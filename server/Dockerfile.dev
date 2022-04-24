@@ -3,12 +3,14 @@ FROM node:14
 WORKDIR /app
 
 COPY ./package.json ./
-# COPY ./tsconfig.json ./
-# COPY ./nodemon.json ./
 
 RUN npm install
 
 COPY . .
 
-CMD [ "npm", "run", "start" ]
+# CMD [ "npm", "run", "start" ]
+
+ENTRYPOINT ["npm"]
+
+CMD ["run", "start"]
 
