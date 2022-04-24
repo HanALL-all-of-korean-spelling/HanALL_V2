@@ -76,7 +76,6 @@ app.get("/api/search", async (req: Request, res: Response) => {
     console.log("/api/search 성공");
   } catch (err) {
     console.error(err);
-    //next(err);
   }
 });
 
