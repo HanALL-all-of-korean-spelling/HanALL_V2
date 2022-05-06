@@ -13,6 +13,4 @@ const createIndex = async (index: String) => {
   }
 };
 
-//createIndex(index);
-
 module.exports = createIndex;

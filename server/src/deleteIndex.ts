@@ -12,6 +12,4 @@ const deleteIndex = async (index: String) => {
   }
 };
 
-//deleteIndex(index);
-
 module.exports = deleteIndex;
