@@ -1,5 +1,7 @@
 export = {};
 const esClient = require("./connection.ts");
+const fs = require("fs");
+//const Data = require("../bulk.json");
 
 let today = new Date();
 let year = today.getFullYear();
@@ -46,5 +48,16 @@ const insertData = async () => {
     console.error(err);
   }
 };
+
+// const insertData = async () => {
+//   try {
+//     await esClient.bulk({
+//       index: "words",
+//       body: Data,
+//     });
+//   } catch (err) {
+//     console.error(err);
+//   }
+// };
 
 module.exports = insertData;

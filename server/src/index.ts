@@ -6,10 +6,12 @@ const createIndex = require("./createIndex");
 const deleteIndex = require("./deleteIndex");
 const setMapping = require("./setMapping");
 const insertData = require("./insertData");
+const { swaggerUi, specs } = require("../swagger");
 
 const app: express.Application = express();
 
 app.use(express.json());
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(specs));
 
 conCheck;
 
