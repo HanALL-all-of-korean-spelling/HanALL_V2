@@ -6,7 +6,7 @@
   "scripts": {
     "start": "npm run dev",
     "dev": "nodemon",
-    "test": "jest --forceExit --detectOpenHandles"
+    "test": "jest --forceExit"
   },
   "keywords": [],
   "author": "",
