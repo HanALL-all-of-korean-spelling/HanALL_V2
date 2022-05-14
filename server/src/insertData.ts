@@ -1,13 +1,33 @@
-export = {};
 const esClient = require("./connection.ts");
 const fs = require("fs");
+import path from "path";
+//const split = require("split2");
+import split from "split2";
 //const Data = require("../bulk.json");
 
-let today = new Date();
-let year = today.getFullYear();
-let month = today.getMonth() + 1;
-let date = today.getDate();
-let date_data = year + "-" + month + "-" + date;
+const insertData = async () => {
+  const datasetPath = path.join(
+    __dirname,
+    "..",
+    "fixtures",
+    "words-bulk.ndjson"
+  );
+  const datasource = fs.createReadStream(datasetPath).pipe(split());
+  console.log("datasetPath=", datasetPath);
+  console.log("datasource=", datasource);
+
+  const result = await esClient.helpers.bulk({
+    datasource,
+    onDocument() {
+      return {
+        index: { _index: "words" },
+      };
+    },
+  });
+  console.log("result=", result);
+};
+
+export { insertData };
 
 // const insertData = async () => {
 //   try {
@@ -29,25 +49,25 @@ let date_data = year + "-" + month + "-" + date;
 //   }
 // };
 
-const insertData = async () => {
-  try {
-    await esClient.index({
-      index: "words",
-      id: 2,
-      body: {
-        right_words: "왠지",
-        wrong_words: ["웬지"],
-        Description: "왠지에 대한 설명",
-        Helpful_info: "쉽게 외우는 방법",
-        Related: 3,
-        Created_At: date_data,
-        Updated_At: date_data,
-      },
-    });
-  } catch (err) {
-    console.error(err);
-  }
-};
+// const insertData = async () => {
+//   try {
+//     await esClient.index({
+//       index: "words",
+//       id: 2,
+//       body: {
+//         right_words: "왠지",
+//         wrong_words: ["웬지"],
+//         Description: "왠지에 대한 설명",
+//         Helpful_info: "쉽게 외우는 방법",
+//         Related: 3,
+//         Created_At: date_data,
+//         Updated_At: date_data,
+//       },
+//     });
+//   } catch (err) {
+//     console.error(err);
+//   }
+// };
 
 // const insertData = async () => {
 //   try {
@@ -60,4 +80,4 @@ const insertData = async () => {
 //   }
 // };
 
-module.exports = insertData;
+// module.exports = insertData;

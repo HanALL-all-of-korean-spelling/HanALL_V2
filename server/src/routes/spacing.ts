@@ -10,6 +10,7 @@ router
       const result = await esClient.search({
         index: index,
         body: {
+          _source: ["title"],
           query: {
             match: {
               type: "spacing",

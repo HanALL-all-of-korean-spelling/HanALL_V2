@@ -5,7 +5,7 @@ const conCheck = require("./conCheck");
 
 import * as crt from "./createIndex";
 import * as del from "./deleteIndex";
-const insertData = require("./insertData");
+import * as ins from "./insertData";
 const { swaggerUi, specs } = require("../swagger");
 
 const app: express.Application = express();
@@ -16,14 +16,14 @@ app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(specs));
 conCheck;
 
 //del.deleteWordsIndex();
-//del.deleteUsersIndex();
 //del.deleteBoardIndex();
+//del.deleteUsersIndex();
 
-crt.createWordsIndex();
+//crt.createWordsIndex();
 //crt.createBoardIndex();
 //crt.createUsersIndex();
 
-//insertData;
+//ins.insertData();
 
 app.use("/api", indexRouter);
 

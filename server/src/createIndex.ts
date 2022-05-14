@@ -1,6 +1,9 @@
 const esClient = require("./connection.ts");
 
 const words_schema = {
+  type: {
+    type: "keyword",
+  },
   right_words: {
     type: "text",
   },
@@ -41,6 +44,9 @@ const users_schema = {
 };
 
 const board_schema = {
+  title: {
+    type: "text",
+  },
   question: {
     type: "text",
   },
@@ -51,7 +57,7 @@ const board_schema = {
     type: "text",
   },
   created_at: {
-    type: "date",
+    type: "text",
   },
 };
 
