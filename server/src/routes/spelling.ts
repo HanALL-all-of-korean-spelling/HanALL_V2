@@ -133,7 +133,7 @@ module.exports = router;
  *            required: true
  *            schema:
  *                type: string
- *                description: 검색 내용
+ *                description: text
  *          produces:
  *          - application/json
  *          responses:
