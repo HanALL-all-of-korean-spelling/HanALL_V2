@@ -1,5 +1,15 @@
 const esClient = require("./connection.ts");
 
+const nori = {
+  analysis: {
+    analyzer: {
+      default: {
+        type: "nori",
+      },
+    },
+  },
+};
+
 const words_schema = {
   type: {
     type: "keyword",
@@ -67,6 +77,7 @@ const createWordsIndex = async () => {
     await esClient.indices.create({
       index: index,
       body: {
+        settings: nori,
         mappings: {
           dynamic: true,
           properties: words_schema,

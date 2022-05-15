@@ -35,7 +35,9 @@ services:
       - ES_HOST=elasticsearch
 
   elasticsearch:
-    image: docker.elastic.co/elasticsearch/elasticsearch:7.13.0
+    build:
+      dockerfile: Dockerfile.dev
+      context: ./elasticsearch
     container_name: elasticsearch
     environment:
       - node.name=elasticsearch
