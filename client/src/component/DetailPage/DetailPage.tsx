@@ -1,6 +1,6 @@
 import React from "react";
 
-function DetailPage() {
+export const DetailPage = () => {
   const detailInfo = {
     type: "spelling",
     hit: 34,
@@ -36,6 +36,4 @@ function DetailPage() {
       </div>
     </>
   );
-}
-
-export default DetailPage;
+};

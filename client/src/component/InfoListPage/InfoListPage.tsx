@@ -1,6 +1,6 @@
 import React from "react";
 
-function InfoListPage() {
+export const InfoListPage = () => {
   const spellings = [
     {
       _index: "words",
@@ -46,6 +46,4 @@ function InfoListPage() {
     });
 
   return <>{renderSpellings}</>;
-}
-
-export default InfoListPage;
+};

@@ -1,12 +1,8 @@
 import type { NextPage } from "next";
-import InfoListPage from "../src/component/InfoListPage/InfoListPage";
+import { InfoListPage } from "../src/component/InfoListPage/InfoListPage";
 
 const Spelling: NextPage = () => {
-  return (
-    <>
-      <InfoListPage />
-    </>
-  );
+  return <InfoListPage />;
 };
 
 export default Spelling;
