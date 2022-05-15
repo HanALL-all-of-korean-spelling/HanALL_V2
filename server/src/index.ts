@@ -15,13 +15,25 @@ app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(specs));
 
 conCheck;
 
-//del.deleteWordsIndex();
-//del.deleteBoardIndex();
-//del.deleteUsersIndex();
+const reload_word_index = () => {
+  del.deleteWordsIndex();
+  crt.createWordsIndex();
+};
 
-//crt.createWordsIndex();
-//crt.createBoardIndex();
-//crt.createUsersIndex();
+const reload_board_index = () => {
+  del.deleteBoardIndex();
+  crt.createBoardIndex();
+};
+
+const reload_user_index = () => {
+  del.deleteUsersIndex();
+  crt.createUsersIndex();
+};
+
+//reload_word_index();
+
+//reload_board_index();
+//reload_user_index();
 
 //ins.insertData();
 

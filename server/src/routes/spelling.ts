@@ -12,7 +12,7 @@ router
       const result = await esClient.search({
         index: index,
         body: {
-          _source: ["title"],
+          _source: ["title", "hits"],
           query: {
             match: {
               type: "spelling",
@@ -35,7 +35,6 @@ router
       const result = await esClient.search({
         index: index,
         body: {
-          _source: ["title"],
           query: {
             match: {
               wrong_words: req.body.text,
@@ -52,7 +51,6 @@ router
         const result = await esClient.search({
           index: index,
           body: {
-            _source: ["title"],
             query: {
               match: {
                 right_words: req.body.text,
@@ -82,6 +80,17 @@ router
             match: {
               _id: req.params.id,
             },
+          },
+        },
+      });
+      let hits = result.body.hits.hits[0]._source.Hits;
+      hits++;
+      const count_hits = await esClient.update({
+        index: index,
+        id: req.params.id,
+        body: {
+          doc: {
+            Hits: hits,
           },
         },
       });
