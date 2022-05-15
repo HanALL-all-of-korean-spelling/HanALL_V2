@@ -12,7 +12,7 @@ router
       const result = await esClient.search({
         index: index,
         body: {
-          _source: ["title", "hits"],
+          _source: ["title", "Hits"],
           query: {
             match: {
               type: "spelling",
