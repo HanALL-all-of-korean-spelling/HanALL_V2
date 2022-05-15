@@ -30,13 +30,13 @@ router
 router
   .route("/search")
   // swagger에서 돌아가게 하려고 post로 작성(이후 get으로 수정하기)
-  .get(async (req: Request, res: Response, next: NextFunction) => {
+  .post(async (req: Request, res: Response, next: NextFunction) => {
     try {
       const result = await esClient.search({
         index: index,
         body: {
+          _source: ["title"],
           query: {
-            _source: ["title"],
             match: {
               wrong_words: req.body.text,
             },
@@ -52,6 +52,7 @@ router
         const result = await esClient.search({
           index: index,
           body: {
+            _source: ["title"],
             query: {
               match: {
                 right_words: req.body.text,
