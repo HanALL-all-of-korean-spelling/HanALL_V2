@@ -1,14 +1,33 @@
 const esClient = require("./connection.ts");
 
+const nori = {
+  analysis: {
+    analyzer: {
+      nori: {
+        tokenizer: "nori_mixed",
+      },
+    },
+    tokenizer: {
+      nori_mixed: {
+        type: "nori_tokenizer",
+        decompound_mode: "mixed",
+        user_dictionary_rules: ["왠", "웬"],
+      },
+    },
+  },
+};
+
 const words_schema = {
   type: {
     type: "keyword",
   },
   right_words: {
     type: "text",
+    analyzer: "nori",
   },
   wrong_words: {
     type: "text",
+    analyzer: "nori",
   },
   title: { type: "text" },
   Description: {
@@ -18,6 +37,12 @@ const words_schema = {
     type: "text",
   },
   Related: {
+    type: "integer",
+  },
+  Hits: {
+    type: "integer",
+  },
+  Scraps: {
     type: "integer",
   },
 };
@@ -67,6 +92,7 @@ const createWordsIndex = async () => {
     await esClient.indices.create({
       index: index,
       body: {
+        settings: nori,
         mappings: {
           dynamic: true,
           properties: words_schema,

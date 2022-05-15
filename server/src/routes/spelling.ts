@@ -12,7 +12,7 @@ router
       const result = await esClient.search({
         index: index,
         body: {
-          _source: ["title"],
+          _source: ["title", "hits"],
           query: {
             match: {
               type: "spelling",
@@ -30,13 +30,12 @@ router
 router
   .route("/search")
   // swagger에서 돌아가게 하려고 post로 작성(이후 get으로 수정하기)
-  .get(async (req: Request, res: Response, next: NextFunction) => {
+  .post(async (req: Request, res: Response, next: NextFunction) => {
     try {
       const result = await esClient.search({
         index: index,
         body: {
           query: {
-            _source: ["title"],
             match: {
               wrong_words: req.body.text,
             },
@@ -81,6 +80,17 @@ router
             match: {
               _id: req.params.id,
             },
+          },
+        },
+      });
+      let hits = result.body.hits.hits[0]._source.Hits;
+      hits++;
+      const count_hits = await esClient.update({
+        index: index,
+        id: req.params.id,
+        body: {
+          doc: {
+            Hits: hits,
           },
         },
       });
