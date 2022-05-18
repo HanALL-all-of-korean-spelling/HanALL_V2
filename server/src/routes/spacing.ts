@@ -143,6 +143,7 @@ module.exports = router;
  *          parameters:
  *          - in: query
  *            name: "sort_by"
+ *            description: 정렬 방식을 입력하세요.(created_at / hits / scraps)
  *            required: false
  *            schema:
  *                type: string
@@ -160,6 +161,7 @@ module.exports = router;
  *          parameters:
  *          - in: path
  *            name: "id"
+ *            description: 게시글의 고유 아이디 값을 입력하세요.
  *            required: true
  *            schema:
  *                type: string
