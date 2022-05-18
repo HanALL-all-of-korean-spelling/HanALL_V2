@@ -1,12 +1,12 @@
-{"index":{"_index":"words","_id":"1"}}
-{"type":"spelling", "title":"베개 vs 배게", "right_words":"베개", "wrong_words": ["배게","배개","베게"], "Description": "베개에 대한 설명", "Helpful_info": "쉽게 외우는 방법", "Related": "", "Hits":0, "Scraps":0}
-{"index":{"_index":"words","_id":"2"}}
-{"type":"spelling", "title":"왠지 vs 웬지", "right_words":"왠지", "wrong_words": ["웬지"], "Description": "왠지에 대한 설명", "Helpful_info": "쉽게 외우는 방법", "Related": 3, "Hits":0, "Scraps":0}
-{"index":{"_index":"words","_id":"3"}}
-{"type":"spelling", "title":"웬만하면 vs 왠만하면", "right_words":"웬만하면", "wrong_words": ["왠만하면"], "Description": "웬만하면에 대한 설명", "Helpful_info": "쉽게 외우는 방법", "Related": 2, "Hits":0, "Scraps":0}
-{"index":{"_index":"words","_id":"4"}}
-{"type":"spacing", "title":"할 수 vs 할수", "right_words":"할 수", "wrong_words": ["할수"], "Description": "할 수에 대한 설명", "Helpful_info": "쉽게 외우는 방법", "Related":"", "Hits":0, "Scraps":0}
-{"index":{"_index":"words","_id":"5"}}
-{"type":"spacing", "title":"할 거 vs 할거", "right_words":"할 거", "wrong_words": ["할거"], "Description": "할 거에 대한 설명", "Helpful_info": "쉽게 외우는 방법", "Related":"", "Hits":0, "Scraps":0}
-{"index":{"_index":"words","_id":"6"}}
-{"type":"spelling", "title":"왠 vs 웬", "right_words":"웬", "wrong_words": ["왠"], "Description": "웬에 대한 설명", "Helpful_info": "쉽게 외우는 방법", "Related":"", "Hits":0, "Scraps":0}    
+{"index":{"_index":"words"}}
+{"type":"spelling", "title":"베개 vs 배게", "right_words":"베개", "wrong_words": ["배게","배개","베게"], "description": "베개에 대한 설명", "helpful_info": "쉽게 외우는 방법", "related": "", "hits":0, "scraps":0, "created_at": "2022-05-19"}
+{"index":{"_index":"words"}}
+{"type":"spelling", "title":"왠지 vs 웬지", "right_words":"왠지", "wrong_words": ["웬지"], "description": "왠지에 대한 설명", "helpful_info": "쉽게 외우는 방법", "related": "", "hits":0, "scraps":0, "created_at": "2022-05-20"}
+{"index":{"_index":"words"}}
+{"type":"spelling", "title":"웬만하면 vs 왠만하면", "right_words":"웬만하면", "wrong_words": ["왠만하면"], "description": "웬만하면에 대한 설명", "helpful_info": "쉽게 외우는 방법", "related": "", "hits":0, "scraps":0, "created_at": "2022-05-21"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"할 수 vs 할수", "right_words":"할 수", "wrong_words": ["할수"], "description": "할 수에 대한 설명", "helpful_info": "쉽게 외우는 방법", "related":"", "hits":0, "scraps":0, "created_at": "2022-05-22"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"할 거 vs 할거", "right_words":"할 거", "wrong_words": ["할거"], "description": "할 거에 대한 설명", "helpful_info": "쉽게 외우는 방법", "related":"", "hits":0, "scraps":0, "created_at": "2022-05-23"}
+{"index":{"_index":"words"}}
+{"type":"spelling", "title":"왠 vs 웬", "right_words":"웬", "wrong_words": ["왠"], "description": "웬에 대한 설명", "helpful_info": "쉽게 외우는 방법", "related":"", "hits":0, "scraps":0, "created_at": "2022-06-01"}    
