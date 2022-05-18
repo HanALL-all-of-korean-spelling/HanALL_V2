@@ -39,7 +39,7 @@ router
           created_at: date,
         },
       });
-      res.status(200).json(result.body);
+      res.status(201).json(result.body);
     } catch (err) {
       console.error(err);
       next(err);
@@ -94,7 +94,7 @@ router
         id: req.params.id,
       });
       console.log(req.params.id);
-      res.status(200).json(result.body);
+      res.status(204).json(result.body);
     } catch (err) {
       console.error(err);
       next(err);

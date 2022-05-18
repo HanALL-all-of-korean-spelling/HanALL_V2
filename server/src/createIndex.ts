@@ -30,41 +30,43 @@ const words_schema = {
     analyzer: "nori",
   },
   title: { type: "text" },
-  Description: {
+  description: {
     type: "text",
   },
-  Helpful_info: {
+  helpful_info: {
     type: "text",
   },
-  Related: {
+  related: {
     type: "integer",
   },
-  Hits: {
+  hits: {
     type: "integer",
   },
-  Scraps: {
+  scraps: {
     type: "integer",
+  },
+  created_at: {
+    type: "date",
+    format: "yyyy-MM-dd",
   },
 };
 
 const users_schema = {
-  user_id: {
-    type: "keyword",
-  },
-  user_pw: {
-    type: "keyword",
-  },
-  name: {
-    type: "keyword",
-  },
   email: {
+    type: "keyword",
+  },
+  pw: {
+    type: "keyword",
+  },
+
+  nickname: {
     type: "keyword",
   },
   rank: {
     type: "keyword",
   },
   scraps: {
-    type: "integer",
+    type: "keyword",
   },
 };
 
@@ -82,7 +84,8 @@ const board_schema = {
     type: "text",
   },
   created_at: {
-    type: "text",
+    type: "date",
+    format: "yyyy-MM-dd",
   },
 };
 
