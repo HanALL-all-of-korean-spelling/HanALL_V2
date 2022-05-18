@@ -37,7 +37,7 @@ const words_schema = {
     type: "text",
   },
   related: {
-    type: "integer",
+    type: "keyword",
   },
   hits: {
     type: "integer",
@@ -58,7 +58,6 @@ const users_schema = {
   pw: {
     type: "keyword",
   },
-
   nickname: {
     type: "keyword",
   },
