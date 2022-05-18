@@ -82,7 +82,36 @@ router
           },
         },
       });
-      let hits = result.body.hits.hits[0]._source.Hits;
+      let related = await esClient.search({
+        index: index,
+        body: {
+          query: {
+            bool: {
+              must: [
+                {
+                  multi_match: {
+                    query: result.body.hits.hits[0]._source.right_words,
+                    fields: ["right_words", "wrong_words"],
+                  },
+                },
+              ],
+              must_not: [
+                {
+                  match: {
+                    _id: result.body.hits.hits[0]._id,
+                  },
+                },
+              ],
+            },
+          },
+        },
+      });
+      if (related.body.hits.total.value == 0) {
+        related = "";
+      } else {
+        related = related.body.hits.hits[0]._id;
+      }
+      let hits = result.body.hits.hits[0]._source.hits;
       hits++;
       const count_hits = await esClient.update({
         index: index,
@@ -90,6 +119,7 @@ router
         body: {
           doc: {
             hits: hits,
+            related: related,
           },
         },
       });
