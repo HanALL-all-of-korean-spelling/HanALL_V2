@@ -141,7 +141,7 @@ router
           },
         },
       });
-      const related = await esClient.search({
+      let related = await esClient.search({
         index: index,
         body: {
           query: {
@@ -165,6 +165,11 @@ router
           },
         },
       });
+      if (related.body.hits.total.value == 0) {
+        related = "";
+      } else {
+        related = related.body.hits.hits[0]._id;
+      }
       let hits = result.body.hits.hits[0]._source.hits;
       hits++;
       const count_hits = await esClient.update({
@@ -173,7 +178,7 @@ router
         body: {
           doc: {
             hits: hits,
-            related: related.body.hits.hits[0]._id,
+            related: related,
           },
         },
       });
