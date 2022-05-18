@@ -39,7 +39,7 @@ module.exports = router;
  *      get:
  *          tags: [today]
  *          summary: 오늘의 맞춤법 조회
- *          description: 오늘의 맞춤법 조회
+ *          description: execute를 누를 때마다 랜덤하게 데이터 전달
  *          produces:
  *          - application/json
  *          responses:

@@ -198,20 +198,22 @@ module.exports = router;
  *      get:
  *          tags: [spelling]
  *          summary: 철자 정보 조회 및 검색
- *          description: 철자 정보 조회 및 검색
+ *          description: 검색 값, 정렬 방식 입력 X -> 최신순 3개, 조회수순 3개의 데이터 전달 <br> 검색 값과 정렬 방식은 하나씩만 입력 가능
  *          parameters:
  *          - in: query
  *            name: "text"
+ *            description: 검색 내용을 입력하세요.
  *            required: false
  *            schema:
  *                type: string
- *                description: text
+ *                description: 검색 내용
  *          - in: query
  *            name: "sort_by"
+ *            description: 정렬 방식을 입력하세요.(created_at / hits / scraps)
  *            required: false
  *            schema:
  *                type: string
- *                description: sort
+ *                description: 정렬 방식
  *          produces:
  *          - application/json
  *          responses:
@@ -225,6 +227,7 @@ module.exports = router;
  *          parameters:
  *          - in: path
  *            name: "id"
+ *            description: 게시글의 고유 아이디 값을 입력하세요.
  *            required: true
  *            schema:
  *                type: string
