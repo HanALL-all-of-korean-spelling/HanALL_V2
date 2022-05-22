@@ -2,7 +2,8 @@ import express, { Request, Response, NextFunction } from "express";
 const indexRouter = require("./routes");
 const esClient = require("./connection.ts");
 const conCheck = require("./conCheck");
-
+import passport from "passport";
+import { passportLocal } from "./passport";
 import * as crt from "./createIndex";
 import * as del from "./deleteIndex";
 import * as ins from "./insertData";
@@ -12,6 +13,8 @@ const app: express.Application = express();
 
 app.use(express.json());
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(specs));
+app.use(passport.initialize());
+passportLocal();
 
 conCheck;
 
