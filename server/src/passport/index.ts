@@ -1,3 +1,5 @@
+import { Request } from "express";
+
 const passport = require("passport");
 const passportJWT = require("passport-jwt");
 const JWTStrategy = passportJWT.Strategy;
@@ -42,8 +44,15 @@ const passportVerify = async (email: String, password: String, done: any) => {
   }
 };
 
+const cookieExtractor = (req: Request) => {
+  console.log("cookie", req.cookies);
+  const { token } = req.cookies;
+  return token;
+};
+
 const JWTConfig = {
-  jwtFromRequest: ExtractJWT.fromAuthHeaderAsBearerToken(),
+  //jwtFromRequest: ExtractJWT.fromAuthHeaderAsBearerToken(),
+  jwtFromRequest: cookieExtractor,
   secretOrKey: "jwt-secret-key",
 };
 

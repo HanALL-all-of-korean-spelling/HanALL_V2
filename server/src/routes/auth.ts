@@ -68,37 +68,29 @@ router.post(
           console.error(loginError);
           return next(loginError);
         }
-        //return res.status(200).redirect("/");
         // 로그인 성공 시 토큰 발급
         console.log("토큰 발급 아이디", user.body.hits.hits[0]._id);
         const token = jwt.sign(
           { id: user.body.hits.hits[0]._id },
           "jwt-secret-key"
         );
-        res.json({ token });
+        res.cookie("token", token, {
+          httpOnly: true,
+          maxAge: 24 * 60 * 60 * 1000,
+        });
+        res.status(200).json({ token });
       });
     })(req, res, next);
   }
 );
 
-// router.get(
-//   "/token",
-//   passport.authenticate("jwt", { session: false }),
-//   async (req: Request, res: Response, next: NextFunction) => {
-//     try {
-//       res.json({ result: true });
-//     } catch (error) {
-//       console.error(error);
-//       next(error);
-//     }
-//   }
-// );
-
-router.get("/logout", isLoggedIn, (req: Request, res: Response) => {
-  req.logout(); // req.user 객체 제거
-  //req.session.destroy(); // req.session 객체 내용 제거
-  res.redirect("/");
-});
+router.get(
+  "/logout",
+  passport.authenticate("jwt", { session: false }),
+  (req: Request, res: Response) => {
+    return res.clearCookie("token").end();
+  }
+);
 
 module.exports = router;
 
@@ -139,4 +131,14 @@ module.exports = router;
  *          responses:
  *              200:
  *                  description: 로그인 성공
+ *  /api/auth/logout:
+ *      get:
+ *          tags: [auth]
+ *          summary: 로그아웃
+ *          description: 로그아웃
+ *          produces:
+ *          - application/json
+ *          responses:
+ *              200:
+ *                  description: 로그아웃 성공
  */

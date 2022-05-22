@@ -1,4 +1,5 @@
 import express, { Request, Response, NextFunction } from "express";
+const cookieParser = require("cookie-parser");
 const indexRouter = require("./routes");
 const esClient = require("./connection.ts");
 const conCheck = require("./conCheck");
@@ -12,6 +13,7 @@ const { swaggerUi, specs } = require("../swagger");
 const app: express.Application = express();
 
 app.use(express.json());
+app.use(cookieParser(process.env.COOKIE_SECRET));
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(specs));
 app.use(passport.initialize());
 passportLocal();
