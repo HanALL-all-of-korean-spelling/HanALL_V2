@@ -2,6 +2,7 @@ import express, { Request, Response, NextFunction } from "express";
 import passport from "passport";
 import jwt from "jsonwebtoken";
 import bcrypt from "bcryptjs";
+import dotenv from "dotenv";
 const { isLoggedIn, isNotLoggedIn } = require("./middlewares");
 const router = express.Router();
 const esClient = require("../connection.ts");
@@ -72,7 +73,8 @@ router.post(
         console.log("토큰 발급 아이디", user.body.hits.hits[0]._id);
         const token = jwt.sign(
           { id: user.body.hits.hits[0]._id },
-          "jwt-secret-key"
+          process.env.JWT_SECRET as string,
+          { expiresIn: "1d" }
         );
         res.cookie("token", token, {
           httpOnly: true,
@@ -105,7 +107,7 @@ module.exports = router;
  *          parameters:
  *          - in: body
  *            name: "user"
- *            description: "email, nickname, password'를 json 형식으로 입력하세요."
+ *            description: "email, nickname, password를 json 형식으로 입력하세요."
  *            required: true
  *            schema:
  *                type: string
@@ -122,7 +124,7 @@ module.exports = router;
  *          parameters:
  *          - in: body
  *            name: "user"
- *            description: "'email, password'를 json 형식으로 입력하세요."
+ *            description: "email, password를 json 형식으로 입력하세요."
  *            required: true
  *            schema:
  *                type: string

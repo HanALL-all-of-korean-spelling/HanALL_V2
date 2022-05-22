@@ -53,7 +53,7 @@ const cookieExtractor = (req: Request) => {
 const JWTConfig = {
   //jwtFromRequest: ExtractJWT.fromAuthHeaderAsBearerToken(),
   jwtFromRequest: cookieExtractor,
-  secretOrKey: "jwt-secret-key",
+  secretOrKey: process.env.JWT_SECRET,
 };
 
 const JWTVerify = async (jwtPayload: any, done: any) => {
