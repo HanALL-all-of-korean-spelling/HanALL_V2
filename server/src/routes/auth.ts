@@ -3,6 +3,7 @@ import passport from "passport";
 import jwt from "jsonwebtoken";
 import bcrypt from "bcryptjs";
 import dotenv from "dotenv";
+import { body, check, validationResult } from "express-validator";
 const { isLoggedIn, isNotLoggedIn } = require("./middlewares");
 const router = express.Router();
 const esClient = require("../connection.ts");
@@ -14,7 +15,17 @@ const index: String = "users";
 router.post(
   "/join",
   isNotLoggedIn,
+  [
+    body("email").notEmpty().isEmail(),
+    body("nickname").notEmpty(),
+    body("password").notEmpty().isLength({ min: 8 }),
+  ],
   async (req: Request, res: Response, next: NextFunction) => {
+    // 입력값 검증에 문제가 있는 경우 에러 정보 전달
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      return res.status(400).json({ errors: errors.array() });
+    }
     const { email, nickname, password } = req.body;
     try {
       const exUser: any = await esClient.search({
