@@ -55,7 +55,7 @@ const users_schema = {
   email: {
     type: "keyword",
   },
-  pw: {
+  password: {
     type: "keyword",
   },
   nickname: {
