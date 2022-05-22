@@ -10,6 +10,16 @@ const esClient = require("../connection.ts");
 require("dotenv").config();
 const index: String = "users";
 
+declare global {
+  namespace Express {
+    interface User {
+      email: number;
+      nickname: string;
+      password: string;
+    }
+  }
+}
+
 const passportConfig = { usernameField: "email", passwordField: "password" };
 
 const passportVerify = async (email: String, password: String, done: any) => {

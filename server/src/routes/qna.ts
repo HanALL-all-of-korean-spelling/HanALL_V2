@@ -1,4 +1,5 @@
 import express, { Request, Response, NextFunction } from "express";
+import passport from "passport";
 const router = express.Router();
 const esClient = require("../connection.ts");
 const index: String = "board";
@@ -28,23 +29,26 @@ router
       next(err);
     }
   })
-  .post(async (req: Request, res: Response, next: NextFunction) => {
-    try {
-      const result = await esClient.index({
-        index: index,
-        body: {
-          title: req.body.title,
-          name: req.body.name,
-          question: req.body.question,
-          created_at: date,
-        },
-      });
-      res.status(201).json(result.body);
-    } catch (err) {
-      console.error(err);
-      next(err);
+  .post(
+    passport.authenticate("jwt", { session: false }),
+    async (req: Request, res: Response, next: NextFunction) => {
+      try {
+        const result = await esClient.index({
+          index: index,
+          body: {
+            title: req.body.title,
+            name: req.user?.nickname,
+            question: req.body.question,
+            created_at: date,
+          },
+        });
+        res.status(201).json(result.body);
+      } catch (err) {
+        console.error(err);
+        next(err);
+      }
     }
-  });
+  );
 
 router
   .route("/:id")
@@ -67,39 +71,44 @@ router
       next(err);
     }
   })
-  .put(async (req: Request, res: Response, next: NextFunction) => {
-    try {
-      const result = await esClient.update({
-        index: index,
-        id: req.params.id,
-        body: {
-          doc: {
-            title: req.body.title,
-            name: req.body.name,
-            question: req.body.question,
+  .put(
+    passport.authenticate("jwt", { session: false }),
+    async (req: Request, res: Response, next: NextFunction) => {
+      try {
+        const result = await esClient.update({
+          index: index,
+          id: req.params.id,
+          body: {
+            doc: {
+              title: req.body.title,
+              question: req.body.question,
+            },
           },
-        },
-      });
-      console.log(req.params.id);
-      res.status(200).json(result.body);
-    } catch (err) {
-      console.error(err);
-      next(err);
+        });
+        console.log(req.params.id);
+        res.status(200).json(result.body);
+      } catch (err) {
+        console.error(err);
+        next(err);
+      }
     }
-  })
-  .delete(async (req: Request, res: Response, next: NextFunction) => {
-    try {
-      const result = await esClient.delete({
-        index: index,
-        id: req.params.id,
-      });
-      console.log(req.params.id);
-      res.status(204).json(result.body);
-    } catch (err) {
-      console.error(err);
-      next(err);
+  )
+  .delete(
+    passport.authenticate("jwt", { session: false }),
+    async (req: Request, res: Response, next: NextFunction) => {
+      try {
+        const result = await esClient.delete({
+          index: index,
+          id: req.params.id,
+        });
+        console.log(req.params.id);
+        res.status(204).json(result.body);
+      } catch (err) {
+        console.error(err);
+        next(err);
+      }
     }
-  });
+  );
 
 module.exports = router;
 
