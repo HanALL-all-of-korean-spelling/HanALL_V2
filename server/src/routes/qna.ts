@@ -1,7 +1,7 @@
 import express, { Request, Response, NextFunction } from "express";
 import passport from "passport";
 const router = express.Router();
-const esClient = require("../connection.ts");
+const esClient = require("../models/connection.ts");
 const index: String = "board";
 
 let get_today = new Date();

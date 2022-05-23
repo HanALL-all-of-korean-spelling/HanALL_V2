@@ -6,7 +6,7 @@ const JWTStrategy = passportJWT.Strategy;
 const ExtractJWT = passportJWT.ExtractJwt;
 const LocalStrategy = require("passport-local").Strategy;
 const bcrypt = require("bcryptjs");
-const esClient = require("../connection.ts");
+const esClient = require("../models/connection.ts");
 require("dotenv").config();
 const index: String = "users";
 
