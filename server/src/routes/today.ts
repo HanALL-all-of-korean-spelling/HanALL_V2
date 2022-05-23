@@ -8,7 +8,9 @@ router
   .route("/")
   .get(async (req: Request, res: Response, next: NextFunction) => {
     try {
-      console.log(Math.random());
+      const today = new Date();
+      const seed = today.getDate() + today.getMonth();
+      console.log(seed);
       const result = await esClient.search({
         index: index,
         body: {
@@ -18,7 +20,7 @@ router
               query: {
                 match_all: {},
               },
-              random_score: {},
+              random_score: { seed: seed },
             },
           },
         },
