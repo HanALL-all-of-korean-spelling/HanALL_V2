@@ -1,7 +1,6 @@
 import express, { Request, Response, NextFunction } from "express";
-import { resourceLimits } from "worker_threads";
 const router = express.Router();
-const esClient = require("../connection.ts");
+const esClient = require("../models/connection.ts");
 const index: String = "words";
 
 router
