@@ -3,7 +3,7 @@ import passport from "passport";
 import jwt from "jsonwebtoken";
 import bcrypt from "bcryptjs";
 import dotenv from "dotenv";
-import { body, check, validationResult } from "express-validator";
+import { body, validationResult } from "express-validator";
 const { isLoggedIn, isNotLoggedIn } = require("./middlewares");
 const router = express.Router();
 const esClient = require("../models/connection.ts");
