@@ -38,6 +38,7 @@ const reload_user_index = () => {
 //reload_word_index();
 
 //reload_board_index();
+
 //reload_user_index();
 
 //ins.insertData();

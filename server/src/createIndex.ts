@@ -46,7 +46,8 @@ const words_schema = {
     type: "integer",
   },
   created_at: {
-    type: "text",
+    type: "date",
+    format: "yyyy-MM-dd",
   },
 };
 
