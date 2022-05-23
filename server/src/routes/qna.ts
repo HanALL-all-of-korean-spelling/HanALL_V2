@@ -75,18 +75,33 @@ router
     passport.authenticate("jwt", { session: false }),
     async (req: Request, res: Response, next: NextFunction) => {
       try {
-        const result = await esClient.update({
+        const writer = await esClient.search({
           index: index,
-          id: req.params.id,
           body: {
-            doc: {
-              title: req.body.title,
-              question: req.body.question,
+            query: {
+              bool: {
+                must: [{ match: { _id: req.params.id } }],
+              },
             },
           },
         });
-        console.log(req.params.id);
-        res.status(200).json(result.body);
+        console.log(writer.body.hits.hits[0]._source.name);
+        if (writer.body.hits.hits[0]._source.name == req.user?.nickname) {
+          const result = await esClient.update({
+            index: index,
+            id: req.params.id,
+            body: {
+              doc: {
+                title: req.body.title,
+                question: req.body.question,
+              },
+            },
+          });
+          console.log(req.params.id);
+          res.status(200).json(result.body);
+        } else {
+          res.status(400).send(false);
+        }
       } catch (err) {
         console.error(err);
         next(err);
@@ -97,12 +112,27 @@ router
     passport.authenticate("jwt", { session: false }),
     async (req: Request, res: Response, next: NextFunction) => {
       try {
-        const result = await esClient.delete({
+        const writer = await esClient.search({
           index: index,
-          id: req.params.id,
+          body: {
+            query: {
+              bool: {
+                must: [{ match: { _id: req.params.id } }],
+              },
+            },
+          },
         });
-        console.log(req.params.id);
-        res.status(204).json(result.body);
+        console.log(writer.body.hits.hits[0]._source.name);
+        if (writer.body.hits.hits[0]._source.name == req.user?.nickname) {
+          const result = await esClient.delete({
+            index: index,
+            id: req.params.id,
+          });
+          console.log(req.params.id);
+          res.status(204).json(result.body);
+        } else {
+          res.status(400).send(false);
+        }
       } catch (err) {
         console.error(err);
         next(err);
@@ -135,7 +165,7 @@ module.exports = router;
  *            required: true
  *            schema:
  *                type: string
- *                description: title, name, question
+ *                description: title, question
  *          produces:
  *          - application/json
  *          responses:
@@ -172,7 +202,7 @@ module.exports = router;
  *            required: true
  *            schema:
  *                type: string
- *                description: title, name, question
+ *                description: title, question
  *          produces:
  *          - application/json
  *          responses:
