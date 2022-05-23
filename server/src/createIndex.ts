@@ -46,8 +46,7 @@ const words_schema = {
     type: "integer",
   },
   created_at: {
-    type: "date",
-    format: "yyyy-MM-dd",
+    type: "text",
   },
 };
 
@@ -79,12 +78,14 @@ const board_schema = {
   answer: {
     type: "text",
   },
-  name: {
+  nickname: {
+    type: "text",
+  },
+  user_id: {
     type: "text",
   },
   created_at: {
-    type: "date",
-    format: "yyyy-MM-dd",
+    type: "text",
   },
 };
 

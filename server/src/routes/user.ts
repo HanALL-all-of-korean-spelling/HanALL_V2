@@ -12,10 +12,11 @@ const index: String = "users";
 router.get(
   "/",
   passport.authenticate("jwt", { session: false }),
-  async (req: Request, res: Response, next: NextFunction) => {
+  (req: Request, res: Response, next: NextFunction) => {
     try {
-      const user_info = req.user;
-      res.json(user_info);
+      const email = req.user?._source.email;
+      const nickname = req.user?._source.nickname;
+      res.json({ email, nickname });
     } catch (error) {
       console.error(error);
       next(error);
@@ -28,9 +29,9 @@ module.exports = router;
 /**
  * @swagger
  *  securityDefinitions:
- *      bearerAuth:
+ *      cookieAuth:
  *          type: apiKey
- *          name: Authorization
+ *          name: token
  *          in: header
  *
  * paths:
@@ -40,7 +41,7 @@ module.exports = router;
  *          summary: 회원 정보 확인
  *          description: "우측 자물쇠 클릭 후 'Bearer 토큰'을 입력하세요."
  *          security:
- *              - bearerAuth: []
+ *              - cookieAuth: []
  *          produces:
  *          - application/json
  *          responses:

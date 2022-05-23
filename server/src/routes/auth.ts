@@ -2,6 +2,8 @@ import express, { Request, Response, NextFunction } from "express";
 import passport from "passport";
 import jwt from "jsonwebtoken";
 import bcrypt from "bcryptjs";
+import dotenv from "dotenv";
+import { body, check, validationResult } from "express-validator";
 const { isLoggedIn, isNotLoggedIn } = require("./middlewares");
 const router = express.Router();
 const esClient = require("../connection.ts");
@@ -13,7 +15,17 @@ const index: String = "users";
 router.post(
   "/join",
   isNotLoggedIn,
+  [
+    body("email").notEmpty().isEmail(),
+    body("nickname").notEmpty(),
+    body("password").notEmpty().isLength({ min: 8 }),
+  ],
   async (req: Request, res: Response, next: NextFunction) => {
+    // 입력값 검증에 문제가 있는 경우 에러 정보 전달
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      return res.status(400).json({ errors: errors.array() });
+    }
     const { email, nickname, password } = req.body;
     try {
       const exUser: any = await esClient.search({
@@ -68,37 +80,29 @@ router.post(
           console.error(loginError);
           return next(loginError);
         }
-        //return res.status(200).redirect("/");
         // 로그인 성공 시 토큰 발급
-        console.log("토큰 발급 아이디", user.body.hits.hits[0]._id);
         const token = jwt.sign(
           { id: user.body.hits.hits[0]._id },
-          "jwt-secret-key"
+          process.env.JWT_SECRET as string,
+          { expiresIn: "1d" }
         );
-        res.json({ token });
+        res.cookie("token", token, {
+          httpOnly: true,
+          maxAge: 24 * 60 * 60 * 1000,
+        });
+        res.status(200).json({ token });
       });
     })(req, res, next);
   }
 );
 
-// router.get(
-//   "/token",
-//   passport.authenticate("jwt", { session: false }),
-//   async (req: Request, res: Response, next: NextFunction) => {
-//     try {
-//       res.json({ result: true });
-//     } catch (error) {
-//       console.error(error);
-//       next(error);
-//     }
-//   }
-// );
-
-router.get("/logout", isLoggedIn, (req: Request, res: Response) => {
-  req.logout(); // req.user 객체 제거
-  //req.session.destroy(); // req.session 객체 내용 제거
-  res.redirect("/");
-});
+router.get(
+  "/logout",
+  passport.authenticate("jwt", { session: false }),
+  (req: Request, res: Response) => {
+    return res.clearCookie("token").end();
+  }
+);
 
 module.exports = router;
 
@@ -113,7 +117,7 @@ module.exports = router;
  *          parameters:
  *          - in: body
  *            name: "user"
- *            description: "email, nickname, password'를 json 형식으로 입력하세요."
+ *            description: "email, nickname, password를 json 형식으로 입력하세요."
  *            required: true
  *            schema:
  *                type: string
@@ -130,7 +134,7 @@ module.exports = router;
  *          parameters:
  *          - in: body
  *            name: "user"
- *            description: "'email, password'를 json 형식으로 입력하세요."
+ *            description: "email, password를 json 형식으로 입력하세요."
  *            required: true
  *            schema:
  *                type: string
@@ -139,4 +143,14 @@ module.exports = router;
  *          responses:
  *              200:
  *                  description: 로그인 성공
+ *  /api/auth/logout:
+ *      get:
+ *          tags: [auth]
+ *          summary: 로그아웃
+ *          description: 로그아웃
+ *          produces:
+ *          - application/json
+ *          responses:
+ *              200:
+ *                  description: 로그아웃 성공
  */
