@@ -37,7 +37,8 @@ router
           index: index,
           body: {
             title: req.body.title,
-            name: req.user?.nickname,
+            nickname: req.user?._source.nickname,
+            user_id: req.user?._id,
             question: req.body.question,
             created_at: date,
           },
@@ -64,7 +65,6 @@ router
           },
         },
       });
-      console.log(req.params.id);
       res.status(200).json(result.body.hits.hits[0]._source);
     } catch (err) {
       console.error(err);
@@ -85,8 +85,7 @@ router
             },
           },
         });
-        console.log(writer.body.hits.hits[0]._source.name);
-        if (writer.body.hits.hits[0]._source.name == req.user?.nickname) {
+        if (writer.body.hits.hits[0]._source.user_id == req.user?._id) {
           const result = await esClient.update({
             index: index,
             id: req.params.id,
@@ -97,7 +96,6 @@ router
               },
             },
           });
-          console.log(req.params.id);
           res.status(200).json(result.body);
         } else {
           res.status(400).send(false);
@@ -122,13 +120,11 @@ router
             },
           },
         });
-        console.log(writer.body.hits.hits[0]._source.name);
-        if (writer.body.hits.hits[0]._source.name == req.user?.nickname) {
+        if (writer.body.hits.hits[0]._source.user_id == req.user?._id) {
           const result = await esClient.delete({
             index: index,
             id: req.params.id,
           });
-          console.log(req.params.id);
           res.status(204).json(result.body);
         } else {
           res.status(400).send(false);

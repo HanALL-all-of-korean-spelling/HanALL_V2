@@ -81,7 +81,6 @@ router.post(
           return next(loginError);
         }
         // 로그인 성공 시 토큰 발급
-        console.log("토큰 발급 아이디", user.body.hits.hits[0]._id);
         const token = jwt.sign(
           { id: user.body.hits.hits[0]._id },
           process.env.JWT_SECRET as string,

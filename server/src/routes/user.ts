@@ -14,8 +14,9 @@ router.get(
   passport.authenticate("jwt", { session: false }),
   (req: Request, res: Response, next: NextFunction) => {
     try {
-      const user_info = req.user;
-      res.json(user_info);
+      const email = req.user?._source.email;
+      const nickname = req.user?._source.nickname;
+      res.json({ email, nickname });
     } catch (error) {
       console.error(error);
       next(error);

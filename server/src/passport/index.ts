@@ -13,7 +13,16 @@ const index: String = "users";
 declare global {
   namespace Express {
     interface User {
-      email: number;
+      _id: string;
+      _source: source;
+    }
+  }
+}
+
+declare global {
+  namespace Express {
+    interface source {
+      email: string;
       nickname: string;
       password: string;
     }
@@ -55,13 +64,11 @@ const passportVerify = async (email: String, password: String, done: any) => {
 };
 
 const cookieExtractor = (req: Request) => {
-  console.log("cookie", req.cookies);
   const { token } = req.cookies;
   return token;
 };
 
 const JWTConfig = {
-  //jwtFromRequest: ExtractJWT.fromAuthHeaderAsBearerToken(),
   jwtFromRequest: cookieExtractor,
   secretOrKey: process.env.JWT_SECRET,
 };
@@ -81,7 +88,7 @@ const JWTVerify = async (jwtPayload: any, done: any) => {
     });
     // 유저 데이터가 있다면 유저 데이터 전송
     if (user) {
-      done(null, user.body.hits.hits[0]._source);
+      done(null, user.body.hits.hits[0]);
       return;
     }
     // 유저 데이터가 없을 경우 에러 표시
