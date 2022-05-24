@@ -1,18 +1,16 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
+import { getSpellingList } from "../../services/user-service";
 
 export const InfoListPage = () => {
   const [spellings, setSpellings] = useState<any[]>([]);
+  const [sort, setSort] = useState<string>("created_at");
 
-  const getData = async () => {
-    await axios.get("/api/spellings?sort=created_at").then((response) => {
-      console.log(response.data);
-      setSpellings(response.data);
-    });
-  };
   useEffect(() => {
-    getData();
-  }, []);
+    async () => {
+      const list = await getSpellingList(sort);
+      setSpellings(list);
+    };
+  }, [sort]);
 
   const renderSpellings =
     spellings &&
