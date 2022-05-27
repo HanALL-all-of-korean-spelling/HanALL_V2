@@ -1,17 +1,19 @@
 import express, { Request, Response, NextFunction } from "express";
+const cookieParser = require("cookie-parser");
 const indexRouter = require("./routes");
-const esClient = require("./connection.ts");
-const conCheck = require("./conCheck");
+const esClient = require("./models/connection.ts");
+const conCheck = require("./models/conCheck");
 import passport from "passport";
 import { passportLocal } from "./passport";
-import * as crt from "./createIndex";
-import * as del from "./deleteIndex";
-import * as ins from "./insertData";
+import * as crt from "./models/createIndex";
+import * as del from "./models/deleteIndex";
+import * as ins from "./models/insertData";
 const { swaggerUi, specs } = require("../swagger");
 
 const app: express.Application = express();
 
 app.use(express.json());
+app.use(cookieParser(process.env.COOKIE_SECRET));
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(specs));
 app.use(passport.initialize());
 passportLocal();
@@ -36,6 +38,7 @@ const reload_user_index = () => {
 //reload_word_index();
 
 //reload_board_index();
+
 //reload_user_index();
 
 //ins.insertData();

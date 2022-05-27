@@ -1,14 +1,15 @@
 import express, { Request, Response, NextFunction } from "express";
-import { resourceLimits } from "worker_threads";
 const router = express.Router();
-const esClient = require("../connection.ts");
+const esClient = require("../models/connection.ts");
 const index: String = "words";
 
 router
   .route("/")
   .get(async (req: Request, res: Response, next: NextFunction) => {
     try {
-      console.log(Math.random());
+      const today = new Date();
+      const seed = today.getDate() + today.getMonth();
+      console.log(seed);
       const result = await esClient.search({
         index: index,
         body: {
@@ -18,7 +19,7 @@ router
               query: {
                 match_all: {},
               },
-              random_score: {},
+              random_score: { seed: seed },
             },
           },
         },

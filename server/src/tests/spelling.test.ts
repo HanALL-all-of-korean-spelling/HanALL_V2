@@ -1,7 +1,7 @@
 const request = require("supertest");
 const spellingRouter = require("../routes/spelling");
 const app = require("../index");
-const client = require("../connection.ts");
+const client = require("../models/connection.ts");
 
 describe("GET /api/spellings", () => {
   test("return spellings", async () => {

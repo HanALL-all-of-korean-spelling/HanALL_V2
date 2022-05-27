@@ -1,7 +1,6 @@
 import express, { Request, Response, NextFunction } from "express";
-import { resourceLimits } from "worker_threads";
 const router = express.Router();
-const esClient = require("../connection.ts");
+const esClient = require("../models/connection.ts");
 const index: String = "words";
 
 //정보글 post 때 넣을 date 값
@@ -14,9 +13,9 @@ let date = get_year + "-" + get_month + "-" + get_date;
 router
   .route("/")
   .get(async (req: Request, res: Response, next: NextFunction) => {
-    let { text, sort_by } = req.query;
+    let { text, sort } = req.query;
     let flag: Boolean = false;
-    if (text && !sort_by) {
+    if (text && !sort) {
       // 철자 정보 검색
       try {
         const result = await esClient.search({
@@ -64,12 +63,12 @@ router
         console.error(err);
         next(err);
       }
-    } else if (sort_by && !text) {
+    } else if (sort && !text) {
       // 철자 정보 게시판 조회
       try {
         const result = await esClient.search({
           index: index,
-          sort: [`${sort_by}:desc`],
+          sort: [`${sort}:desc`],
           body: {
             _source: ["title", "hits", "scraps", "created_at"],
             size: "10",
@@ -85,7 +84,7 @@ router
         console.error(err);
         next(err);
       }
-    } else if (!text && !sort_by) {
+    } else if (!text && !sort) {
       // 메인 페이지 요청
       try {
         const sort_hits_result = await esClient.search({
@@ -208,7 +207,7 @@ module.exports = router;
  *                type: string
  *                description: 검색 내용
  *          - in: query
- *            name: "sort_by"
+ *            name: "sort"
  *            description: 정렬 방식을 입력하세요.(created_at / hits / scraps)
  *            required: false
  *            schema:

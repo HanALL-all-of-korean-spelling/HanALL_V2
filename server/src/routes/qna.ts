@@ -1,6 +1,7 @@
 import express, { Request, Response, NextFunction } from "express";
+import passport from "passport";
 const router = express.Router();
-const esClient = require("../connection.ts");
+const esClient = require("../models/connection.ts");
 const index: String = "board";
 
 let get_today = new Date();
@@ -28,23 +29,27 @@ router
       next(err);
     }
   })
-  .post(async (req: Request, res: Response, next: NextFunction) => {
-    try {
-      const result = await esClient.index({
-        index: index,
-        body: {
-          title: req.body.title,
-          name: req.body.name,
-          question: req.body.question,
-          created_at: date,
-        },
-      });
-      res.status(201).json(result.body);
-    } catch (err) {
-      console.error(err);
-      next(err);
+  .post(
+    passport.authenticate("jwt", { session: false }),
+    async (req: Request, res: Response, next: NextFunction) => {
+      try {
+        const result = await esClient.index({
+          index: index,
+          body: {
+            title: req.body.title,
+            nickname: req.user?._source.nickname,
+            user_id: req.user?._id,
+            question: req.body.question,
+            created_at: date,
+          },
+        });
+        res.status(201).json(result.body);
+      } catch (err) {
+        console.error(err);
+        next(err);
+      }
     }
-  });
+  );
 
 router
   .route("/:id")
@@ -60,46 +65,76 @@ router
           },
         },
       });
-      console.log(req.params.id);
       res.status(200).json(result.body.hits.hits[0]._source);
     } catch (err) {
       console.error(err);
       next(err);
     }
   })
-  .put(async (req: Request, res: Response, next: NextFunction) => {
-    try {
-      const result = await esClient.update({
-        index: index,
-        id: req.params.id,
-        body: {
-          doc: {
-            title: req.body.title,
-            name: req.body.name,
-            question: req.body.question,
+  .put(
+    passport.authenticate("jwt", { session: false }),
+    async (req: Request, res: Response, next: NextFunction) => {
+      try {
+        const writer = await esClient.search({
+          index: index,
+          body: {
+            query: {
+              bool: {
+                must: [{ match: { _id: req.params.id } }],
+              },
+            },
           },
-        },
-      });
-      console.log(req.params.id);
-      res.status(200).json(result.body);
-    } catch (err) {
-      console.error(err);
-      next(err);
+        });
+        if (writer.body.hits.hits[0]._source.user_id == req.user?._id) {
+          const result = await esClient.update({
+            index: index,
+            id: req.params.id,
+            body: {
+              doc: {
+                title: req.body.title,
+                question: req.body.question,
+              },
+            },
+          });
+          res.status(200).json(result.body);
+        } else {
+          res.status(400).send(false);
+        }
+      } catch (err) {
+        console.error(err);
+        next(err);
+      }
     }
-  })
-  .delete(async (req: Request, res: Response, next: NextFunction) => {
-    try {
-      const result = await esClient.delete({
-        index: index,
-        id: req.params.id,
-      });
-      console.log(req.params.id);
-      res.status(204).json(result.body);
-    } catch (err) {
-      console.error(err);
-      next(err);
+  )
+  .delete(
+    passport.authenticate("jwt", { session: false }),
+    async (req: Request, res: Response, next: NextFunction) => {
+      try {
+        const writer = await esClient.search({
+          index: index,
+          body: {
+            query: {
+              bool: {
+                must: [{ match: { _id: req.params.id } }],
+              },
+            },
+          },
+        });
+        if (writer.body.hits.hits[0]._source.user_id == req.user?._id) {
+          const result = await esClient.delete({
+            index: index,
+            id: req.params.id,
+          });
+          res.status(204).json(result.body);
+        } else {
+          res.status(400).send(false);
+        }
+      } catch (err) {
+        console.error(err);
+        next(err);
+      }
     }
-  });
+  );
 
 module.exports = router;
 
@@ -126,7 +161,7 @@ module.exports = router;
  *            required: true
  *            schema:
  *                type: string
- *                description: title, name, question
+ *                description: title, question
  *          produces:
  *          - application/json
  *          responses:
@@ -163,7 +198,7 @@ module.exports = router;
  *            required: true
  *            schema:
  *                type: string
- *                description: title, name, question
+ *                description: title, question
  *          produces:
  *          - application/json
  *          responses:

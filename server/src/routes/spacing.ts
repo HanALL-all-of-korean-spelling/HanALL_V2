@@ -1,17 +1,17 @@
 import express, { Request, Response, NextFunction } from "express";
 const router = express.Router();
-const esClient = require("../connection.ts");
+const esClient = require("../models/connection.ts");
 const index: String = "words";
 
 router
   .route("/")
   .get(async (req: Request, res: Response, next: NextFunction) => {
-    let { sort_by } = req.query;
-    if (sort_by) {
+    let { sort } = req.query;
+    if (sort) {
       try {
         const result = await esClient.search({
           index: index,
-          sort: [`${sort_by}:desc`],
+          sort: [`${sort}:desc`],
           body: {
             _source: ["title", "hits", "scraps", "created_at"],
             query: {
@@ -142,7 +142,7 @@ module.exports = router;
  *          description: 띄어쓰기 정보 조회
  *          parameters:
  *          - in: query
- *            name: "sort_by"
+ *            name: "sort"
  *            description: 정렬 방식을 입력하세요.(created_at / hits / scraps)
  *            required: false
  *            schema:

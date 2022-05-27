@@ -1,12 +1,33 @@
+import { Request } from "express";
+
 const passport = require("passport");
 const passportJWT = require("passport-jwt");
 const JWTStrategy = passportJWT.Strategy;
 const ExtractJWT = passportJWT.ExtractJwt;
 const LocalStrategy = require("passport-local").Strategy;
 const bcrypt = require("bcryptjs");
-const esClient = require("../connection.ts");
+const esClient = require("../models/connection.ts");
 require("dotenv").config();
 const index: String = "users";
+
+declare global {
+  namespace Express {
+    interface User {
+      _id: string;
+      _source: source;
+    }
+  }
+}
+
+declare global {
+  namespace Express {
+    interface source {
+      email: string;
+      nickname: string;
+      password: string;
+    }
+  }
+}
 
 const passportConfig = { usernameField: "email", passwordField: "password" };
 
@@ -42,9 +63,14 @@ const passportVerify = async (email: String, password: String, done: any) => {
   }
 };
 
+const cookieExtractor = (req: Request) => {
+  const { token } = req.cookies;
+  return token;
+};
+
 const JWTConfig = {
-  jwtFromRequest: ExtractJWT.fromAuthHeaderAsBearerToken(),
-  secretOrKey: "jwt-secret-key",
+  jwtFromRequest: cookieExtractor,
+  secretOrKey: process.env.JWT_SECRET,
 };
 
 const JWTVerify = async (jwtPayload: any, done: any) => {
@@ -62,7 +88,7 @@ const JWTVerify = async (jwtPayload: any, done: any) => {
     });
     // 유저 데이터가 있다면 유저 데이터 전송
     if (user) {
-      done(null, user.body.hits.hits[0]._source);
+      done(null, user.body.hits.hits[0]);
       return;
     }
     // 유저 데이터가 없을 경우 에러 표시
