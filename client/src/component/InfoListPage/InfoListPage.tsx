@@ -5,11 +5,14 @@ export const InfoListPage = () => {
   const [spellings, setSpellings] = useState<any[]>([]);
   const [sort, setSort] = useState<string>("created_at");
 
+  const getData = async () => {
+    const list = await getSpellingList(sort);
+    console.log(list);
+    setSpellings(list);
+  };
+
   useEffect(() => {
-    async () => {
-      const list = await getSpellingList(sort);
-      setSpellings(list);
-    };
+    getData();
   }, [sort]);
 
   const renderSpellings =
