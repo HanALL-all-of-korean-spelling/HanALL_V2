@@ -114,9 +114,10 @@ router
             },
           },
         });
-        const result: Array<JSON> = [];
-        result.push(sort_hits_result.body.hits.hits);
-        result.push(sort_crt_result.body.hits.hits);
+        const result: Array<any> = [];
+
+        result.push("hits", sort_hits_result.body.hits.hits);
+        result.push("created_at", sort_crt_result.body.hits.hits);
         res.status(200).json(result);
       } catch (err) {
         console.error(err);
