@@ -22,6 +22,20 @@ router.get(
   }
 );
 
+router.get(
+  "/scraps",
+  passport.authenticate("jwt", { session: false }),
+  (req: Request, res: Response, next: NextFunction) => {
+    try {
+      console.log(req.user);
+      res.json(req.user?._source.scraps);
+    } catch (error) {
+      console.error(error);
+      next(error);
+    }
+  }
+);
+
 module.exports = router;
 
 /**
@@ -37,7 +51,7 @@ module.exports = router;
  *      get:
  *          tags: [users]
  *          summary: 회원 정보 확인
- *          description: "우측 자물쇠 클릭 후 'Bearer 토큰'을 입력하세요."
+ *          description: "우측 자물쇠 클릭 후 토큰을 입력하세요."
  *          security:
  *              - cookieAuth: []
  *          produces:
@@ -45,4 +59,16 @@ module.exports = router;
  *          responses:
  *              200:
  *                  description: 회원 정보 확인 성공
+ *  /api/users/scraps:
+ *      get:
+ *          tags: [users]
+ *          summary: 회원 스크랩 확인
+ *          description: "우측 자물쇠 클릭 후 토큰을 입력하세요."
+ *          security:
+ *              - cookieAuth: []
+ *          produces:
+ *          - application/json
+ *          responses:
+ *              200:
+ *                  description: 회원 스크랩 확인 성공
  */
