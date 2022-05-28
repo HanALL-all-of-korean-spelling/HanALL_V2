@@ -206,8 +206,8 @@ router
         let new_scraps: Array<string> = [];
 
         // 기존에 스크랩 했던 게 있으면 추가
-        if (user_result.body.hits.hits[0]._source.scraps) {
-          new_scraps = user_result.body.hits.hits[0]._source.scraps;
+        if (user_result.body.hits.hits[0]._source.scraps.spelling) {
+          new_scraps = user_result.body.hits.hits[0]._source.scraps.spelling;
           if (
             // 이미 스크랩한 글이면
             new_scraps.includes(req.params.id)
@@ -311,7 +311,7 @@ module.exports = router;
  *              200:
  *                  description: 철자 정보 세부 조회 성공
  *      put:
- *          tags: [speeling]
+ *          tags: [spelling]
  *          summary: 철자 정보 스크랩
  *          description: 철자 정보 스크랩
  *          parameters:

@@ -65,7 +65,14 @@ const users_schema = {
     type: "keyword",
   },
   scraps: {
-    type: "keyword",
+    properties: {
+      spelling: {
+        type: "keyword",
+      },
+      spacing: {
+        type: "keyword",
+      },
+    },
   },
 };
 

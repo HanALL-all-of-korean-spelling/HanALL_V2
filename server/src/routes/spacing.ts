@@ -148,8 +148,8 @@ router
         let new_scraps: Array<string> = [];
 
         // 기존에 스크랩 했던 게 있으면 추가
-        if (user_result.body.hits.hits[0]._source.scraps) {
-          new_scraps = user_result.body.hits.hits[0]._source.scraps;
+        if (user_result.body.hits.hits[0]._source.scraps.spacing) {
+          new_scraps = user_result.body.hits.hits[0]._source.scraps.spacing;
           if (
             // 이미 스크랩한 글이면
             new_scraps.includes(req.params.id)
@@ -167,7 +167,7 @@ router
           id: req.user?._id,
           body: {
             doc: {
-              scraps: new_scraps,
+              scraps: { spacing: new_scraps },
             },
           },
         });
