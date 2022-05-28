@@ -1,6 +1,7 @@
 import express, { Request, Response, NextFunction } from "express";
 const router = express.Router();
 const esClient = require("../models/connection.ts");
+import passport from "passport";
 const index: String = "words";
 
 router
@@ -128,7 +129,81 @@ router
       console.error(err);
       next(err);
     }
-  });
+  })
+  .put(
+    passport.authenticate("jwt", { session: false }),
+    async (req: Request, res: Response, next: NextFunction) => {
+      try {
+        const user_result = await esClient.search({
+          index: "users",
+          body: {
+            query: {
+              bool: {
+                must: [{ match: { _id: req.user?._id } }],
+              },
+            },
+          },
+        });
+
+        let new_scraps: Array<string> = [];
+
+        // 기존에 스크랩 했던 게 있으면 추가
+        if (user_result.body.hits.hits[0]._source.scraps.spacing) {
+          new_scraps = user_result.body.hits.hits[0]._source.scraps.spacing;
+          if (
+            // 이미 스크랩한 글이면
+            new_scraps.includes(req.params.id)
+          ) {
+            res.status(400).send("이미 스크랩한 글입니다.");
+          } else {
+            new_scraps.push(req.params.id);
+          }
+        } else {
+          // 첫 스크랩이면
+          new_scraps = [req.params.id];
+        }
+        const user_scrap = esClient.update({
+          index: "users",
+          id: req.user?._id,
+          body: {
+            doc: {
+              scraps: { spacing: new_scraps },
+            },
+          },
+        });
+
+        // 스크랩 수 설정
+        const result = await esClient.search({
+          index: index,
+          body: {
+            query: {
+              bool: {
+                must: [
+                  { match: { type: "spacing" } },
+                  { match: { _id: req.params.id } },
+                ],
+              },
+            },
+          },
+        });
+        let scraps = result.body.hits.hits[0]._source.scraps;
+        scraps++;
+        const count_hits = await esClient.update({
+          index: index,
+          id: req.params.id,
+          body: {
+            doc: {
+              scraps: scraps,
+            },
+          },
+        });
+        res.status(200).json(result.body.hits.hits[0]._source);
+      } catch (err) {
+        console.error(err);
+        next(err);
+      }
+    }
+  );
 
 module.exports = router;
 
@@ -170,4 +245,20 @@ module.exports = router;
  *          responses:
  *              200:
  *                  description: 띄어쓰기 정보 세부 조회 성공
+ *      put:
+ *          tags: [spacing]
+ *          summary: 띄어쓰기 정보 스크랩
+ *          description: 띄어쓰기 정보 스크랩
+ *          parameters:
+ *          - in: path
+ *            name: "id"
+ *            description: 게시글의 고유 아이디 값을 입력하세요.
+ *            required: true
+ *            schema:
+ *                type: string
+ *          produces:
+ *          - application/json
+ *          responses:
+ *              200:
+ *                  description: 띄어쓰기 정보 스크랩 성공
  */
