@@ -25,6 +25,7 @@ declare global {
       email: string;
       nickname: string;
       password: string;
+      scraps: Array<string>;
     }
   }
 }
