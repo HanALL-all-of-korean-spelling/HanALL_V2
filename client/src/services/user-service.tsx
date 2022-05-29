@@ -35,7 +35,7 @@ export const getSpellingList = (sort: string) => {
     });
 };
 
-export const getSpellingDetail = (id: string) => {
+export const getSpellingDetail = (id: string | string[]) => {
   return axios
     .get("/api/spellings/" + id)
     .then((response) => {

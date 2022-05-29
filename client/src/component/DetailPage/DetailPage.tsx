@@ -1,9 +1,17 @@
 import React, { useState, useEffect } from "react";
 import { getSpellingDetail } from "../../services/user-service";
 
-export const DetailPage = () => {
-  const [detailInfo, setDetailInfo] = useState<Object>({});
-  let id = "uzEM-oABH_eeTwxVb8dK";
+export const DetailPage = ({ id }: { id: string | string[] }) => {
+  const [detailInfo, setDetailInfo] = useState({
+    title: "",
+    hits: 0,
+    scraps: 0,
+    right_words: "",
+    wrong_words: "",
+    description: "",
+    helpful_info: "",
+    related: "",
+  });
   const getData = async () => {
     const detail = await getSpellingDetail(id);
     console.log(detail);
@@ -11,7 +19,9 @@ export const DetailPage = () => {
   };
 
   useEffect(() => {
-    getData();
+    if (id) {
+      getData();
+    }
   }, [id]);
 
   return (
