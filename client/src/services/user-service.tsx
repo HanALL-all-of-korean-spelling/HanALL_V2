@@ -80,3 +80,15 @@ export const getMainSpellingList = () => {
       console.log(error);
     });
 };
+
+// today
+export const getTodayInfo = () => {
+  return axios
+    .get("/api/todays")
+    .then((response) => {
+      return response.data;
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+};
