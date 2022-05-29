@@ -1,23 +1,11 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { getSearchResult } from "../../services/user-service";
 
-export const RightWrong = () => {
-  const result = {
-    type: "spelling",
-    hit: 34,
-    scrap: 32,
-    title: "베개 vs 배게",
-    right_words: "베개",
-    wrong_words: ["배게", "배개", "베게"],
-    Description: "베개에 대한 설명",
-    Helpful_info: "쉽게 외우는 방법",
-    Related: "",
-    flag: true,
-  };
-
+export const RightWrong = ({ result }: { result: Object[] }) => {
   return (
     <div>
       <div>
-        <p>{result.right_words}</p>가 옳은 표현입니다.
+        {/* <p>{result.result._source.right_words}</p>가 옳은 표현입니다. */}
       </div>
       {result.flag ? (
         <div>당신은 맞춤법 지킴이!</div>

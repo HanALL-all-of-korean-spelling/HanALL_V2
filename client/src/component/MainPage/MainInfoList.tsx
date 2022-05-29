@@ -1,23 +1,18 @@
 import React from "react";
-import { InfoListPage } from "../InfoListPage/InfoListPage";
 
-export const MainInfoList = () => {
-  return (
-    <>
-      <div>
-        <div>
-          <div>철자</div>
-          <div>더보기</div>
-        </div>
-        <InfoListPage />
-      </div>
-      <div>
-        <div>
-          <div>띄어쓰기</div>
-          <div>더보기</div>
-        </div>
-        <InfoListPage />
-      </div>
-    </>
-  );
+export const MainInfoList = ({ data }: { data: Array<Object> }) => {
+  const renderInfo =
+    data &&
+    data.map((info) => {
+      return (
+        // <div key={info._id}>
+        //   <div>{info._source.title}</div>
+        //   <div>{info._source.hits}</div>
+        //   <div>{info._source.created_at}</div>
+        // </div>
+        <div>hello</div>
+      );
+    });
+
+  return <>{renderInfo}</>;
 };

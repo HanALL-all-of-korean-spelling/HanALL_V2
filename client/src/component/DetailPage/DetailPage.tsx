@@ -1,17 +1,28 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { getSpellingDetail } from "../../services/user-service";
 
-export const DetailPage = () => {
-  const detailInfo = {
-    type: "spelling",
-    hit: 34,
-    scrap: 32,
-    title: "베개 vs 배게",
-    right_words: "베개",
-    wrong_words: ["배게", "배개", "베게"],
-    Description: "베개에 대한 설명",
-    Helpful_info: "쉽게 외우는 방법",
-    Related: "",
+export const DetailPage = ({ id }: { id: string | string[] }) => {
+  const [detailInfo, setDetailInfo] = useState({
+    title: "",
+    hits: 0,
+    scraps: 0,
+    right_words: "",
+    wrong_words: "",
+    description: "",
+    helpful_info: "",
+    related: "",
+  });
+  const getData = async () => {
+    const detail = await getSpellingDetail(id);
+    console.log(detail);
+    setDetailInfo(detail);
   };
+
+  useEffect(() => {
+    if (id) {
+      getData();
+    }
+  }, [id]);
 
   return (
     <>
@@ -19,20 +30,20 @@ export const DetailPage = () => {
         <div>{detailInfo.title}</div>
         <div>
           <div>조회수</div>
-          <div>{detailInfo.hit}</div>
+          <div>{detailInfo.hits}</div>
         </div>
         <div>
           <div>보관</div>
-          <div>{detailInfo.scrap}</div>
+          <div>{detailInfo.scraps}</div>
         </div>
       </div>
       <div>
         <div>😄 옳은 표현: {detailInfo.right_words}</div>
         <div>🤔 틀린 표현: {detailInfo.wrong_words}</div>
-        <div>{detailInfo.Description}</div>
-        <div>{detailInfo.Helpful_info}</div>
+        <div>{detailInfo.description}</div>
+        <div>{detailInfo.helpful_info}</div>
         <div>보관하기</div>
-        {detailInfo.Related && <div>친구 {detailInfo.Related}</div>}
+        {detailInfo.related && <div>친구 {detailInfo.related}</div>}
       </div>
     </>
   );
