@@ -57,3 +57,26 @@ export const getSearchResult = (searchText: string | string[]) => {
       console.log(error);
     });
 };
+
+// main
+export const getMainSpacingList = () => {
+  return axios
+    .get("/api/spacings")
+    .then((response) => {
+      return response.data;
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+};
+
+export const getMainSpellingList = () => {
+  return axios
+    .get("/api/spellings")
+    .then((response) => {
+      return response.data;
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+};
