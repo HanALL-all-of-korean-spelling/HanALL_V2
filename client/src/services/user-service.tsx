@@ -45,3 +45,15 @@ export const getSpellingDetail = (id: string | string[]) => {
       console.log(error);
     });
 };
+
+// search
+export const getSearchResult = (searchText: string | string[]) => {
+  return axios
+    .get('/api/spellings?text="' + searchText + '"')
+    .then((response) => {
+      return response.data;
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+};
