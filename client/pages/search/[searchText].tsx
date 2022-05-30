@@ -6,9 +6,10 @@ import { DetailPage } from "../../src/component/DetailPage/DetailPage";
 import { SearchBar } from "../../src/component/SearchBar";
 import { RightWrong } from "../../src/component/SearchPage/RightWrong";
 import { SimilarResults } from "../../src/component/SearchPage/SimilarResults";
+import { ISearch } from "../../types";
 
 const Search: NextPage = () => {
-  const [result, setResult] = useState<any[]>([]);
+  const [result, setResult] = useState<ISearch>();
 
   const router = useRouter();
   const { searchText } = router.query;
@@ -27,10 +28,14 @@ const Search: NextPage = () => {
 
   return (
     <>
-      {/* <SearchBar /> */}
-      <RightWrong result={result} />
-      <DetailPage id={result.detail._id} />
-      <SimilarResults result={result} />
+      {result && (
+        <>
+          {/* <SearchBar /> */}
+          <RightWrong result={result} />
+          <DetailPage id={result.detail._id} />
+          <SimilarResults result={result} />
+        </>
+      )}
     </>
   );
 };

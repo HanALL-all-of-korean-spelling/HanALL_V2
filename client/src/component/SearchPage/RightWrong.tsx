@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
-import { getSearchResult } from "../../services/user-service";
+import React from "react";
+import { ISearch } from "../../../types";
 
-export const RightWrong = ({ result }: { result: Object[] }) => {
+export const RightWrong = ({ result }: { result: ISearch }) => {
   return (
     <div>
       <div>
