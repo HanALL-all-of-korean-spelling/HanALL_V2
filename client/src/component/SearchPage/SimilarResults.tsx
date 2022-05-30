@@ -1,6 +1,7 @@
 import React from "react";
+import { ISearch } from "../../../types";
 
-export const SimilarResults = ({ result }: { result: Object[] }) => {
+export const SimilarResults = ({ result }: { result: ISearch }) => {
   const renderSimilarResult =
     result.similar &&
     result.similar.map((similar) => {

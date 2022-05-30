@@ -1,6 +1,7 @@
 import React from "react";
+import { IList } from "../../../types";
 
-export const MainInfoList = ({ data }: { data: Array<Object> }) => {
+export const MainInfoList = ({ data }: { data: IList[] }) => {
   const renderInfo =
     data &&
     data.map((info) => {
@@ -19,6 +20,5 @@ export const MainInfoList = ({ data }: { data: Array<Object> }) => {
         </>
       );
     });
-
   return <>{renderInfo}</>;
 };
