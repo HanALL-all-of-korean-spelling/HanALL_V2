@@ -12,8 +12,7 @@ export const TodaySpelling = () => {
 
   const getData = async () => {
     const info = await getTodayInfo();
-    console.log(info.result);
-    setTodayInfo(info.result);
+    setTodayInfo(info);
   };
 
   useEffect(() => {

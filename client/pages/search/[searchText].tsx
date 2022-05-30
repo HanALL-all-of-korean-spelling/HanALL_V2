@@ -17,7 +17,6 @@ const Search: NextPage = () => {
     if (searchText) {
       const search = await getSearchResult(searchText);
       console.log(search);
-      console.log(search.result._index);
       setResult(search);
     }
   };
@@ -30,7 +29,7 @@ const Search: NextPage = () => {
     <>
       {/* <SearchBar /> */}
       <RightWrong result={result} />
-      {/* <DetailPage /> */}
+      <DetailPage id={result.detail._id} />
       <SimilarResults result={result} />
     </>
   );

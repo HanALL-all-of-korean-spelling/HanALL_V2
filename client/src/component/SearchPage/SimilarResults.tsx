@@ -2,8 +2,8 @@ import React from "react";
 
 export const SimilarResults = ({ result }: { result: Object[] }) => {
   const renderSimilarResult =
-    result.result &&
-    result.result.map((similar) => {
+    result.similar &&
+    result.similar.map((similar) => {
       return (
         <div key={similar._id}>
           <div>{similar._source.title}</div>
