@@ -5,7 +5,7 @@ export const RightWrong = ({ result }: { result: Object[] }) => {
   return (
     <div>
       <div>
-        {/* <p>{result.result._source.right_words}</p>가 옳은 표현입니다. */}
+        <p>{result.detail._source.right_words}</p>가 옳은 표현입니다.
       </div>
       {result.flag ? (
         <div>당신은 맞춤법 지킴이!</div>
