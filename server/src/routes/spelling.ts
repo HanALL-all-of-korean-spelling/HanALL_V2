@@ -57,9 +57,9 @@ router
         if (flag_check.body.hits.total.value > 0) {
           flag = true;
         }
-        return res
-          .status(200)
-          .json({ result: result.body.hits.hits, flag: flag });
+        const detail: JSON = result.body.hits.hits[0];
+        const similar: Array<JSON> = result.body.hits.hits.slice(1);
+        return res.status(200).json({ detail: detail, similar, flag: flag });
       } catch (err) {
         console.error(err);
         next(err);
@@ -114,11 +114,10 @@ router
             },
           },
         });
-        const result: Array<any> = [];
+        const hits: Array<JSON> = sort_hits_result.body.hits.hits;
+        const crt: Array<JSON> = sort_crt_result.body.hits.hits;
 
-        result.push("hits", sort_hits_result.body.hits.hits);
-        result.push("created_at", sort_crt_result.body.hits.hits);
-        res.status(200).json(result);
+        res.status(200).json({ hits_order: hits, created_at_order: crt });
       } catch (err) {
         console.error(err);
         next(err);

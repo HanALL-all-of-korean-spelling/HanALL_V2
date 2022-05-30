@@ -55,10 +55,10 @@ router
             },
           },
         });
-        const result: Array<JSON> = [];
-        result.push(sort_hits_result.body.hits.hits);
-        result.push(sort_crt_result.body.hits.hits);
-        res.status(200).json(result);
+        const hits: Array<JSON> = sort_hits_result.body.hits.hits;
+        const crt: Array<JSON> = sort_crt_result.body.hits.hits;
+
+        res.status(200).json({ hits_order: hits, created_at_order: crt });
       } catch (err) {
         console.error(err);
         next(err);
