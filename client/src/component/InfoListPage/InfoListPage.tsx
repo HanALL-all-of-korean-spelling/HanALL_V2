@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
+import { IList } from "../../../types";
 import { getSpellingList } from "../../services/user-service";
 
 export const InfoListPage = () => {
-  const [spellings, setSpellings] = useState<any[]>([]);
+  const [spellings, setSpellings] = useState<IList[]>();
   const [sort, setSort] = useState<string>("created_at");
 
   const getData = async () => {
