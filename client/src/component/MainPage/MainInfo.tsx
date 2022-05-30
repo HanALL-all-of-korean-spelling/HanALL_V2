@@ -14,8 +14,6 @@ export const MainInfo = () => {
     const spacing = await getMainSpacingList();
     setSpellingList(spelling);
     setSpacingList(spacing);
-    console.log(spelling);
-    console.log(spacing);
   };
 
   useEffect(() => {
@@ -29,14 +27,24 @@ export const MainInfo = () => {
           <div>철자</div>
           <div>더보기</div>
         </div>
-        <MainInfoList data={spellingList} />
+        <div>
+          <div>다른 사람들이 많이 봤어요!</div>
+          <MainInfoList data={spellingList.hits_order} />
+          <div>새로 추가됐어요!</div>
+          <MainInfoList data={spellingList.created_at_order} />
+        </div>
       </div>
       <div>
         <div>
           <div>띄어쓰기</div>
           <div>더보기</div>
         </div>
-        <MainInfoList data={spacingList} />
+        <div>
+          <div>다른 사람들이 많이 봤어요!</div>
+          <MainInfoList data={spacingList.hits_order} />
+          <div>새로 추가됐어요!</div>
+          <MainInfoList data={spacingList.created_at_order} />
+        </div>
       </div>
     </>
   );
