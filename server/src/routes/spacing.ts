@@ -108,9 +108,12 @@ router
         },
       });
       if (related.body.hits.total.value == 0) {
-        related = "";
+        related = { id: "", title: "" };
       } else {
-        related = related.body.hits.hits[0]._id;
+        related = {
+          id: related.body.hits.hits[0]._id,
+          title: related.body.hits.hits[0]._source.title,
+        };
       }
       let hits = result.body.hits.hits[0]._source.hits;
       hits++;
