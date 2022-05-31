@@ -24,7 +24,7 @@ router
           },
         },
       });
-      return res.status(200).json(result.body.hits.hits[0]._source);
+      return res.status(200).json(result.body.hits.hits[0]);
     } catch (err) {
       console.error(err);
       next(err);

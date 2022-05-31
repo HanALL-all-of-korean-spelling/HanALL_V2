@@ -37,7 +37,14 @@ const words_schema = {
     type: "text",
   },
   related: {
-    type: "keyword",
+    properties: {
+      id: {
+        type: "keyword",
+      },
+      title: {
+        type: "text",
+      },
+    },
   },
   hits: {
     type: "integer",
