@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import { ISearch } from "../../../types";
 
@@ -6,10 +7,12 @@ export const SimilarResults = ({ result }: { result: ISearch }) => {
     result.similar &&
     result.similar.map((similar) => {
       return (
-        <div key={similar._id}>
-          <div>{similar._source.title}</div>
-          <div>{similar._source.hits}</div>
-        </div>
+        <Link href="/detail/[id]" as={`/detail/${similar._id}`}>
+          <div key={similar._id}>
+            <div>{similar._source.title}</div>
+            <div>{similar._source.hits}</div>
+          </div>
+        </Link>
       );
     });
 
