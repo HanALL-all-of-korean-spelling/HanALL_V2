@@ -8,6 +8,7 @@ const Home: NextPage = () => {
     <>
       <SearchBar />
       <TodaySpelling />
+      <hr />
       <MainInfo />
     </>
   );
