@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import { IDetail } from "../../../types";
 import { getSpellingDetail } from "../../services/user-service";
@@ -37,7 +38,14 @@ export const DetailPage = ({ id }: { id: string | string[] }) => {
             <div>{detailInfo.description}</div>
             <div>{detailInfo.helpful_info}</div>
             <div>보관하기</div>
-            {detailInfo.related && <div>친구 {detailInfo.related.title}</div>}
+            {detailInfo.related?.id && (
+              <Link
+                href="/detail/[id]"
+                as={`/detail/${detailInfo.related?.id}`}
+              >
+                <div>친구 {detailInfo.related.title}</div>
+              </Link>
+            )}
           </div>
         </>
       )}
