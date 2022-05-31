@@ -1,24 +1,24 @@
 import type { NextPage } from "next";
 import React, { useEffect, useState } from "react";
 import { InfoListPage } from "../src/component/InfoListPage/InfoListPage";
-import { getSpellingList } from "../src/services/user-service";
+import { getSpacingList } from "../src/services/user-service";
 import { IList } from "../types";
 
-const Spelling: NextPage = () => {
-  const [spellings, setSpellings] = useState<IList[]>();
+const Spacing: NextPage = () => {
+  const [spacings, setSpacings] = useState<IList[]>();
   const [sort, setSort] = useState<string>("created_at");
 
   const getData = async () => {
-    const list = await getSpellingList(sort);
+    const list = await getSpacingList(sort);
     console.log(list);
-    setSpellings(list);
+    setSpacings(list);
   };
 
   useEffect(() => {
     getData();
   }, [sort]);
 
-  return <>{spellings && <InfoListPage list={spellings} />}</>;
+  return <>{spacings && <InfoListPage list={spacings} />}</>;
 };
 
-export default Spelling;
+export default Spacing;
