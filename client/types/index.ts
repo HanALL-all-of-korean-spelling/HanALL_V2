@@ -24,14 +24,24 @@ export interface IMainList {
   created_at_order: IList[],
 }
 
-// 디테일 + 오늘의 맞춤법
-export interface IDetail extends ISource{
+interface IRelated {
+  id: string,
+  title: string,
+}
+
+// 디테일
+export interface IDetail extends ISource {
   type: string,
   right_words: string,
   wrong_words: string[],
   description: string,
   helpful_info: string,
-  related: string,
+  related?: IRelated,
+}
+
+// 오늘의 맞춤법
+export interface IToday extends IDetail {
+  _id: string,
 }
 
 // 검색 세부 결과
