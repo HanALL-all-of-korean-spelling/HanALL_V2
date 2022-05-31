@@ -7,7 +7,6 @@ export const DetailPage = ({ id }: { id: string | string[] }) => {
 
   const getData = async () => {
     const detail = await getSpellingDetail(id);
-    console.log(detail);
     setDetailInfo(detail);
   };
 
@@ -38,7 +37,7 @@ export const DetailPage = ({ id }: { id: string | string[] }) => {
             <div>{detailInfo.description}</div>
             <div>{detailInfo.helpful_info}</div>
             <div>보관하기</div>
-            {detailInfo.related && <div>친구 {detailInfo.related}</div>}
+            {detailInfo.related && <div>친구 {detailInfo.related.title}</div>}
           </div>
         </>
       )}
