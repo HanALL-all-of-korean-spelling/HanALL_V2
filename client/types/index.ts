@@ -40,8 +40,8 @@ export interface IDetail extends ISource {
 }
 
 // 오늘의 맞춤법
-export interface IToday extends IDetail {
-  _id: string,
+export interface IToday extends IId {
+  _source: IDetail,
 }
 
 // 검색 세부 결과

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Link from "next/link";
 import { IMainList } from "../../../types";
 import {
   getMainSpacingList,
@@ -27,7 +28,9 @@ export const MainInfo = () => {
         <div>
           <div>
             <div>철자</div>
-            <div>더보기</div>
+            <Link href="/spelling">
+              <div>더보기</div>
+            </Link>
           </div>
           <div>
             <div>다른 사람들이 많이 봤어요!</div>
@@ -37,11 +40,14 @@ export const MainInfo = () => {
           </div>
         </div>
       )}
+      <hr />
       {spacingList && (
         <div>
           <div>
             <div>띄어쓰기</div>
-            <div>더보기</div>
+            <Link href="/spacing">
+              <div>더보기</div>
+            </Link>
           </div>
           <div>
             <div>다른 사람들이 많이 봤어요!</div>
