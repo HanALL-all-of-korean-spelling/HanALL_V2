@@ -7,8 +7,8 @@ router
   .route("/")
   .get(async (req: Request, res: Response, next: NextFunction) => {
     try {
-      const today = new Date();
-      const seed = today.getDate() + today.getMonth();
+      const today: Date = new Date();
+      const seed: Number = today.getDate() + today.getMonth();
       console.log(seed);
       const result = await esClient.search({
         index: index,
@@ -24,7 +24,7 @@ router
           },
         },
       });
-      return res.status(200).json(result.body.hits.hits[0]._source);
+      return res.status(200).json(result.body.hits.hits[0]);
     } catch (err) {
       console.error(err);
       next(err);
