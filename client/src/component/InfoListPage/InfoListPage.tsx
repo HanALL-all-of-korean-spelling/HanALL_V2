@@ -1,32 +1,25 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { IList } from "../../../types";
-import { getSpellingList } from "../../services/user-service";
 
-export const InfoListPage = () => {
-  const [spellings, setSpellings] = useState<IList[]>();
-  const [sort, setSort] = useState<string>("created_at");
-
-  const getData = async () => {
-    const list = await getSpellingList(sort);
-    console.log(list);
-    setSpellings(list);
-  };
-
-  useEffect(() => {
-    getData();
-  }, [sort]);
-
-  const renderSpellings =
-    spellings &&
-    spellings.map((spelling) => {
+export const InfoListPage = ({ list }: { list: IList[] }) => {
+  const renderList =
+    list &&
+    list.map((info) => {
       return (
-        <div key={spelling._id}>
-          <div>{spelling._source.title}</div>
-          <div>{spelling._source.hits}</div>
-          <div>{spelling._source.created_at}</div>
-        </div>
+        <>
+          <style jsx>{`
+            div {
+              display: flex;
+            }
+          `}</style>
+          <div key={info._id}>
+            <div>{info._source.title}</div>
+            <div>{info._source.hits}</div>
+            <div>{info._source.created_at}</div>
+          </div>
+        </>
       );
     });
 
-  return <>{renderSpellings}</>;
+  return <>{renderList}</>;
 };
