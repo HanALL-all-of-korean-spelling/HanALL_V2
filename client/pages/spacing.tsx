@@ -10,7 +10,6 @@ const Spacing: NextPage = () => {
 
   const getData = async () => {
     const list = await getSpacingList(sort);
-    console.log(list);
     setSpacings(list);
   };
 

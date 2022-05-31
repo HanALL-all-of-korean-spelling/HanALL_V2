@@ -10,7 +10,6 @@ const Spelling: NextPage = () => {
 
   const getData = async () => {
     const list = await getSpellingList(sort);
-    console.log(list);
     setSpellings(list);
   };
 

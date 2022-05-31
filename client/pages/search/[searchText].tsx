@@ -17,7 +17,6 @@ const Search: NextPage = () => {
   const getData = async () => {
     if (searchText) {
       const search = await getSearchResult(searchText);
-      console.log(search);
       setResult(search);
     }
   };
