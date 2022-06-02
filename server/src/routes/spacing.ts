@@ -4,14 +4,6 @@ const esClient = require("../models/connection.ts");
 import passport from "passport";
 const index: String = "words";
 
-let get_today = new Date();
-let get_year = get_today.getFullYear();
-let get_month = get_today.getMonth() + 1;
-let get_date = get_today.getDate();
-let date = `${get_year}-${get_month >= 10 ? get_month : "0" + get_month}-${
-  get_date >= 10 ? get_date : "0" + get_date
-}`;
-
 router
   .route("/")
   .get(async (req: Request, res: Response, next: NextFunction) => {
@@ -90,7 +82,9 @@ router
             right_words: req.body.right_words,
             wrong_words: req.body.wrong_words,
             helpful_info: req.body.helpful_info,
-            created_at: date,
+            created_at: new Date(
+              +new Date() + 9 * 60 * 60 * 1000
+            ).toISOString(),
           },
         });
         res.status(201).json(result.body);
