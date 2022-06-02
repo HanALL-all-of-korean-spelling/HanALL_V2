@@ -24,8 +24,8 @@ const deleteUsersIndex = async () => {
   }
 };
 
-const deleteBoardIndex = async () => {
-  const index: String = "board";
+const deleteQuestionsIndex = async () => {
+  const index: String = "questions";
   try {
     await esClient.indices.delete({
       index: index,
@@ -36,4 +36,21 @@ const deleteBoardIndex = async () => {
   }
 };
 
-export { deleteWordsIndex, deleteUsersIndex, deleteBoardIndex };
+const deleteAnswersIndex = async () => {
+  const index: String = "answers";
+  try {
+    await esClient.indices.delete({
+      index: index,
+    });
+    console.log(`Deleted ${index} index`);
+  } catch (err) {
+    console.error(err);
+  }
+};
+
+export {
+  deleteWordsIndex,
+  deleteUsersIndex,
+  deleteQuestionsIndex,
+  deleteAnswersIndex,
+};

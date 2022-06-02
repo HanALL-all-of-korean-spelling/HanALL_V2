@@ -20,26 +20,33 @@ passportLocal();
 
 conCheck;
 
-const reload_word_index = () => {
+const reload_words_index = () => {
   del.deleteWordsIndex();
   crt.createWordsIndex();
 };
 
-const reload_board_index = () => {
-  del.deleteBoardIndex();
-  crt.createBoardIndex();
+const reload_questions_index = () => {
+  del.deleteQuestionsIndex();
+  crt.createQuestionsIndex();
 };
 
-const reload_user_index = () => {
+const reload_answers_index = () => {
+  del.deleteAnswersIndex();
+  crt.createAnswersIndex();
+};
+
+const reload_users_index = () => {
   del.deleteUsersIndex();
   crt.createUsersIndex();
 };
 
-//reload_word_index();
+//reload_words_index();
 
-//reload_board_index();
+//reload_questions_index();
 
-//reload_user_index();
+//reload_answers_index();
+
+//reload_users_index();
 
 //ins.insertData();
 

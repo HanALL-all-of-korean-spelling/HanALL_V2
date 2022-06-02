@@ -82,14 +82,11 @@ const users_schema = {
   },
 };
 
-const board_schema = {
+const questions_schema = {
   title: {
     type: "text",
   },
   question: {
-    type: "text",
-  },
-  answer: {
     type: "text",
   },
   nickname: {
@@ -100,6 +97,18 @@ const board_schema = {
   },
   created_at: {
     type: "date",
+  },
+  answer_flag: {
+    type: "boolean",
+  },
+};
+
+const answers_schema = {
+  answer: {
+    type: "text",
+  },
+  question_id: {
+    type: "text",
   },
 };
 
@@ -142,16 +151,15 @@ const createUsersIndex = async () => {
   }
 };
 
-const createBoardIndex = async () => {
-  const index: String = "board";
+const createQuestionsIndex = async () => {
+  const index: String = "questions";
   try {
-    const index: String = "board";
     await esClient.indices.create({
       index: index,
       body: {
         mappings: {
           dynamic: true,
-          properties: board_schema,
+          properties: questions_schema,
         },
       },
     });
@@ -162,4 +170,28 @@ const createBoardIndex = async () => {
   }
 };
 
-export { createBoardIndex, createUsersIndex, createWordsIndex };
+const createAnswersIndex = async () => {
+  const index: String = "answers";
+  try {
+    await esClient.indices.create({
+      index: index,
+      body: {
+        mappings: {
+          dynamic: true,
+          properties: answers_schema,
+        },
+      },
+    });
+    console.log(`Created ${index} index`);
+  } catch (err) {
+    console.log(`Creating ${index} index error`);
+    console.error(err);
+  }
+};
+
+export {
+  createQuestionsIndex,
+  createAnswersIndex,
+  createUsersIndex,
+  createWordsIndex,
+};
