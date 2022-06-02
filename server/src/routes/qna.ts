@@ -4,28 +4,22 @@ const router = express.Router();
 const esClient = require("../models/connection.ts");
 const index: String = "board";
 
-let get_today = new Date();
-let get_year = get_today.getFullYear();
-let get_month = get_today.getMonth() + 1;
-let get_date = get_today.getDate();
-let date = `${get_year}-${get_month >= 10 ? get_month : "0" + get_month}-${
-  get_date >= 10 ? get_date : "0" + get_date
-}`;
-
 router
   .route("/")
+  // 전체 qna 리스트 조회
   .get(async (req: Request, res: Response, next: NextFunction) => {
     try {
       const result = await esClient.search({
         index: index,
         body: {
-          _source: ["title"],
+          _source: ["title", "answer", "created_at"],
+          sort: { created_at: "desc" },
           query: {
             match_all: {},
           },
         },
       });
-      res.status(200).json(result.body);
+      res.status(200).json(result.body.hits.hits);
     } catch (err) {
       console.error(err);
       next(err);
@@ -42,7 +36,10 @@ router
             nickname: req.user?._source.nickname,
             user_id: req.user?._id,
             question: req.body.question,
-            created_at: date,
+            answer: "",
+            created_at: new Date(
+              +new Date() + 9 * 60 * 60 * 1000
+            ).toISOString(),
           },
         });
         res.status(201).json(result.body);

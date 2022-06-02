@@ -54,7 +54,6 @@ const words_schema = {
   },
   created_at: {
     type: "date",
-    format: "yyyy-MM-dd",
   },
 };
 
@@ -100,7 +99,7 @@ const board_schema = {
     type: "text",
   },
   created_at: {
-    type: "text",
+    type: "date",
   },
 };
 
