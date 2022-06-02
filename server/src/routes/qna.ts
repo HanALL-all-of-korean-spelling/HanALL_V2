@@ -8,7 +8,9 @@ let get_today = new Date();
 let get_year = get_today.getFullYear();
 let get_month = get_today.getMonth() + 1;
 let get_date = get_today.getDate();
-let date = get_year + "-" + get_month + "-" + get_date;
+let date = `${get_year}-${get_month >= 10 ? get_month : "0" + get_month}-${
+  get_date >= 10 ? get_date : "0" + get_date
+}`;
 
 router
   .route("/")
@@ -125,7 +127,7 @@ router
             index: index,
             id: req.params.id,
           });
-          res.status(204).json(result.body);
+          res.status(204).send("삭제되었습니다.");
         } else {
           res.status(400).send(false);
         }
