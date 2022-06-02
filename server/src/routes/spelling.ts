@@ -4,12 +4,14 @@ const esClient = require("../models/connection.ts");
 import passport from "passport";
 const index: String = "words";
 
-//정보글 post 때 넣을 date 값
+//정보글 등록 때 넣을 date 값
 let get_today = new Date();
 let get_year = get_today.getFullYear();
 let get_month = get_today.getMonth() + 1;
 let get_date = get_today.getDate();
-let date = get_year + "-" + get_month + "-" + get_date;
+let date = `${get_year}-${get_month >= 10 ? get_month : "0" + get_month}-${
+  get_date >= 10 ? get_date : "0" + get_date
+}`;
 
 router
   .route("/")
@@ -125,10 +127,38 @@ router
     } else {
       res.status(400).send("error");
     }
-  });
+  })
+  // 철자 정보글 등록
+  .post(
+    passport.authenticate("jwt", { session: false }),
+    async (req: Request, res: Response, next: NextFunction) => {
+      //console.log(req.user);
+      if (req.user?._source.email != "matji1349@gmail.com") {
+        res.status(400).send("잘못된 접근입니다.");
+      }
+      try {
+        const result = await esClient.index({
+          index: index,
+          body: {
+            type: "spelling",
+            title: req.body.title,
+            right_words: req.body.right_words,
+            wrong_words: req.body.wrong_words,
+            helpful_info: req.body.helpful_info,
+            created_at: date,
+          },
+        });
+        res.status(201).json(result.body);
+      } catch (err) {
+        console.error(err);
+        next(err);
+      }
+    }
+  );
 
 router
   .route("/:id")
+  // 철자 정보글 세부 조회
   .get(async (req: Request, res: Response, next: NextFunction) => {
     try {
       const result = await esClient.search({
@@ -192,6 +222,55 @@ router
       next(err);
     }
   })
+  // 철자 정보글 수정
+  .put(
+    passport.authenticate("jwt", { session: false }),
+    async (req: Request, res: Response, next: NextFunction) => {
+      if (req.user?._source.email != "matji1349@gmail.com") {
+        res.status(400).send("잘못된 접근입니다.");
+      }
+      try {
+        const result = await esClient.update({
+          index: index,
+          id: req.params.id,
+          body: {
+            doc: {
+              title: req.body.title,
+              right_words: req.body.right_words,
+              wrong_words: req.body.wrong_words,
+              helpful_info: req.body.helpful_info,
+            },
+          },
+        });
+        res.status(200).json(result.body);
+      } catch (err) {
+        console.error(err);
+        next(err);
+      }
+    }
+  )
+  // 철자 정보글 삭제
+  .delete(
+    passport.authenticate("jwt", { session: false }),
+    async (req: Request, res: Response, next: NextFunction) => {
+      if (req.user?._source.email != "matji1349@gmail.com") {
+        res.status(400).send("잘못된 접근입니다.");
+      }
+      try {
+        const result = await esClient.delete({
+          index: index,
+          id: req.params.id,
+        });
+        res.status(204).send("삭제되었습니다.");
+      } catch (err) {
+        console.error(err);
+        next(err);
+      }
+    }
+  );
+
+router
+  .route("/:id/scraps")
   .put(
     passport.authenticate("jwt", { session: false }),
     async (req: Request, res: Response, next: NextFunction) => {
@@ -297,6 +376,23 @@ module.exports = router;
  *          responses:
  *              200:
  *                  description: 철자 정보 조회 성공
+ *      post:
+ *          tags: [spelling]
+ *          summary: 철자 정보 등록
+ *          description: 철자 정보 등록
+ *          parameters:
+ *          - in: body
+ *            name: "req"
+ *            description: title, right_words, wrong_words, helpful_info 를 작성하세요.
+ *            required: true
+ *            schema:
+ *                type: string
+ *                description: title, right_words, wrong_words, helpful_info
+ *          produces:
+ *          - application/json
+ *          responses:
+ *              200:
+ *                  description: 철자 정보 등록 성공
  *  /api/spellings/{id}:
  *      get:
  *          tags: [spelling]
@@ -316,8 +412,31 @@ module.exports = router;
  *                  description: 철자 정보 세부 조회 성공
  *      put:
  *          tags: [spelling]
- *          summary: 철자 정보 스크랩
- *          description: 철자 정보 스크랩
+ *          summary: 철자 정보글 수정
+ *          description: 철자 정보글 수정
+ *          parameters:
+ *          - in: path
+ *            name: "id"
+ *            description: 게시글의 고유 아이디 값을 입력하세요.
+ *            required: true
+ *            schema:
+ *                type: string
+ *          - in: body
+ *            name: "req"
+ *            description: title, right_words, wrong_words, helpful_info 를 작성하세요.
+ *            required: true
+ *            schema:
+ *                type: string
+ *                description: title, right_words, wrong_words, helpful_info
+ *          produces:
+ *          - application/json
+ *          responses:
+ *              200:
+ *                  description: 철자 정보글 수정 성공
+ *      delete:
+ *          tags: [spelling]
+ *          summary: 철자 정보글 삭제
+ *          description: 철자 정보글 삭제
  *          parameters:
  *          - in: path
  *            name: "id"
@@ -329,5 +448,22 @@ module.exports = router;
  *          - application/json
  *          responses:
  *              200:
- *                  description: 철자 정보 스크랩 성공
+ *                  description: 철자 정보글 삭제 성공
+ *  /api/spellings/{id}/scraps:
+ *      put:
+ *          tags: [spelling]
+ *          summary: 철자 정보 보관
+ *          description: 철자 정보 보관
+ *          parameters:
+ *          - in: path
+ *            name: "id"
+ *            description: 게시글의 고유 아이디 값을 입력하세요.
+ *            required: true
+ *            schema:
+ *                type: string
+ *          produces:
+ *          - application/json
+ *          responses:
+ *              200:
+ *                  description: 철자 정보 보관 성공
  */
