@@ -2,13 +2,20 @@ import express, { Request, Response, NextFunction } from "express";
 const router = express.Router();
 const esClient = require("../models/connection.ts");
 import passport from "passport";
+import { off } from "process";
 const index: String = "words";
 
 router
   .route("/")
   .get(async (req: Request, res: Response, next: NextFunction) => {
-    let { text, sort } = req.query;
+    let { text, sort, page } = req.query;
     let flag: Boolean = false;
+
+    let from: Number = 0;
+    if (typeof page == "string") {
+      from = (parseInt(page) - 1) * 10;
+    }
+
     if (text && !sort) {
       // 철자 정보 검색
       try {
@@ -66,6 +73,7 @@ router
           body: {
             _source: ["title", "hits", "scraps", "created_at"],
             size: "10",
+            from: from,
             query: {
               match: {
                 type: "spelling",
@@ -364,6 +372,13 @@ module.exports = router;
  *            schema:
  *                type: string
  *                description: 정렬 방식
+ *          - in: query
+ *            name: "page"
+ *            description: 페이지를 입력하세요.
+ *            required: false
+ *            schema:
+ *                type: string
+ *                description: 페이지
  *          produces:
  *          - application/json
  *          responses:

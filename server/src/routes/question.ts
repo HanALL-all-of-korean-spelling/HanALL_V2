@@ -8,11 +8,19 @@ router
   .route("/")
   // 전체 qna 리스트 조회
   .get(async (req: Request, res: Response, next: NextFunction) => {
+    let page = req.query.page;
+
+    let from: Number = 0;
+    if (typeof page == "string") {
+      from = (parseInt(page) - 1) * 10;
+    }
     try {
       const result = await esClient.search({
         index: index,
         body: {
           _source: ["title", "created_at", "answer_flag"],
+          size: "10",
+          from: from,
           sort: { created_at: "desc" },
           query: {
             match_all: {},
@@ -166,6 +174,14 @@ module.exports = router;
  *          tags: [questions]
  *          summary: 문의 게시판 조회
  *          description: 문의 게시판 전체 조회
+ *          parameters:
+ *          - in: query
+ *            name: "page"
+ *            description: 페이지를 입력하세요.
+ *            required: false
+ *            schema:
+ *                type: string
+ *                description: 페이지
  *          produces:
  *          - application/json
  *          responses:

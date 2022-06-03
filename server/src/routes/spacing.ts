@@ -7,7 +7,13 @@ const index: String = "words";
 router
   .route("/")
   .get(async (req: Request, res: Response, next: NextFunction) => {
-    let { sort } = req.query;
+    let { sort, page } = req.query;
+
+    let from: Number = 0;
+    if (typeof page == "string") {
+      from = (parseInt(page) - 1) * 10;
+    }
+
     if (sort) {
       try {
         const result = await esClient.search({
@@ -15,6 +21,8 @@ router
           sort: [`${sort}:desc`],
           body: {
             _source: ["title", "hits", "scraps", "created_at"],
+            size: "10",
+            from: from,
             query: {
               match: {
                 type: "spacing",
@@ -304,6 +312,13 @@ module.exports = router;
  *            schema:
  *                type: string
  *                description: sort
+ *          - in: query
+ *            name: "page"
+ *            description: 페이지를 입력하세요.
+ *            required: false
+ *            schema:
+ *                type: string
+ *                description: 페이지
  *          produces:
  *          - application/json
  *          responses:
