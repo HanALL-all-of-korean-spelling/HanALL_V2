@@ -10,7 +10,7 @@ router
   .get(async (req: Request, res: Response, next: NextFunction) => {
     let page = req.query.page;
 
-    let from: Number = 0;
+    let from: number = 0;
     if (typeof page == "string") {
       from = (parseInt(page) - 1) * 10;
     }
@@ -27,6 +27,21 @@ router
           },
         },
       });
+      // 전체 페이지 개수
+      const count = await esClient.count({
+        index: index,
+      });
+      console.log(count.body.count);
+      const page_count: number = Math.ceil(count.body.count / 10);
+      const result_data: Array<JSON> = result.body.hits.hits;
+      const current_page: number = from / 10 + 1;
+
+      res.status(200).json({
+        total_page: page_count,
+        current_page: current_page,
+        result: result_data,
+      });
+
       res.status(200).json(result.body.hits.hits);
     } catch (err) {
       console.error(err);

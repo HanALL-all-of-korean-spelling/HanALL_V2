@@ -2,7 +2,6 @@ import express, { Request, Response, NextFunction } from "express";
 const router = express.Router();
 const esClient = require("../models/connection.ts");
 import passport from "passport";
-import { off } from "process";
 const index: String = "words";
 
 router
@@ -11,7 +10,7 @@ router
     let { text, sort, page } = req.query;
     let flag: Boolean = false;
 
-    let from: Number = 0;
+    let from: number = 0;
     if (typeof page == "string") {
       from = (parseInt(page) - 1) * 10;
     }
@@ -65,7 +64,7 @@ router
         next(err);
       }
     } else if (sort && !text) {
-      // 철자 정보 게시판 조회
+      // 철자 게시판 조회
       try {
         const result = await esClient.search({
           index: index,
@@ -81,7 +80,26 @@ router
             },
           },
         });
-        res.status(200).json(result.body.hits.hits);
+        // 전체 페이지 개수
+        const count = await esClient.count({
+          index: index,
+          body: {
+            query: {
+              match: {
+                type: "spelling",
+              },
+            },
+          },
+        });
+
+        const page_count: number = Math.ceil(count.body.count / 10);
+        const result_data: Array<JSON> = result.body.hits.hits;
+        const current_page: number = from / 10 + 1;
+        res.status(200).json({
+          total_page: page_count,
+          current_page: current_page,
+          result: result_data,
+        });
       } catch (err) {
         console.error(err);
         next(err);
@@ -172,6 +190,7 @@ router
           },
         },
       });
+      const word = result.body.hits.hits[0]._source?.right_words;
       let related = await esClient.search({
         index: index,
         body: {
@@ -180,7 +199,7 @@ router
               must: [
                 {
                   multi_match: {
-                    query: result.body.hits.hits[0]._source.right_words,
+                    query: word,
                     fields: ["right_words", "wrong_words"],
                   },
                 },
@@ -196,7 +215,6 @@ router
           },
         },
       });
-      console.log(related.body.hits.total.value);
       if (related.body.hits.total.value == 0) {
         related = { id: "", title: "" };
       } else {

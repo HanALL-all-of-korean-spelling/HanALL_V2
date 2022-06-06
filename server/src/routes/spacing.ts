@@ -9,12 +9,13 @@ router
   .get(async (req: Request, res: Response, next: NextFunction) => {
     let { sort, page } = req.query;
 
-    let from: Number = 0;
+    let from: number = 0;
     if (typeof page == "string") {
       from = (parseInt(page) - 1) * 10;
     }
 
     if (sort) {
+      // 띄어쓰기 게시판 조회
       try {
         const result = await esClient.search({
           index: index,
@@ -30,12 +31,32 @@ router
             },
           },
         });
-        res.status(200).json(result.body.hits.hits);
+        // 전체 페이지 개수
+        const count = await esClient.count({
+          index: index,
+          body: {
+            query: {
+              match: {
+                type: "spacing",
+              },
+            },
+          },
+        });
+
+        const page_count: number = Math.ceil(count.body.count / 10);
+        const result_data: Array<JSON> = result.body.hits.hits;
+        const current_page: number = from / 10 + 1;
+        res.status(200).json({
+          total_page: page_count,
+          current_page: current_page,
+          result: result_data,
+        });
       } catch (err) {
         console.error(err);
         next(err);
       }
     } else {
+      // 메인 페이지 요청
       try {
         const sort_hits_result = await esClient.search({
           index: index,
