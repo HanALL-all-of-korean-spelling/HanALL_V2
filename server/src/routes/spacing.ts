@@ -7,14 +7,23 @@ const index: String = "words";
 router
   .route("/")
   .get(async (req: Request, res: Response, next: NextFunction) => {
-    let { sort } = req.query;
+    let { sort, page } = req.query;
+
+    let from: number = 0;
+    if (typeof page == "string") {
+      from = (parseInt(page) - 1) * 10;
+    }
+
     if (sort) {
+      // 띄어쓰기 게시판 조회
       try {
         const result = await esClient.search({
           index: index,
           sort: [`${sort}:desc`],
           body: {
             _source: ["title", "hits", "scraps", "created_at"],
+            size: "10",
+            from: from,
             query: {
               match: {
                 type: "spacing",
@@ -22,12 +31,32 @@ router
             },
           },
         });
-        res.status(200).json(result.body.hits.hits);
+        // 전체 페이지 개수
+        const count = await esClient.count({
+          index: index,
+          body: {
+            query: {
+              match: {
+                type: "spacing",
+              },
+            },
+          },
+        });
+
+        const page_count: number = Math.ceil(count.body.count / 10);
+        const result_data: Array<JSON> = result.body.hits.hits;
+        const current_page: number = from / 10 + 1;
+        res.status(200).json({
+          total_page: page_count,
+          current_page: current_page,
+          result: result_data,
+        });
       } catch (err) {
         console.error(err);
         next(err);
       }
     } else {
+      // 메인 페이지 요청
       try {
         const sort_hits_result = await esClient.search({
           index: index,
@@ -304,6 +333,13 @@ module.exports = router;
  *            schema:
  *                type: string
  *                description: sort
+ *          - in: query
+ *            name: "page"
+ *            description: 페이지를 입력하세요.
+ *            required: false
+ *            schema:
+ *                type: string
+ *                description: 페이지
  *          produces:
  *          - application/json
  *          responses:

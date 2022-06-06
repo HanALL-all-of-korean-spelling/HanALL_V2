@@ -7,8 +7,14 @@ const index: String = "words";
 router
   .route("/")
   .get(async (req: Request, res: Response, next: NextFunction) => {
-    let { text, sort } = req.query;
+    let { text, sort, page } = req.query;
     let flag: Boolean = false;
+
+    let from: number = 0;
+    if (typeof page == "string") {
+      from = (parseInt(page) - 1) * 10;
+    }
+
     if (text && !sort) {
       // 철자 정보 검색
       try {
@@ -58,7 +64,7 @@ router
         next(err);
       }
     } else if (sort && !text) {
-      // 철자 정보 게시판 조회
+      // 철자 게시판 조회
       try {
         const result = await esClient.search({
           index: index,
@@ -66,6 +72,7 @@ router
           body: {
             _source: ["title", "hits", "scraps", "created_at"],
             size: "10",
+            from: from,
             query: {
               match: {
                 type: "spelling",
@@ -73,7 +80,26 @@ router
             },
           },
         });
-        res.status(200).json(result.body.hits.hits);
+        // 전체 페이지 개수
+        const count = await esClient.count({
+          index: index,
+          body: {
+            query: {
+              match: {
+                type: "spelling",
+              },
+            },
+          },
+        });
+
+        const page_count: number = Math.ceil(count.body.count / 10);
+        const result_data: Array<JSON> = result.body.hits.hits;
+        const current_page: number = from / 10 + 1;
+        res.status(200).json({
+          total_page: page_count,
+          current_page: current_page,
+          result: result_data,
+        });
       } catch (err) {
         console.error(err);
         next(err);
@@ -164,6 +190,7 @@ router
           },
         },
       });
+      const word = result.body.hits.hits[0]._source?.right_words;
       let related = await esClient.search({
         index: index,
         body: {
@@ -172,7 +199,7 @@ router
               must: [
                 {
                   multi_match: {
-                    query: result.body.hits.hits[0]._source.right_words,
+                    query: word,
                     fields: ["right_words", "wrong_words"],
                   },
                 },
@@ -188,7 +215,6 @@ router
           },
         },
       });
-      console.log(related.body.hits.total.value);
       if (related.body.hits.total.value == 0) {
         related = { id: "", title: "" };
       } else {
@@ -364,6 +390,13 @@ module.exports = router;
  *            schema:
  *                type: string
  *                description: 정렬 방식
+ *          - in: query
+ *            name: "page"
+ *            description: 페이지를 입력하세요.
+ *            required: false
+ *            schema:
+ *                type: string
+ *                description: 페이지
  *          produces:
  *          - application/json
  *          responses:
