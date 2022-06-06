@@ -306,9 +306,9 @@ router
         });
 
         let new_scraps: Array<string> = [];
-
+        console.log(user_result.body.hits.hits[0]);
         // 기존에 스크랩 했던 게 있으면 추가
-        if (user_result.body.hits.hits[0]._source.scraps.spelling) {
+        if (user_result.body.hits.hits[0]._source.scraps?.spelling) {
           new_scraps = user_result.body.hits.hits[0]._source.scraps.spelling;
           if (
             // 이미 스크랩한 글이면

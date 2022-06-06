@@ -12,9 +12,18 @@ router.get(
   passport.authenticate("jwt", { session: false }),
   (req: Request, res: Response, next: NextFunction) => {
     try {
+      console.log(req.user?._source);
       const email = req.user?._source.email;
       const nickname = req.user?._source.nickname;
-      res.json({ email, nickname });
+      let point = 0;
+      let rank = "맞춤법 초보";
+      if (req.user?._source.point) {
+        point = req.user?._source.point;
+      }
+      if (req.user?._source.rank) {
+        rank = req.user?._source.rank;
+      }
+      res.json({ email, nickname, rank, point });
     } catch (error) {
       console.error(error);
       next(error);

@@ -26,6 +26,8 @@ declare global {
       nickname: string;
       password: string;
       scraps: Array<string>;
+      rank: string;
+      point: number;
     }
   }
 }

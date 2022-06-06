@@ -80,6 +80,9 @@ const users_schema = {
       },
     },
   },
+  point: {
+    type: "integer",
+  },
 };
 
 const questions_schema = {

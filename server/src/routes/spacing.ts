@@ -258,7 +258,7 @@ router
         let new_scraps: Array<string> = [];
 
         // 기존에 스크랩 했던 게 있으면 추가
-        if (user_result.body.hits.hits[0]._source.scraps.spacing) {
+        if (user_result.body.hits.hits[0]._source.scraps?.spacing) {
           new_scraps = user_result.body.hits.hits[0]._source.scraps.spacing;
           if (
             // 이미 스크랩한 글이면
@@ -418,7 +418,7 @@ module.exports = router;
  *          responses:
  *              200:
  *                  description: 띄어쓰기 정보글 삭제 성공
- *  /api/spacing/{id}/scraps:
+ *  /api/spacings/{id}/scraps:
  *      put:
  *          tags: [spacing]
  *          summary: 띄어쓰기 정보 보관
