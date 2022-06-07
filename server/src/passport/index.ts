@@ -25,9 +25,18 @@ declare global {
       email: string;
       nickname: string;
       password: string;
-      scraps: Array<string>;
+      scraps: scraps;
       rank: string;
       point: number;
+    }
+  }
+}
+
+declare global {
+  namespace Express {
+    interface scraps {
+      spelling: Array<string>;
+      spacing: Array<string>;
     }
   }
 }
