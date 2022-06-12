@@ -73,10 +73,24 @@ const users_schema = {
   scraps: {
     properties: {
       spelling: {
-        type: "keyword",
+        properties: {
+          id: {
+            type: "keyword",
+          },
+          title: {
+            type: "text",
+          },
+        },
       },
       spacing: {
-        type: "keyword",
+        properties: {
+          id: {
+            type: "keyword",
+          },
+          title: {
+            type: "text",
+          },
+        },
       },
     },
   },

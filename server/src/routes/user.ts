@@ -60,9 +60,9 @@ router
         }
 
         // 보관한 정보 id 합치기
-        let scraps_list: Array<string> = [];
-        const spellings: Array<string> = req.user?._source?.scraps.spelling!;
-        const spacings: Array<string> = req.user?._source?.scraps.spacing!;
+        let scraps_list: Array<JSON> = [];
+        const spellings: Array<JSON> = req.user?._source?.scraps.spelling!;
+        const spacings: Array<JSON> = req.user?._source?.scraps.spacing!;
         scraps_list = scraps_list?.concat(spellings, spacings);
 
         console.log(scraps_list);
