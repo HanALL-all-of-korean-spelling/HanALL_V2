@@ -255,22 +255,35 @@ router
           },
         });
 
-        let new_scraps: Array<string> = [];
+        const get_title = await esClient.search({
+          index: index,
+          body: {
+            query: {
+              bool: {
+                must: [{ match: { _id: req.params.id } }],
+              },
+            },
+          },
+        });
+
+        const title: string = get_title.body.hits.hits[0]._source.title;
+        let new_scraps = [];
+        const id: string = req.params.id;
 
         // 기존에 스크랩 했던 게 있으면 추가
         if (user_result.body.hits.hits[0]._source.scraps?.spacing) {
           new_scraps = user_result.body.hits.hits[0]._source.scraps.spacing;
           if (
             // 이미 스크랩한 글이면
-            new_scraps.includes(req.params.id)
+            new_scraps.some((item: any) => item.id === req.params.id)
           ) {
             res.status(400).send("이미 스크랩한 글입니다.");
           } else {
-            new_scraps.push(req.params.id);
+            new_scraps.push({ id: req.params.id, title: title });
           }
         } else {
           // 첫 스크랩이면
-          new_scraps = [req.params.id];
+          new_scraps = [{ id: req.params.id, title: title }];
         }
         const user_scrap = esClient.update({
           index: "users",
