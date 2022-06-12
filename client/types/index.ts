@@ -24,7 +24,7 @@ export interface IMainList {
   created_at_order: IList[],
 }
 
-interface IRelated {
+export interface IRelated {
   id: string,
   title: string,
 }
@@ -54,4 +54,10 @@ export interface ISearch {
   detail: ISearchContent,
   similar: ISearchContent[],
   flag: boolean,
+}
+
+// 스크랩 목록
+export interface IScrap {
+  spacing: IRelated[],
+  spelling: IRelated[],
 }
