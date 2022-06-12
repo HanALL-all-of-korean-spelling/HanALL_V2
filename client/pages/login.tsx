@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { login } from "../src/services/auth-service";
 import { LoginInputs } from "../types/auth";
+import Link from "next/link";
 
 export default function Login() {
   const initialValues: LoginInputs = { email: "", password: "" };
@@ -37,6 +38,12 @@ export default function Login() {
         value={inputs.password}
       />
       <button type="submit">Login</button>
+      <div>
+        <div>한올이 처음이라면?</div>
+        <Link href="/join">
+          <div>회원가입하러 가기</div>
+        </Link>
+      </div>
     </form>
   );
 }
