@@ -1,10 +1,10 @@
 import { useState } from "react";
-import { login } from "../src/services/auth-service";
-import { LoginInputs } from "../types/auth";
+import { join } from "../src/services/auth-service";
+import { JoinInputs } from "../types/auth";
 
-export default function Login() {
-  const initialValues: LoginInputs = { email: "", password: "" };
-  const [inputs, setInputs] = useState<LoginInputs>(initialValues);
+export default function Join() {
+  const initialValues: JoinInputs = { email: "", password: "", nickname: "" };
+  const [inputs, setInputs] = useState<JoinInputs>(initialValues);
 
   const handleInputChange = (e: React.ChangeEvent<any>) => {
     e.persist();
@@ -16,7 +16,7 @@ export default function Login() {
 
   const handleSubmit = async (e: any) => {
     e.preventDefault();
-    const res = await login(inputs);
+    const res = await join(inputs);
     console.log(res);
   };
 
@@ -36,7 +36,14 @@ export default function Login() {
         onChange={handleInputChange}
         value={inputs.password}
       />
-      <button type="submit">Login</button>
+      <input
+        type="nickname"
+        name="nickname"
+        placeholder="nickname"
+        onChange={handleInputChange}
+        value={inputs.nickname}
+      />
+      <button type="submit">join</button>
     </form>
   );
 }

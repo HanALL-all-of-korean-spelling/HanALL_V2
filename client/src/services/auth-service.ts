@@ -1,11 +1,25 @@
 import axios from "axios";
 import Cookie from "js-cookie";
 import router from "next/router";
-import { LoginInputs } from "../../pages/login";
+import { LoginInputs } from "../../types/auth";
 
 export const COOKIES = {
   authToken: "myApp.authToken",
 };
+
+export async function join(inputs: LoginInputs): Promise<string | void> {
+  return await axios
+    .post("/api/auth/join", inputs)
+    .then((res) => {
+      //회원가입 성공
+      if (res.status === 200) {
+        router.push("/login");
+      } 
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+}
 
 export async function login(inputs: LoginInputs): Promise<string | void> {
   return await axios
