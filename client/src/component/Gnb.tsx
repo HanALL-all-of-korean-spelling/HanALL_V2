@@ -20,8 +20,12 @@ export default function Gnb() {
         <Link href="/spacing">
           <div>띄어쓰기 정보</div>
         </Link>
-        <div>문의 게시판</div>
-        <div>보관함</div>
+        <Link href="/qna">
+          <div>문의 게시판</div>
+        </Link>
+        <Link href="/scrap">
+          <div>보관함</div>
+        </Link>
         <UserNickname />
       </div>
     </>

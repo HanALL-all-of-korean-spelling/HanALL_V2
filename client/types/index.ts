@@ -61,3 +61,23 @@ export interface IScrap {
   spacing: IRelated[],
   spelling: IRelated[],
 }
+
+// 페이지네이션
+export interface IPage {
+  total_page: number,
+  current_page: number,
+}
+
+// 문의 게시판 조회
+interface IQSource {
+  answer_flag: boolean,
+  created_at: string,
+  title?: string,
+}
+interface IQList extends IId {
+  _source: IQSource,
+  sort: number[],
+}
+export interface IQuestion extends IPage {
+  result: IQList[],
+}
