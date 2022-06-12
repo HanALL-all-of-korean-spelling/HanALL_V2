@@ -26,3 +26,13 @@ export async function login(inputs: LoginInputs): Promise<string | void> {
       console.log(error);
     });
 }
+
+export const getCurrentUser = () => {
+  return Cookie.get(COOKIES.authToken)
+}
+
+export const logout = async () => {
+  Cookie.remove(COOKIES.authToken);
+  alert("logout");
+  await router.push("/login");
+};

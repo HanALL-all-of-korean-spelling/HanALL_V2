@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { login } from "../src/services/login-service";
+import { login } from "../src/services/auth-service";
 
 export type LoginInputs = {
   email: string;
