@@ -6,21 +6,16 @@ import {
   getMainSpellingList,
 } from "../../services/user-service";
 import { MainInfoList } from "./MainInfoList";
-import { getUserInfo, logout } from "../../services/auth-service";
 
 export const MainInfo = () => {
   const [spellingList, setSpellingList] = useState<IMainList>();
   const [spacingList, setSpacingList] = useState<IMainList>();
-  const [user, setUser] = useState();
 
   const getData = async () => {
     const spelling = await getMainSpellingList();
     const spacing = await getMainSpacingList();
-    const userInfo = await getUserInfo();
     setSpellingList(spelling);
     setSpacingList(spacing);
-    setUser(userInfo);
-    console.log(userInfo);
   };
 
   useEffect(() => {
@@ -31,7 +26,6 @@ export const MainInfo = () => {
     <>
       {spellingList && (
         <div>
-          <button onClick={logout}>로그아웃</button>
           <div>
             <div>철자</div>
             <Link href="/spelling">
