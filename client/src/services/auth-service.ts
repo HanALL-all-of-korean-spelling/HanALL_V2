@@ -7,6 +7,7 @@ export const COOKIES = {
   authToken: "myApp.authToken",
 };
 
+// auth
 export async function join(inputs: LoginInputs): Promise<string | void> {
   return await axios
     .post("/api/auth/join", inputs)
@@ -45,11 +46,30 @@ export const logout = async () => {
   await router.push("/login");
 };
 
+// users
 export const getUserInfo = async () => {
   const cookie = Cookie.get(COOKIES.authToken)
   if (cookie) {
     return axios
       .get("/api/users", {
+        headers: {
+          token: cookie
+        }
+      })
+      .then((response) => {
+        return response.data;
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }
+};
+
+export const getScrapList = () => {
+  const cookie = Cookie.get(COOKIES.authToken)
+  if (cookie) {
+    return axios
+      .get("/api/users/scraps", {
         headers: {
           token: cookie
         }
