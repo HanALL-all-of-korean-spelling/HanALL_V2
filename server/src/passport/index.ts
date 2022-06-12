@@ -35,8 +35,8 @@ declare global {
 declare global {
   namespace Express {
     interface scraps {
-      spelling: Array<string>;
-      spacing: Array<string>;
+      spelling: Array<JSON>;
+      spacing: Array<JSON>;
     }
   }
 }
