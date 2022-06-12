@@ -14,8 +14,6 @@ export async function login(inputs: LoginInputs): Promise<string | void> {
       //로그인 성공
       if (res.status === 200) {
         const { token } = res.data;
-        console.log(res)
-        console.log(token)
         Cookie.set(COOKIES.authToken, token);
         router.push("/");
       } else if (!res.data || !res.data.token) {
@@ -27,12 +25,26 @@ export async function login(inputs: LoginInputs): Promise<string | void> {
     });
 }
 
-export const getCurrentUser = () => {
-  return Cookie.get(COOKIES.authToken)
-}
-
 export const logout = async () => {
   Cookie.remove(COOKIES.authToken);
-  alert("logout");
+  console.log("logout");
   await router.push("/login");
+};
+
+export const getUserInfo = async () => {
+  const cookie = Cookie.get(COOKIES.authToken)
+  if (cookie) {
+    return axios
+      .get("/api/users", {
+        headers: {
+          token: cookie
+        }
+      })
+      .then((response) => {
+        return response.data;
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }
 };
