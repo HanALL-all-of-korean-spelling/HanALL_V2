@@ -61,6 +61,21 @@ export const getSpellingDetail = (id: string | string[]) => {
     });
 };
 
+export const scrapSpelling = (id: string | string[]) => {
+  return axios
+    .put("/api/spellings/" + id + "/scraps")
+    .then((response) => {
+      console.log(response.data);
+      return response.data;
+    })
+    .catch((error) => {
+      console.log(error);
+      if (error.response.status === 400 && error.response.data) {
+        alert("이미 스크랩한 글입니다");
+      }
+    });
+};
+
 // search
 export const getSearchResult = (searchText: string | string[]) => {
   return axios

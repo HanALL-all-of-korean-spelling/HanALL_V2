@@ -1,7 +1,11 @@
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import { IDetail } from "../../../types";
-import { getSpellingDetail, scrapSpacing } from "../../services/user-service";
+import {
+  getSpellingDetail,
+  scrapSpacing,
+  scrapSpelling,
+} from "../../services/user-service";
 
 export const DetailPage = ({ id }: { id: string | string[] }) => {
   const [detailInfo, setDetailInfo] = useState<IDetail>();
@@ -37,7 +41,11 @@ export const DetailPage = ({ id }: { id: string | string[] }) => {
             <div>🤔 틀린 표현: {detailInfo.wrong_words}</div>
             <div>{detailInfo.description}</div>
             <div>{detailInfo.helpful_info}</div>
-            <div onClick={() => scrapSpacing(id)}>보관하기</div>
+            {detailInfo.type === "spacing" ? (
+              <div onClick={() => scrapSpacing(id)}>보관하기</div>
+            ) : (
+              <div onClick={() => scrapSpelling(id)}>보관하기</div>
+            )}
             {detailInfo.related?.id && (
               <Link
                 href="/detail/[id]"
