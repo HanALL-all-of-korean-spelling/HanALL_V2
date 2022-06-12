@@ -11,7 +11,7 @@ export const QuestionList = () => {
 
   useEffect(() => {
     getData();
-  }, []);
+  }, [qnaList]);
 
   const renderQna =
     qnaList?.result &&
