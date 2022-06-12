@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@types/axios": "^0.14.0",
+    "@types/js-cookie": "^3.0.2",
+    "js-cookie": "^3.0.1",
     "next": "12.1.5",
     "react": "18.0.0",
     "react-dom": "18.0.0"
