@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { UserNickname } from "./User/UserNickname";
 
 export default function Gnb() {
   return (
@@ -21,6 +22,7 @@ export default function Gnb() {
         </Link>
         <div>문의 게시판</div>
         <div>보관함</div>
+        <UserNickname />
       </div>
     </>
   );
