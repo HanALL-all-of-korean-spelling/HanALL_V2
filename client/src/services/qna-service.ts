@@ -23,3 +23,15 @@ export const postQuestions = (inputs: QuestionInputs) => {
       console.log(error);
     });
 };
+
+export const getQuestionDetail = (id: string) => {
+  return axios
+    .get("/api/questions/" + id)
+    .then((response) => {
+      console.log(response.data)
+      return response.data;
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+};

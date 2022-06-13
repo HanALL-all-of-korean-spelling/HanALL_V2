@@ -82,6 +82,17 @@ export interface IQuestion extends IPage {
   result: IQList[],
 }
 
+// 문의게시판 글 세부 내용 조회
+interface QDetailSource extends QuestionInputs {
+  answer_flag: boolean,
+  created_at: string,
+  nickname: string,
+  user_id: string,
+}
+export interface IQDetail extends IId {
+  _source: QDetailSource
+}
+
 // 문의 게시판 글 작성
 export interface QuestionInputs {
   title: string,
