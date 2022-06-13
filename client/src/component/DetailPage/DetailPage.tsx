@@ -1,6 +1,8 @@
 import Link from "next/link";
+import { userInfo } from "os";
 import React, { useState, useEffect } from "react";
 import { IDetail } from "../../../types";
+import { getUserInfo } from "../../services/auth-service";
 import {
   getSpellingDetail,
   scrapSpacing,
@@ -9,10 +11,14 @@ import {
 
 export const DetailPage = ({ id }: { id: string | string[] }) => {
   const [detailInfo, setDetailInfo] = useState<IDetail>();
+  const [user, setUser] = useState();
 
   const getData = async () => {
     const detail = await getSpellingDetail(id);
     setDetailInfo(detail);
+    const userInfo = await getUserInfo();
+    setUser(userInfo);
+    console.log(userInfo);
   };
 
   useEffect(() => {
@@ -42,9 +48,29 @@ export const DetailPage = ({ id }: { id: string | string[] }) => {
             <div>{detailInfo.description}</div>
             <div>{detailInfo.helpful_info}</div>
             {detailInfo.type === "spacing" ? (
-              <div onClick={() => scrapSpacing(id)}>보관하기</div>
+              <div
+                onClick={() => {
+                  if (user) {
+                    scrapSpacing(id);
+                  } else {
+                    alert("스크랩하려면 로그인해주세요");
+                  }
+                }}
+              >
+                보관하기
+              </div>
             ) : (
-              <div onClick={() => scrapSpelling(id)}>보관하기</div>
+              <div
+                onClick={() => {
+                  if (user) {
+                    scrapSpelling(id);
+                  } else {
+                    alert("스크랩하려면 로그인해주세요");
+                  }
+                }}
+              >
+                보관하기
+              </div>
             )}
             {detailInfo.related?.id && (
               <Link
