@@ -12,10 +12,16 @@ interface IId {
   _score?: number,
 }
 
-// 리스트
 export interface IList extends IId {
   _source: ISource,
   sort: number[],
+}
+
+// 리스트
+export interface IPageList extends IId {
+  total_page: number,
+  current_page: number,
+  result: IList[],
 }
 
 // 메인 리스트

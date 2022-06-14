@@ -2,10 +2,10 @@ import type { NextPage } from "next";
 import React, { useEffect, useState } from "react";
 import { InfoListPage } from "../src/component/InfoListPage/InfoListPage";
 import { getSpellingList } from "../src/services/user-service";
-import { IList } from "../types";
+import { IPageList } from "../types";
 
 const Spelling: NextPage = () => {
-  const [spellings, setSpellings] = useState<IList[]>();
+  const [spellings, setSpellings] = useState<IPageList>();
   const [sort, setSort] = useState<string>("created_at");
 
   const getData = async () => {
@@ -17,7 +17,57 @@ const Spelling: NextPage = () => {
     getData();
   }, [sort]);
 
-  return <>{spellings && <InfoListPage list={spellings} />}</>;
+  const selectSort = () => {
+    return (
+      <>
+        <style jsx>{`
+          div {
+            display: flex;
+            margin: 5px;
+          }
+        `}</style>
+        <div>
+          <div
+            onClick={() => setSort("created_at")}
+            style={
+              sort == "created_at"
+                ? { fontWeight: "bold" }
+                : { fontWeight: "normal" }
+            }
+          >
+            최신순
+          </div>
+          <div>&nbsp;|</div>
+          <div
+            onClick={() => setSort("hits")}
+            style={
+              sort == "hits" ? { fontWeight: "bold" } : { fontWeight: "normal" }
+            }
+          >
+            조회수순
+          </div>
+          <div>&nbsp;|</div>
+          <div
+            onClick={() => setSort("scraps")}
+            style={
+              sort == "scraps"
+                ? { fontWeight: "bold" }
+                : { fontWeight: "normal" }
+            }
+          >
+            스크랩순
+          </div>
+        </div>
+      </>
+    );
+  };
+
+  return (
+    <>
+      {selectSort()}
+      <>{spellings && <InfoListPage list={spellings.result} />}</>
+    </>
+  );
 };
 
 export default Spelling;
