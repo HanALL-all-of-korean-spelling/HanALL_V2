@@ -2,10 +2,10 @@ import type { NextPage } from "next";
 import React, { useEffect, useState } from "react";
 import { InfoListPage } from "../src/component/InfoListPage/InfoListPage";
 import { getSpellingList } from "../src/services/user-service";
-import { IList } from "../types";
+import { IPageList } from "../types";
 
 const Spelling: NextPage = () => {
-  const [spellings, setSpellings] = useState<IList[]>();
+  const [spellings, setSpellings] = useState<IPageList>();
   const [sort, setSort] = useState<string>("created_at");
 
   const getData = async () => {
@@ -17,7 +17,7 @@ const Spelling: NextPage = () => {
     getData();
   }, [sort]);
 
-  return <>{spellings && <InfoListPage list={spellings} />}</>;
+  return <>{spellings && <InfoListPage list={spellings.result} />}</>;
 };
 
 export default Spelling;

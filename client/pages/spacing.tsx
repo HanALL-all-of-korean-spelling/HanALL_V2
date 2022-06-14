@@ -2,10 +2,10 @@ import type { NextPage } from "next";
 import React, { useEffect, useState } from "react";
 import { InfoListPage } from "../src/component/InfoListPage/InfoListPage";
 import { getSpacingList } from "../src/services/user-service";
-import { IList } from "../types";
+import { IPageList } from "../types";
 
 const Spacing: NextPage = () => {
-  const [spacings, setSpacings] = useState<IList[]>();
+  const [spacings, setSpacings] = useState<IPageList>();
   const [sort, setSort] = useState<string>("created_at");
 
   const getData = async () => {
@@ -17,7 +17,7 @@ const Spacing: NextPage = () => {
     getData();
   }, [sort]);
 
-  return <>{spacings && <InfoListPage list={spacings} />}</>;
+  return <>{spacings && <InfoListPage list={spacings.result} />}</>;
 };
 
 export default Spacing;
