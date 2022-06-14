@@ -22,6 +22,24 @@ export default function Join() {
 
   return (
     <form onSubmit={handleSubmit}>
+      <style jsx>{`
+        input {
+          display: flex;
+          justify-content: center;
+          align-content: center;
+          flex-direction: column;
+          margin: 5px 0px;
+        }
+        form {
+          display: flex;
+          height: 90vh;
+          align-items: center;
+          justify-content: center;
+          align-content: center;
+          flex-direction: column;
+          margin: 5px 0px;
+        }
+      `}</style>
       <input
         type="email"
         name="email"

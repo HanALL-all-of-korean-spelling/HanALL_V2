@@ -18,6 +18,15 @@ export const UserNickname = () => {
 
   return (
     <>
+      <style jsx>{`
+        button {
+          background-color: white;
+          border: none;
+          border-radius: 10px;
+          padding: 5px;
+          margin-left: 5px;
+        }
+      `}</style>
       {user ? (
         <div>
           <div>{user.nickname}님</div>
@@ -25,7 +34,7 @@ export const UserNickname = () => {
         </div>
       ) : (
         <Link href="/login">
-          <div>로그인하기</div>
+          <button>로그인하기</button>
         </Link>
       )}
     </>

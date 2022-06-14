@@ -23,26 +23,46 @@ export default function Login() {
 
   return (
     <form onSubmit={handleSubmit}>
-      <input
-        type="email"
-        name="email"
-        placeholder="ID"
-        onChange={handleInputChange}
-        value={inputs.email}
-      />
-      <input
-        type="password"
-        name="password"
-        placeholder="Password"
-        onChange={handleInputChange}
-        value={inputs.password}
-      />
-      <button type="submit">Login</button>
-      <div>
-        <div>한올이 처음이라면?</div>
-        <Link href="/join">
-          <div>회원가입하러 가기</div>
-        </Link>
+      <style jsx>{`
+        input {
+          display: flex;
+          justify-content: center;
+          align-content: center;
+          flex-direction: column;
+          margin: 5px 0px;
+        }
+        .LoginCont {
+          display: flex;
+          height: 90vh;
+          align-items: center;
+          justify-content: center;
+          align-content: center;
+          flex-direction: column;
+          margin: 5px 0px;
+        }
+      `}</style>
+      <div className="LoginCont">
+        <input
+          type="email"
+          name="email"
+          placeholder="ID"
+          onChange={handleInputChange}
+          value={inputs.email}
+        />
+        <input
+          type="password"
+          name="password"
+          placeholder="Password"
+          onChange={handleInputChange}
+          value={inputs.password}
+        />
+        <button type="submit">Login</button>
+        <div>
+          <div>한올이 처음이라면?</div>
+          <Link href="/join">
+            <div>회원가입하러 가기</div>
+          </Link>
+        </div>
       </div>
     </form>
   );
