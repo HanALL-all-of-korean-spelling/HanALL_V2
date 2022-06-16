@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { userInfo } from "os";
 import React, { useState, useEffect } from "react";
 import { IDetail } from "../../../types";
 import { getUserInfo } from "../../services/auth-service";
@@ -29,15 +28,41 @@ export const DetailPage = ({ id }: { id: string | string[] }) => {
 
   return (
     <>
+      <style jsx>{`
+        .flexN {
+          display: flex;
+          flex-direction: row;
+          width: 150px;
+          align-items: center;
+        }
+        div {
+          display: flex;
+          flex-direction: column;
+          align-content: center;
+          justify-content: center;
+          width: 100%;
+          height: 100%;
+          margin-left: 10%;
+          margin-top: 10px;
+        }
+        button {
+          background-color: #ffde88;
+          border: none;
+          border-radius: 10px;
+          width: 100px;
+          padding: 15px;
+          margin-left: 5px;
+        }
+      `}</style>
       {detailInfo && (
-        <>
+        <div>
           <div>
             <div>{detailInfo.title}</div>
-            <div>
+            <div className="flexN">
               <div>조회수</div>
               <div>{detailInfo.hits}</div>
             </div>
-            <div>
+            <div className="flexN">
               <div>보관</div>
               <div>{detailInfo.scraps}</div>
             </div>
@@ -48,7 +73,7 @@ export const DetailPage = ({ id }: { id: string | string[] }) => {
             <div>{detailInfo.description}</div>
             <div>{detailInfo.helpful_info}</div>
             {detailInfo.type === "spacing" ? (
-              <div
+              <button
                 onClick={() => {
                   if (user) {
                     scrapSpacing(id);
@@ -58,9 +83,9 @@ export const DetailPage = ({ id }: { id: string | string[] }) => {
                 }}
               >
                 보관하기
-              </div>
+              </button>
             ) : (
-              <div
+              <button
                 onClick={() => {
                   if (user) {
                     scrapSpelling(id);
@@ -70,7 +95,7 @@ export const DetailPage = ({ id }: { id: string | string[] }) => {
                 }}
               >
                 보관하기
-              </div>
+              </button>
             )}
             {detailInfo.related?.id && (
               <Link
@@ -81,7 +106,7 @@ export const DetailPage = ({ id }: { id: string | string[] }) => {
               </Link>
             )}
           </div>
-        </>
+        </div>
       )}
     </>
   );

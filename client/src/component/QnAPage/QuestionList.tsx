@@ -23,6 +23,12 @@ export const QuestionList = () => {
     qnaList.result.map((qna) => {
       return (
         <div key={qna._id} onClick={() => setId(qna._id)}>
+          <style jsx>{`
+            div {
+              display: flex;
+              width: 300px;
+            }
+          `}</style>
           <div>{qna._source.title}</div>
           <div>{qna._source.created_at}</div>
         </div>
