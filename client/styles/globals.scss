@@ -6,6 +6,11 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
+style, 
+#__NEXT_DATA__ {
+  display: none;
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -13,4 +18,6 @@ a {
 
 * {
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
 }
