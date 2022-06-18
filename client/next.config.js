@@ -1,4 +1,5 @@
 // /** @type {import('next').NextConfig} */
+const path = require("path");
 
 module.exports = {
   webpackDevMiddleware: (config) => {
@@ -7,5 +8,8 @@ module.exports = {
       aggregateTimeout: 300,
     };
     return config;
+  },
+  sassOptions: {
+    includePaths: [path.join(__dirname, "styles")],
   },
 };
