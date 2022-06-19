@@ -1,0 +1,37 @@
+
+// @import "../../../styles/_settings.colors.scss";
+$concept-yellow: #FFDE88;
+$concept-pink: #FF8888;
+
+@mixin button-color($color) {
+  background: $color;
+  &:hover {
+    background: lighten($color, 10%);
+  }
+  &:active {
+    background: darken($color, 10%); 
+  }
+}
+
+.Button {
+  border: none;
+  border-radius: 10px;
+  padding: 0 1rem;
+  margin-left: 5px;
+  cursor: pointer;
+  height: 2rem;
+  width: 100px;
+
+  &.yellow {
+    @include button-color($concept-yellow);
+  }
+
+  &.pink {
+    @include button-color($concept-pink);
+  }
+
+  &.white {
+    @include button-color(white);
+  }
+
+}
