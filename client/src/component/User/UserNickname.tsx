@@ -22,7 +22,9 @@ export const UserNickname = () => {
       {user ? (
         <div>
           <div>{user.nickname}님</div>
-          <button onClick={logout}>로그아웃</button>
+          <Button color="white" onClick={logout}>
+            로그아웃
+          </Button>
         </div>
       ) : (
         <Link href="/login">

@@ -1,7 +1,5 @@
 
-// @import "../../../styles/_settings.colors.scss";
-$concept-yellow: #FFDE88;
-$concept-pink: #FF8888;
+@import "../../../styles/_settings.colors.module.scss";
 
 @mixin button-color($color) {
   background: $color;
@@ -10,6 +8,9 @@ $concept-pink: #FF8888;
   }
   &:active {
     background: darken($color, 10%); 
+  }
+  &.shadow {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   }
 }
 
@@ -20,7 +21,10 @@ $concept-pink: #FF8888;
   margin-left: 5px;
   cursor: pointer;
   height: 2rem;
-  width: 100px;
+  background-color: $concept-yellow;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
 
   &.yellow {
     @include button-color($concept-yellow);

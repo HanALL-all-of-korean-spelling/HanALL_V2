@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { QuestionInputs } from "../../../types";
 import { postQuestions } from "../../services/qna-service";
+import { Button } from "../Button/Button";
 
 export const QuestionInput = () => {
   const initialValues: QuestionInputs = { title: "", question: "" };
@@ -34,7 +35,7 @@ export const QuestionInput = () => {
         onChange={handleInputChange}
         value={inputs.question}
       ></textarea>
-      <button type="submit">등록하기</button>
+      <Button type="submit">등록하기</Button>
     </form>
   );
 };
