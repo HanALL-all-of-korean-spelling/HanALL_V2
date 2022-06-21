@@ -59,6 +59,7 @@ export const DetailPage = ({ id }: { id: string | string[] }) => {
 
             <Button
               color="white"
+              shadow
               onClick={() =>
                 user ? selectDetailInfo() : alert("스크랩하려면 로그인해주세요")
               }
@@ -71,7 +72,9 @@ export const DetailPage = ({ id }: { id: string | string[] }) => {
                 href="/detail/[id]"
                 as={`/detail/${detailInfo.related?.id}`}
               >
-                <div>친구 {detailInfo.related.title}</div>
+                <Button color="white" outline shadow>
+                  친구 {detailInfo.related.title}
+                </Button>
               </Link>
             )}
           </div>

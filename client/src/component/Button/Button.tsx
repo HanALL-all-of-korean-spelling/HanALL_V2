@@ -6,14 +6,24 @@ type buttonType = {
   children: any;
   color: string;
   shadow?: boolean;
+  outline?: boolean;
   onClick?: () => void;
   type?: string;
 };
 
-export const Button = ({ children, color, shadow, onClick }: buttonType) => {
+export const Button = ({
+  children,
+  color,
+  shadow,
+  outline,
+  onClick,
+}: buttonType) => {
   return (
     <button
-      className={classNames(style["Button"], style[color], style["shadow"])}
+      className={classNames(style["Button"], style[color], {
+        [style.shadow]: shadow,
+        [style.outline]: outline,
+      })}
       onClick={onClick}
     >
       {children}

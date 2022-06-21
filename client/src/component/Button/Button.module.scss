@@ -12,6 +12,10 @@
   &.shadow {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   }
+  &.outline {
+    border: 1px solid $concept-yellow;
+    padding: 2rem;
+  }
 }
 
 .Button {
