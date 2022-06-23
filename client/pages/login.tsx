@@ -2,6 +2,8 @@ import { useState } from "react";
 import { login } from "../src/services/auth-service";
 import { LoginInputs } from "../types/auth";
 import Link from "next/link";
+import { Input } from "../src/component/Input/Input";
+import { Button } from "../src/component/Button/Button";
 
 export default function Login() {
   const initialValues: LoginInputs = { email: "", password: "" };
@@ -24,13 +26,6 @@ export default function Login() {
   return (
     <form onSubmit={handleSubmit}>
       <style jsx>{`
-        input {
-          display: flex;
-          justify-content: center;
-          align-content: center;
-          flex-direction: column;
-          margin: 5px 0px;
-        }
         .LoginCont {
           display: flex;
           height: 90vh;
@@ -42,21 +37,21 @@ export default function Login() {
         }
       `}</style>
       <div className="LoginCont">
-        <input
+        <Input
           type="email"
           name="email"
           placeholder="ID"
           onChange={handleInputChange}
           value={inputs.email}
         />
-        <input
+        <Input
           type="password"
           name="password"
           placeholder="Password"
           onChange={handleInputChange}
           value={inputs.password}
         />
-        <button type="submit">Login</button>
+        <Button type="submit">Login</Button>
         <div>
           <div>한올이 처음이라면?</div>
           <Link href="/join">

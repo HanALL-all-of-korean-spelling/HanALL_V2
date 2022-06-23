@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { QuestionInputs } from "../../../types";
 import { postQuestions } from "../../services/qna-service";
 import { Button } from "../Button/Button";
+import { Input } from "../Input/Input";
 
 export const QuestionInput = () => {
   const initialValues: QuestionInputs = { title: "", question: "" };
@@ -23,12 +24,12 @@ export const QuestionInput = () => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <input
+      <Input
         name="title"
         onChange={handleInputChange}
         value={inputs.title}
         placeholder="제목을 입력해주세요."
-      ></input>
+      ></Input>
       <textarea
         placeholder="추가되었으면 하는 내용을 입력해주세요."
         name="question"

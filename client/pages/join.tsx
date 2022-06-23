@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { Button } from "../src/component/Button/Button";
+import { Input } from "../src/component/Input/Input";
 import { join } from "../src/services/auth-service";
 import { JoinInputs } from "../types/auth";
 
@@ -23,13 +25,6 @@ export default function Join() {
   return (
     <form onSubmit={handleSubmit}>
       <style jsx>{`
-        input {
-          display: flex;
-          justify-content: center;
-          align-content: center;
-          flex-direction: column;
-          margin: 5px 0px;
-        }
         form {
           display: flex;
           height: 90vh;
@@ -40,28 +35,28 @@ export default function Join() {
           margin: 5px 0px;
         }
       `}</style>
-      <input
+      <Input
         type="email"
         name="email"
         placeholder="ID"
         onChange={handleInputChange}
         value={inputs.email}
       />
-      <input
+      <Input
         type="password"
         name="password"
         placeholder="Password"
         onChange={handleInputChange}
         value={inputs.password}
       />
-      <input
+      <Input
         type="nickname"
         name="nickname"
         placeholder="nickname"
         onChange={handleInputChange}
         value={inputs.nickname}
       />
-      <button type="submit">join</button>
+      <Button type="submit">join</Button>
     </form>
   );
 }
