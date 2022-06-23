@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { IUser } from "../../../types/auth";
 import { getUserInfo, logout } from "../../services/auth-service";
 import Link from "next/link";
+import { Button } from "../Button/Button";
 
 export const UserNickname = () => {
   const [user, setUser] = useState<IUser>();
@@ -18,23 +19,16 @@ export const UserNickname = () => {
 
   return (
     <>
-      <style jsx>{`
-        button {
-          background-color: white;
-          border: none;
-          border-radius: 10px;
-          padding: 5px;
-          margin-left: 5px;
-        }
-      `}</style>
       {user ? (
         <div>
           <div>{user.nickname}님</div>
-          <button onClick={logout}>로그아웃</button>
+          <Button color="white" onClick={logout}>
+            로그아웃
+          </Button>
         </div>
       ) : (
         <Link href="/login">
-          <button>로그인하기</button>
+          <Button color="white">로그인하기</Button>
         </Link>
       )}
     </>

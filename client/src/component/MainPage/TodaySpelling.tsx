@@ -2,6 +2,7 @@ import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import { IToday } from "../../../types";
 import { getTodayInfo } from "../../services/user-service";
+import { Button } from "../Button/Button";
 
 export const TodaySpelling = () => {
   const [todayInfo, setTodayInfo] = useState<IToday>();
@@ -32,7 +33,9 @@ export const TodaySpelling = () => {
                 href="/detail/[id]/"
                 as={`/detail/${todayInfo._source.related?.id}`}
               >
-                <div>친구 {todayInfo._source.related.title}</div>
+                <Button color="white" outline shadow>
+                  친구 {todayInfo._source.related.title}
+                </Button>
               </Link>
             )}
           </div>

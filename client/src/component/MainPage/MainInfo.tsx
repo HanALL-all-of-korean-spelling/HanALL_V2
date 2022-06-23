@@ -6,6 +6,7 @@ import {
   getMainSpellingList,
 } from "../../services/user-service";
 import { MainInfoList } from "./MainInfoList";
+import { Button } from "../Button/Button";
 
 export const MainInfo = () => {
   const [spellingList, setSpellingList] = useState<IMainList>();
@@ -29,7 +30,7 @@ export const MainInfo = () => {
           <div>
             <div>철자</div>
             <Link href="/spelling">
-              <div>더보기</div>
+              <Button>더보기</Button>
             </Link>
           </div>
           <div>
@@ -46,7 +47,7 @@ export const MainInfo = () => {
           <div>
             <div>띄어쓰기</div>
             <Link href="/spacing">
-              <div>더보기</div>
+              <Button>더보기</Button>
             </Link>
           </div>
           <div>

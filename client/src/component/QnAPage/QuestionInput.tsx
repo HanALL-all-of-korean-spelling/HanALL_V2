@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { QuestionInputs } from "../../../types";
 import { postQuestions } from "../../services/qna-service";
+import { Button } from "../Button/Button";
+import { Input } from "../Input/Input";
 
 export const QuestionInput = () => {
   const initialValues: QuestionInputs = { title: "", question: "" };
@@ -22,19 +24,20 @@ export const QuestionInput = () => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <input
+      <Input
         name="title"
         onChange={handleInputChange}
         value={inputs.title}
         placeholder="제목을 입력해주세요."
-      ></input>
-      <textarea
-        placeholder="추가되었으면 하는 내용을 입력해주세요."
+      ></Input>
+      <Input
+        textArea
         name="question"
         onChange={handleInputChange}
         value={inputs.question}
-      ></textarea>
-      <button type="submit">등록하기</button>
+        placeholder="추가되었으면 하는 내용을 입력해주세요."
+      ></Input>
+      <Button type="submit">등록하기</Button>
     </form>
   );
 };

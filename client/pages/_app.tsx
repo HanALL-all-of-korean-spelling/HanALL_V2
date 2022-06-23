@@ -1,6 +1,6 @@
-import "../styles/globals.css";
+import "../styles/globals.scss";
 import type { AppProps } from "next/app";
-import Gnb from "../src/component/Gnb";
+import Gnb from "../src/component/Gnb/Gnb";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (

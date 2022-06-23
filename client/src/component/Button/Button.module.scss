@@ -1,0 +1,45 @@
+
+@import "../../../styles/_settings.colors.module.scss";
+
+@mixin button-color($color) {
+  background: $color;
+  &:hover {
+    background: lighten($color, 10%);
+  }
+  &:active {
+    background: darken($color, 10%); 
+  }
+  &.shadow {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  &.outline {
+    border: 1px solid $concept-yellow;
+    padding: 2rem;
+  }
+}
+
+.Button {
+  border: none;
+  border-radius: 10px;
+  padding: 0 1rem;
+  margin-left: 5px;
+  cursor: pointer;
+  height: 2rem;
+  background-color: $concept-yellow;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  &.yellow {
+    @include button-color($concept-yellow);
+  }
+
+  &.pink {
+    @include button-color($concept-pink);
+  }
+
+  &.white {
+    @include button-color(white);
+  }
+
+}
