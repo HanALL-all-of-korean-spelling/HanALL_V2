@@ -7,16 +7,35 @@ type inputType = {
   name?: string;
   onChange: any;
   type?: string;
+  textArea?: boolean;
 };
 
-export const Input = ({ placeholder, value, name, onChange }: inputType) => {
+export const Input = ({
+  placeholder,
+  value,
+  name,
+  onChange,
+  textArea,
+}: inputType) => {
   return (
-    <input
-      className={style.Input}
-      placeholder={placeholder}
-      value={value}
-      name={name}
-      onChange={onChange}
-    ></input>
+    <>
+      {textArea ? (
+        <textarea
+          className={`${style.Input} ${style.TextArea}`}
+          placeholder={placeholder}
+          value={value}
+          name={name}
+          onChange={onChange}
+        ></textarea>
+      ) : (
+        <input
+          className={style.Input}
+          placeholder={placeholder}
+          value={value}
+          name={name}
+          onChange={onChange}
+        ></input>
+      )}
+    </>
   );
 };

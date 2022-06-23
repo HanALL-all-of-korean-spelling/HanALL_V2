@@ -6,4 +6,11 @@
   & + & {
     margin-top: 0.6rem;
   }
+  
+  &.TextArea {
+    overflow-x: hidden;
+    overflow-wrap: break-word;
+    height: 10rem;
+    resize: none;
+  }  
 }

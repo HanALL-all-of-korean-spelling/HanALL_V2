@@ -30,12 +30,13 @@ export const QuestionInput = () => {
         value={inputs.title}
         placeholder="제목을 입력해주세요."
       ></Input>
-      <textarea
-        placeholder="추가되었으면 하는 내용을 입력해주세요."
+      <Input
+        textArea
         name="question"
         onChange={handleInputChange}
         value={inputs.question}
-      ></textarea>
+        placeholder="추가되었으면 하는 내용을 입력해주세요."
+      ></Input>
       <Button type="submit">등록하기</Button>
     </form>
   );
