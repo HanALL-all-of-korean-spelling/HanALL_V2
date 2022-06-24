@@ -5,8 +5,8 @@ type inputType = {
   placeholder: string;
   value: string;
   name?: string;
-  onChange: any;
   type?: string;
+  onChange: any;
   textArea?: boolean;
 };
 
@@ -14,6 +14,7 @@ export const Input = ({
   placeholder,
   value,
   name,
+  type,
   onChange,
   textArea,
 }: inputType) => {
@@ -32,6 +33,7 @@ export const Input = ({
           className={style.Input}
           placeholder={placeholder}
           value={value}
+          type={type}
           name={name}
           onChange={onChange}
         ></input>

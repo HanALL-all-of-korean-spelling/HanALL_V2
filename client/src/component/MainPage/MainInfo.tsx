@@ -35,9 +35,9 @@ export const MainInfo = () => {
           </div>
           <div>
             <div>다른 사람들이 많이 봤어요!</div>
-            <MainInfoList data={spellingList.hits_order} />
+            <MainInfoList data={spellingList.hits_order} type="hit" />
             <div>새로 추가됐어요!</div>
-            <MainInfoList data={spellingList.created_at_order} />
+            <MainInfoList data={spellingList.created_at_order} type="create" />
           </div>
         </div>
       )}
@@ -52,9 +52,9 @@ export const MainInfo = () => {
           </div>
           <div>
             <div>다른 사람들이 많이 봤어요!</div>
-            <MainInfoList data={spacingList.hits_order} />
+            <MainInfoList data={spacingList.hits_order} type="hit" />
             <div>새로 추가됐어요!</div>
-            <MainInfoList data={spacingList.created_at_order} />
+            <MainInfoList data={spacingList.created_at_order} type="create" />
           </div>
         </div>
       )}

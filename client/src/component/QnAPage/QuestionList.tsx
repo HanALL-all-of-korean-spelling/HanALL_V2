@@ -25,7 +25,7 @@ export const QuestionList = () => {
       return (
         <div key={qna._id} onClick={() => setId(qna._id)}>
           <div>{qna._source.title}</div>
-          <div>{qna._source.created_at}</div>
+          <div>{qna._source.created_at.substring(0, 10)}</div>
         </div>
       );
     });
@@ -38,7 +38,7 @@ export const QuestionList = () => {
           <div>{qnaDetail._source.title}</div>
           <div>{qnaDetail._source.question}</div>
           <div>{qnaDetail._source.nickname}</div>
-          <div>{qnaDetail._source.created_at}</div>
+          <div>{qnaDetail._source.created_at.substring(0, 10)}</div>
         </div>
       )}
     </>
