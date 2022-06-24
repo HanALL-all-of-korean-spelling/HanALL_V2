@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import { ISearch } from "../../../types";
+import { ListView } from "../ListView/ListView";
 
 export const SimilarResults = ({ result }: { result: ISearch }) => {
   const renderSimilarResult =
@@ -25,13 +26,8 @@ export const SimilarResults = ({ result }: { result: ISearch }) => {
 
   return (
     <>
-      <style jsx>{`
-        .similar {
-          font-weight: bold;
-        }
-      `}</style>
-      <div className="similar">유사 검색 결과</div>
-      <div>{renderSimilarResult}</div>
+      <div>유사 검색 결과</div>
+      <ListView>{renderSimilarResult}</ListView>
     </>
   );
 };
