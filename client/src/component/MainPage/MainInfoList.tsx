@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import { IList } from "../../../types";
+import { ListView } from "../ListView/ListView";
 
 export const MainInfoList = ({ data }: { data: IList[] }) => {
   const renderInfo =
@@ -8,11 +9,6 @@ export const MainInfoList = ({ data }: { data: IList[] }) => {
     data.map((info) => {
       return (
         <>
-          <style jsx>{`
-            div {
-              display: flex;
-            }
-          `}</style>
           <Link href="/detail/[id]" as={`/detail/${info._id}`}>
             <div key={info._id}>
               <div>{info._source.title}</div>
@@ -23,5 +19,5 @@ export const MainInfoList = ({ data }: { data: IList[] }) => {
         </>
       );
     });
-  return <>{renderInfo}</>;
+  return <ListView>{renderInfo}</ListView>;
 };
