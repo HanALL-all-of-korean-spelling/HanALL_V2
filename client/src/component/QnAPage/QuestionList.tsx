@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { IQDetail, IQuestion } from "../../../types";
 import { getQuestionDetail, getQuestions } from "../../services/qna-service";
+import { ListView } from "../ListView/ListView";
 
 export const QuestionList = () => {
   const [qnaList, setQnaList] = useState<IQuestion>();
@@ -23,27 +24,21 @@ export const QuestionList = () => {
     qnaList.result.map((qna) => {
       return (
         <div key={qna._id} onClick={() => setId(qna._id)}>
-          <style jsx>{`
-            div {
-              display: flex;
-              width: 300px;
-            }
-          `}</style>
           <div>{qna._source.title}</div>
-          <div>{qna._source.created_at}</div>
+          <div>{qna._source.created_at.substring(0, 10)}</div>
         </div>
       );
     });
 
   return (
     <>
-      <div>{renderQna}</div>
+      <ListView>{renderQna}</ListView>
       {qnaDetail && (
         <div key={qnaDetail._id}>
           <div>{qnaDetail._source.title}</div>
           <div>{qnaDetail._source.question}</div>
           <div>{qnaDetail._source.nickname}</div>
-          <div>{qnaDetail._source.created_at}</div>
+          <div>{qnaDetail._source.created_at.substring(0, 10)}</div>
         </div>
       )}
     </>

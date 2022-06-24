@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { IRelated } from "../../../types";
+import { ListView } from "../ListView/ListView";
 
 export const ScrapList = ({ scraps }: { scraps: IRelated[] }) => {
   const renderList =
@@ -8,11 +9,6 @@ export const ScrapList = ({ scraps }: { scraps: IRelated[] }) => {
     scraps.map((info) => {
       return (
         <>
-          <style jsx>{`
-            div {
-              display: flex;
-            }
-          `}</style>
           <Link href="/detail/[id]" as={`/detail/${info.id}`}>
             <div key={info.id}>
               <div>{info.title}</div>
@@ -22,5 +18,5 @@ export const ScrapList = ({ scraps }: { scraps: IRelated[] }) => {
       );
     });
 
-  return <>{scraps && <>{renderList}</>}</>;
+  return <>{scraps && <ListView>{renderList}</ListView>}</>;
 };
