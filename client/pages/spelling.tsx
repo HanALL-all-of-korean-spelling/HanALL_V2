@@ -65,7 +65,7 @@ const Spelling: NextPage = () => {
   return (
     <>
       {selectSort()}
-      <>{spellings && <InfoListPage list={spellings.result} />}</>
+      <>{spellings && <InfoListPage list={spellings.result} type={sort} />}</>
     </>
   );
 };

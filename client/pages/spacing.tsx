@@ -65,7 +65,7 @@ const Spacing: NextPage = () => {
   return (
     <>
       {selectSort()}
-      {spacings && <InfoListPage list={spacings.result} />}
+      {spacings && <InfoListPage list={spacings.result} type={sort} />}
     </>
   );
 };
