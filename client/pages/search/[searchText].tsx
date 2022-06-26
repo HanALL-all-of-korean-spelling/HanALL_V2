@@ -26,11 +26,25 @@ const Search: NextPage = () => {
 
   return (
     <>
+      <style jsx>{`
+        .cont {
+          width: 40rem;
+        }
+        .rightWrong {
+          justify-content: center;
+          display: flex;
+          margin: 2rem;
+        }
+      `}</style>
       {result && (
-        <div className="flex-col">
-          <RightWrong result={result} />
-          <DetailPage id={result.detail._id} />
-          <SimilarResults result={result} />
+        <div className="flex-col cont">
+          <div className="rightWrong">
+            <RightWrong result={result} />
+          </div>
+          <div className="flex-between">
+            <DetailPage id={result.detail._id} />
+            <SimilarResults result={result} />
+          </div>
         </div>
       )}
     </>
