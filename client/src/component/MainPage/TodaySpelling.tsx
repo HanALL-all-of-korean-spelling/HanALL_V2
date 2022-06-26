@@ -20,9 +20,19 @@ export const TodaySpelling = () => {
     <>
       {todayInfo && (
         <div>
-          <div>오늘의 맞춤법</div>
+          <style jsx>{`
+            .todayTitle {
+              font-weight: bold;
+              font-size: 1.5rem;
+              margin-bottom: 1.5rem;
+            }
+            div {
+              margin: 1rem;
+            }
+          `}</style>
+          <div className="todayTitle">오늘의 맞춤법</div>
           <Link href="/detail/[id]" as={`/detail/${todayInfo._id}`}>
-            <div>{todayInfo._source.title}</div>
+            <div className="pink-title-2">{todayInfo._source.title}</div>
           </Link>
           <div>
             <div>😄 옳은 표현: {todayInfo._source.right_words}</div>

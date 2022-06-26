@@ -9,11 +9,6 @@ export const SimilarResults = ({ result }: { result: ISearch }) => {
     result.similar.map((similar) => {
       return (
         <>
-          <style jsx>{`
-            div {
-              display: flex;
-            }
-          `}</style>
           <Link href="/detail/[id]" as={`/detail/${similar._id}`}>
             <div key={similar._id}>
               <div>{similar._source.title}</div>
@@ -25,9 +20,9 @@ export const SimilarResults = ({ result }: { result: ISearch }) => {
     });
 
   return (
-    <>
-      <div>유사 검색 결과</div>
+    <div>
+      <div className="pink-title-1">유사 검색 결과</div>
       <ListView>{renderSimilarResult}</ListView>
-    </>
+    </div>
   );
 };

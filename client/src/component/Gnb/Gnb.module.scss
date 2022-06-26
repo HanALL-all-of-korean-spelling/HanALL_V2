@@ -1,9 +1,26 @@
+@import "../../../styles/_settings.colors.module.scss";
+
 .Gnb {
-  background-color: #ffde88;
+  background-color: $concept-yellow;
   justify-content: space-between;
+  width: 100%;
+  display: flex;
   
   div {
-    padding: 0.25rem 1rem;
+    padding: 0.25rem 0.6rem;
+    display: flex;
     flex-direction: row;
+    min-width: max-content;
+  }
+  
+  div:first-child {
+    div {
+      cursor: pointer;
+  
+      &:hover {
+        color: $concept-pink;
+        font-weight: bold;
+      }
+    }    
   }
 }
