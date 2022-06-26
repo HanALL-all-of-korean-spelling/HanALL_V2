@@ -2,6 +2,7 @@
 
 .ListView {
   border-top: 1.5px solid #C4C4C4;  
+  min-width: 20rem;
 }
 
 .ListView > div {
@@ -14,5 +15,10 @@
 
   &:hover {
     color: $concept-pink;
+  }
+
+  div:first-child {
+    font-weight: bold;
+    margin-right: 1rem;
   }
 }

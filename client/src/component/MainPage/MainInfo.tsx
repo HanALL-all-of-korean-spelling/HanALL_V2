@@ -26,8 +26,8 @@ export const MainInfo = () => {
   return (
     <>
       {spellingList && (
-        <div>
-          <div>
+        <div className="margin-x">
+          <div className="flex-between">
             <div>철자</div>
             <Link href="/spelling">
               <Button>더보기</Button>
@@ -41,10 +41,9 @@ export const MainInfo = () => {
           </div>
         </div>
       )}
-      <hr />
       {spacingList && (
         <div>
-          <div>
+          <div className="flex-between">
             <div>띄어쓰기</div>
             <Link href="/spacing">
               <Button>더보기</Button>

@@ -23,7 +23,7 @@ export const QuestionInput = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="flex-col">
       <Input
         name="title"
         onChange={handleInputChange}

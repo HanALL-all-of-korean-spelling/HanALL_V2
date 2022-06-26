@@ -19,7 +19,7 @@ export const TodaySpelling = () => {
   return (
     <>
       {todayInfo && (
-        <>
+        <div>
           <div>오늘의 맞춤법</div>
           <Link href="/detail/[id]" as={`/detail/${todayInfo._id}`}>
             <div>{todayInfo._source.title}</div>
@@ -39,7 +39,7 @@ export const TodaySpelling = () => {
               </Link>
             )}
           </div>
-        </>
+        </div>
       )}
     </>
   );
