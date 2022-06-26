@@ -18,8 +18,8 @@ export const MainInfoList = ({
           <Link href="/detail/[id]" as={`/detail/${info._id}`}>
             <div key={info._id}>
               <div>{info._source.title}</div>
-              {type == "hit" ? <div>{info._source.hits}</div> : <></>}
-              {type == "create" ? <div>{info._source.created_at}</div> : <></>}
+              {type == "hit" && <div>{info._source.hits}</div>}
+              {type == "create" && <div>{info._source.created_at}</div>}
             </div>
           </Link>
         </>
