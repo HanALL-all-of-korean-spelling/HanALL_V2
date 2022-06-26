@@ -6,8 +6,10 @@ COPY package*.json ./
 
 RUN npm install
 
+ENV NODE_PATH /app/node_modules/
+
 COPY ./ ./
 
 RUN npm run build
 
-CMD [ "npm", "run", "dev" ]
+CMD [ "npm", "run", "start" ]
