@@ -19,10 +19,14 @@ const Scrap: NextPage = () => {
     <>
       {scraps && (
         <>
-          <div>철자</div>
-          <ScrapList scraps={scraps?.spelling} />
-          <div>띄어쓰기</div>
-          <ScrapList scraps={scraps?.spacing} />
+          <div className="margin-x">
+            <div>철자</div>
+            <ScrapList scraps={scraps?.spelling} />
+          </div>
+          <div className="margin-x">
+            <div>띄어쓰기</div>
+            <ScrapList scraps={scraps?.spacing} />
+          </div>
         </>
       )}
     </>

@@ -31,7 +31,7 @@ export const QuestionList = () => {
     });
 
   return (
-    <>
+    <div className="margin-x">
       <ListView>{renderQna}</ListView>
       {qnaDetail && (
         <div key={qnaDetail._id}>
@@ -41,6 +41,6 @@ export const QuestionList = () => {
           <div>{qnaDetail._source.created_at.substring(0, 10)}</div>
         </div>
       )}
-    </>
+    </div>
   );
 };

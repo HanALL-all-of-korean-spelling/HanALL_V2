@@ -4,10 +4,10 @@ import { QuestionList } from "../src/component/QnaPage/QuestionList";
 
 const Qna: NextPage = () => {
   return (
-    <>
+    <div className="flex-between">
       <QuestionInput />
       <QuestionList />
-    </>
+    </div>
   );
 };
 

@@ -27,11 +27,11 @@ const Search: NextPage = () => {
   return (
     <>
       {result && (
-        <>
+        <div className="flex-col">
           <RightWrong result={result} />
           <DetailPage id={result.detail._id} />
           <SimilarResults result={result} />
-        </>
+        </div>
       )}
     </>
   );

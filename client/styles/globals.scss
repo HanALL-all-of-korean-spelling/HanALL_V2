@@ -18,6 +18,29 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  margin: 2rem;
+}
+
+.flex-col {
   display: flex;
   flex-direction: column;
+}
+
+.flex-even {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.margin-x {
+  margin: 0 2rem;
 }
