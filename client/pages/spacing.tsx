@@ -63,10 +63,10 @@ const Spacing: NextPage = () => {
   };
 
   return (
-    <>
+    <div className="flex-col">
       {selectSort()}
       {spacings && <InfoListPage list={spacings.result} type={sort} />}
-    </>
+    </div>
   );
 };
 

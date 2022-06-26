@@ -5,12 +5,13 @@ import { SearchBar } from "../src/component/SearchPage/SearchBar";
 
 const Home: NextPage = () => {
   return (
-    <>
+    <div className="flex-col">
       <SearchBar />
-      <TodaySpelling />
-      <hr />
-      <MainInfo />
-    </>
+      <div className="flex-between">
+        <TodaySpelling />
+        <MainInfo />
+      </div>
+    </div>
   );
 };
 

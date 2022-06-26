@@ -63,10 +63,10 @@ const Spelling: NextPage = () => {
   };
 
   return (
-    <>
+    <div className="flex-col">
       {selectSort()}
       <>{spellings && <InfoListPage list={spellings.result} type={sort} />}</>
-    </>
+    </div>
   );
 };
 
