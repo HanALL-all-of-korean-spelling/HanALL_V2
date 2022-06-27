@@ -19,7 +19,7 @@ export const InfoListPage = ({
             <div>{info._source.title}</div>
             {type == "hits" ? <div>{info._source.hits}</div> : <></>}
             {type == "created_at" ? (
-              <div>{info._source.created_at}</div>
+              <div>{info._source.created_at?.substring(0, 10)}</div>
             ) : (
               <></>
             )}

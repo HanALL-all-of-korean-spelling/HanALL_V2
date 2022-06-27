@@ -19,7 +19,9 @@ export const MainInfoList = ({
             <div key={info._id}>
               <div>{info._source.title}</div>
               {type == "hit" && <div>{info._source.hits}</div>}
-              {type == "create" && <div>{info._source.created_at}</div>}
+              {type == "create" && (
+                <div>{info._source.created_at?.substring(0, 10)}</div>
+              )}
             </div>
           </Link>
         </>
