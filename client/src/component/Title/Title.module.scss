@@ -1,0 +1,17 @@
+@import "../../../styles/_settings.colors.module.scss";
+
+.Title {  
+  color: $concept-pink;
+  font-size: 1.4rem;
+  
+  &.bold {
+    font-weight:bold;
+  }
+
+  &.black {
+    color: black;
+  }
+  &.pink {
+    color: $concept-pink;
+  }
+}
