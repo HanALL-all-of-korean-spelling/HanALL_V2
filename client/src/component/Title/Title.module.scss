@@ -1,17 +1,31 @@
 @import "../../../styles/_settings.colors.module.scss";
 
 .Title {  
-  color: $concept-pink;
-  font-size: 1.4rem;
+  font-weight: bold;
   
-  &.bold {
-    font-weight:bold;
+  &.normal {
+    font-weight: normal;
   }
 
+  // color
   &.black {
     color: black;
   }
   &.pink {
     color: $concept-pink;
+  }
+  &.blue {
+    color: blue;
+  }
+
+  // size
+  &.big {
+    font-size: 1.4rem;
+  }
+  &.mid {
+    font-size: 1.2rem;
+  }
+  &.small {
+    font-size: 1.0rem;
   }
 }

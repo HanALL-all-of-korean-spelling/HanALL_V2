@@ -5,13 +5,14 @@ import style from "./Title.module.scss";
 type titleType = {
   children: string;
   color: string;
+  size: string;
   bold?: boolean;
 };
 
-export const Title = ({ children, color, bold }: titleType) => {
+export const Title = ({ children, color, size, bold }: titleType) => {
   return (
     <div
-      className={classNames(style["Title"], style[color], {
+      className={classNames(style["Title"], style[color], style[size], {
         [style.bold]: bold,
       })}
     >
@@ -22,5 +23,5 @@ export const Title = ({ children, color, bold }: titleType) => {
 
 Title.defaultProps = {
   color: "pink",
-  type: "submit",
+  size: "big",
 };
