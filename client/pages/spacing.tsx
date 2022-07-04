@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import React, { useEffect, useState } from "react";
 import { InfoListPage } from "../src/component/InfoListPage/InfoListPage";
+import { Title } from "../src/component/Title/Title";
 import { getSpacingList } from "../src/services/user-service";
 import { IPageList } from "../types";
 
@@ -64,6 +65,7 @@ const Spacing: NextPage = () => {
 
   return (
     <div className="flex-col">
+      <Title>띄어쓰기 정보</Title>
       {selectSort()}
       {spacings && <InfoListPage list={spacings.result} type={sort} />}
     </div>
