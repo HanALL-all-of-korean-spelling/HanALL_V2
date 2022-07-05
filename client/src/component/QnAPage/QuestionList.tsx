@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { IQDetail, IQuestion } from "../../../types";
 import { getQuestionDetail, getQuestions } from "../../services/qna-service";
 import { ListView } from "../ListView/ListView";
+import { Title } from "../Title/Title";
 
 export const QuestionList = () => {
   const [qnaList, setQnaList] = useState<IQuestion>();
@@ -43,7 +44,7 @@ export const QuestionList = () => {
       `}</style>
       {qnaDetail && (
         <div key={qnaDetail._id} className="cont">
-          <div className="pink-title-2">{qnaDetail._source.title}</div>
+          <Title size="mid">{qnaDetail._source.title}</Title>
           <div>{qnaDetail._source.question}</div>
           <div className="flex-between">
             <div>{qnaDetail._source.nickname}</div>

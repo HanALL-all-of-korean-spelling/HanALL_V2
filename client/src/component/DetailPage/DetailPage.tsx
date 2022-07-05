@@ -8,6 +8,7 @@ import {
   scrapSpelling,
 } from "../../services/user-service";
 import { Button } from "../Button/Button";
+import { Title } from "../Title/Title";
 
 export const DetailPage = ({ id }: { id: string | string[] }) => {
   const [detailInfo, setDetailInfo] = useState<IDetail>();
@@ -61,7 +62,7 @@ export const DetailPage = ({ id }: { id: string | string[] }) => {
           `}</style>
           <div className="cont">
             <div>
-              <div className="pink-title-1">{detailInfo.title}</div>
+              <Title>{detailInfo.title}</Title>
               <div className="flex-row flex-end">
                 <div className="flex-row mr-1">
                   <div className="mr-05">조회수</div>
@@ -75,11 +76,11 @@ export const DetailPage = ({ id }: { id: string | string[] }) => {
             </div>
             <div>
               <div className="flex-row">
-                <div className="pink-title-3 mr-05">😄 옳은 표현:</div>
-                {detailInfo.right_words}
+                <Title size="small">😄 옳은 표현:</Title>
+                <div>{detailInfo.right_words}</div>
               </div>
               <div className="flex-row">
-                <div className="pink-title-3 mr-05">🤔 틀린 표현:</div>
+                <Title size="small">🤔 틀린 표현:</Title>
                 <div>{detailInfo.wrong_words}</div>
               </div>
               <div className="contDesc">
@@ -108,9 +109,7 @@ export const DetailPage = ({ id }: { id: string | string[] }) => {
                 >
                   <Button color="white" outline shadow>
                     친구
-                    <div className="pink-title-3">
-                      {detailInfo.related.title}
-                    </div>
+                    <Title size="small">{detailInfo.related.title}</Title>
                   </Button>
                 </Link>
               )}

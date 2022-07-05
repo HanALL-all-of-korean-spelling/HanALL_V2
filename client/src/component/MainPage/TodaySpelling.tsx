@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import { IToday } from "../../../types";
 import { getTodayInfo } from "../../services/user-service";
 import { Button } from "../Button/Button";
+import { Title } from "../Title/Title";
 
 export const TodaySpelling = () => {
   const [todayInfo, setTodayInfo] = useState<IToday>();
@@ -22,17 +23,15 @@ export const TodaySpelling = () => {
         <div>
           <style jsx>{`
             .todayTitle {
-              font-weight: bold;
-              font-size: 1.5rem;
               margin-bottom: 1.5rem;
             }
             div {
               margin: 1rem;
             }
           `}</style>
-          <div className="todayTitle">오늘의 맞춤법</div>
+          <Title color="black">오늘의 맞춤법</Title>
           <Link href="/detail/[id]" as={`/detail/${todayInfo._id}`}>
-            <div className="pink-title-2">{todayInfo._source.title}</div>
+            <Title size="mid">{todayInfo._source.title}</Title>
           </Link>
           <div>
             <div>😄 옳은 표현: {todayInfo._source.right_words}</div>
