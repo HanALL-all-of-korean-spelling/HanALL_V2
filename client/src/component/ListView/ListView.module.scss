@@ -17,8 +17,9 @@
     color: $concept-pink;
   }
 
-  div:first-child {
-    font-weight: bold;
-    margin-right: 1rem;
+  div:last-child {
+    margin-left: 1rem;
+    font-weight: lighter;
+    font-size: 0.8rem;
   }
 }

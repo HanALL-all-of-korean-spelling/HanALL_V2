@@ -2,6 +2,7 @@
 
 .Title {  
   font-weight: bold;
+  padding: 0.4rem 0;
   
   &.normal {
     font-weight: normal;
@@ -26,6 +27,7 @@
     font-size: 1.2rem;
   }
   &.small {
-    font-size: 1.0rem;
+    font-size: 1.1rem;
+    padding: 0 0.4rem;
   }
 }
