@@ -5,7 +5,7 @@ import {
   getMainSpacingList,
   getMainSpellingList,
 } from "../../services/user-service";
-import { MainInfoList } from "./MainInfoList";
+import { InfoListPage } from "../InfoListPage/InfoListPage";
 import { Button } from "../Button/Button";
 import { Title } from "../Title/Title";
 
@@ -46,11 +46,14 @@ export const MainInfo = () => {
             <Title color="blue" size="small">
               다른 사람들이 많이 봤어요!
             </Title>
-            <MainInfoList data={spellingList.hits_order} type="hit" />
+            <InfoListPage list={spellingList.hits_order} type="hits" />
             <Title color="blue" size="small">
               새로 추가됐어요!
             </Title>
-            <MainInfoList data={spellingList.created_at_order} type="create" />
+            <InfoListPage
+              list={spellingList.created_at_order}
+              type="created_at"
+            />
           </div>
         </div>
       )}
@@ -66,11 +69,14 @@ export const MainInfo = () => {
             <Title color="blue" size="small">
               다른 사람들이 많이 봤어요!
             </Title>
-            <MainInfoList data={spacingList.hits_order} type="hit" />
+            <InfoListPage list={spacingList.hits_order} type="hits" />
             <Title color="blue" size="small">
               새로 추가됐어요!
             </Title>
-            <MainInfoList data={spacingList.created_at_order} type="create" />
+            <InfoListPage
+              list={spacingList.created_at_order}
+              type="created_at"
+            />
           </div>
         </div>
       )}
