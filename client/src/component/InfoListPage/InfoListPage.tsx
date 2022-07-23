@@ -14,8 +14,13 @@ export const InfoListPage = ({
     list &&
     list.map((info) => {
       return (
-        <Link href="/detail/[id]" as={`/detail/${info._id}`}>
-          <div key={info._id}>
+        <Link
+          href="/detail/[id]"
+          as={`/detail/${info._id}`}
+          key={info._id}
+          passHref
+        >
+          <div>
             <div>{info._source.title}</div>
             {type == "hits" && <div>{info._source.hits}</div>}
             {type == "created_at" && (

@@ -10,7 +10,7 @@ export const SimilarResults = ({ result }: { result: ISearch }) => {
     result.similar.map((similar) => {
       return (
         <>
-          <Link href="/detail/[id]" as={`/detail/${similar._id}`}>
+          <Link href="/detail/[id]" as={`/detail/${similar._id}`} passHref>
             <div key={similar._id}>
               <div>{similar._source.title}</div>
               <div>{similar._source.hits}</div>

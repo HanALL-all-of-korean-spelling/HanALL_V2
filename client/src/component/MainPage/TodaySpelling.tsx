@@ -22,15 +22,12 @@ export const TodaySpelling = () => {
       {todayInfo && (
         <div>
           <style jsx>{`
-            .todayTitle {
-              margin-bottom: 1.5rem;
-            }
             div {
-              margin: 1rem;
+              margin: 1rem 0;
             }
           `}</style>
           <Title color="black">오늘의 맞춤법</Title>
-          <Link href="/detail/[id]" as={`/detail/${todayInfo._id}`}>
+          <Link href="/detail/[id]" as={`/detail/${todayInfo._id}`} passHref>
             <Title size="mid">{todayInfo._source.title}</Title>
           </Link>
           <div>
@@ -41,6 +38,7 @@ export const TodaySpelling = () => {
               <Link
                 href="/detail/[id]/"
                 as={`/detail/${todayInfo._source.related?.id}`}
+                passHref
               >
                 <Button color="white" outline shadow>
                   친구 {todayInfo._source.related.title}
