@@ -28,7 +28,19 @@ export const getQuestionDetail = (id: string) => {
   return axios
     .get("/api/questions/" + id)
     .then((response) => {
-      console.log(response.data)
+      console.log(response.data);
+      return response.data;
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+};
+
+// answer
+export const postAnswer = (id: string, input: string) => {
+  return axios
+    .post("/api/questions", { question_id: id, answers: input })
+    .then((response) => {
       return response.data;
     })
     .catch((error) => {
