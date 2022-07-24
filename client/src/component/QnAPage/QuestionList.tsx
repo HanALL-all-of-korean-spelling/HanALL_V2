@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { IQDetail, IQuestion } from "../../../types";
+import { IQnaDetail, IQuestion } from "../../../types";
 import { getQuestionDetail, getQuestions } from "../../services/qna-service";
 import { SmallText } from "../Title/Title";
 
@@ -10,7 +10,7 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 export const QuestionList = () => {
   const [qnaList, setQnaList] = useState<IQuestion>();
-  const [qnaDetail, setQnaDetail] = useState<IQDetail>();
+  const [qnaDetail, setQnaDetail] = useState<IQnaDetail>();
   const [id, setId] = useState<string>("");
   const [expanded, setExpanded] = React.useState<string | false>(false);
 
@@ -23,7 +23,7 @@ export const QuestionList = () => {
     const list = await getQuestions(1);
     const detail = await getQuestionDetail(id);
     setQnaList(list);
-    setQnaDetail(detail.question);
+    setQnaDetail(detail);
   };
 
   useEffect(() => {
@@ -41,20 +41,22 @@ export const QuestionList = () => {
           onChange={handleChange(qna._id)}
           style={{ minWidth: "20rem" }}
         >
+          {/* 문의 타이틀 */}
           <AccordionSummary expandIcon={<ExpandMoreIcon />}>
             <div style={{ width: "70%", flexShrink: 0 }}>
               {qna._source.title}
             </div>
             <SmallText>{qna._source.created_at.substring(0, 10)}</SmallText>
           </AccordionSummary>
+          {/* 문의 상세 내용 */}
           <AccordionDetails>
-            {qnaDetail && (
+            {qnaDetail?.question && (
               <div>
-                <div>{qnaDetail._source.question}</div>
+                <div>{qnaDetail.question._source.question}</div>
                 <div className="flex-between">
-                  <SmallText>{qnaDetail._source.nickname}</SmallText>
+                  <SmallText>{qnaDetail.question._source.nickname}</SmallText>
                   <SmallText>
-                    {qnaDetail._source.created_at.substring(0, 10)}
+                    {qnaDetail.question._source.created_at.substring(0, 10)}
                   </SmallText>
                 </div>
               </div>
