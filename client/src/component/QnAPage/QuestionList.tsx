@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { IQDetail, IQuestion } from "../../../types";
 import { getQuestionDetail, getQuestions } from "../../services/qna-service";
+import { SmallText } from "../Title/Title";
 
 import Accordion from "@mui/material/Accordion";
 import AccordionDetails from "@mui/material/AccordionDetails";
@@ -44,15 +45,17 @@ export const QuestionList = () => {
             <div style={{ width: "70%", flexShrink: 0 }}>
               {qna._source.title}
             </div>
-            <div>{qna._source.created_at.substring(0, 10)}</div>
+            <SmallText>{qna._source.created_at.substring(0, 10)}</SmallText>
           </AccordionSummary>
           <AccordionDetails>
             {qnaDetail && (
               <div>
                 <div>{qnaDetail._source.question}</div>
                 <div className="flex-between">
-                  <div>{qnaDetail._source.nickname}</div>
-                  <div>{qnaDetail._source.created_at.substring(0, 10)}</div>
+                  <SmallText>{qnaDetail._source.nickname}</SmallText>
+                  <SmallText>
+                    {qnaDetail._source.created_at.substring(0, 10)}
+                  </SmallText>
                 </div>
               </div>
             )}

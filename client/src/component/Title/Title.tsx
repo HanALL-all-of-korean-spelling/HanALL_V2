@@ -25,3 +25,7 @@ Title.defaultProps = {
   color: "pink",
   size: "big",
 };
+
+export const SmallText = ({ children }: { children: string }) => {
+  return <div className={style.smallText}>{children}</div>;
+};
