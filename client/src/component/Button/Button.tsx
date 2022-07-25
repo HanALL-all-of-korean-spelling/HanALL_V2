@@ -7,6 +7,7 @@ type buttonType = {
   color: string;
   shadow?: boolean;
   outline?: boolean;
+  fullWidth?: boolean;
   onClick?: () => void;
   type?: string;
 };
@@ -16,6 +17,7 @@ export const Button = ({
   color,
   shadow,
   outline,
+  fullWidth,
   onClick,
 }: buttonType) => {
   return (
@@ -23,6 +25,7 @@ export const Button = ({
       className={classNames(style["Button"], style[color], {
         [style.shadow]: shadow,
         [style.outline]: outline,
+        [style.fullWidth]: fullWidth,
       })}
       onClick={onClick}
     >

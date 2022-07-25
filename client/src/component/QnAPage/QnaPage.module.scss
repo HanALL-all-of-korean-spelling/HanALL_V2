@@ -1,0 +1,39 @@
+@import "../../../styles/_settings.colors.module.scss";
+
+.titleCont {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  div:first-child {
+    font-weight: bold;
+
+    &:hover {
+      color: $concept-pink;
+    }
+  }
+  div:last-child {
+    display: flex;
+  }
+}
+
+.icon {
+  color: $concept-pink;
+  margin-right: 0.2rem;
+}
+
+.questionContent {
+  div {
+    margin-bottom: 1rem;
+  }
+  div:last-child {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+.answer {
+  background-color: #f6f6f6;
+  padding: 0.8rem;
+  border-radius: 0.4rem;
+}
