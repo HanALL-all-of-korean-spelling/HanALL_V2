@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { IQnaDetail, IQuestion } from "../../../types";
 import { getQuestionDetail, getQuestions } from "../../services/qna-service";
+import { AnswerInput } from "./AnswerInput";
 import { SmallText } from "../Title/Title";
 import style from "./QnaPage.module.scss";
 
-import { Accordion, AccordionDetails, AccordionSummary } from "@mui/material";
+import Accordion from "@mui/material/Accordion";
+import AccordionDetails from "@mui/material/AccordionDetails";
+import AccordionSummary from "@mui/material/AccordionSummary";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import MarkChatReadOutlinedIcon from "@mui/icons-material/MarkChatReadOutlined";
 
@@ -63,13 +66,18 @@ export const QuestionList = () => {
                 <SmallText>{qnaDetail.question._source.nickname}</SmallText>
               </div>
             )}
-            <div className={style.answer}>
-              {qnaDetail?.answer ? (
-                qnaDetail.answer._source.answer
-              ) : (
-                <>아직 답변이 등록되지 않았습니다.</>
-              )}
-            </div>
+            {qnaDetail?.answer ? (
+              <div className={style.answer}>
+                {qnaDetail.answer._source.answer}
+              </div>
+            ) : (
+              <>
+                <div className={style.answer}>
+                  아직 답변이 등록되지 않았습니다.
+                </div>
+                <AnswerInput id={id} />
+              </>
+            )}
           </AccordionDetails>
         </Accordion>
       );
