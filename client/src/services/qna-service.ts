@@ -39,7 +39,7 @@ export const getQuestionDetail = (id: string) => {
 // answer
 export const postAnswer = (id: string, input: string) => {
   return axios
-    .post("/api/questions", { question_id: id, answers: input })
+    .post("/api/answers", { question_id: id, answer: input })
     .then((response) => {
       return response.data;
     })
