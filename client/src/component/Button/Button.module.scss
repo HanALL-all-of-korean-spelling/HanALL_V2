@@ -1,4 +1,3 @@
-
 @import "../../../styles/_settings.colors.module.scss";
 
 @mixin button-color($color) {
@@ -7,7 +6,7 @@
     background: lighten($color, 10%);
   }
   &:active {
-    background: darken($color, 10%); 
+    background: darken($color, 10%);
   }
   &.shadow {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -16,13 +15,17 @@
     border: 1px solid $concept-yellow;
     padding: 2rem;
   }
+  &.fullWidth {
+    width: 100%;
+    margin: 0.5rem 0;
+  }
 }
 
 .Button {
   border: none;
   border-radius: 10px;
   padding: 0 1rem;
-  margin-left: 5px;
+  margin-left: 0.5rem;
   cursor: pointer;
   height: 2rem;
   background-color: $concept-yellow;
@@ -45,5 +48,4 @@
       background: lighten($concept-yellow, 20%);
     }
   }
-
 }
