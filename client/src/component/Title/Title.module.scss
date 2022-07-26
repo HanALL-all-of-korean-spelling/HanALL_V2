@@ -1,9 +1,9 @@
 @import "../../../styles/_settings.colors.module.scss";
 
-.Title {  
+.Title {
   font-weight: bold;
   padding: 0.4rem 0;
-  
+
   &.normal {
     font-weight: normal;
   }
@@ -16,7 +16,8 @@
     color: $concept-pink;
   }
   &.blue {
-    color: blue;
+    color: #88a2ff;
+    margin: 1.2rem 0 0.4rem;
   }
 
   // size

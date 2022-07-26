@@ -8,6 +8,7 @@ import {
 import { InfoListPage } from "../InfoListPage/InfoListPage";
 import { Button } from "../Button/Button";
 import { Title } from "../Title/Title";
+import style from "./MainPage.module.scss";
 import Grid from "@mui/material/Grid";
 
 export const MainInfo = () => {
@@ -27,7 +28,7 @@ export const MainInfo = () => {
 
   const renderMainInfo = (list: IMainList, title: string, link: string) => {
     return (
-      <div className="margin-x">
+      <div className={style.MainInfo}>
         <div className="flex-between">
           <Title>{title}</Title>
           <Link href={link} passHref>

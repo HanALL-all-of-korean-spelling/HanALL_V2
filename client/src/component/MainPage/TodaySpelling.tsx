@@ -4,6 +4,7 @@ import { IToday } from "../../../types";
 import { getTodayInfo } from "../../services/user-service";
 import { Button } from "../Button/Button";
 import { Title } from "../Title/Title";
+import style from "./MainPage.module.scss";
 
 export const TodaySpelling = () => {
   const [todayInfo, setTodayInfo] = useState<IToday>();
@@ -20,12 +21,7 @@ export const TodaySpelling = () => {
   return (
     <>
       {todayInfo && (
-        <div>
-          <style jsx>{`
-            div {
-              margin: 1rem 0;
-            }
-          `}</style>
+        <div className={style.TodaySpelling}>
           <Title color="black">오늘의 맞춤법</Title>
           <Link href="/detail/[id]" as={`/detail/${todayInfo._id}`} passHref>
             <Title size="mid">{todayInfo._source.title}</Title>
