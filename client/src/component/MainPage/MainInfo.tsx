@@ -29,12 +29,14 @@ export const MainInfo = () => {
   const renderMainInfo = (list: IMainList, title: string, link: string) => {
     return (
       <div className={style.MainInfo}>
-        <div className="flex-between">
-          <Title>{title}</Title>
-          <Link href={link} passHref>
-            <Button>더보기</Button>
-          </Link>
-        </div>
+        <Link href={link} passHref>
+          <div className="flex-between">
+            <Title>{title}</Title>
+            <Button color="white" outline>
+              더보기
+            </Button>
+          </div>
+        </Link>
         <div>
           <Title color="blue" size="small">
             다른 사람들이 많이 봤어요!
