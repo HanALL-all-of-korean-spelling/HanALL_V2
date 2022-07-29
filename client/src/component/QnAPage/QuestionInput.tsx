@@ -24,7 +24,7 @@ export const QuestionInput = () => {
 
   return (
     <form onSubmit={handleSubmit} className="flex-col">
-      <div className="mb-2 flex-col">
+      <div className="mb-1 flex-col">
         <Input
           name="title"
           onChange={handleInputChange}

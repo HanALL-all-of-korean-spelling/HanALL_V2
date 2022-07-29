@@ -84,7 +84,7 @@ export const QuestionList = () => {
     });
 
   return (
-    <div className="margin-x">
+    <div>
       <div>{renderQna}</div>
     </div>
   );

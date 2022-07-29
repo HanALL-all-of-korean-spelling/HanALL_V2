@@ -2,11 +2,11 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
+    Helvetica Neue, sans-serif;
 }
 
-style, 
+style,
 #__NEXT_DATA__ {
   display: none;
 }
@@ -37,7 +37,7 @@ a {
 }
 .flex-end {
   display: flex;
-  justify-content: flex-end
+  justify-content: flex-end;
 }
 
 .flex-even {
@@ -63,6 +63,6 @@ a {
 .mr-2 {
   margin-right: 2rem;
 }
-.mb-2 {
-  margin-bottom: 2rem;  
+.mb-1 {
+  margin-bottom: 1rem;
 }
