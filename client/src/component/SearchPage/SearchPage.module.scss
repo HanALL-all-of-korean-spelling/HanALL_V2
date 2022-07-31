@@ -1,0 +1,20 @@
+.SearchBar {
+  display: flex;
+
+  button {
+    padding: 1.5rem;
+    margin-left: 1rem;
+  }
+}
+
+.RightWrong {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  div:first-child {
+    display: flex;
+    align-items: center;
+    margin-right: 0.2rem;
+  }
+}

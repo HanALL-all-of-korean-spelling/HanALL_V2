@@ -42,7 +42,6 @@ export const QuestionList = () => {
           onClick={() => setId(qna._id)}
           expanded={expanded === qna._id}
           onChange={handleChange(qna._id)}
-          style={{ minWidth: "20rem" }}
         >
           {/* 문의 타이틀 */}
           <AccordionSummary expandIcon={<ExpandMoreIcon />}>
@@ -83,9 +82,5 @@ export const QuestionList = () => {
       );
     });
 
-  return (
-    <div className="margin-x">
-      <div>{renderQna}</div>
-    </div>
-  );
+  return <div className={style.QuestionList}>{renderQna}</div>;
 };
