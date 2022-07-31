@@ -6,14 +6,14 @@ type titleType = {
   children: string;
   color: string;
   size: string;
-  bold?: boolean;
+  normal?: boolean;
 };
 
-export const Title = ({ children, color, size, bold }: titleType) => {
+export const Title = ({ children, color, size, normal }: titleType) => {
   return (
     <div
       className={classNames(style["Title"], style[color], style[size], {
-        [style.bold]: bold,
+        [style.normal]: normal,
       })}
     >
       {children}

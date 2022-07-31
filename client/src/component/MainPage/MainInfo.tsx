@@ -9,7 +9,7 @@ import { InfoListPage } from "../InfoListPage/InfoListPage";
 import { Button } from "../Button/Button";
 import { Title } from "../Title/Title";
 import style from "./MainPage.module.scss";
-import Grid from "@mui/material/Grid";
+import { MWContainer } from "../MWContainer/MWContainer";
 
 export const MainInfo = () => {
   const [spellingList, setSpellingList] = useState<IMainList>();
@@ -52,13 +52,9 @@ export const MainInfo = () => {
   };
 
   return (
-    <Grid container columnSpacing={6}>
-      <Grid item xs={12} md={6}>
-        {spellingList && renderMainInfo(spellingList, "철자", "/spelling")}
-      </Grid>
-      <Grid item xs={12} md={6}>
-        {spacingList && renderMainInfo(spacingList, "띄어쓰기", "/spacing")}
-      </Grid>
-    </Grid>
+    <MWContainer tablet>
+      {spellingList && renderMainInfo(spellingList, "철자", "/spelling")}
+      {spacingList && renderMainInfo(spacingList, "띄어쓰기", "/spacing")}
+    </MWContainer>
   );
 };
