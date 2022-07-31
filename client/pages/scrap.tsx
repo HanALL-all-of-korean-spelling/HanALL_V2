@@ -4,6 +4,7 @@ import { IScrap } from "../types";
 import { getScrapList } from "../src/services/auth-service";
 import { ScrapList } from "../src/component/ScrapPage/ScrapList";
 import { Title } from "../src/component/Title/Title";
+import { MWContainer } from "../src/component/MWContainer/MWContainer";
 
 const Scrap: NextPage = () => {
   const [scraps, setScraps] = useState<IScrap>();
@@ -19,16 +20,16 @@ const Scrap: NextPage = () => {
   return (
     <>
       {scraps && (
-        <>
-          <div className="margin-x">
+        <MWContainer>
+          <div>
             <Title size="mid">철자</Title>
             <ScrapList scraps={scraps?.spelling} />
           </div>
-          <div className="margin-x">
+          <div>
             <Title size="mid">띄어쓰기</Title>
             <ScrapList scraps={scraps?.spacing} />
           </div>
-        </>
+        </MWContainer>
       )}
     </>
   );
