@@ -1,4 +1,5 @@
 import axios from "axios";
+import { InfoInputs } from "../../types";
 
 // spacing
 export const getSpacingList = (sort: string) => {
@@ -12,20 +13,9 @@ export const getSpacingList = (sort: string) => {
     });
 };
 
-export const postSpacing = (
-  title: string,
-  right_words: string,
-  wrong_words: string,
-  helpful_info: string
-) => {
-  const body = {
-    title: title,
-    right_words: right_words,
-    wrong_words: wrong_words,
-    helpful_info: helpful_info,
-  };
+export const postSpacing = (inputs: InfoInputs) => {
   return axios
-    .post("/api/spacings", body)
+    .post("/api/spacings", inputs)
     .then((response) => {
       return response.data;
     })
@@ -106,20 +96,9 @@ export const getSpellingList = (sort: string) => {
     });
 };
 
-export const postSpelling = (
-  title: string,
-  right_words: string,
-  wrong_words: string,
-  helpful_info: string
-) => {
-  const body = {
-    title: title,
-    right_words: right_words,
-    wrong_words: wrong_words,
-    helpful_info: helpful_info,
-  };
+export const postSpelling = (inputs: InfoInputs) => {
   return axios
-    .post("/api/spellings", body)
+    .post("/api/spellings", inputs)
     .then((response) => {
       return response.data;
     })
