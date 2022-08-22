@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import { useState } from "react";
 import { InfoInputs } from "../types";
-import { postSpacing } from "../src/services/user-service";
+import { postSpacing, postSpelling } from "../src/services/user-service";
 import { Button } from "../src/component/Button/Button";
 import { Input } from "../src/component/Input/Input";
 
@@ -14,6 +14,7 @@ const NewInfo: NextPage = () => {
     helpful_info: "",
   };
   const [inputs, setInputs] = useState<InfoInputs>(initialValues);
+  const [selectedCategory, setSelectedCategory] = useState<string>("spelling");
 
   const handleInputChange = (e: React.ChangeEvent<any>) => {
     e.persist();
@@ -23,16 +24,31 @@ const NewInfo: NextPage = () => {
     });
   };
 
+  const handleCategoryChange = (e: React.ChangeEvent<any>) => {
+    setSelectedCategory(e.target.value);
+  };
+
   const handleSubmit = async (e: any) => {
     e.preventDefault();
-    const res = await postSpacing(inputs);
-    console.log(res);
+    if (selectedCategory == "spelling") {
+      await postSpelling(inputs);
+    } else {
+      await postSpacing(inputs);
+    }
   };
 
   return (
     <div>
       <form onSubmit={handleSubmit}>
         <div>
+          <select
+            onChange={handleCategoryChange}
+            value={selectedCategory}
+            defaultValue="spelling"
+          >
+            <option value="spelling">철자 정보</option>
+            <option value="spacing">띄어쓰기 정보</option>
+          </select>
           <Input
             name="title"
             onChange={handleInputChange}
