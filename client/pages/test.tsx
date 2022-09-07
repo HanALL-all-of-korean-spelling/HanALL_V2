@@ -1,21 +1,21 @@
 import type { NextPage } from "next";
 import { useEffect, useState } from "react";
+import { TestList } from "../src/component/ScrapPage/TestList";
 import { getTestList } from "../src/services/auth-service";
 import { ITest } from "../types";
 
 const Test: NextPage = () => {
-  const [scraps, setScraps] = useState<ITest[]>();
+  const [quizzes, setQuizzes] = useState<ITest[]>();
   const getData = async () => {
     const list = await getTestList();
-    setScraps(list);
+    setQuizzes(list);
   };
-  console.log(scraps);
 
   useEffect(() => {
     getData();
   }, []);
 
-  return <div>test</div>;
+  return <>{quizzes && <TestList quizzes={quizzes} />}</>;
 };
 
 export default Test;
