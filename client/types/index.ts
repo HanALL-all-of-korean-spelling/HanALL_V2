@@ -68,6 +68,11 @@ export interface IScrap {
   spelling: IRelated[];
 }
 
+// 테스트
+export interface ITest extends IId {
+  _source: IDetail;
+}
+
 // 페이지네이션
 export interface IPage {
   total_page: number;
