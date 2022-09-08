@@ -13,13 +13,13 @@ export const TestSlice = createSlice({
   name: "testReducer",
   initialState,
   reducers: {
-    setScore: (state, action) => {
+    setTotalScore: (state, action) => {
       state.score = action.payload;
     },
   },
 });
 
-export const { setScore } = TestSlice.actions;
+export const { setTotalScore } = TestSlice.actions;
 
 export const getTest = (state: RootState) => state.test;
 
