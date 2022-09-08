@@ -101,16 +101,21 @@ export const getTestList = () => {
   }
 };
 
-export const putTestList = () => {
+export const putTestResult = (score: number) => {
   const cookie = Cookie.get(COOKIES.authToken);
   if (cookie) {
     return axios
-      .put("/api/users/tests", {
-        headers: {
-          token: cookie,
-        },
-      })
+      .put(
+        "/api/users/tests",
+        { point: score },
+        {
+          headers: {
+            token: cookie,
+          },
+        }
+      )
       .then((response) => {
+        console.log(response.data);
         return response.data;
       })
       .catch((error) => {
