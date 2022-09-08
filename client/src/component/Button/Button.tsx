@@ -8,7 +8,7 @@ type buttonType = {
   shadow?: boolean;
   outline?: boolean;
   fullWidth?: boolean;
-  onClick?: () => void;
+  onClick?: React.MouseEventHandler<HTMLButtonElement>;
   type?: string;
 };
 

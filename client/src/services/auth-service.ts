@@ -15,7 +15,7 @@ export async function join(inputs: LoginInputs): Promise<string | void> {
       //회원가입 성공
       if (res.status === 200) {
         router.push("/login");
-      } 
+      }
     })
     .catch((error) => {
       console.log(error);
@@ -48,13 +48,13 @@ export const logout = async () => {
 
 // users
 export const getUserInfo = async () => {
-  const cookie = Cookie.get(COOKIES.authToken)
+  const cookie = Cookie.get(COOKIES.authToken);
   if (cookie) {
     return axios
       .get("/api/users", {
         headers: {
-          token: cookie
-        }
+          token: cookie,
+        },
       })
       .then((response) => {
         return response.data;
@@ -66,15 +66,56 @@ export const getUserInfo = async () => {
 };
 
 export const getScrapList = () => {
-  const cookie = Cookie.get(COOKIES.authToken)
+  const cookie = Cookie.get(COOKIES.authToken);
   if (cookie) {
     return axios
       .get("/api/users/scraps", {
         headers: {
-          token: cookie
-        }
+          token: cookie,
+        },
       })
       .then((response) => {
+        return response.data;
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }
+};
+
+export const getTestList = () => {
+  const cookie = Cookie.get(COOKIES.authToken);
+  if (cookie) {
+    return axios
+      .get("/api/users/tests", {
+        headers: {
+          token: cookie,
+        },
+      })
+      .then((response) => {
+        return response.data;
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }
+};
+
+export const putTestResult = (score: number) => {
+  const cookie = Cookie.get(COOKIES.authToken);
+  if (cookie) {
+    return axios
+      .put(
+        "/api/users/tests",
+        { point: score },
+        {
+          headers: {
+            token: cookie,
+          },
+        }
+      )
+      .then((response) => {
+        console.log(response.data);
         return response.data;
       })
       .catch((error) => {
