@@ -27,6 +27,20 @@ export const TestList = ({ quizzes }: { quizzes: ITest[] }) => {
     }
   };
 
+  const AnswerButton = (name: string | string[], isRight: boolean) => {
+    return (
+      <Button
+        fullWidth
+        outline
+        color={checkedList.includes(name) ? "lightPink" : "white"}
+        shadow
+        onClick={() => onClickCheck(name, isRight)}
+      >
+        {name}
+      </Button>
+    );
+  };
+
   const renderTestList =
     quizzes &&
     quizzes.map((quiz) => {
@@ -34,32 +48,8 @@ export const TestList = ({ quizzes }: { quizzes: ITest[] }) => {
         <div key={quiz._id}>
           <style jsx>{style}</style>
           <Title color="black">다음 중 옳은 표현을 고르세요.</Title>
-          <Button
-            fullWidth
-            outline
-            color={
-              checkedList.includes(quiz._source.right_words)
-                ? "lightPink"
-                : "white"
-            }
-            shadow
-            onClick={() => onClickCheck(quiz._source.right_words, true)}
-          >
-            {quiz._source.right_words}
-          </Button>
-          <Button
-            fullWidth
-            outline
-            color={
-              checkedList.includes(quiz._source.wrong_words)
-                ? "lightPink"
-                : "white"
-            }
-            shadow
-            onClick={() => onClickCheck(quiz._source.wrong_words, false)}
-          >
-            {quiz._source.wrong_words}
-          </Button>
+          {AnswerButton(quiz._source.right_words, true)}
+          {AnswerButton(quiz._source.wrong_words, false)}
         </div>
       );
     });
