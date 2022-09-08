@@ -10,6 +10,13 @@ import { Button } from "../Button/Button";
 
 export const TestList = ({ quizzes }: { quizzes: ITest[] }) => {
   const router = useRouter();
+  const dispatch = useAppDispatch();
+
+  let score = 0;
+
+  const onClickRight = () => {
+    score += 1;
+  };
 
   const renderTestList =
     quizzes &&
@@ -18,7 +25,7 @@ export const TestList = ({ quizzes }: { quizzes: ITest[] }) => {
         <div key={quiz._id}>
           <style jsx>{style}</style>
           <Title color="black">다음 중 옳은 표현을 고르세요.</Title>
-          <Button fullWidth outline color="white" shadow>
+          <Button fullWidth outline color="white" shadow onClick={onClickRight}>
             {quiz._source.right_words}
           </Button>
           <Button fullWidth outline color="white" shadow>
@@ -36,6 +43,7 @@ export const TestList = ({ quizzes }: { quizzes: ITest[] }) => {
         shadow
         onClick={() => {
           router.push("/test/result");
+          dispatch(setScore(score));
         }}
       >
         점수 보기
