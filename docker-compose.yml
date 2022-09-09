@@ -44,7 +44,7 @@ services:
       - cluster.name=es-docker-cluster
       - cluster.initial_master_nodes=elasticsearch
       - bootstrap.memory_lock=true
-      - "ES_JAVA_OPTS=-Xms750m -Xmx750m"
+      - ES_JAVA_OPTS=-Xms750m -Xmx750m
     ulimits:
       memlock:
         soft: -1
