@@ -40,15 +40,15 @@ const reload_users_index = () => {
   crt.createUsersIndex();
 };
 
-//reload_words_index();
+reload_words_index();
 
-//reload_questions_index();
+reload_questions_index();
 
-//reload_answers_index();
+reload_answers_index();
 
-//reload_users_index();
+reload_users_index();
 
-//ins.insertData();
+ins.insertData();
 
 app.use("/api", indexRouter);
 
