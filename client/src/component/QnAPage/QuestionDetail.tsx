@@ -1,8 +1,12 @@
-import React from "react";
-import { IQnaDetail } from "../../../types";
-import { deleteQuestionDetail } from "../../services/qna-service";
+import React, { useState } from "react";
+import { IQnaDetail, QuestionInputs } from "../../../types";
+import {
+  deleteQuestionDetail,
+  putQuestionDetail,
+} from "../../services/qna-service";
 import { AnswerInput } from "./AnswerInput";
 import { Button } from "../Button/Button";
+import { Input } from "../Input/Input";
 import { SmallText } from "../Title/Title";
 import style from "./QnaPage.module.scss";
 
@@ -13,18 +17,66 @@ export const QuestionDetail = ({
   qnaDetail: IQnaDetail;
   id: string;
 }) => {
+  // 수정 입력 인풋
+  const initialValues: QuestionInputs = { title: "", question: "" };
+  const [inputs, setInputs] = useState<QuestionInputs>(initialValues);
+
+  const handleInputChange = (e: React.ChangeEvent<any>) => {
+    e.persist();
+    setInputs({
+      ...inputs,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  // 수정 중 여부
+  const [isEdit, setIsEdit] = useState(false);
+
+  const onClickEdit = async () => {
+    setIsEdit(!isEdit);
+    setInputs({
+      title: qnaDetail.question._source.title,
+      question: qnaDetail.question._source.question,
+    });
+    if (isEdit) await putQuestionDetail(id, inputs); // 수정 완료
+  };
+
   const onClickDelete = async () => {
     await deleteQuestionDetail(id);
   };
+
   return (
     <div>
       {qnaDetail?.question && (
         <div className={style.questionContent}>
-          <div>{qnaDetail.question._source.question}</div>
-          <SmallText>{qnaDetail.question._source.nickname}</SmallText>
-          <Button shadow color="white" onClick={onClickDelete}>
-            삭제
-          </Button>
+          {!isEdit ? (
+            <div>{qnaDetail.question._source.question}</div>
+          ) : (
+            <>
+              <Input
+                name="title"
+                value={inputs.title}
+                onChange={handleInputChange}
+              ></Input>
+              <Input
+                textArea
+                name="question"
+                onChange={handleInputChange}
+                value={inputs.question}
+              ></Input>
+            </>
+          )}
+          <div>
+            <SmallText>{qnaDetail.question._source.nickname}</SmallText>
+            <div>
+              <Button shadow color="white" onClick={onClickEdit}>
+                {!isEdit ? <>수정</> : <>수정 완료</>}
+              </Button>
+              <Button shadow color="white" onClick={onClickDelete}>
+                삭제
+              </Button>
+            </div>
+          </div>
         </div>
       )}
       {qnaDetail?.answer ? (
