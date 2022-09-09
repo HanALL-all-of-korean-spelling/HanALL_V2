@@ -48,7 +48,7 @@ reload_answers_index();
 
 reload_users_index();
 
-ins.insertData();
+//ins.insertData();
 
 app.use("/api", indexRouter);
 
