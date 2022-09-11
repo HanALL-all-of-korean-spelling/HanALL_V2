@@ -45,7 +45,6 @@ services:
       - cluster.initial_master_nodes=elasticsearch
       - bootstrap.memory_lock=true
       - ES_JAVA_OPTS=-Xms750m -Xmx750m
-    mem_limit: 15g
     ulimits:
       memlock:
         soft: -1
@@ -54,6 +53,10 @@ services:
       - data:/usr/share/elasticsearch/data
     ports:
       - 9200:9200
+    deploy:
+      resources:
+        limits:
+          memory: 10g
 
   kibana:
     image: docker.elastic.co/kibana/kibana:7.13.0
