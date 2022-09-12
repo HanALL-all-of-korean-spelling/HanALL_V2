@@ -20,7 +20,6 @@ export default function Login() {
   const handleSubmit = async (e: any) => {
     e.preventDefault();
     const res = await login(inputs);
-    console.log(res);
   };
 
   return (
@@ -43,6 +42,7 @@ export default function Login() {
           placeholder="ID"
           onChange={handleInputChange}
           value={inputs.email}
+          required
         />
         <Input
           type="password"
@@ -50,11 +50,13 @@ export default function Login() {
           placeholder="Password"
           onChange={handleInputChange}
           value={inputs.password}
+          required
+          minLength={8}
         />
         <Button type="submit">Login</Button>
         <div>
           <div>한올이 처음이라면?</div>
-          <Link href="/join">
+          <Link href="/join" passHref>
             <div>회원가입하러 가기</div>
           </Link>
         </div>

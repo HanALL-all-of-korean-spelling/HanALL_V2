@@ -19,7 +19,6 @@ export default function Join() {
   const handleSubmit = async (e: any) => {
     e.preventDefault();
     const res = await join(inputs);
-    console.log(res);
   };
 
   return (
@@ -41,6 +40,7 @@ export default function Join() {
         placeholder="ID"
         onChange={handleInputChange}
         value={inputs.email}
+        required
       />
       <Input
         type="password"
@@ -48,6 +48,8 @@ export default function Join() {
         placeholder="Password"
         onChange={handleInputChange}
         value={inputs.password}
+        required
+        minLength={8}
       />
       <Input
         type="nickname"
@@ -55,6 +57,7 @@ export default function Join() {
         placeholder="nickname"
         onChange={handleInputChange}
         value={inputs.nickname}
+        required
       />
       <Button type="submit">join</Button>
     </form>
