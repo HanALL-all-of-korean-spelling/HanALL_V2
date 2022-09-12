@@ -1,9 +1,9 @@
 import axios from "axios";
 
 // spacing
-export const getSpacingList = (sort: string) => {
+export const getSpacingList = (sort: string, page: number) => {
   return axios
-    .get("/api/spacings?sort=" + sort)
+    .get("/api/spacings?sort=" + sort + "&page=" + page)
     .then((response) => {
       return response.data;
     })
@@ -39,9 +39,9 @@ export const scrapSpacing = (id: string | string[]) => {
 };
 
 // spelling
-export const getSpellingList = (sort: string) => {
+export const getSpellingList = (sort: string, page: number) => {
   return axios
-    .get("/api/spellings?sort=" + sort)
+    .get("/api/spellings?sort=" + sort + "&page=" + page)
     .then((response) => {
       return response.data;
     })

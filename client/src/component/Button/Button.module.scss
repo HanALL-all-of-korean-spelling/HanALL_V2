@@ -42,6 +42,10 @@
     @include button-color($concept-pink);
   }
 
+  &.lightPink {
+    @include button-color(lighten($concept-pink, 15%));
+  }
+
   &.white {
     @include button-color(white);
     &:hover {

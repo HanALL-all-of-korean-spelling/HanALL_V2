@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { IQnaDetail, IQuestion } from "../../../types";
 import { getQuestionDetail, getQuestions } from "../../services/qna-service";
+import { useAppSelector } from "../../_app/hooks";
+import { getTest } from "../../_reducer/testReducer";
 import { AnswerInput } from "./AnswerInput";
 import { SmallText } from "../Title/Title";
+import { PaginationView } from "../PaginationView/PaginationView";
 import style from "./QnaPage.module.scss";
 
 import Accordion from "@mui/material/Accordion";
@@ -16,6 +19,7 @@ export const QuestionList = () => {
   const [qnaDetail, setQnaDetail] = useState<IQnaDetail>();
   const [id, setId] = useState<string>("");
   const [expanded, setExpanded] = React.useState<string | false>(false);
+  const page = useAppSelector(getTest).page;
 
   const handleChange =
     (panel: string) => (event: React.SyntheticEvent, isExpanded: boolean) => {
@@ -23,7 +27,7 @@ export const QuestionList = () => {
     };
 
   const getData = async () => {
-    const list = await getQuestions(1);
+    const list = await getQuestions(page);
     const detail = await getQuestionDetail(id);
     setQnaList(list);
     setQnaDetail(detail);
@@ -31,7 +35,7 @@ export const QuestionList = () => {
 
   useEffect(() => {
     getData();
-  }, [id]);
+  }, [id, page]);
 
   const renderQna =
     qnaList?.result &&
@@ -82,5 +86,14 @@ export const QuestionList = () => {
       );
     });
 
-  return <div className={style.QuestionList}>{renderQna}</div>;
+  return (
+    <>
+      {qnaList && (
+        <div>
+          <div className={style.QuestionList}>{renderQna}</div>
+          <PaginationView total={qnaList?.total_page} current={page} />
+        </div>
+      )}
+    </>
+  );
 };

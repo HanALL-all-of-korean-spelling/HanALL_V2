@@ -1,22 +1,26 @@
 import type { NextPage } from "next";
 import React, { useEffect, useState } from "react";
+import { getSpellingList } from "../src/services/user-service";
+import { useAppSelector } from "../src/_app/hooks";
+import { getTest } from "../src/_reducer/testReducer";
+import { IPageList } from "../types";
 import { InfoListPage } from "../src/component/InfoListPage/InfoListPage";
 import { Title } from "../src/component/Title/Title";
-import { getSpellingList } from "../src/services/user-service";
-import { IPageList } from "../types";
+import { PaginationView } from "../src/component/PaginationView/PaginationView";
 
 const Spelling: NextPage = () => {
   const [spellings, setSpellings] = useState<IPageList>();
   const [sort, setSort] = useState<string>("created_at");
+  const page = useAppSelector(getTest).page;
 
   const getData = async () => {
-    const list = await getSpellingList(sort);
+    const list = await getSpellingList(sort, page);
     setSpellings(list);
   };
 
   useEffect(() => {
     getData();
-  }, [sort]);
+  }, [sort, page]);
 
   const selectSort = () => {
     return (
@@ -64,10 +68,17 @@ const Spelling: NextPage = () => {
   };
 
   return (
-    <div className="flex-col">
+    <div>
       <Title>철자 정보</Title>
       {selectSort()}
-      <>{spellings && <InfoListPage list={spellings.result} type={sort} />}</>
+      <>
+        {spellings && (
+          <>
+            <InfoListPage list={spellings.result} type={sort} />
+            <PaginationView total={spellings.total_page} current={page} />
+          </>
+        )}
+      </>
     </div>
   );
 };
