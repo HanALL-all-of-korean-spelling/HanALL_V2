@@ -4,10 +4,12 @@ import { LoginInputs } from "../types/auth";
 import Link from "next/link";
 import { Input } from "../src/component/Input/Input";
 import { Button } from "../src/component/Button/Button";
+import { AlertToast } from "../src/component/AlertToast/AlertToast";
 
 export default function Login() {
   const initialValues: LoginInputs = { email: "", password: "" };
   const [inputs, setInputs] = useState<LoginInputs>(initialValues);
+  const [isAlert, setIsAlert] = useState(false);
 
   const handleInputChange = (e: React.ChangeEvent<any>) => {
     e.persist();
@@ -20,6 +22,9 @@ export default function Login() {
   const handleSubmit = async (e: any) => {
     e.preventDefault();
     const res = await login(inputs);
+    if (res?.response.status === 500) {
+      setIsAlert(true);
+    }
   };
 
   return (
@@ -60,6 +65,9 @@ export default function Login() {
             <div>회원가입하러 가기</div>
           </Link>
         </div>
+        {isAlert && (
+          <AlertToast message="아이디나 비밀번호가 일치하지 않습니다." />
+        )}
       </div>
     </form>
   );

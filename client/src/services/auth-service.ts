@@ -8,7 +8,7 @@ export const COOKIES = {
 };
 
 // auth
-export async function join(inputs: LoginInputs): Promise<string | void> {
+export async function join(inputs: LoginInputs) {
   return await axios
     .post("/api/auth/join", inputs)
     .then((res) => {
@@ -19,10 +19,11 @@ export async function join(inputs: LoginInputs): Promise<string | void> {
     })
     .catch((error) => {
       console.log(error);
+      return error;
     });
 }
 
-export async function login(inputs: LoginInputs): Promise<string | void> {
+export async function login(inputs: LoginInputs) {
   return await axios
     .post("/api/auth/login", inputs)
     .then((res) => {
@@ -37,6 +38,7 @@ export async function login(inputs: LoginInputs): Promise<string | void> {
     })
     .catch((error) => {
       console.log(error);
+      return error;
     });
 }
 
