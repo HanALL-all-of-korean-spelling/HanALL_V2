@@ -106,6 +106,7 @@ export const DetailPage = ({ id }: { id: string | string[] }) => {
                 <Link
                   href="/detail/[id]"
                   as={`/detail/${detailInfo.related?.id}`}
+                  passHref
                 >
                   <Button color="white" outline shadow>
                     친구
