@@ -45,8 +45,12 @@ export async function login(inputs: LoginInputs) {
 
 export const logout = async () => {
   Cookie.remove(COOKIES.authToken);
-  console.log("logout");
-  await router.push("/login");
+  return await axios.get("/api/auth/logout").then((res) => {
+    //로그아웃 성공
+    if (res.status === 200) {
+      console.log("logout");
+    }
+  });
 };
 
 // users

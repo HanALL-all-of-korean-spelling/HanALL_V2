@@ -22,7 +22,7 @@ export const postQuestions = (inputs: QuestionInputs) => {
       }
     })
     .catch((error) => {
-      console.log(error);
+      return error;
     });
 };
 
@@ -55,7 +55,7 @@ export const deleteQuestionDetail = (id: string) => {
   return axios
     .delete("/api/questions/" + id)
     .then((response) => {
-      if (response.status === 200) {
+      if (response.status === 204) {
         return response.data;
       }
     })
