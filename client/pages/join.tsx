@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { AlertToast } from "../src/component/AlertToast/AlertToast";
 import { Button } from "../src/component/Button/Button";
 import { Input } from "../src/component/Input/Input";
 import { join } from "../src/services/auth-service";
@@ -7,6 +8,7 @@ import { JoinInputs } from "../types/auth";
 export default function Join() {
   const initialValues: JoinInputs = { email: "", password: "", nickname: "" };
   const [inputs, setInputs] = useState<JoinInputs>(initialValues);
+  const [isAlert, setIsAlert] = useState(false);
 
   const handleInputChange = (e: React.ChangeEvent<any>) => {
     e.persist();
@@ -19,7 +21,9 @@ export default function Join() {
   const handleSubmit = async (e: any) => {
     e.preventDefault();
     const res = await join(inputs);
-    console.log(res);
+    if (res?.response.data == "이미 가입하셨습니다.") {
+      setIsAlert(true);
+    }
   };
 
   return (
@@ -38,9 +42,10 @@ export default function Join() {
       <Input
         type="email"
         name="email"
-        placeholder="ID"
+        placeholder="email"
         onChange={handleInputChange}
         value={inputs.email}
+        required
       />
       <Input
         type="password"
@@ -48,6 +53,8 @@ export default function Join() {
         placeholder="Password"
         onChange={handleInputChange}
         value={inputs.password}
+        required
+        minLength={8}
       />
       <Input
         type="nickname"
@@ -55,8 +62,10 @@ export default function Join() {
         placeholder="nickname"
         onChange={handleInputChange}
         value={inputs.nickname}
+        required
       />
       <Button type="submit">join</Button>
+      {isAlert && <AlertToast message="이미 가입된 이메일입니다." />}
     </form>
   );
 }

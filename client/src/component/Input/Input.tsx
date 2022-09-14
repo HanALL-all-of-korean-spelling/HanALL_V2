@@ -9,6 +9,8 @@ type inputType = {
   onChange: any;
   fullWidth?: boolean;
   textArea?: boolean;
+  required?: boolean;
+  minLength?: number;
 };
 
 export const Input = ({
@@ -19,6 +21,8 @@ export const Input = ({
   onChange,
   textArea,
   fullWidth,
+  required,
+  minLength,
 }: inputType) => {
   return (
     <>
@@ -29,6 +33,7 @@ export const Input = ({
           value={value}
           name={name}
           onChange={onChange}
+          required={required}
         ></textarea>
       ) : (
         <input
@@ -38,6 +43,8 @@ export const Input = ({
           type={type}
           name={name}
           onChange={onChange}
+          required={required}
+          minLength={minLength}
         ></input>
       )}
     </>

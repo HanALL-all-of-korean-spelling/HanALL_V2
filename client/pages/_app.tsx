@@ -7,8 +7,8 @@ import Gnb from "../src/component/Gnb/Gnb";
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
-      <Gnb />
       <Provider store={store}>
+        <Gnb />
         <div className="container">
           <Component {...pageProps} />
         </div>

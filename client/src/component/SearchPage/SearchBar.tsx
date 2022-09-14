@@ -4,8 +4,11 @@ import { Button } from "../Button/Button";
 import { Input } from "../Input/Input";
 import style from "./SearchPage.module.scss";
 
-export const SearchBar = () => {
-  const [searchText, setSearchText] = useState<string>("");
+export const SearchBar = ({ initialText }: { initialText?: string }) => {
+  if (!initialText) {
+    initialText = "";
+  }
+  const [searchText, setSearchText] = useState<string>(initialText);
 
   return (
     <div className={style.SearchBar}>

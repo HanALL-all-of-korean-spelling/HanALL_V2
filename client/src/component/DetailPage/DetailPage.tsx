@@ -7,12 +7,14 @@ import {
   scrapSpacing,
   scrapSpelling,
 } from "../../services/user-service";
+import { ShowAlertToast } from "../AlertToast/AlertToast";
 import { Button } from "../Button/Button";
 import { Title } from "../Title/Title";
 
 export const DetailPage = ({ id }: { id: string | string[] }) => {
   const [detailInfo, setDetailInfo] = useState<IDetail>();
   const [user, setUser] = useState();
+  const [isOpen, setIsOpen] = useState(false);
 
   const getData = async () => {
     const detail = await getSpellingDetail(id);
@@ -23,6 +25,7 @@ export const DetailPage = ({ id }: { id: string | string[] }) => {
   };
 
   const selectDetailInfo = () => {
+    setIsOpen(true);
     if (detailInfo?.type === "spacing") {
       return scrapSpacing(id);
     } else {
@@ -100,12 +103,14 @@ export const DetailPage = ({ id }: { id: string | string[] }) => {
                 >
                   보관하기
                 </Button>
+                {ShowAlertToast(isOpen, "스크랩 완료")}
               </div>
 
               {detailInfo.related?.id && (
                 <Link
                   href="/detail/[id]"
                   as={`/detail/${detailInfo.related?.id}`}
+                  passHref
                 >
                   <Button color="white" outline shadow>
                     친구
