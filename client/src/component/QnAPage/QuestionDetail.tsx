@@ -4,6 +4,8 @@ import {
   deleteQuestionDetail,
   putQuestionDetail,
 } from "../../services/qna-service";
+import { useAppSelector } from "../../_app/hooks";
+import { getUser } from "../../_reducer/userReducer";
 import { AnswerInput } from "./AnswerInput";
 import { Button } from "../Button/Button";
 import { Input } from "../Input/Input";
@@ -20,6 +22,14 @@ export const QuestionDetail = ({
   // 수정 입력 인풋
   const initialValues: QuestionInputs = { title: "", question: "" };
   const [inputs, setInputs] = useState<QuestionInputs>(initialValues);
+
+  const user = useAppSelector(getUser);
+
+  // 글 작성자인지 체크
+  let isWriter = false;
+  if (user.user?.nickname == qnaDetail.question?._source.nickname) {
+    isWriter = true;
+  }
 
   const handleInputChange = (e: React.ChangeEvent<any>) => {
     e.persist();
@@ -66,16 +76,18 @@ export const QuestionDetail = ({
               ></Input>
             </>
           )}
-          <div>
+          <div className={style.userNickname}>
             <SmallText>{qnaDetail.question._source.nickname}</SmallText>
-            <div>
-              <Button shadow color="white" onClick={onClickEdit}>
-                {!isEdit ? <>수정</> : <>수정 완료</>}
-              </Button>
-              <Button shadow color="white" onClick={onClickDelete}>
-                삭제
-              </Button>
-            </div>
+            {isWriter && (
+              <div>
+                <Button shadow color="white" onClick={onClickEdit}>
+                  {!isEdit ? <>수정</> : <>수정 완료</>}
+                </Button>
+                <Button shadow color="white" onClick={onClickDelete}>
+                  삭제
+                </Button>
+              </div>
+            )}
           </div>
         </div>
       )}
@@ -84,7 +96,7 @@ export const QuestionDetail = ({
       ) : (
         <>
           <div className={style.answer}>아직 답변이 등록되지 않았습니다.</div>
-          <AnswerInput id={id} />
+          {user.isAdmin && <AnswerInput id={id} />}
         </>
       )}
     </div>

@@ -45,7 +45,7 @@ export const DetailPage = ({ id }: { id: string | string[] }) => {
         <>
           <style jsx>{`
             .cont {
-              width: 15rem;
+              max-width: 20rem;
               display: flex;
               flex-direction: column;
               align-items: center;
@@ -58,6 +58,9 @@ export const DetailPage = ({ id }: { id: string | string[] }) => {
             }
             .contDesc {
               margin: 1rem 0 2rem;
+            }
+            .contDesc > div {
+              margin-bottom: 1.2rem;
             }
             .BtnCont {
               margin-bottom: 2rem;

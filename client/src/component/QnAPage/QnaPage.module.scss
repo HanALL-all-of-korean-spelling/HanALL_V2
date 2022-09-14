@@ -30,12 +30,16 @@
 
 .questionContent {
   div {
-    margin-bottom: 1rem;
-    max-width: fit-content;
+    margin-bottom: 0.5rem;
   }
-  div:last-child {
+  .userNickname {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
+    align-items: center;
+    // 버튼
+    div:last-child {
+      display: flex;
+    }
   }
 }
 
