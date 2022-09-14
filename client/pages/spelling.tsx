@@ -7,6 +7,7 @@ import { IPageList } from "../types";
 import { InfoListPage } from "../src/component/InfoListPage/InfoListPage";
 import { Title } from "../src/component/Title/Title";
 import { PaginationView } from "../src/component/PaginationView/PaginationView";
+import { SearchBar } from "../src/component/SearchPage/SearchBar";
 
 const Spelling: NextPage = () => {
   const [spellings, setSpellings] = useState<IPageList>();
@@ -69,6 +70,7 @@ const Spelling: NextPage = () => {
 
   return (
     <div>
+      <SearchBar />
       <Title>철자 정보</Title>
       {selectSort()}
       <>
