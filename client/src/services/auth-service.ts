@@ -32,6 +32,7 @@ export async function login(inputs: LoginInputs) {
         const { token } = res.data;
         Cookie.set(COOKIES.authToken, token);
         router.push("/");
+        return res;
       } else if (!res.data || !res.data.token) {
         return "Something went wrong!";
       }

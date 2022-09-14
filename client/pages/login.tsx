@@ -1,7 +1,9 @@
 import { useState } from "react";
-import { login } from "../src/services/auth-service";
-import { LoginInputs } from "../types/auth";
 import Link from "next/link";
+import { getUserInfo, login } from "../src/services/auth-service";
+import { useAppDispatch } from "../src/_app/hooks";
+import { setUser } from "../src/_reducer/userReducer";
+import { LoginInputs } from "../types/auth";
 import { Input } from "../src/component/Input/Input";
 import { Button } from "../src/component/Button/Button";
 import { AlertToast } from "../src/component/AlertToast/AlertToast";
@@ -10,6 +12,7 @@ export default function Login() {
   const initialValues: LoginInputs = { email: "", password: "" };
   const [inputs, setInputs] = useState<LoginInputs>(initialValues);
   const [isAlert, setIsAlert] = useState(false);
+  const dispatch = useAppDispatch();
 
   const handleInputChange = (e: React.ChangeEvent<any>) => {
     e.persist();
@@ -22,7 +25,11 @@ export default function Login() {
   const handleSubmit = async (e: any) => {
     e.preventDefault();
     const res = await login(inputs);
-    if (res?.response.status === 500) {
+    if (res) {
+      const userInfo = await getUserInfo();
+      dispatch(setUser(userInfo));
+    }
+    if (res?.status === 500) {
       setIsAlert(true);
     }
   };
@@ -44,7 +51,7 @@ export default function Login() {
         <Input
           type="email"
           name="email"
-          placeholder="ID"
+          placeholder="email"
           onChange={handleInputChange}
           value={inputs.email}
           required

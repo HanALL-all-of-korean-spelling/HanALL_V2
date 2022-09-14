@@ -42,7 +42,7 @@ export default function Join() {
       <Input
         type="email"
         name="email"
-        placeholder="ID"
+        placeholder="email"
         onChange={handleInputChange}
         value={inputs.email}
         required
