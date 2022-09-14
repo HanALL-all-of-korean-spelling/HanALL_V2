@@ -53,3 +53,9 @@ export const AlertToast = ({ message }: { message: string }) => {
     </Snackbar>
   );
 };
+
+export const ShowAlertToast = (isOpen: boolean, message: string) => {
+  if (isOpen) {
+    return <AlertToast message={message} />;
+  }
+};
