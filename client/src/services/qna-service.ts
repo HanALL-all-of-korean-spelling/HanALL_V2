@@ -17,7 +17,9 @@ export const postQuestions = (inputs: QuestionInputs) => {
   return axios
     .post("/api/questions", inputs)
     .then((response) => {
-      return response.data;
+      if (response.status === 200) {
+        return response.data;
+      }
     })
     .catch((error) => {
       console.log(error);
@@ -36,12 +38,66 @@ export const getQuestionDetail = (id: string) => {
     });
 };
 
+export const putQuestionDetail = (id: string, inputs: QuestionInputs) => {
+  return axios
+    .put("/api/questions/" + id, inputs)
+    .then((response) => {
+      if (response.status === 200) {
+        return response.data;
+      }
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+};
+
+export const deleteQuestionDetail = (id: string) => {
+  return axios
+    .delete("/api/questions/" + id)
+    .then((response) => {
+      if (response.status === 200) {
+        return response.data;
+      }
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+};
+
 // answer
 export const postAnswer = (id: string, input: string) => {
   return axios
     .post("/api/answers", { question_id: id, answer: input })
     .then((response) => {
-      return response.data;
+      if (response.status === 200) {
+        return response.data;
+      }
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+};
+
+export const putAnswer = (id: string, input: string) => {
+  return axios
+    .put("/api/answers/" + id, { answer: input })
+    .then((response) => {
+      if (response.status === 200) {
+        return response.data;
+      }
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+};
+
+export const deleteAnswer = (id: string) => {
+  return axios
+    .delete("/api/answers/" + id)
+    .then((response) => {
+      if (response.status === 200) {
+        return response.data;
+      }
     })
     .catch((error) => {
       console.log(error);

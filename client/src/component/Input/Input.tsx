@@ -2,7 +2,7 @@ import React from "react";
 import style from "./Input.module.scss";
 
 type inputType = {
-  placeholder: string;
+  placeholder?: string;
   value: string;
   name?: string;
   type?: string;

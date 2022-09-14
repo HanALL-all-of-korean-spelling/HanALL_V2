@@ -3,7 +3,7 @@ import { IQnaDetail, IQuestion } from "../../../types";
 import { getQuestionDetail, getQuestions } from "../../services/qna-service";
 import { useAppSelector } from "../../_app/hooks";
 import { getTest } from "../../_reducer/testReducer";
-import { AnswerInput } from "./AnswerInput";
+import { QuestionDetail } from "./QuestionDetail";
 import { SmallText } from "../Title/Title";
 import { PaginationView } from "../PaginationView/PaginationView";
 import style from "./QnaPage.module.scss";
@@ -26,14 +26,13 @@ export const QuestionList = () => {
       setExpanded(isExpanded ? panel : false);
     };
 
-  const getData = async () => {
-    const list = await getQuestions(page);
-    const detail = await getQuestionDetail(id);
-    setQnaList(list);
-    setQnaDetail(detail);
-  };
-
   useEffect(() => {
+    const getData = async () => {
+      const list = await getQuestions(page);
+      const detail = await getQuestionDetail(id);
+      setQnaList(list);
+      setQnaDetail(detail);
+    };
     getData();
   }, [id, page]);
 
@@ -63,24 +62,7 @@ export const QuestionList = () => {
           </AccordionSummary>
           {/* 문의 상세 내용 */}
           <AccordionDetails>
-            {qnaDetail?.question && (
-              <div className={style.questionContent}>
-                <div>{qnaDetail.question._source.question}</div>
-                <SmallText>{qnaDetail.question._source.nickname}</SmallText>
-              </div>
-            )}
-            {qnaDetail?.answer ? (
-              <div className={style.answer}>
-                {qnaDetail.answer._source.answer}
-              </div>
-            ) : (
-              <>
-                <div className={style.answer}>
-                  아직 답변이 등록되지 않았습니다.
-                </div>
-                <AnswerInput id={id} />
-              </>
-            )}
+            {qnaDetail && <QuestionDetail qnaDetail={qnaDetail} id={id} />}
           </AccordionDetails>
         </Accordion>
       );
