@@ -23,7 +23,11 @@ export const SimilarResults = ({ result }: { result: ISearch }) => {
   return (
     <div>
       <Title>유사 검색 결과</Title>
-      <ListView>{renderSimilarResult}</ListView>
+      {result.similar.length > 0 ? (
+        <ListView>{renderSimilarResult}</ListView>
+      ) : (
+        <div>유사 검색 결과가 없습니다.</div>
+      )}
     </div>
   );
 };

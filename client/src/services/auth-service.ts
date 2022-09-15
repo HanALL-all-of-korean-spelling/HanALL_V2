@@ -8,7 +8,7 @@ export const COOKIES = {
 };
 
 // auth
-export async function join(inputs: LoginInputs): Promise<string | void> {
+export async function join(inputs: LoginInputs) {
   return await axios
     .post("/api/auth/join", inputs)
     .then((res) => {
@@ -19,10 +19,11 @@ export async function join(inputs: LoginInputs): Promise<string | void> {
     })
     .catch((error) => {
       console.log(error);
+      return error;
     });
 }
 
-export async function login(inputs: LoginInputs): Promise<string | void> {
+export async function login(inputs: LoginInputs) {
   return await axios
     .post("/api/auth/login", inputs)
     .then((res) => {
@@ -31,19 +32,25 @@ export async function login(inputs: LoginInputs): Promise<string | void> {
         const { token } = res.data;
         Cookie.set(COOKIES.authToken, token);
         router.push("/");
+        return res;
       } else if (!res.data || !res.data.token) {
         return "Something went wrong!";
       }
     })
     .catch((error) => {
       console.log(error);
+      return error;
     });
 }
 
 export const logout = async () => {
   Cookie.remove(COOKIES.authToken);
-  console.log("logout");
-  await router.push("/login");
+  return await axios.get("/api/auth/logout").then((res) => {
+    //로그아웃 성공
+    if (res.status === 200) {
+      console.log("logout");
+    }
+  });
 };
 
 // users

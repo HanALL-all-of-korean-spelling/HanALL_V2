@@ -1,3 +1,5 @@
+import { ESRCH } from "constants";
+
 const { Client } = require("@elastic/elasticsearch");
 
 const esHost = process.env.ES_HOST || "localhost";

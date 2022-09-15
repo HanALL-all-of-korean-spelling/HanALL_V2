@@ -7,6 +7,7 @@ import { IPageList } from "../types";
 import { InfoListPage } from "../src/component/InfoListPage/InfoListPage";
 import { Title } from "../src/component/Title/Title";
 import { PaginationView } from "../src/component/PaginationView/PaginationView";
+import { SearchBar } from "../src/component/SearchPage/SearchBar";
 
 const Spacing: NextPage = () => {
   const [spacings, setSpacings] = useState<IPageList>();
@@ -68,7 +69,8 @@ const Spacing: NextPage = () => {
   };
 
   return (
-    <div className="flex-col">
+    <div>
+      <SearchBar />
       <Title>띄어쓰기 정보</Title>
       {selectSort()}
       {spacings && (

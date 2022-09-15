@@ -9,26 +9,27 @@ import { SimilarResults } from "../../src/component/SearchPage/SimilarResults";
 import { Button } from "../../src/component/Button/Button";
 import { OutlineBox } from "../../src/component/OutlineBox/OutlineBox";
 import { MWContainer } from "../../src/component/MWContainer/MWContainer";
+import { SearchBar } from "../../src/component/SearchPage/SearchBar";
 
 const Search: NextPage = () => {
   const [result, setResult] = useState<ISearch>();
 
   const router = useRouter();
-  const { searchText } = router.query;
-
-  const getData = async () => {
-    if (searchText) {
-      const search = await getSearchResult(searchText);
-      setResult(search);
-    }
-  };
+  const searchText = String(router.query.searchText);
 
   useEffect(() => {
+    const getData = async () => {
+      if (searchText) {
+        const search = await getSearchResult(searchText);
+        setResult(search);
+      }
+    };
     getData();
   }, [searchText]);
 
   return (
-    <>
+    <div>
+      <SearchBar initialText={searchText} />
       {result && result.detail ? (
         <div>
           <RightWrong result={result} />
@@ -45,7 +46,7 @@ const Search: NextPage = () => {
           <Button onClick={() => router.push("/")}>메인으로 가기</Button>
         </div>
       )}
-    </>
+    </div>
   );
 };
 
