@@ -1,26 +1,46 @@
 @import "../../../styles/_settings.colors.module.scss";
+@import "../../../styles/_settings.media.module.scss";
 
 .Gnb {
   background-color: $concept-yellow;
   justify-content: space-between;
   width: 100%;
   display: flex;
-  
+
   div {
     padding: 0.25rem 0.6rem;
     display: flex;
     flex-direction: row;
     min-width: max-content;
   }
-  
-  div:first-child {
+
+  .menu {
+    cursor: pointer;
+    display: none;
+    @include mobile {
+      display: block;
+      padding-top: 0.5rem;
+      padding-left: 1.1rem;
+    }
+  }
+
+  .List {
     div {
       cursor: pointer;
-  
+
       &:hover {
         color: $concept-pink;
         font-weight: bold;
       }
-    }    
+    }
+  }
+
+  @include mobile {
+    .Close {
+      display: none;
+    }
+    .Open {
+      display: block;
+    }
   }
 }
