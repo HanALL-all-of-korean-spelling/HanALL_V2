@@ -11,7 +11,7 @@ router
     passport.authenticate("jwt", { session: false }),
     async (req: Request, res: Response, next: NextFunction) => {
       if (req.user?._source.email != "matji1349@gmail.com") {
-        res.status(400).send("잘못된 접근입니다.");
+        return res.status(400).send("잘못된 접근입니다.");
       }
       try {
         const result = await esClient.index({
@@ -30,7 +30,7 @@ router
             },
           },
         });
-        res.status(201).json(result.body);
+        return res.status(201).json(result.body);
       } catch (err) {
         console.error(err);
         next(err);
@@ -45,7 +45,7 @@ router
     passport.authenticate("jwt", { session: false }),
     async (req: Request, res: Response, next: NextFunction) => {
       if (req.user?._source.email != "matji1349@gmail.com") {
-        res.status(400).send("잘못된 접근입니다.");
+        return res.status(400).send("잘못된 접근입니다.");
       }
       try {
         const result = await esClient.update({
@@ -57,7 +57,7 @@ router
             },
           },
         });
-        res.status(200).json(result.body);
+        return res.status(200).json(result.body);
       } catch (err) {
         console.error(err);
         next(err);
@@ -69,7 +69,7 @@ router
     passport.authenticate("jwt", { session: false }),
     async (req: Request, res: Response, next: NextFunction) => {
       if (req.user?._source.email != "matji1349@gmail.com") {
-        res.status(400).send("잘못된 접근입니다.");
+        return res.status(400).send("잘못된 접근입니다.");
       }
       try {
         const search_result = await esClient.search({
@@ -99,7 +99,7 @@ router
           index: index,
           id: req.params.id,
         });
-        res.status(204).send("삭제되었습니다.");
+        return res.status(204).send("삭제되었습니다.");
       } catch (err) {
         console.error(err);
         next(err);

@@ -27,7 +27,7 @@ router.get(
       if (req.user?._source.rank) {
         rank = req.user?._source.rank;
       }
-      res.json({ email, nickname, rank, point });
+      return res.json({ email, nickname, rank, point });
     } catch (error) {
       console.error(error);
       next(error);
@@ -40,7 +40,7 @@ router.get(
   passport.authenticate("jwt", { session: false }),
   (req: Request, res: Response, next: NextFunction) => {
     try {
-      res.json(req.user?._source.scraps);
+      return res.json(req.user?._source.scraps);
     } catch (error) {
       console.error(error);
       next(error);
@@ -55,7 +55,9 @@ router
     async (req: Request, res: Response, next: NextFunction) => {
       try {
         if (!req.user?._source.scraps) {
-          res.status(400).send("보관한 정보가 없어서 학습이 불가능해요!");
+          return res
+            .status(400)
+            .send("보관한 정보가 없어서 학습이 불가능해요!");
         }
 
         // 보관한 정보 id 합치기
@@ -74,7 +76,7 @@ router
             },
           },
         });
-        res.json(result.body.hits.hits);
+        return res.json(result.body.hits.hits);
       } catch (error) {
         console.error(error);
         next(error);
@@ -129,7 +131,7 @@ router
           },
         });
 
-        res.status(200).json(result.body);
+        return res.status(200).json(result.body);
       } catch (error) {
         console.error(error);
         next(error);
