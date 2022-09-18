@@ -13,7 +13,6 @@ router.get(
   passport.authenticate("jwt", { session: false }),
   (req: Request, res: Response, next: NextFunction) => {
     try {
-      console.log(req.user?._source);
       const email = req.user?._source.email;
       const nickname = req.user?._source.nickname;
 
