@@ -71,6 +71,23 @@ export const QnaSlice = createSlice({
         (question) => question._id !== action.payload
       );
     },
+    addAnswer: (state, action) => {
+      const findItem = state.qnaList.result.find(
+        (question) => question._id == action.payload.id
+      );
+      if (findItem) {
+        findItem._source.answer_flag = true;
+      }
+      state.qnaDetail.answer = {
+        _source: {
+          answer: action.payload.answer,
+          question_id: "1",
+        },
+        _index: "answers",
+        _id: "1",
+        _type: "_doc",
+      };
+    },
   },
 });
 
@@ -80,6 +97,7 @@ export const {
   addQuestion,
   editQuestion,
   deleteQuestion,
+  addAnswer,
 } = QnaSlice.actions;
 
 export const getQna = (state: RootState) => state.qna;
