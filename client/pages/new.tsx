@@ -11,6 +11,7 @@ const NewInfo: NextPage = () => {
     title: "",
     right_words: "",
     wrong_words: "",
+    description: "",
     helpful_info: "",
   };
   const [inputs, setInputs] = useState<InfoInputs>(initialValues);
@@ -66,6 +67,13 @@ const NewInfo: NextPage = () => {
             onChange={handleInputChange}
             value={inputs.wrong_words}
             placeholder="틀린 단어를 입력해주세요."
+          ></Input>
+          <Input
+            textArea
+            name="description"
+            onChange={handleInputChange}
+            value={inputs.description}
+            placeholder="설명을 입력해주세요."
           ></Input>
           <Input
             textArea

@@ -121,5 +121,6 @@ export interface InfoInputs {
   title: string;
   right_words: string;
   wrong_words: string;
+  description: string;
   helpful_info: string;
 }
