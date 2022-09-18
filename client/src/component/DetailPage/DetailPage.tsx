@@ -1,27 +1,25 @@
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import { IDetail } from "../../../types";
-import { getUserInfo } from "../../services/auth-service";
 import {
   getSpellingDetail,
   scrapSpacing,
   scrapSpelling,
 } from "../../services/user-service";
+import { useAppSelector } from "../../_app/hooks";
+import { getUser } from "../../_reducer/userReducer";
 import { ShowAlertToast } from "../AlertToast/AlertToast";
 import { Button } from "../Button/Button";
 import { Title } from "../Title/Title";
 
 export const DetailPage = ({ id }: { id: string | string[] }) => {
   const [detailInfo, setDetailInfo] = useState<IDetail>();
-  const [user, setUser] = useState();
+  const user = useAppSelector(getUser).user;
   const [isOpen, setIsOpen] = useState(false);
 
   const getData = async () => {
     const detail = await getSpellingDetail(id);
     setDetailInfo(detail);
-    const userInfo = await getUserInfo();
-    setUser(userInfo);
-    console.log(userInfo);
   };
 
   const selectDetailInfo = () => {
