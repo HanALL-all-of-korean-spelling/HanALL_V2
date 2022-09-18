@@ -42,6 +42,20 @@ export const QnaSlice = createSlice({
     setQnaDetail: (state, action) => {
       state.qnaDetail = action.payload;
     },
+    addQuestion: (state, action) => {
+      const today = new Date();
+      state.qnaList.result.unshift({
+        _source: {
+          title: action.payload,
+          answer_flag: false,
+          created_at: today.toJSON(),
+        },
+        sort: [1],
+        _index: "question",
+        _id: "1",
+        _type: "_doc",
+      });
+    },
     editQuestion: (state, action) => {
       const findItem = state.qnaList.result.find(
         (question) => question._id == action.payload.id
@@ -60,8 +74,13 @@ export const QnaSlice = createSlice({
   },
 });
 
-export const { setQnaList, setQnaDetail, editQuestion, deleteQuestion } =
-  QnaSlice.actions;
+export const {
+  setQnaList,
+  setQnaDetail,
+  addQuestion,
+  editQuestion,
+  deleteQuestion,
+} = QnaSlice.actions;
 
 export const getQna = (state: RootState) => state.qna;
 export const getQnaList = (state: RootState) => state.qna.qnaList;
