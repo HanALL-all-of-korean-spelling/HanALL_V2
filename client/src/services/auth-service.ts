@@ -1,11 +1,6 @@
 import axios from "axios";
-import Cookie from "js-cookie";
 import router from "next/router";
 import { LoginInputs } from "../../types/auth";
-
-export const COOKIES = {
-  authToken: "myApp.authToken",
-};
 
 // auth
 export async function join(inputs: LoginInputs) {
@@ -18,8 +13,7 @@ export async function join(inputs: LoginInputs) {
       }
     })
     .catch((error) => {
-      console.log(error);
-      return error;
+      return error.response;
     });
 }
 
@@ -29,8 +23,9 @@ export async function login(inputs: LoginInputs) {
     .then((res) => {
       //로그인 성공
       if (res.status === 200) {
-        const { token } = res.data;
-        Cookie.set(COOKIES.authToken, token);
+        const token = res.data.token;
+        // axios 헤더에 토큰 담아 보내기
+        axios.defaults.headers.common["Authorization"] = token;
         router.push("/");
         return res;
       } else if (!res.data || !res.data.token) {
@@ -38,13 +33,11 @@ export async function login(inputs: LoginInputs) {
       }
     })
     .catch((error) => {
-      console.log(error);
-      return error;
+      return error.response;
     });
 }
 
 export const logout = async () => {
-  Cookie.remove(COOKIES.authToken);
   return await axios.get("/api/auth/logout").then((res) => {
     //로그아웃 성공
     if (res.status === 200) {
@@ -55,78 +48,49 @@ export const logout = async () => {
 
 // users
 export const getUserInfo = async () => {
-  const cookie = Cookie.get(COOKIES.authToken);
-  if (cookie) {
-    return axios
-      .get("/api/users", {
-        headers: {
-          token: cookie,
-        },
-      })
-      .then((response) => {
-        return response.data;
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  }
+  return axios
+    .get("/api/users", {})
+    .then((response) => {
+      return response.data;
+    })
+    .catch((error) => {
+      return error.response;
+    });
 };
 
 export const getScrapList = () => {
-  const cookie = Cookie.get(COOKIES.authToken);
-  if (cookie) {
-    return axios
-      .get("/api/users/scraps", {
-        headers: {
-          token: cookie,
-        },
-      })
-      .then((response) => {
-        return response.data;
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  }
+  return axios
+    .get("/api/users/scraps", {})
+    .then((response) => {
+      return response.data;
+    })
+    .catch((error) => {
+      return error.response;
+    });
 };
 
 export const getTestList = () => {
-  const cookie = Cookie.get(COOKIES.authToken);
-  if (cookie) {
-    return axios
-      .get("/api/users/tests", {
-        headers: {
-          token: cookie,
-        },
-      })
-      .then((response) => {
-        return response.data;
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  }
+  const user = localStorage.getItem("jwtToken");
+  return axios
+    .get("/api/users/tests", {})
+    .then((response) => {
+      return response.data;
+    })
+    .catch((error) => {
+      return error.response;
+    });
+  // }
 };
 
 export const putTestResult = (score: number) => {
-  const cookie = Cookie.get(COOKIES.authToken);
-  if (cookie) {
-    return axios
-      .put(
-        "/api/users/tests",
-        { point: score },
-        {
-          headers: {
-            token: cookie,
-          },
-        }
-      )
-      .then((response) => {
-        console.log(response.data);
-        return response.data;
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  }
+  const user = localStorage.getItem("jwtToken");
+  return axios
+    .put("/api/users/tests", { point: score })
+    .then((response) => {
+      console.log(response.data);
+      return response.data;
+    })
+    .catch((error) => {
+      return error.response;
+    });
 };

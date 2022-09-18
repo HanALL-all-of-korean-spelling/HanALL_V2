@@ -21,7 +21,7 @@ export default function Join() {
   const handleSubmit = async (e: any) => {
     e.preventDefault();
     const res = await join(inputs);
-    if (res?.response.data == "이미 가입하셨습니다.") {
+    if (res?.data == "이미 가입하셨습니다.") {
       setIsAlert(true);
     }
   };
