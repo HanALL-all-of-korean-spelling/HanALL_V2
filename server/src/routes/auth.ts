@@ -102,7 +102,10 @@ router.get(
   "/logout",
   passport.authenticate("jwt", { session: false }),
   (req: Request, res: Response) => {
-    return res.clearCookie("token").end();
+    res.clearCookie("token");
+    res.clearCookie("jwt");
+    res.clearCookie("myApp.authToken").end();
+    return;
   }
 );
 
