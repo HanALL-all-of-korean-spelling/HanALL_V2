@@ -36,13 +36,11 @@ router
       const result_data: Array<JSON> = result.body.hits.hits;
       const current_page: number = from / 10 + 1;
 
-      res.status(200).json({
+      return res.status(200).json({
         total_page: page_count,
         current_page: current_page,
         result: result_data,
       });
-
-      res.status(200).json(result.body.hits.hits);
     } catch (err) {
       console.error(err);
       next(err);
@@ -66,7 +64,7 @@ router
             ).toISOString(),
           },
         });
-        res.status(201).json(result.body);
+        return res.status(201).json(result.body);
       } catch (err) {
         console.error(err);
         next(err);
@@ -106,7 +104,7 @@ router
         answer = answer_result.body.hits.hits[0];
       }
 
-      res.status(200).json({ question: question, answer: answer });
+      return res.status(200).json({ question: question, answer: answer });
     } catch (err) {
       console.error(err);
       next(err);
@@ -138,9 +136,9 @@ router
               },
             },
           });
-          res.status(200).json(result.body);
+          return res.status(200).json(result.body);
         } else {
-          res.status(400).send("작성자가 아닙니다.");
+          return res.status(400).send("작성자가 아닙니다.");
         }
       } catch (err) {
         console.error(err);
@@ -168,9 +166,9 @@ router
             index: index,
             id: req.params.id,
           });
-          res.status(204).send("삭제되었습니다.");
+          return res.status(204).send("삭제되었습니다.");
         } else {
-          res.status(400).send("작성자가 아닙니다.");
+          return res.status(400).send("작성자가 아닙니다.");
         }
       } catch (err) {
         console.error(err);

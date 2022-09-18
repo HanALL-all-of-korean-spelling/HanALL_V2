@@ -74,7 +74,7 @@ router.post(
         // 비밀번호 불일치
         return res.status(400).send("비밀번호가 일치하지 않습니다.");
       }
-      return req.login(user, { session: false }, (loginError) => {
+      req.login(user, { session: false }, (loginError) => {
         // 로그인 성공
         if (loginError) {
           console.error(loginError);
@@ -86,7 +86,7 @@ router.post(
           process.env.JWT_SECRET as string,
           { expiresIn: "1d" }
         );
-        res
+        return res
           .cookie("token", token, {
             httpOnly: true,
             maxAge: 24 * 60 * 60 * 1000,

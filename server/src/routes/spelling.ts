@@ -95,7 +95,7 @@ router
         const page_count: number = Math.ceil(count.body.count / 10);
         const result_data: Array<JSON> = result.body.hits.hits;
         const current_page: number = from / 10 + 1;
-        res.status(200).json({
+        return res.status(200).json({
           total_page: page_count,
           current_page: current_page,
           result: result_data,
@@ -136,7 +136,9 @@ router
         const hits: Array<JSON> = sort_hits_result.body.hits.hits;
         const crt: Array<JSON> = sort_crt_result.body.hits.hits;
 
-        res.status(200).json({ hits_order: hits, created_at_order: crt });
+        return res
+          .status(200)
+          .json({ hits_order: hits, created_at_order: crt });
       } catch (err) {
         console.error(err);
         next(err);
@@ -151,7 +153,7 @@ router
     async (req: Request, res: Response, next: NextFunction) => {
       //console.log(req.user);
       if (req.user?._source.email != "matji1349@gmail.com") {
-        res.status(400).send("잘못된 접근입니다.");
+        return res.status(400).send("잘못된 접근입니다.");
       }
       try {
         const result = await esClient.index({
@@ -167,7 +169,7 @@ router
             ).toISOString(),
           },
         });
-        res.status(201).json(result.body);
+        return res.status(201).json(result.body);
       } catch (err) {
         console.error(err);
         next(err);
@@ -235,7 +237,7 @@ router
           },
         },
       });
-      res.status(200).json(result.body.hits.hits[0]._source);
+      return res.status(200).json(result.body.hits.hits[0]._source);
     } catch (err) {
       console.error(err);
       next(err);
@@ -261,7 +263,7 @@ router
             },
           },
         });
-        res.status(200).json(result.body);
+        return res.status(200).json(result.body);
       } catch (err) {
         console.error(err);
         next(err);
@@ -273,14 +275,14 @@ router
     passport.authenticate("jwt", { session: false }),
     async (req: Request, res: Response, next: NextFunction) => {
       if (req.user?._source.email != "matji1349@gmail.com") {
-        res.status(400).send("잘못된 접근입니다.");
+        return res.status(400).send("잘못된 접근입니다.");
       }
       try {
         const result = await esClient.delete({
           index: index,
           id: req.params.id,
         });
-        res.status(204).send("삭제되었습니다.");
+        return res.status(204).send("삭제되었습니다.");
       } catch (err) {
         console.error(err);
         next(err);
@@ -371,7 +373,7 @@ router
             },
           },
         });
-        res.status(200).json(result.body.hits.hits[0]._source);
+        return res.status(200).json(result.body.hits.hits[0]._source);
       } catch (err) {
         console.error(err);
         next(err);

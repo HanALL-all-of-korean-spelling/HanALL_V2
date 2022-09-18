@@ -64,10 +64,10 @@ const passportVerify = async (email: String, password: String, done: any) => {
       if (result) {
         return done(null, exUser, { message: "Logged In Successfully" });
       } else {
-        done(null, false, { message: "비밀번호가 일치하지 않습니다." });
+        return done(null, false, { message: "비밀번호가 일치하지 않습니다." });
       }
     } else {
-      done(true, false, { message: "가입되지 않은 회원입니다." });
+      return done(true, false, { message: "가입되지 않은 회원입니다." });
     }
   } catch (error) {
     console.error(error);
@@ -105,6 +105,7 @@ const JWTVerify = async (jwtPayload: any, done: any) => {
     }
     // 유저 데이터가 없을 경우 에러 표시
     done(null, false, { reason: "올바르지 않은 인증정보 입니다." });
+    return;
   } catch (error) {
     console.error(error);
     done(error);
