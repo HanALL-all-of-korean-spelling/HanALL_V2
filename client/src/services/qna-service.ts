@@ -17,12 +17,12 @@ export const postQuestions = (inputs: QuestionInputs) => {
   return axios
     .post("/api/questions", inputs)
     .then((response) => {
-      if (response.status === 200) {
-        return response.data;
+      if (response.status === 201) {
+        return response;
       }
     })
     .catch((error) => {
-      return error;
+      return error.response;
     });
 };
 
@@ -56,7 +56,7 @@ export const deleteQuestionDetail = (id: string) => {
     .delete("/api/questions/" + id)
     .then((response) => {
       if (response.status === 204) {
-        return response.data;
+        return "success";
       }
     })
     .catch((error) => {

@@ -1,12 +1,16 @@
 import React, { useState } from "react";
 import { QuestionInputs } from "../../../types";
 import { postQuestions } from "../../services/qna-service";
+import { useAppDispatch } from "../../_app/hooks";
+import { addQuestion } from "../../_reducer/qnaReducer";
 import { ShowAlertToast } from "../AlertToast/AlertToast";
 import { Button } from "../Button/Button";
 import { Input } from "../Input/Input";
 import style from "./QnaPage.module.scss";
 
 export const QuestionInput = () => {
+  const dispatch = useAppDispatch();
+
   const initialValues: QuestionInputs = { title: "", question: "" };
   const [inputs, setInputs] = useState<QuestionInputs>(initialValues);
   const [isOpen, setIsOpen] = useState(false);
@@ -22,8 +26,10 @@ export const QuestionInput = () => {
   const handleSubmit = async (e: any) => {
     e.preventDefault();
     const res = await postQuestions(inputs);
-
-    if (res.response.status === 401) {
+    if (res?.status === 201) {
+      dispatch(addQuestion(inputs.title));
+      setInputs(initialValues);
+    } else if (res?.status === 401) {
       setIsOpen(true);
     }
   };
@@ -37,6 +43,7 @@ export const QuestionInput = () => {
             onChange={handleInputChange}
             value={inputs.title}
             placeholder="제목을 입력해주세요."
+            required
           ></Input>
           <Input
             textArea
@@ -44,6 +51,7 @@ export const QuestionInput = () => {
             onChange={handleInputChange}
             value={inputs.question}
             placeholder="추가되었으면 하는 내용을 입력해주세요."
+            required
           ></Input>
         </div>
         <Button type="submit" fullWidth>

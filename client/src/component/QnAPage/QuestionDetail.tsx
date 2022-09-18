@@ -4,7 +4,8 @@ import {
   deleteQuestionDetail,
   putQuestionDetail,
 } from "../../services/qna-service";
-import { useAppSelector } from "../../_app/hooks";
+import { useAppDispatch, useAppSelector } from "../../_app/hooks";
+import { editQuestion, deleteQuestion } from "../../_reducer/qnaReducer";
 import { getUser } from "../../_reducer/userReducer";
 import { AnswerInput } from "./AnswerInput";
 import { Button } from "../Button/Button";
@@ -19,6 +20,8 @@ export const QuestionDetail = ({
   qnaDetail: IQnaDetail;
   id: string;
 }) => {
+  const dispatch = useAppDispatch();
+
   // 수정 입력 인풋
   const initialValues: QuestionInputs = { title: "", question: "" };
   const [inputs, setInputs] = useState<QuestionInputs>(initialValues);
@@ -48,11 +51,25 @@ export const QuestionDetail = ({
       title: qnaDetail.question._source.title,
       question: qnaDetail.question._source.question,
     });
-    if (isEdit) await putQuestionDetail(id, inputs); // 수정 완료
+    // 수정 완료
+    if (isEdit) {
+      const res = await putQuestionDetail(id, inputs);
+      if (res) {
+        dispatch(
+          editQuestion({
+            id: id,
+            ...inputs,
+          })
+        );
+      }
+    }
   };
 
   const onClickDelete = async () => {
-    await deleteQuestionDetail(id);
+    const res = await deleteQuestionDetail(id);
+    if (res) {
+      dispatch(deleteQuestion(id));
+    }
   };
 
   return (

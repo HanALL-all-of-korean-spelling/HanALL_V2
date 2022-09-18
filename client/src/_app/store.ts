@@ -1,4 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
+import qnaReducer from "../_reducer/qnaReducer";
 import testReducer from "../_reducer/testReducer";
 import userReducer from "../_reducer/userReducer";
 
@@ -6,6 +7,7 @@ export const store = configureStore({
   reducer: {
     test: testReducer,
     user: userReducer,
+    qna: qnaReducer,
   },
 });
 

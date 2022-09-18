@@ -26,12 +26,12 @@ export const UserNickname = () => {
   return (
     <>
       {user ? (
-        <div>
+        <>
           <div>{user.nickname}님</div>
           <Button color="white" onClick={onClickLogout}>
             로그아웃
           </Button>
-        </div>
+        </>
       ) : (
         <Link href="/login" passHref>
           <Button color="white">로그인하기</Button>
