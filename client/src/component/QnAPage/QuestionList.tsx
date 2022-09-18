@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { IQnaDetail, IQuestion } from "../../../types";
 import { getQuestionDetail, getQuestions } from "../../services/qna-service";
-import { AnswerInput } from "./AnswerInput";
+import { useAppSelector } from "../../_app/hooks";
+import { getTest } from "../../_reducer/testReducer";
+import { QuestionDetail } from "./QuestionDetail";
 import { SmallText } from "../Title/Title";
+import { PaginationView } from "../PaginationView/PaginationView";
 import style from "./QnaPage.module.scss";
 
 import Accordion from "@mui/material/Accordion";
@@ -16,22 +19,22 @@ export const QuestionList = () => {
   const [qnaDetail, setQnaDetail] = useState<IQnaDetail>();
   const [id, setId] = useState<string>("");
   const [expanded, setExpanded] = React.useState<string | false>(false);
+  const page = useAppSelector(getTest).page;
 
   const handleChange =
     (panel: string) => (event: React.SyntheticEvent, isExpanded: boolean) => {
       setExpanded(isExpanded ? panel : false);
     };
 
-  const getData = async () => {
-    const list = await getQuestions(1);
-    const detail = await getQuestionDetail(id);
-    setQnaList(list);
-    setQnaDetail(detail);
-  };
-
   useEffect(() => {
+    const getData = async () => {
+      const list = await getQuestions(page);
+      const detail = await getQuestionDetail(id);
+      setQnaList(list);
+      setQnaDetail(detail);
+    };
     getData();
-  }, [id]);
+  }, [id, page]);
 
   const renderQna =
     qnaList?.result &&
@@ -59,28 +62,20 @@ export const QuestionList = () => {
           </AccordionSummary>
           {/* 문의 상세 내용 */}
           <AccordionDetails>
-            {qnaDetail?.question && (
-              <div className={style.questionContent}>
-                <div>{qnaDetail.question._source.question}</div>
-                <SmallText>{qnaDetail.question._source.nickname}</SmallText>
-              </div>
-            )}
-            {qnaDetail?.answer ? (
-              <div className={style.answer}>
-                {qnaDetail.answer._source.answer}
-              </div>
-            ) : (
-              <>
-                <div className={style.answer}>
-                  아직 답변이 등록되지 않았습니다.
-                </div>
-                <AnswerInput id={id} />
-              </>
-            )}
+            {qnaDetail && <QuestionDetail qnaDetail={qnaDetail} id={id} />}
           </AccordionDetails>
         </Accordion>
       );
     });
 
-  return <div className={style.QuestionList}>{renderQna}</div>;
+  return (
+    <>
+      {qnaList && (
+        <div>
+          <div className={style.QuestionList}>{renderQna}</div>
+          <PaginationView total={qnaList?.total_page} current={page} />
+        </div>
+      )}
+    </>
+  );
 };

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { QuestionInputs } from "../../../types";
 import { postQuestions } from "../../services/qna-service";
+import { ShowAlertToast } from "../AlertToast/AlertToast";
 import { Button } from "../Button/Button";
 import { Input } from "../Input/Input";
 import style from "./QnaPage.module.scss";
@@ -8,6 +9,7 @@ import style from "./QnaPage.module.scss";
 export const QuestionInput = () => {
   const initialValues: QuestionInputs = { title: "", question: "" };
   const [inputs, setInputs] = useState<QuestionInputs>(initialValues);
+  const [isOpen, setIsOpen] = useState(false);
 
   const handleInputChange = (e: React.ChangeEvent<any>) => {
     e.persist();
@@ -20,7 +22,10 @@ export const QuestionInput = () => {
   const handleSubmit = async (e: any) => {
     e.preventDefault();
     const res = await postQuestions(inputs);
-    console.log(res);
+
+    if (res.response.status === 401) {
+      setIsOpen(true);
+    }
   };
 
   return (
@@ -44,6 +49,7 @@ export const QuestionInput = () => {
         <Button type="submit" fullWidth>
           등록하기
         </Button>
+        {ShowAlertToast(isOpen, "로그인 후 이용해 주세요.")}
       </form>
     </div>
   );

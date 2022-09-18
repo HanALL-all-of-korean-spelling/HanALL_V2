@@ -1,22 +1,27 @@
 import type { NextPage } from "next";
 import React, { useEffect, useState } from "react";
+import { getSpacingList } from "../src/services/user-service";
+import { useAppSelector } from "../src/_app/hooks";
+import { getTest } from "../src/_reducer/testReducer";
+import { IPageList } from "../types";
 import { InfoListPage } from "../src/component/InfoListPage/InfoListPage";
 import { Title } from "../src/component/Title/Title";
-import { getSpacingList } from "../src/services/user-service";
-import { IPageList } from "../types";
+import { PaginationView } from "../src/component/PaginationView/PaginationView";
+import { SearchBar } from "../src/component/SearchPage/SearchBar";
 
 const Spacing: NextPage = () => {
   const [spacings, setSpacings] = useState<IPageList>();
   const [sort, setSort] = useState<string>("created_at");
+  const page = useAppSelector(getTest).page;
 
   const getData = async () => {
-    const list = await getSpacingList(sort);
+    const list = await getSpacingList(sort, page);
     setSpacings(list);
   };
 
   useEffect(() => {
     getData();
-  }, [sort]);
+  }, [sort, page]);
 
   const selectSort = () => {
     return (
@@ -64,10 +69,16 @@ const Spacing: NextPage = () => {
   };
 
   return (
-    <div className="flex-col">
+    <div>
+      <SearchBar />
       <Title>띄어쓰기 정보</Title>
       {selectSort()}
-      {spacings && <InfoListPage list={spacings.result} type={sort} />}
+      {spacings && (
+        <>
+          <InfoListPage list={spacings.result} type={sort} />
+          <PaginationView total={spacings.total_page} current={page} />
+        </>
+      )}
     </div>
   );
 };
