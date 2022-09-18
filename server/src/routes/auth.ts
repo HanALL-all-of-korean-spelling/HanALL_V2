@@ -66,13 +66,13 @@ router.post(
   (req: Request, res: Response, next: NextFunction) => {
     passport.authenticate("local", (authError, user, info) => {
       if (authError) {
-        // 로그인 실패
-        console.error(authError);
+        // 회원가입 하지 않은 유저
+        res.status(400).send("가입되지 않은 이메일입니다.");
         return next(authError);
       }
       if (!user) {
-        // 로그인 실패
-        return res.redirect(`/?loginError=${info.message}`);
+        // 비밀번호 불일치
+        return res.status(400).send("비밀번호가 일치하지 않습니다.");
       }
       return req.login(user, { session: false }, (loginError) => {
         // 로그인 성공
@@ -86,11 +86,13 @@ router.post(
           process.env.JWT_SECRET as string,
           { expiresIn: "1d" }
         );
-        res.cookie("token", token, {
-          httpOnly: true,
-          maxAge: 24 * 60 * 60 * 1000,
-        });
-        res.status(200).json({ token });
+        res
+          .cookie("token", token, {
+            httpOnly: true,
+            maxAge: 24 * 60 * 60 * 1000,
+          })
+          .status(200)
+          .json({ token });
       });
     })(req, res, next);
   }
