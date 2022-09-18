@@ -16,6 +16,7 @@ export const DetailPage = ({ id }: { id: string | string[] }) => {
   const [detailInfo, setDetailInfo] = useState<IDetail>();
   const user = useAppSelector(getUser).user;
   const [isOpen, setIsOpen] = useState(false);
+  const [messageContent, setMessageContent] = useState("");
 
   const getData = async () => {
     const detail = await getSpellingDetail(id);
@@ -23,11 +24,21 @@ export const DetailPage = ({ id }: { id: string | string[] }) => {
   };
 
   const selectDetailInfo = () => {
-    setIsOpen(true);
     if (detailInfo?.type === "spacing") {
       return scrapSpacing(id);
     } else {
       return scrapSpelling(id);
+    }
+  };
+
+  const setScrapAlert = async () => {
+    const res = await selectDetailInfo();
+    if (res?.status === 200) {
+      setIsOpen(true);
+      setMessageContent("스크랩 완료");
+    } else {
+      setIsOpen(true);
+      setMessageContent(res?.data);
     }
   };
 
@@ -98,13 +109,13 @@ export const DetailPage = ({ id }: { id: string | string[] }) => {
                   shadow
                   onClick={() =>
                     user
-                      ? selectDetailInfo()
+                      ? setScrapAlert()
                       : alert("스크랩하려면 로그인해주세요")
                   }
                 >
                   보관하기
                 </Button>
-                {ShowAlertToast(isOpen, "스크랩 완료")}
+                {ShowAlertToast(isOpen, messageContent)}
               </div>
 
               {detailInfo.related?.id && (
