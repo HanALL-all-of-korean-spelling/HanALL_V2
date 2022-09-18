@@ -328,6 +328,7 @@ router
             new_scraps.some((item: any) => item.id === req.params.id)
           ) {
             res.status(400).send("이미 스크랩한 글입니다.");
+            return;
           } else {
             new_scraps.push({ id: req.params.id, title: title });
           }

@@ -64,8 +64,6 @@ router
         const spacings: Array<JSON> = req.user?._source?.scraps.spacing!;
         scraps_list = scraps_list?.concat(spellings, spacings);
 
-        console.log(scraps_list);
-
         const result = await esClient.search({
           index: "words",
           body: {
