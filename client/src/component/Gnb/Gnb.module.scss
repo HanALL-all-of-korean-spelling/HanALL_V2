@@ -18,9 +18,11 @@
     cursor: pointer;
     display: none;
     @include mobile {
-      display: block;
-      padding-top: 0.5rem;
-      padding-left: 1.1rem;
+      display: flex;
+      align-items: center;
+      &:hover {
+        color: $concept-pink;
+      }
     }
   }
 
@@ -39,8 +41,10 @@
     .Close {
       display: none;
     }
-    .Open {
-      display: block;
+    .Open,
+    .Open > div {
+      display: flex;
+      flex-direction: column;
     }
   }
 }

@@ -1,17 +1,24 @@
 import Link from "next/link";
 import { useState } from "react";
 import { UserNickname } from "../User/UserNickname";
+import ListRoundedIcon from "@mui/icons-material/ListRounded";
 import style from "./Gnb.module.scss";
 
 export default function Gnb() {
   const [isOpen, setIsOpen] = useState(false);
+  const onClickClose = () => {
+    setIsOpen(!isOpen);
+  };
 
   return (
     <div className={style.Gnb}>
-      <div className={style.menu} onClick={() => setIsOpen(!isOpen)}>
-        {isOpen ? <>메뉴 닫기</> : <>메뉴 열기</>}
+      <div className={style.menu} onClick={onClickClose}>
+        <ListRoundedIcon />
       </div>
-      <div className={`${style.List} ${isOpen ? style.Open : style.Close}`}>
+      <div
+        className={`${style.List} ${isOpen ? style.Open : style.Close}`}
+        onClick={onClickClose}
+      >
         <Link href="/" passHref>
           <div>메인</div>
         </Link>
@@ -28,7 +35,9 @@ export default function Gnb() {
           <div>보관함</div>
         </Link>
       </div>
-      <UserNickname />
+      <div className={`${isOpen && style.Open}`}>
+        <UserNickname />
+      </div>
     </div>
   );
 }
