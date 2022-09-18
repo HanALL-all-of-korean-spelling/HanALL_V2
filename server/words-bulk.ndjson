@@ -105,7 +105,7 @@
 {"index":{"_index":"words"}}
 {"type":"spacing", "title":"멀뿐더러 vs 멀 뿐더러", "right_words":"멀뿐더러", "wrong_words": ["멀 뿐더러"], "description": "‘-ㄹ뿐더러’는 어떤 일이 그것만으로 그치지 않고 나아가 다른 일이 더 있음을 나타내는 연결 어미로, 앞말과 붙여서 사용합니다.", "helpful_info": "'-ㄹ뿐더러'가 하나의 어미인 걸 기억하세요! ", "hits":0, "scraps":0, "created_at": "2022-05-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
-{"type":"spacing", "title":"할 수 vs 할수", "right_words":"할 수", "wrong_words": ["할수"], "description": "'할 수'에서의 '수'는 의존 명사입니다. 의존 명사는 띄어쓰는 게 맞습니다.", "helpful_info": "양 옆의 글자가 물(水)에 빠지지 않게 띄어쓰기를 해주세요!", "hits":0, "scraps":0, "created_at": "2022-05-17T05:48:49.850Z"}
+{"type":"spacing", "title":"수개월 vs 수 개월", "right_words":"수개월", "wrong_words": ["수 개월"], "description": "'수개월'은 두서너 달 또는 여러 달을 뜻하는, 하나의 단어이므로, '수개월'과 같이 적습니다.", "helpful_info": "'수개월'은 한 단어임을 기억하세요!", "hits":0, "scraps":0, "created_at": "2022-05-17T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spacing", "title":"할 거 vs 할거", "right_words":"할 거", "wrong_words": ["할거"], "description": "'할 거'에서의 '거'는 '것'의 구어적 표현입니다. '것'은 의존 명사로, 띄어쓰는 게 맞습니다.", "helpful_info": "'것'은 띄어쓰는 것! '거'도 띄어쓰는 거!", "hits":0, "scraps":0, "created_at": "2022-05-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
