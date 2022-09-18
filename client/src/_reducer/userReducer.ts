@@ -22,10 +22,15 @@ export const UserSlice = createSlice({
         state.isAdmin = true;
       }
     },
+    setUserScore: (state, action) => {
+      if (state.user != undefined) {
+        state.user.point += action.payload;
+      }
+    },
   },
 });
 
-export const { setUser } = UserSlice.actions;
+export const { setUser, setUserScore } = UserSlice.actions;
 
 export const getUser = (state: RootState) => state.user;
 

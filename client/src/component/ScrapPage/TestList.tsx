@@ -1,14 +1,14 @@
 import React, { useState } from "react";
-import { useRouter } from "next/router";
 import { ITest } from "../../../types";
+import { putTestResult } from "../../services/auth-service";
 import { useAppDispatch } from "../../_app/hooks";
 import { setTotalScore } from "../../_reducer/testReducer";
+import { setUserScore } from "../../_reducer/userReducer";
 import { Title } from "../Title/Title";
 import { Button } from "../Button/Button";
 import css from "styled-jsx/css";
 
 export const TestList = ({ quizzes }: { quizzes: ITest[] }) => {
-  const router = useRouter();
   const dispatch = useAppDispatch();
 
   const [checkedList, setCheckedList] = useState<Array<string | string[]>>([]);
@@ -54,17 +54,17 @@ export const TestList = ({ quizzes }: { quizzes: ITest[] }) => {
       );
     });
 
+  // 점수 보기 버튼 클릭
+  const onClickResult = async () => {
+    dispatch(setTotalScore(score));
+    dispatch(setUserScore(score));
+    await putTestResult(score);
+  };
+
   return (
     <>
       <div>{renderTestList}</div>
-      <Button
-        fullWidth
-        shadow
-        onClick={() => {
-          router.push("/test/result");
-          dispatch(setTotalScore(score));
-        }}
-      >
+      <Button fullWidth shadow onClick={onClickResult}>
         점수 보기
       </Button>
     </>

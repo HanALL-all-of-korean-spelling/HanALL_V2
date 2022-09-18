@@ -70,7 +70,6 @@ export const getScrapList = () => {
 };
 
 export const getTestList = () => {
-  const user = localStorage.getItem("jwtToken");
   return axios
     .get("/api/users/tests", {})
     .then((response) => {
@@ -79,16 +78,16 @@ export const getTestList = () => {
     .catch((error) => {
       return error.response;
     });
-  // }
 };
 
 export const putTestResult = (score: number) => {
-  const user = localStorage.getItem("jwtToken");
   return axios
     .put("/api/users/tests", { point: score })
     .then((response) => {
-      console.log(response.data);
-      return response.data;
+      if (response.status === 200) {
+        router.push("/test/result");
+        return response.data;
+      }
     })
     .catch((error) => {
       return error.response;
