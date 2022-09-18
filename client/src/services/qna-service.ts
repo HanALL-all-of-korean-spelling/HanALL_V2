@@ -56,7 +56,7 @@ export const deleteQuestionDetail = (id: string) => {
     .delete("/api/questions/" + id)
     .then((response) => {
       if (response.status === 204) {
-        return response.data;
+        return "success";
       }
     })
     .catch((error) => {

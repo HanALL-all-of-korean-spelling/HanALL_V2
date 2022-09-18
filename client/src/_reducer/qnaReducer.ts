@@ -42,10 +42,26 @@ export const QnaSlice = createSlice({
     setQnaDetail: (state, action) => {
       state.qnaDetail = action.payload;
     },
+    editQuestion: (state, action) => {
+      const findItem = state.qnaList.result.find(
+        (question) => question._id == action.payload.id
+      );
+      if (findItem) {
+        findItem._source.title = action.payload.title;
+      }
+      state.qnaDetail.question._source.title = action.payload.title;
+      state.qnaDetail.question._source.question = action.payload.question;
+    },
+    deleteQuestion: (state, action) => {
+      state.qnaList.result = state.qnaList.result.filter(
+        (question) => question._id !== action.payload
+      );
+    },
   },
 });
 
-export const { setQnaList, setQnaDetail } = QnaSlice.actions;
+export const { setQnaList, setQnaDetail, editQuestion, deleteQuestion } =
+  QnaSlice.actions;
 
 export const getQna = (state: RootState) => state.qna;
 export const getQnaList = (state: RootState) => state.qna.qnaList;

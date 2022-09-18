@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { IQnaDetail, IQuestion } from "../../../types";
 import { getQuestionDetail, getQuestions } from "../../services/qna-service";
-import { useAppSelector } from "../../_app/hooks";
+import { useAppDispatch, useAppSelector } from "../../_app/hooks";
 import { getTest } from "../../_reducer/testReducer";
 import { QuestionDetail } from "./QuestionDetail";
 import { SmallText } from "../Title/Title";
@@ -13,13 +12,20 @@ import AccordionDetails from "@mui/material/AccordionDetails";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import MarkChatReadOutlinedIcon from "@mui/icons-material/MarkChatReadOutlined";
+import {
+  getQnaDetail,
+  getQnaList,
+  setQnaDetail,
+  setQnaList,
+} from "../../_reducer/qnaReducer";
 
 export const QuestionList = () => {
-  const [qnaList, setQnaList] = useState<IQuestion>();
-  const [qnaDetail, setQnaDetail] = useState<IQnaDetail>();
+  const dispatch = useAppDispatch();
   const [id, setId] = useState<string>("");
   const [expanded, setExpanded] = React.useState<string | false>(false);
   const page = useAppSelector(getTest).page;
+  const qnaList = useAppSelector(getQnaList);
+  const qnaDetail = useAppSelector(getQnaDetail);
 
   const handleChange =
     (panel: string) => (event: React.SyntheticEvent, isExpanded: boolean) => {
@@ -30,8 +36,8 @@ export const QuestionList = () => {
     const getData = async () => {
       const list = await getQuestions(page);
       const detail = await getQuestionDetail(id);
-      setQnaList(list);
-      setQnaDetail(detail);
+      dispatch(setQnaList(list));
+      dispatch(setQnaDetail(detail));
     };
     getData();
   }, [id, page]);
@@ -62,7 +68,7 @@ export const QuestionList = () => {
           </AccordionSummary>
           {/* 문의 상세 내용 */}
           <AccordionDetails>
-            {qnaDetail && <QuestionDetail qnaDetail={qnaDetail} id={id} />}
+            {qnaDetail && <QuestionDetail id={id} qnaDetail={qnaDetail} />}
           </AccordionDetails>
         </Accordion>
       );
