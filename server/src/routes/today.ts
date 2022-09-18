@@ -9,7 +9,6 @@ router
     try {
       const today: Date = new Date();
       const seed: Number = today.getDate() + today.getMonth();
-      console.log(seed);
       const result = await esClient.search({
         index: index,
         body: {
