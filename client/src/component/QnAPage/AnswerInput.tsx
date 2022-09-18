@@ -1,9 +1,12 @@
 import React, { useState } from "react";
 import { postAnswer } from "../../services/qna-service";
+import { useAppDispatch } from "../../_app/hooks";
+import { addAnswer } from "../../_reducer/qnaReducer";
 import { Button } from "../Button/Button";
 import { Input } from "../Input/Input";
 
 export const AnswerInput = ({ id }: { id: string }) => {
+  const dispatch = useAppDispatch();
   const [answer, setAnswer] = useState<string>("");
   const [isOpen, setIsOpen] = useState(false);
 
@@ -14,6 +17,8 @@ export const AnswerInput = ({ id }: { id: string }) => {
 
   const handleSubmit = async () => {
     await postAnswer(id, answer);
+    setIsOpen(!isOpen);
+    dispatch(addAnswer({ answer: answer, id: id }));
   };
 
   return (
@@ -29,6 +34,7 @@ export const AnswerInput = ({ id }: { id: string }) => {
             onChange={handleInputChange}
             value={answer}
             placeholder="답변 내용을 입력해주세요."
+            required
           ></Input>
           <Button fullWidth onClick={handleSubmit}>
             등록
