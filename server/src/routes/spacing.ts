@@ -61,7 +61,7 @@ router
         const sort_hits_result = await esClient.search({
           index: index,
           body: {
-            _source: ["title", "hits"],
+            _source: ["title", "hits", "created_at"],
             sort: { hits: "desc" },
             size: "3",
             query: {
@@ -74,7 +74,7 @@ router
         const sort_crt_result = await esClient.search({
           index: index,
           body: {
-            _source: ["title", "hits"],
+            _source: ["title", "hits", "created_at"],
             sort: { created_at: "desc" },
             size: "3",
             query: {
