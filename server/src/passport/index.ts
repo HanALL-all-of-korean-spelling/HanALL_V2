@@ -55,11 +55,11 @@ const passportVerify = async (email: String, password: String, done: any) => {
         },
       },
     });
-    console.log("exuser", exUser.body.hits.hits[0]._source.password);
-    if (exUser) {
+    const userData = exUser.body.hits.hits;
+    if (userData.length > 0) {
       const result = await bcrypt.compare(
         password,
-        exUser.body.hits.hits[0]._source.password
+        userData[0]._source.password
       );
       if (result) {
         return done(null, exUser, { message: "Logged In Successfully" });
