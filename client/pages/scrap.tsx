@@ -9,6 +9,7 @@ import { ScrapList } from "../src/component/ScrapPage/ScrapList";
 import { Title } from "../src/component/Title/Title";
 import { MWContainer } from "../src/component/MWContainer/MWContainer";
 import { Button } from "../src/component/Button/Button";
+import { MyInfo } from "../src/component/ScrapPage/MyInfo";
 
 const Scrap: NextPage = () => {
   const router = useRouter();
@@ -28,8 +29,9 @@ const Scrap: NextPage = () => {
     <div>
       {user ? (
         <>
+          <MyInfo user={user} />
           {scraps ? (
-            <>
+            <div>
               <Button onClick={() => router.push("/test")}>시험 응시</Button>
               <MWContainer>
                 <div>
@@ -41,7 +43,7 @@ const Scrap: NextPage = () => {
                   <ScrapList scraps={scraps?.spacing} />
                 </div>
               </MWContainer>
-            </>
+            </div>
           ) : (
             <>
               <div>보관된 정보가 없습니다.</div>

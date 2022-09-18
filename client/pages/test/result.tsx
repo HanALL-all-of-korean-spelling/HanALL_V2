@@ -1,52 +1,21 @@
 import type { NextPage } from "next";
 import { useRouter } from "next/router";
-import React, { useEffect, useState } from "react";
 import { useAppSelector } from "../../src/_app/hooks";
 import { getTest } from "../../src/_reducer/testReducer";
+import { getUser } from "../../src/_reducer/userReducer";
 import { Button } from "../../src/component/Button/Button";
-import { getUserInfo, putTestResult } from "../../src/services/auth-service";
-import { IUser } from "../../types/auth";
+import { MyInfo } from "../../src/component/ScrapPage/MyInfo";
 import css from "styled-jsx/css";
 
 const Result: NextPage = () => {
   const router = useRouter();
   const score = useAppSelector(getTest).score;
-  const [user, setUser] = useState<IUser>();
-
-  const getData = async () => {
-    if (score) {
-      const res = await putTestResult(score);
-      if (res) {
-        const userInfo = await getUserInfo();
-        setUser(userInfo);
-      }
-    }
-  };
-
-  useEffect(() => {
-    getData();
-  }, []);
+  const user = useAppSelector(getUser).user;
 
   return (
     <div>
       <style jsx>{style}</style>
-      {user && (
-        <>
-          <div>
-            {user.nickname} 님의 점수는
-            <strong>{score * 10}</strong>
-            점!
-          </div>
-          <div>
-            총점:
-            <strong>{user.point * 10}</strong>
-          </div>
-          <div>
-            현재 등급:
-            <strong>{user.rank}</strong>
-          </div>
-        </>
-      )}
+      {user && <MyInfo user={user} score={score} />}
       <Button
         fullWidth
         color="lightPink"
@@ -64,12 +33,6 @@ const Result: NextPage = () => {
 const style = css`
   div:first-child {
     margin-top: 5rem;
-  }
-  div {
-    margin: 0.6rem;
-  }
-  strong {
-    margin-left: 0.4rem;
   }
 `;
 
