@@ -12,6 +12,7 @@ export default function Login() {
   const initialValues: LoginInputs = { email: "", password: "" };
   const [inputs, setInputs] = useState<LoginInputs>(initialValues);
   const [isAlert, setIsAlert] = useState(false);
+  const [messageContent, setMessageContent] = useState("");
   const dispatch = useAppDispatch();
 
   const handleInputChange = (e: React.ChangeEvent<any>) => {
@@ -25,12 +26,12 @@ export default function Login() {
   const handleSubmit = async (e: any) => {
     e.preventDefault();
     const res = await login(inputs);
-    if (res) {
+    if (res?.status === 200) {
       const userInfo = await getUserInfo();
       dispatch(setUser(userInfo));
-    }
-    if (res?.status === 500) {
+    } else {
       setIsAlert(true);
+      setMessageContent(res?.data);
     }
   };
 
@@ -72,9 +73,7 @@ export default function Login() {
             <div>회원가입하러 가기</div>
           </Link>
         </div>
-        {isAlert && (
-          <AlertToast message="아이디나 비밀번호가 일치하지 않습니다." />
-        )}
+        {isAlert && <AlertToast message={messageContent} />}
       </div>
     </form>
   );

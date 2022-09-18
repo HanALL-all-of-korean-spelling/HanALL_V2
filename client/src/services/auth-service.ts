@@ -18,8 +18,7 @@ export async function join(inputs: LoginInputs) {
       }
     })
     .catch((error) => {
-      console.log(error);
-      return error;
+      return error.response;
     });
 }
 
@@ -38,8 +37,7 @@ export async function login(inputs: LoginInputs) {
       }
     })
     .catch((error) => {
-      console.log(error);
-      return error;
+      return error.response;
     });
 }
 
@@ -67,7 +65,7 @@ export const getUserInfo = async () => {
         return response.data;
       })
       .catch((error) => {
-        console.log(error);
+        return error.response;
       });
   }
 };
@@ -85,7 +83,7 @@ export const getScrapList = () => {
         return response.data;
       })
       .catch((error) => {
-        console.log(error);
+        return error.response;
       });
   }
 };
@@ -103,7 +101,7 @@ export const getTestList = () => {
         return response.data;
       })
       .catch((error) => {
-        console.log(error);
+        return error.response;
       });
   }
 };
@@ -126,7 +124,7 @@ export const putTestResult = (score: number) => {
         return response.data;
       })
       .catch((error) => {
-        console.log(error);
+        return error.response;
       });
   }
 };

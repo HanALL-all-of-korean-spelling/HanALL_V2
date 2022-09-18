@@ -25,7 +25,6 @@ export const AlertToast = ({ message }: { message: string }) => {
   return (
     <Snackbar
       open={open}
-      autoHideDuration={6000}
       onClose={handleClose}
       anchorOrigin={{
         vertical: "bottom",
