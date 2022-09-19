@@ -17,23 +17,23 @@
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"눈곱 vs 눈꼽", "right_words":"눈곱", "wrong_words": ["눈꼽"], "description": "'눈곱'은 기원적으로는 '눈'과 '곱'이 결합한 말입니다.", "helpful_info": "곱창 먹으러 가기 전에 눈곱이라도 좀 떼라.", "hits":0, "scraps":0, "created_at": "2022-05-24T05:48:49.850Z"}
 {"index":{"_index":"words"}}
-{"type":"spelling", "title":"어따 vs 얻다", "right_words":"얻다", "wrong_words": ["어따"], "description": "“어디에다 대고 반말이야?”와 같은 문맥이라면, “얻다 대고 반말이야?”와 같이 ‘얻다’를 쓸 수 있습니다.", "helpful_info": "'얻다 대고'가 '어디에다 대고'의 준말임을 기억하세요!'",  "hits":0, "scraps":0, "created_at": "2022-05-25T05:48:49.850Z"}
+{"type":"spelling", "title":"어따 vs 얻다", "right_words":"얻다", "wrong_words": ["어따"], "description": "“어디에다 대고 반말이야?”와 같은 문맥이라면, “얻다 대고 반말이야?”와 같이 ‘얻다’를 쓸 수 있습니다. 또, “얻다 쓸지 고민이다”의 경우에도 '어디에다' 쓸 지 고민이라는 의미이기에, '얻다'가 맞습니다.", "helpful_info": "'얻다'가 '어디에다'의 준말임을 기억하세요!",  "hits":0, "scraps":0, "created_at": "2022-05-25T05:48:49.850Z"}
 {"index":{"_index":"words"}}
-{"type":"spelling", "title":"빌어 vs 빌려", "right_words":"빌려", "wrong_words": ["빌어"], "description": "남의 물건을 돌려주기로 하고 쓰는 것은 '빌리다'이므로, '빌려'가 맞는 말입니다.", "helpful_info": "'빌어'는 '빌다'의 의미로만 쓰이는 걸 기억하세요!",  "hits":0, "scraps":0, "created_at": "2022-05-26T05:48:49.850Z"}
+{"type":"spelling", "title":"빌어 vs 빌려", "right_words":"빌려", "wrong_words": ["빌어"], "description": "남의 물건을 돌려주기로 하고 쓰는 것은 '빌리다'이므로, '빌려'가 맞는 말입니다. “이 자리를 빌려”, “우린 이 음악을 빌려 이 분위기를 빌려” 등의 예로 사용됩니다.", "helpful_info": "'빌어'는 (바라는 바, 잘못 등을) '빌다'의 의미로만 쓰이는 걸 기억하세요!",  "hits":0, "scraps":0, "created_at": "2022-05-26T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"박힌 vs 박인", "right_words":"박인", "wrong_words": ["박힌"], "description": "“손바닥, 발바닥 따위에 굳은살이 생기다.”라는 뜻을 가진 동사는 ‘박이다’이므로, '박인'으로 적습니다.", "helpful_info": "박음질을 많이 했더니 굳은살 박인 손을 가지게 되었다.", "hits":0, "scraps":0, "created_at": "2022-05-27T05:48:49.850Z"}
 {"index":{"_index":"words"}}
-{"type":"spelling", "title":"퍼래요 vs 퍼레요", "right_words":"퍼래요", "wrong_words": ["퍼레요"], "description": "'퍼레요'가 맞는 표현입니다. '퍼렇다'의 어간 ‘퍼렇-’ 뒤에 어미 ‘-어’가 붙으면 ‘퍼레’가 됩니다.", "helpful_info": "원형이 '퍼렇다'임을 기억하세요! 같은 원리로 '파랗다'의 경우 '파래요'가 됩니다.'", "hits":0, "scraps":0, "created_at": "2022-05-28T05:48:49.850Z"}
+{"type":"spelling", "title":"퍼래요 vs 퍼레요", "right_words":"퍼레요", "wrong_words": ["퍼래요"], "description": "'퍼레요'가 맞는 표현입니다. '퍼렇다'의 어간 ‘퍼렇-’ 뒤에 어미 ‘-어’가 붙으면 ‘퍼레’가 됩니다.", "helpful_info": "원형이 '퍼렇다'임을 기억하세요! 앞 모음을 따라갑니다. '퍼렇다'는 'ㅓ'로 시작하니까 뒤도 'ㅓ' 계열의 모음이 따라 와요. 같은 원리로 '파랗다'의 경우 'ㅏ' 계열 모음인 '파래요'가 됩니다.'", "hits":0, "scraps":0, "created_at": "2022-05-28T05:48:49.850Z"}
 {"index":{"_index":"words"}}
-{"type":"spelling", "title":"구레나룻 vs 구렛나루", "right_words":"구레나룻", "wrong_words": ["구렛나루"], "description": "귀밑에서 턱까지 잇따라 난 수염을 이르는 말은 ‘구레나룻’이며, 이는 [구레나룯]으로 발음합니다.", "helpful_info": "너의 구레나룻은 아주 굿이구나!", "hits":0, "scraps":0, "created_at": "2022-05-29T05:48:49.850Z"}
+{"type":"spelling", "title":"구레나룻 vs 구렛나루", "right_words":"구레나룻", "wrong_words": ["구레나루, "구렛나루"], "description": "귀밑에서 턱까지 잇따라 난 수염을 이르는 말은 ‘구레나룻’이며, 이는 [구레나룯]으로 발음합니다.", "helpful_info": "너의 구레나룻은 아주 굿이구나!", "hits":0, "scraps":0, "created_at": "2022-05-29T05:48:49.850Z"}
 {"index":{"_index":"words"}}
-{"type":"spelling", "title":"곰곰이 vs 곰곰히", "right_words":"곰곰이", "wrong_words": ["곰곰히"], "description": "'부사에 '-이'가 붙어서 부사가 되는 경우에, 그 어근이나 부사의 원형을 밝히어 적는다.'는 규정에 따라 '곰곰이'로 적습니다.", "helpful_info": "'곰곰이'와 '꼼꼼히'가 각각 맞는 말이라는 걸 기억하세요! '곰곰이'는 전체적으로 획수가 적어요!","hits":0, "scraps":0, "created_at": "2022-05-30T05:48:49.850Z"}
+{"type":"spelling", "title":"곰곰이 vs 곰곰히", "right_words":"곰곰이", "wrong_words": ["곰곰히"], "description": "'부사에 '-이'가 붙어서 부사가 되는 경우에, 그 어근이나 부사의 원형을 밝히어 적는다.'는 규정에 따라 '곰곰이'로 적습니다.", "helpful_info": "'곰곰이'와 '꼼꼼히'가 각각 맞는 말이라는 걸 기억하세요! '곰곰이'는 전체적으로 획수가 적어요! [곰고미]로 발음되는 만큼 '곰'이 '곰곰이' 있는 모습을 상상해 보세요.","hits":0, "scraps":0, "created_at": "2022-05-30T05:48:49.850Z"}
 {"index":{"_index":"words"}}
-{"type":"spelling", "title":"금새 vs 금세", "right_words":"금세", "wrong_words": ["금새"], "description": "표준어인 '금세'가 맞는 말입니다. '지금 바로’의 뜻으로 쓰이는 부사 ‘금세’는 ‘금시에’가 줄어든 말입니다.", "helpful_info": "상처가 세상 금세 낫고 있구나!",  "hits":0, "scraps":0, "created_at": "2022-05-31T05:48:49.850Z"}
+{"type":"spelling", "title":"금새 vs 금세", "right_words":"금세", "wrong_words": ["금새"], "description": "'지금 바로’의 뜻으로 쓰이는 부사 ‘금세’는 ‘금시에’가 줄어든 말입니다. '금시에'와 '금세'에 'ㅔ'가 쓰여요. 유사한 단어는 '요사이'의 준말인 '요새'가 있습니다.", "helpful_info": "상처가 세상 금세 낫고 있구나!",  "hits":0, "scraps":0, "created_at": "2022-05-31T05:48:49.850Z"}
 {"index":{"_index":"words"}}
-{"type":"spelling", "title":"웬일 vs 왠일", "right_words":"웬일", "wrong_words": ["왠일"], "description": "'어찌 된’의 뜻을 나타내는 관형사는 ‘웬’이므로, '어찌 된 일로'라는 함의를 가진 '웬일'이 맞는 말입니다.", "helpful_info": "'왠'은 '왜인'의 준말로, '왠지'에만 쓰이는 걸 기억하세요!'",  "hits":0, "scraps":0, "created_at": "2022-06-01T05:48:49.850Z"}
+{"type":"spelling", "title":"웬일 vs 왠일", "right_words":"웬일", "wrong_words": ["왠일"], "description": "'어찌 된’의 뜻을 나타내는 관형사는 ‘웬’이므로, '어찌 된 일로'라는 함의를 가진 '웬일'이 맞는 말입니다.", "helpful_info": "'왠'은 '왜인'의 준말로, '왠지'에만 쓰이고 나머지는 '웬'인 걸 기억하세요!'",  "hits":0, "scraps":0, "created_at": "2022-06-01T05:48:49.850Z"}
 {"index":{"_index":"words"}}
-{"type":"spelling", "title":"깨방정 vs 개방정", "right_words":"개방정", "wrong_words": ["깨방정"], "description": "온갖 점잖지 못한 말이나 행동을 낮잡아 이르는 말은 '개방정'입니다.", "helpful_info": "개들이 여기저기 날뛰며 개방정을 떠는구나", "hits":0, "scraps":0, "created_at": "2022-06-05T05:48:49.850Z"}
+{"type":"spelling", "title":"깨방정 vs 개방정", "right_words":"개방정", "wrong_words": ["깨방정"], "description": "온갖 점잖지 못한 말이나 행동을 낮잡아 이르는 말은 '방정'에 '개-'가 붙은 '개방정'입니다. '깨방정'은 국립국어원 표준국어대사전에 등록되지 않은 비표준어입니다.", "helpful_info": "개들이 여기저기 날뛰며 개방정을 떠는구나", "hits":0, "scraps":0, "created_at": "2022-06-05T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"주꾸미 vs 쭈꾸미", "right_words":"주꾸미", "wrong_words": ["쭈꾸미"], "description": "문어과의 연체동물을 일컫는 말의 표준어는 '주꾸미'입니다.", "helpful_info": "주중에는 주꾸미를 먹어줘야 한다.",  "hits":0, "scraps":0, "created_at": "2022-06-07T05:48:49.850Z"}
 {"index":{"_index":"words"}}
@@ -47,17 +47,17 @@
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"촉촉이 vs 촉촉히", "right_words":"촉촉이", "wrong_words": ["촉촉히"], "description": "‘-하다’가 붙지만 부사의 끝 음절이 분명히 ‘이’로 소리 나는 경우에는 ‘-이’로 적습니다.", "helpful_info": "땅이 이렇게 촉촉이 젖어 있다니 이상한 일이야!", "hits":0, "scraps":0, "created_at": "2022-06-12T05:48:49.850Z"}
 {"index":{"_index":"words"}}
-{"type":"spelling", "title":"유도심문 vs 유도신문", "right_words":"유도신문", "wrong_words": ["유도심문"], "description": "'유도심문'은 '유도신문'의 잘못된 표현입니다.", "helpful_info": "그는 신문을 언급하며 증인을 유도신문했다.", "hits":0, "scraps":0, "created_at": "2022-06-12T05:48:49.850Z"}
+{"type":"spelling", "title":"유도심문 vs 유도신문", "right_words":"유도신문", "wrong_words": ["유도심문"], "description": "'유도심문'은 '유도신문'의 잘못된 표현입니다.", "helpful_info": "그는 신문을 보여주며 증인을 유도신문했다.", "hits":0, "scraps":0, "created_at": "2022-06-12T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"익숙지 vs 익숙치", "right_words":"익숙지", "wrong_words": ["익숙치"], "description": "'익숙지'가 맞는 말입니다. '익숙하지'가 줄면, '익숙지'의 형태로 적습니다.", "helpful_info": "지금은 익숙지 않겠지만 지나면 괜찮아질 거야.", "hits":0, "scraps":0, "created_at": "2022-06-12T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"거에요 vs 거예요", "right_words":"거예요", "wrong_words": ["거에요"], "description": "'-것' 뒤에, '-이에요'의 준말 '-예요'가 붙으므로, '않을 거예요'로 적습니다.", "helpful_info": "앞에 받침이 없는 말이 오면 '-예요'를 써야 하는 걸 기억하세요! (예외: 아니에요)", "hits":0, "scraps":0, "created_at": "2022-06-12T05:48:49.850Z"}
 {"index":{"_index":"words"}}
-{"type":"spelling", "title":"시덥잖은 vs 시답잖은", "right_words":"시답잖은", "wrong_words": ["시덥잖은"], "description": "'볼품이 없어 만족스럽지 못하다.'의 뜻을 나타내는 형용사는 '시답잖다'이므로, '시답잖은'과 같이 적습니다.", "helpful_info": "너답지 않게 시답잖은 말을 하네.", "hits":0, "scraps":0, "created_at": "2022-06-12T05:48:49.850Z"}
+{"type":"spelling", "title":"시덥잖은 vs 시답잖은", "right_words":"시답잖은", "wrong_words": ["시덥잖은"], "description": "'볼품이 없어 만족스럽지 못하다.'의 뜻을 나타내는 형용사는 '시답잖다'이므로, '시답잖은'과 같이 적습니다. '마음에 차거나 들어서 만족스럽다'를 뜻하는 '시답다'와 '-지 않다'가 합쳐서 '시답잖다'가 만들어 졌어요. '시답다'에는 '너답다', '정답다' 등으로 쓰이는 '-답다'가 쓰인 게 맞답니다.", "helpful_info": "너답지 않게 시답잖은 말을 하네.", "hits":0, "scraps":0, "created_at": "2022-06-12T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"알은체 vs 아는체", "right_words":"알은체", "wrong_words": ["아는체"], "description": "'알은체하며'가 맞는 말로, '사람을 보고 인사하는 표정을 짓다.'라는 뜻을 나타냅니다.", "helpful_info": "'알은체'는 인사를 하거나 관심을 보이는 것을 뜻하는 단어입니다. 모르는 걸 아는 척 한다는 의미로 쓰이는 '아는 체'(띄어쓰기 필요)와 헷갈리지 않도록 주의하세요!", "hits":0, "scraps":0, "created_at": "2022-06-12T05:48:49.850Z"}
 {"index":{"_index":"words"}}
-{"type":"spelling", "title":"짤따란 vs 짧다란", "right_words":"짤따란", "wrong_words": ["짧다란"], "description": "'매우 짧거나 생각보다 짧다.'라는 뜻을 나타내는 표준어는 '짤따랗다'이며, '짤따랗다'는 '짤따란'과 같이 활용합니다.", "helpful_info": "짤따란 나무가 따닥따닥 붙어있다.", "hits":0, "scraps":0, "created_at": "2022-06-12T05:48:49.850Z"}
+{"type":"spelling", "title":"짤다란 vs 짤따란 vs 짧다란 vs 짧따란", "right_words":"짤따란", "wrong_words": ["짤다란", "짧다란", "짧따란"], "description": "'매우 짧거나 생각보다 짧다.'라는 뜻을 나타내는 표준어는 '짤따랗다'이며, '짤따랗다'는 '짤따란'과 같이 활용합니다.", "helpful_info": "짤따란 나무가 따닥따닥 붙어있다.", "hits":0, "scraps":0, "created_at": "2022-06-12T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"나지막이 vs 나지막히", "right_words":"나지막이", "wrong_words": ["나지막히","나즈막이","나즈막히"], "description": "부사화 접미사 '-이/히'의 구별은 일반화가 모든 경우에 반드시 적용된다고 보기는 어렵지만, 'ㄱ'받침 뒤에서는 '이'로 쓰입니다.", "helpful_info": "그는 "지금 이리 와"라고 나지막이 이야기했다.", "hits":0, "scraps":0, "created_at": "2022-06-12T05:48:49.850Z"}
 {"index":{"_index":"words"}}
@@ -65,9 +65,9 @@
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"바라 vs 바래", "right_words":"바라", "wrong_words": ["바래"], "description": "'바라다'는 '생각한 대로 이루어지기를 원한다'는 뜻의 말입니다. '바래다'는 '볕이나 습기를 받아 색이 변하다.'를 의미합니다.", "helpful_info": "'바래'는 '색이 바래다'라는 의미 외로는 사용되지 않는 표현임을 기억하세요! 맞춤법을 틀리지 않길 바라요:)'", "hits":0, "scraps":0, "created_at": "2022-06-12T05:48:49.850Z"}
 {"index":{"_index":"words"}}
-{"type":"spelling", "title":"뵈요 vs 봬요", "right_words":"봬요", "wrong_words": ["뵈요"], "description": "'뵈요'와 같이, 어간 '뵈-' 뒤에 어미가 붙지 않고, 바로 보조사 '-요'가 붙을 수가 없습니다. 그러므로 '봬요'가 맞는 말입니다.", "helpful_info": "'봬요'는 '뵈어요'의 준말임을 기억하세요!'", "hits":0, "scraps":0, "created_at": "2022-06-12T05:48:49.850Z"}
+{"type":"spelling", "title":"뵈요 vs 봬요", "right_words":"봬요", "wrong_words": ["뵈요"], "description": "'뵈요'와 같이, 어간 '뵈-' 뒤에 어미가 붙지 않고, 바로 보조사 '-요'가 붙을 수가 없습니다. 그러므로 '봬요'가 맞는 말입니다. '뵈요'는 '하요'처럼 문장이 안 끝났는데 존댓말부터 하는 느낌이라고 생각하면 돼요.", "helpful_info": "'봬요'는 '뵈어요'의 준말임을 기억하세요!'", "hits":0, "scraps":0, "created_at": "2022-06-12T05:48:49.850Z"}
 {"index":{"_index":"words"}}
-{"type":"spelling", "title":"갯수 vs 개수", "right_words":"개수", "wrong_words": ["갯수"], "description": "'개수'라고 적습니다. 합성어로 볼 수 있는 두 음절로 된 한자어 “곳간(庫間), 셋방(貰房), 숫자(數字), 찻간(車間), 툇간(退間), 횟수(回數)” 에만 사이시옷을 받치어 적습니다.", "helpful_info": "개 밥그릇이 몇 개인지 개수를 세어 봐.", "hits":0, "scraps":0, "created_at": "2022-06-12T05:48:49.850Z"}
+{"type":"spelling", "title":"갯수 vs 개수", "right_words":"개수", "wrong_words": ["갯수"], "description": "'개수'라고 적습니다. 합성어로 볼 수 있는 두 음절로 된 한자어 “셋방(貰房), 숫자(數字), 찻간(車間), 곳간(庫間), 툇간(退間), 횟수(回數)” 에만 사이시옷을 받치어 적습니다. 앞 글자만 따서 '세수 차고 퇴회'가 아니면 사이시옷을 붙입니다.", "helpful_info": "개 밥그릇이 몇 개인지 개수를 세어 봐.", "hits":0, "scraps":0, "created_at": "2022-06-12T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"단출하다 vs 단촐하다", "right_words":"단출하다", "wrong_words": ["단촐하다","간촐하다"], "description": "‘단출하다’가 ‘간촐하다’에 비해 널리 쓰이므로, ‘단출하다’를 표준어로 삼았습니다. 또한 '단촐하다'는 틀린 말입니다.", "helpful_info": "단출한 식단이지만 출출했던 탓에 맛있게 먹었다.", "hits":0, "scraps":0, "created_at": "2022-06-12T05:48:49.850Z"}
 {"index":{"_index":"words"}}
@@ -81,103 +81,21 @@
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"닥달 vs 닦달", "right_words":"닦달", "wrong_words": ["닥달"], "description": "‘남을 단단히 윽박질러서 혼을 냄’이라는 뜻을 나타내는 말은 ‘닦달’입니다.", "helpful_info": "음식을 밖으로 내오라고 직원을 닦달했다.", "hits":0, "scraps":0, "created_at": "2022-06-12T05:48:49.850Z"}
 {"index":{"_index":"words"}}
-{"type":"spelling", "title":"몇 일 vs 며칠", "right_words":"며칠", "wrong_words": ["몇 일"], "description": "'며칠'이 표준어입니다. 만약 '며칠'이 관형사 '몇'과 명사 '일'이 결합된 구성이면 [며 딜]로 소리 나야 할 것입니다.", "helpful_info": "'몇 일'이란 말은 아예 없는 말이라는 걸 기억하세요! 모든 경우에 '며칠'을 사용하는 게 맞습니다.", "hits":0, "scraps":0, "created_at": "2022-06-12T05:48:49.850Z"}
-{"index":{"_index":"words"}}
-{"type":"spelling", "title":"'우겨 vs 욱여' 넣었다", "right_words":"욱여넣었다", "wrong_words": ["우겨넣었다"], "description": "‘주위에서 중심으로 함부로 밀어 넣다.’라는 뜻을 나타내는 말은 ‘욱여넣다’입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
-{"type":"spelling", "title":"있음에 vs 있으매", "right_words":"있으매", "wrong_words": ["있음에"], "description": "어미 '-으매'는 이유나 근거를 나타내는 연결어미로서 '-음에'는 '-으매'로 고쳐 써야 옳습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
-{"type":"spelling", "title":"사단 vs 사달", "right_words":"사달", "wrong_words": ["사단"], "description": "'사달'의 의미로 '사단'을 사용하는 경우가 있으나 '사달'만 표준어로 인정합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
-{"type":"spelling", "title":"'닭개장 vs 닭계장'", "right_words":"닭개장", "wrong_words": ["닭계장"], "description": "'닭개장'은 쇠고기 대신에 닭고기를 넣어 육개장처럼 끓인 음식을 이르는 말로 '닭'과 '개장'이 결합한 말이라고 할 수 있습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
-{"type":"spelling", "title":"눈곱 vs 눈꼽", "right_words":"눈곱", "wrong_words": ["눈꼽"], "description": "'눈곱'은 기원적으로는 '눈'과 '곱'이 결합한 말입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
-{"type":"spelling", "title":"'어따 vs 얻다' 반말이야", "right_words":"얻다", "wrong_words": ["어따"], "description": "“어디에다 대고 반말이야?”와 같은 문맥이라면, “얻다 대고 반말이야?”와 같이 ‘얻다’를 쓸 수 있습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
-{"type":"spelling", "title":"이 자리를 '빌어 vs 빌려'", "right_words":"빌려", "wrong_words": ["빌어"], "description": "남의 물건을 돌려주기로 하고 쓰는 것은 '빌리다'이므로, '빌려'가 맞는 말입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
-{"type":"spelling", "title":"굳은살 '박힌 vs 박인'", "right_words":"박인", "wrong_words": ["박힌"], "description": "“손바닥, 발바닥 따위에 굳은살이 생기다.”라는 뜻을 가진 동사는 ‘박이다’이므로, '박인'으로 적습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
-{"type":"spelling", "title":"입술이 '퍼래요 vs 퍼레요'", "right_words":"퍼레요", "wrong_words": ["퍼래요"], "description": "'퍼레요'가 맞는 표현입니다. '퍼렇다'의 어간 ‘퍼렇-’ 뒤에 어미 ‘-어’가 붙으면 ‘퍼레’가 됩니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
-{"type":"spelling", "title":"'구레나룻 vs 구렛나루'", "right_words":"구레나룻", "wrong_words": ["구렛나루"], "description": "귀밑에서 턱까지 잇따라 난 수염을 이르는 말은 ‘구레나룻’이며, 이는 [구레나룯]으로 발음합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
-{"type":"spelling", "title":"곰곰이 vs 곰곰히", "right_words":"곰곰이", "wrong_words": ["곰곰히"], "description": "'부사에 '-이'가 붙어서 부사가 되는 경우에, 그 어근이나 부사의 원형을 밝히어 적는다.'는 규정에 따라 '곰곰이'로 적습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
-{"type":"spelling", "title":"깨방정 vs 개방정", "right_words":"개방정", "wrong_words": ["깨방정"], "description": "온갖 점잖지 못한 말이나 행동을 낮잡아 이르는 말은 '개방정'입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
-{"type":"spelling", "title":"'금새 vs 금세' 회복되었다", "right_words":"금세", "wrong_words": ["금새"], "description": "표준어인 '금세'가 맞는 말입니다. '지금 바로’의 뜻으로 쓰이는 부사 ‘금세’는 ‘금시에’가 줄어든 말입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
-{"type":"spelling", "title":"'어따 vs 얻다' 쓸지 고민이다", "right_words":"얻다", "wrong_words": ["어따"], "description": "‘어디에다’가 줄어든 말이라고 뜻풀이되는 '얻다'가 이 문장에서 맞는 말입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
-{"type":"spelling", "title":"주꾸미 vs 쭈꾸미", "right_words":"주꾸미", "wrong_words": ["쭈꾸미"], "description": "문어과의 연체동물을 일컫는 말의 표준어는 '주꾸미'입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
-{"type":"spelling", "title":"'웬일 vs 왠일'", "right_words":"웬일", "wrong_words": ["왠일"], "description": "'어찌 된’의 뜻을 나타내는 관형사는 ‘웬’이므로, '어찌 된 일로'라는 함의를 가진 '웬일'이 맞는 말입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
-{"type":"spelling", "title":"'갈래야 vs 가려야' 갈 수 없는", "right_words":"가려야", "wrong_words": ["갈래야"], "description": "'갈래야'는 비표준어로 '가려야'의 잘못된 표현입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
-{"type":"spelling", "title":"푹신한 '배개 vs 베개'", "right_words":"베개", "wrong_words": ["배개"], "description": "잠을 자거나 누울 때에 머리를 괴는 물건을 이르는 말은 '베개' 입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
-{"type":"spelling", "title":"'우레 vs 우뢰' 같은 박수", "right_words":"우레", "wrong_words": ["우뢰"], "description": "'우레'가 맞는 말입니다. 예전에는 '우뢰(雨雷)'로 쓰기도 했는데 이는 '우레'를 한자어로 잘못 인식하여 적은 것입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
-{"type":"spelling", "title":"부조금 vs 부주금", "right_words":"부조금", "wrong_words": ["부주금"], "description": "부조로 내는 돈은 '부조금'이라고 하며, '부주금'은 '부조금'의 잘못된 표현입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
-{"type":"spelling", "title":"황당무개 vs 황당무계", "right_words":"황당무계", "wrong_words": ["황당무개"], "description": "'말이나 행동이 터무니없다'라는 의미로는 '황당무계'가 맞는 표현입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
-{"type":"spelling", "title":"촉촉히 vs 촉촉이", "right_words":"촉촉이", "wrong_words": ["촉촉히"], "description": "‘-하다’가 붙지만 부사의 끝 음절이 분명히 ‘이’로 소리 나는 경우에는 ‘-이’로 적습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
-{"type":"spelling", "title":"유도신문 vs 유도심문", "right_words":"유도신문", "wrong_words": ["유도심문"], "description": "'유도심문'은 '유도신문'의 잘못된 표현입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
-{"type":"spelling", "title":"익숙지 vs 익숙치", "right_words":"익숙지", "wrong_words": ["익숙치"], "description": "'익숙지'가 맞는 말입니다. '익숙하지'가 줄면, '익숙지'의 형태로 적습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"type":"spelling", "title":"몇 일 vs 며칠", "right_words":"며칠", "wrong_words": ["몇 일"], "description": "'며칠'이 표준어입니다. 만약 '며칠'이 관형사 '몇'과 명사 '일'이 결합된 구성이면 [며 딜]로 소리 나야 할 것입니다.", "helpful_info": "'몇 일'이란 말은 아예 없는 말이라는 걸 기억하세요! 모든 경우에 '며칠'을 사용하는 게 맞습니다. '오늘 몇 월 며칠이야?'", "hits":0, "scraps":0, "created_at": "2022-06-12T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"시험 '난도 vs 난이도'", "right_words":"난도", "wrong_words": ["난이도"], "description": "‘난도’는 ‘어려움의 정도’를 뜻하는 말이므로 “난도가 높다.”와 같이 쓰입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
-{"type":"spelling", "title":"않을 '거에요 vs 거예요'", "right_words":"않을 거예요", "wrong_words": ["않을 거에요"], "description": "'않을 것' 뒤에, '-이에요'의 준말 '-예요'가 붙으므로, '않을 거예요'로 적습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
-{"type":"spelling", "title":"시답잖은 vs 시덥잖은", "right_words":"시답잖은", "wrong_words": ["시덥잖은"], "description": "'볼품이 없어 만족스럽지 못하다.'의 뜻을 나타내는 형용사는 '시답잖다'이므로, '시답잖은'과 같이 적습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
-{"type":"spelling", "title":"떡볶이 vs 떡볶기", "right_words":"떡볶이", "wrong_words": ["떡볶기"], "description": "가래떡을 적당한 크기로 잘라 여러 가지 채소를 넣고 양념을 하여 볶은 음식은 '떡볶이'가 맞습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
-{"type":"spelling", "title":"알은체 vs 아는체", "right_words":"알은체하며", "wrong_words": ["아는체하며"], "description": "'알은체하며'가 맞는 말로, '사람을 보고 인사하는 표정을 짓다.'라는 뜻을 나타냅니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
-{"type":"spelling", "title":"짤따란 vs 짧다란", "right_words":"짤따란", "wrong_words": ["짧다란"], "description": "'매우 짧거나 생각보다 짧다.'라는 뜻을 나타내는 표준어는 '짤따랗다'이며, '짤따랗다'는 '짤따란'과 같이 활용합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
-{"type":"spelling", "title":"나지막히 vs 나지막이 vs 나즈막이 vs 나즈막히", "right_words":"나지막이", "wrong_words": ["나지막히", "나즈막이", "나즈막히"], "description": "부사화 접미사 '-이/히'의 구별은 일반화가 모든 경우에 반드시 적용된다고 보기는 어렵지만, 'ㄱ'받침 뒤에서는 '이'로 쓰입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
-{"type":"spelling", "title":"내디뎠다 vs 내딛었다", "right_words":"내디뎠다", "wrong_words": ["내딛었다"], "description": "'내디디다'의 준말 '내딛다'의 과거형은 내디디었다(내디뎠다)'와 같이 쓸 수 있습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
-{"type":"spelling", "title":"행복하기를 '바라 vs 바래'", "right_words":"바라", "wrong_words": ["바래"], "description": "'바라다'는 '생각한 대로 이루어지기를 원한다'는 뜻의 말입니다. '바래다'는 '볕이나 습기를 받아 색이 변하다.'를 의미합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"type":"spelling", "title":"떡볶이 vs 떡볶기", "right_words":"떡볶이", "wrong_words": ["떡뽀끼", "떡볶기", "떡복이"], "description": "가래떡을 적당한 크기로 잘라 여러 가지 채소를 넣고 양념을 하여 볶은 음식은 '떡볶이'가 맞습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"구시렁 vs 궁시렁", "right_words":"구시렁", "wrong_words": ["궁시렁"], "description": "'못마땅하여 군소리를 듣기 싫도록 자꾸 하다'라는 뜻을 나타낼 때 '구시렁거리다'가 맞는 표현입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
-{"type":"spelling", "title":"'내일 뵈요 vs 내일 봬요'", "right_words":"봬요", "wrong_words": ["뵈요"], "description": "'뵈요'와 같이, 어간 '뵈-' 뒤에 어미가 붙지 않고, 바로 보조사 '-요'가 붙을 수가 없습니다. 그러므로 '봬요'가 맞는 말입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
-{"type":"spelling", "title":"갯수 vs 개수", "right_words":"개수", "wrong_words": ["갯수"], "description": "'개수'라고 적습니다. 합성어로 볼 수 있는 두 음절로 된 한자어 “곳간(庫間), 셋방(貰房), 숫자(數字), 찻간(車間), 툇간(退間), 횟수(回數)” 에만 사이시옷을 받치어 적습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
-{"type":"spelling", "title":"간촐하다 vs 단촐하다 vs 단출하다", "right_words":"단출하다", "wrong_words": ["간촐하다", "단촐하다"], "description": "‘단출하다’가 ‘간촐하다’에 비해 널리 쓰이므로, ‘단출하다’를 표준어로 삼았습니다. 또한 '단촐하다'는 틀린 말입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
-{"type":"spelling", "title":"일사분란 vs 일사불란", "right_words":"일사불란", "wrong_words": ["일사분란"], "description": "'질서가 정연하여 조금도 흐트러지지 아니함을 이르는 말'은 일사불란입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
-{"type":"spelling", "title":"흐름량 vs 흐름양", "right_words":"흐름양", "wrong_words": ["흐름량"], "description": "'흐름양'이 맞습니다. '양'은 한자어를 제외한 고유어와 외래어 다음에, '량'은 한자어 다음에 결합하는 특징이 있습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
 {"type":"spelling", "title":"깊숙히 vs 깊숙이", "right_words":"깊숙이", "wrong_words": ["깊숙히"], "description": "'ㄱ' 받침 뒤는 '이'를 사용합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
-{"type":"spelling", "title":"'투표율 vs 투표률'", "right_words":"투표율", "wrong_words": ["투표률"], "description": "받침이 있는 말 다음에는 '률, 렬'로 적고 'ㄴ'받침이나 모음 뒤에서는 '율, 열'로 적습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"넓음에 vs 넓으매", "right_words":"넓으매", "wrong_words": ["넓음에"], "description": "어미 '-으매'는 이유나 근거를 나타내는 연결어미로서 '-음에'는 '-으매'로 고쳐 써야 옳습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
-{"type":"spelling", "title":"꿈을 좇는 vs 꿈을 쫓는", "right_words":"꿈을 좇는", "wrong_words": ["꿈을 쫓는"], "description": "‘좇다’는, 대개 주어가 사람이고 그 주어가 ‘목표, 이상, 행복 등을’이라는 목적어를 추구한다는 뜻을 나타낼 때 쓰입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
 {"type":"spelling", "title":"잇달았다 vs 잇따랐다", "right_words":"잇달았다", "wrong_words": ["잇따랐다"], "description": "'잇달다'가 타동사로 쓰이는 일이 있는데 이때에는 '잇따르다'로 바꿔 쓸 수 없습니다. '잇달았다'가 맞는 말입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
-{"type":"spelling", "title":"'닦달 vs 닥달' 했다", "right_words":"닦달", "wrong_words": ["닥달"], "description": "‘남을 단단히 윽박질러서 혼을 냄’이라는 뜻을 나타내는 말은 ‘닦달’입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
-{"type":"spelling", "title":"생각건대 vs 생각컨대", "right_words":"생각건대", "wrong_words": ["생각컨대"], "description": "'○○하다'가 줄어들 때 '하'가 통째로 줄어드는 경우로 '생각건대'와 같이 적습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
 {"type":"spelling", "title":"홑몸 vs 홀몸", "right_words":"홑몸", "wrong_words": ["홀몸"], "description": "'임신하고 있다'는 의미로는 '홑몸이 아니다'로 표현해야 합니다. '홀몸'은 '배우자나 형제가 없는 사람을 뜻합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
-{"type":"spelling", "title":"몇 일 vs 며칠", "right_words":"며칠", "wrong_words": ["몇 일"], "description": "'며칠'이 표준어입니다. 만약 '며칠'이 관형사 '몇'과 명사 '일'이 결합된 구성이면 [며 딜]로 소리 나야 할 것입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"'심란한 vs 심난한' 표정", "right_words":"심란한", "wrong_words": ["심난한"], "description": "'심란하다'는 마음이 어수선하다는 뜻으로, '심란한 표정'으로 쓰시는 것이 알맞습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
@@ -187,15 +105,13 @@
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"어줍잖다 vs 어쭙잖다", "right_words":"어쭙잖게", "wrong_words": ["어줍잖게"], "description": "'비웃음을 살 만큼 언행이 분수에 넘치는 데가 있다'라는 뜻의 '어쭙잖다'가 정확한 표현입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
-{"type":"spelling", "title":"뵈요 vs 봬요", "right_words":"봬요", "wrong_words": ["뵈요"], "description": "봬요'가 맞습니다. ‘봬’는 ‘뵈어’의 준말입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
 {"type":"spelling", "title":"사기충전 vs 사기충천", "right_words":"사기충천", "wrong_words": ["사기충전"], "description": "'사기충전'은 '사기충천'의 잘못된 표현입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
-{"type":"spelling", "title":"돌아 갔을'런지 vs 는지'", "right_words":"돌아갔을는지", "wrong_words": ["돌아갔을런지"], "description": "'-ㄹ는지'가 맞습니다. '-ㄹ는지'는 뒤 절이 나타내는 일과 상관이 있는 어떤 일의 실현 가능성에 대한 의문을 나타내는 어미로 사용합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"type":"spelling", "title":"돌아 갔을'런지 vs 는지'", "right_words":"는지", "wrong_words": ["런지"], "description": "'-ㄹ는지'가 맞습니다. '-ㄹ는지'는 뒤 절이 나타내는 일과 상관이 있는 어떤 일의 실현 가능성에 대한 의문을 나타내는 어미로 사용합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"머리가 '벗어지다 vs 벗겨지다'", "right_words":"벗어지다", "wrong_words": ["벗겨지다"], "description": "'덮이거나 씌워진 물건이 흘러내리거나 떨어져 나가다.'의 뜻을 나타내는 경우에는 '벗어지다'를 사용합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
-{"type":"spelling", "title":"우동이 '붇지 vs 불지'", "right_words":"붇지", "wrong_words": ["불지"], "description": "'물에 젖어서 부피가 커지다.'라는 뜻을 나타내는 동사는 ‘붇다’입니다. 모음 앞에서는 'ㄹ'로 바뀌지만, 이 경우에는 '붇지'가 옳습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"type":"spelling", "title":"라면이 '붇다 vs 불다'", "right_words":"붇다", "wrong_words": ["불다"], "description": "'물에 젖어서 부피가 커지다.'라는 뜻을 나타내는 동사는 ‘붇다’입니다. 모음 앞에서는 'ㄹ'로 바뀌지만, 이 경우에는 '붇지'가 옳습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"흐리멍텅 vs 흐리멍덩", "right_words":"흐리멍덩", "wrong_words": ["흐리멍텅"], "description": "'흐리멍덩'이 맞는 말입니다. '흐리멍텅하다', '흐리멍텅히'는 ‘흐리멍덩하다’, '흐리멍덩히'의 북한어입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
@@ -209,111 +125,97 @@
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"지르밟다 vs 즈려밟다", "right_words":"지르밟다", "wrong_words": ["즈려밟다"], "description": "위에서 내리눌러 밟는 것을 뜻할 때에는 '지르밟다'가 맞는 표현입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
-{"type":"spelling", "title":"개제 vs 게제 vs 계제", "right_words":"계제", "wrong_words": ["개제", "게제"], "description": "'어떤 일을 할 수 있게 된 형편이나 기회'를 뜻하는 '계제'가 정확한 표현입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"type":"spelling", "title":"신문에 '개제 vs 게제 vs 게재'하다", "right_words":"게재", "wrong_words": ["개제", "게제", "계제", "개재"], "description": "'글이나 그림 따위를 신문이나 잡지에 싣다'의 의미로 쓰일 때는 '게재'가 맞습니다. 차례로 '개제'는 '빌렸던 돈이나 물건 등을 남김없이 갚음, 모든 일을 남김없이 정리하여 끝냄', '게제'는 불교 용어, '계제'는 셈을 따져 제할 것을 제함', '개재'는 '어떤 것들 사이에 끼여 있음'을 의미합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"희안한 vs 희한한", "right_words":"희한한", "wrong_words": ["희안한"], "description": "'매우 드물거나 신기하다'라는 의미로는 '희한하다'가 맞는 표현입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"솜사탕이 '달디달다 vs 다디달다'", "right_words":"다디달다", "wrong_words": ["달디달다"], "description": "'달디달다'는 '다디달다'의 잘못된 표현입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
-{"type":"spelling", "title":"'틈틈이 vs 틈틈히' 생각하다.", "right_words":"틈틈이", "wrong_words": ["틈틈히"], "description": "부사에 '-이'가 붙어서 부사가 되는 경우에, 그 어근이나 부사의 원형을 밝히어 적는다.'는 규정에 따라 '틈틈이'로 적습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"type":"spelling", "title":"틈틈이 vs 틈틈히", "right_words":"틈틈이", "wrong_words": ["틈틈히"], "description": "부사에 '-이'가 붙어서 부사가 되는 경우에, 그 어근이나 부사의 원형을 밝히어 적는다.'는 규정에 따라 '틈틈이'로 적습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
-{"type":"spelling", "title":"'곤욕 vs 곤혹'을 치렀다", "right_words":"곤욕을 치렀다", "wrong_words": ["곤혹을 치렀다"], "description": "'곤욕’은 주로 ‘곤욕을 치르다/곤욕을 겪다/곤욕을 당하다’와 같이, ‘곤혹’은 ‘곤혹을 느끼다’와 같이 쓰이고 있습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"type":"spelling", "title":"곤욕 vs 곤혹", "right_words":"곤욕", "wrong_words": ["곤혹"], "description": "'곤욕’은 주로 ‘곤욕을 치르다/곤욕을 겪다/곤욕을 당하다’와 같이, ‘곤혹’은 ‘곤혹을 느끼다’와 같이 쓰이고 있습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"천생 vs 천상", "right_words":"천생", "wrong_words": ["천상"], "description": "'천생'의 의미로 '천상'을 쓰는 경우가 있으나 '천생'만 표준어로 인정합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"졸업년도 vs 졸업 연도", "right_words":"졸업 연도", "wrong_words": ["졸업년도"], "description": "편의상 구분한 일 년 동안의 기간 또는 앞의 말에 해당하는 그해'를 이르는 말로 명사 '연도(年度)'를 사용합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
-{"type":"spelling", "title":"스포츠란 vs 스포츠난", "right_words":"스포츠난", "wrong_words": ["스포츠란"], "description": "'구분된 지면'의 뜻을 나타내는 말로, 고유어와 외래어 뒤에는 ‘난’을, 한자어 뒤에는 ‘란’을 씁니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"type":"spelling", "title":"신문의 '이슈란 vs 이슈난'", "right_words":"이슈난", "wrong_words": ["이슈란"], "description": "'구분된 지면'의 뜻을 나타내는 말로, 고유어와 외래어 뒤에는 ‘난’을, 한자어 뒤에는 ‘란’을 씁니다.", "helpful_info": "영어인 스포츠와 이슈의 경우 '스포츠난', '이슈난'이 맞고, 고유어인 정치, 문화의 경우 '정치란', '문화란'이 맞습니다.", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
-{"type":"spelling", "title":"가시 '돋힌 vs 돋친' 말", "right_words":"돋친", "wrong_words": ["돋힌"], "description": "흔히 '돋히다'로 쓰는 말은 '돋치다'로 써야 합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"type":"spelling", "title":"정치란 vs 정치난", "right_words":"정치란", "wrong_words": ["정치난"], "description": "'구분된 지면'의 뜻을 나타내는 말로, 고유어와 외래어 뒤에는 ‘난’을, 한자어 뒤에는 ‘란’을 씁니다.", "helpful_info": "영어인 스포츠와 이슈의 경우 '스포츠난', '이슈난'이 맞고, 고유어인 정치, 문화의 경우 '정치란', '문화란'이 맞습니다.", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
-{"type":"spelling", "title":"짓궂다 vs 짖궂다", "right_words":"짓궂다", "wrong_words": ["짖궂다"], "description": "'짖궂다'는 '짓궂다'의 잘못된 표현입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"type":"spelling", "title":"돋힌 vs 돋친", "right_words":"돋친", "wrong_words": ["돋힌"], "description": "'가시 돋친 말', '날개 돋친 듯' 등 흔히 '돋히다'로 쓰는 말은 '돋치다'로 써야 합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
-{"type":"spelling", "title":"뭐예요 vs 뭐에요", "right_words":"뭐예요", "wrong_words": ["뭐에요"], "description": "'뭐' 뒤에, '-이에요'의 준말 '-예요'가 붙으므로, '뭐예요'로 적습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"type":"spelling", "title":"짓궂다 vs 짖궂다", "right_words":"짓궂다", "wrong_words": ["짖궂다"], "description": "'짖궂다'는 '짓궂다'의 잘못된 표현입니다. 장난으로 남을 귀찮게 하고 괴롭히는 것을 뜻하는 단어는 '짓궂다'입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
-{"type":"spelling", "title":"신기록을 '경신 vs 갱신'", "right_words":"경신했다", "wrong_words": ["갱신했다"], "description": "'기록경기 따위에서, 종전의 기록을 깨뜨림.'이라는 뜻을 나타내는 경우에는 '경신'을 씁니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"type":"spelling", "title":"뭐예요 vs 뭐에요", "right_words":"뭐예요", "wrong_words": ["뭐에요"], "description": "'뭐' 뒤에, '-이에요'의 준말 '-예요'가 붙으므로, '뭐예요'로 적습니다. '무엇이에요'의 준말이라 '무어' 뒤에 '-에요'가 아니라 '-이에요'가 붙습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spelling", "title":"신기록을 '경신 vs 갱신'", "right_words":"경신", "wrong_words": ["갱신"], "description": "'기록경기 따위에서, 종전의 기록을 깨뜨림.'이라는 뜻을 나타내는 경우에는 '경신'을 씁니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spelling", "title":"면허 '경신 vs 갱신'", "right_words":"갱신", "wrong_words": ["경신"], "description": "법률관계의 존속 기간이 끝났을 때 그 기간을 연장하는 일과 관련되는 경우 '면허 갱신'처럼 쓰입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"'쥐여 vs 쥐어' 주다", "right_words":"쥐여", "wrong_words": ["쥐어"], "description": "쥐이다'는 '쥐다'의 사동사로, '(누가 누구에게) 쥐게 해 주다'의 뜻으로 쓰려면 '쥐여 주다'가 자연스럽습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
-{"type":"spelling", "title":"낫다 vs 낳다 vs 났다 vs 낮다", "right_words":"낫지", "wrong_words": ["낳지", "났지", "낮지"], "description": "보다 더 좋거나 앞서 있음을 나타내는 표현은 '낫다'입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
-{"type":"spelling", "title":"애당초 vs 애시당초", "right_words":"애당초", "wrong_words": ["애시당초"], "description": "'애시당초'는 '애당초'의 잘못된 표현입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"type":"spelling", "title":"애당초 vs 애시당초", "right_words":"애당초", "wrong_words": ["애시당초"], "description": "일의 맨 처음을 뜻하는 단어는 '애당초'입니다. '애시당초'는 '애당초'의 잘못된 표현입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"얼마예요 vs 얼마에요", "right_words":"얼마예요", "wrong_words": ["얼마에요"], "description": "'-에요'는 어미이며, '예요'는 서술격 조사 어간 '이-' 뒤에 어미 '-에요'가 붙은 '이에요'의 준말입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
-{"type":"spelling", "title":"돼지 '껍질 vs 껍데기'", "right_words":"돼지 껍질", "wrong_words": ["돼지 껍데기"], "description": "'껍질'은 딱딱하지 않은 물체의 겉을 싸고 있는 질긴 물질의 켜를 말하기에, '돼지 껍질'이 맞는 말입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"type":"spelling", "title":"돼지'껍질 vs 껍데기'", "right_words":"껍질", "wrong_words": ["껍데기"], "description": "'껍질'은 딱딱하지 않은 물체의 겉을 싸고 있는 질긴 물질의 켜를 말하기에, '돼지 껍질'이 맞는 말입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"뱃멀미 vs 배멀미", "right_words":"뱃멀미", "wrong_words": ["배멀미"], "description": "순우리말 합성어로, 뒷말의 첫소리 'ㄴ,ㅁ' 앞에서 'ㄴ' 소리가 나기 때문에 사이시옷을 넣어 '뱃멀미'로 표기합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
-{"type":"spelling", "title":"그가 '올런지 vs 올는지'", "right_words":"올는지", "wrong_words": ["올런지"], "description": "'-ㄹ는지'가 맞습니다. '-ㄹ는지'는 뒤 절이 나타내는 일과 상관이 있는 어떤 일의 실현 가능성에 대한 의문을 나타내는 어미로 사용합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
-{"type":"spelling", "title":"핼쑥하다 vs 핼쓱하다", "right_words":"핼쑥해졌다", "wrong_words": ["핼쓱해졌다"], "description": "'핼쓱하다'는 '핼쑥하다'의 잘못된 표현입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"type":"spelling", "title":"핼쑥하다 vs 핼쓱하다", "right_words":"핼쑥하다", "wrong_words": ["핼쓱하다"], "description": "'핼쓱하다'는 '핼쑥하다'의 잘못된 표현입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"'다디단 vs 달디단' 케이크", "right_words":"다디단", "wrong_words": ["달디단"], "description": "'다디달다'가 활용될 때, '다디달-+-ㄴ'은 '다디단'과 같이 적습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"징역 '10개월 vs 10월'을 선고합니다", "right_words":"10월", "wrong_words": ["10개월"], "description": "기수(基數) 뒤에 쓰이는, 달을 세는 단위인 ‘월’은 주로 형을 선고하거나 구형할 때 쓰입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
-{"type":"spelling", "title":"날개 '돋친 vs 돋힌' 듯", "right_words":"돋친", "wrong_words": ["돋힌"], "description": "흔히 '돋히다'로 쓰는 말은 '돋치다'로 써야 합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
 {"type":"spelling", "title":"장마비 vs 장맛비", "right_words":"장맛비", "wrong_words": ["장마비"], "description": "순 우리말로 된 합성어로서 앞말이 모음으로 끝나고, 뒷말의 첫소리가 된소리로 나기 때문에 장맛비로 표기 합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"명절을 '세다 vs 쇠다'", "right_words":"쇠다", "wrong_words": ["세다"], "description": "'쇠다'의 의미로 '쉬다', '세다'를 쓰는 경우가 있으나 '쇠다'만 표준어로 사용합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
-{"type":"spelling", "title":"'알은체 vs 아는체' 하지마라.", "right_words":"알은체", "wrong_words": ["아는체"], "description": "'알은 척'이랑 같은 말로 쓰이는 말은 '알은체'입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
 {"type":"spelling", "title":"얼굴의 '부기 vs 붓기'", "right_words":"부기", "wrong_words": ["붓기"], "description": "'부종(浮腫)으로 인하여 부은 상태'를 뜻하는, 의학 전문어 '부기(浮氣)'로 사용합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
-{"type":"spelling", "title":"꽃잎을 '지르밟다 vs 즈려밟다'.", "right_words":"지르밟다", "wrong_words": ["즈려밟다"], "description": "위에서 내리눌러 밟는 것을 뜻할 때에는 '지르밟다'가 맞는 표현입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"걷어'붙이고 vs 부치고'", "right_words":"붙이고", "wrong_words": ["부치고"], "description": "'붙이다'가 맞는 말입니다. '붙다'의 의미가 살아 있기 때문에 '붙이다'로 적고, 그렇지 않으면 '부치다'로 적습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"북어국 vs 북엇국", "right_words":"북엇국", "wrong_words": ["북어국"], "description": "순 우리말과 한자어의 합성어에서, 앞말이 모음으로 끝나고, 뒷말의 첫소리가 된소리로 나기 때문에 북엇국으로 표기 합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
-{"type":"spelling", "title":"설레임 vs 설렘", "right_words":"설렘", "wrong_words": ["설레임"], "description": "'설레이다' 혹은 '설레임'으로 쓰이기도 하지만, 표준어로는 '설레다'이므로, 명사형도 '설렘'이 표준어입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"type":"spelling", "title":"설레임 vs 설렘", "right_words":"설렘", "wrong_words": ["설레임"], "description": "'설레이다' 혹은 '설레임'으로 쓰이는 단어는 아이스크림 '설레임'때문에 잘못 인식된 용례입니다. '설레이다'라는 단어는 존재하지 않으며, 표준어로는 '설레다'이므로, 명사형도 '설렘'이 표준어입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
-{"type":"spelling", "title":"'삼가 vs 삼가해' 주십시오", "right_words":"삼가 주십시오", "wrong_words": ["삼가해 주십시오"], "description": "표준어는 '삼가하다'가 아니고, '삼가다'이며, '삼가다'의 어간 '삼가-' 뒤에 어미 '-아'가 붙으면, '삼가'의 형태로 활용합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"type":"spelling", "title":"삼가다 vs 삼가하다", "right_words":"삼가", "wrong_words": ["삼가해"], "description": "표준어는 '삼가하다'가 아니고, '삼가다'이며, '삼가다'의 어간 '삼가-' 뒤에 어미 '-아'가 붙으면, '삼가'의 형태로 활용합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
-{"type":"spelling", "title":"'일부러 vs 일부로'", "right_words":"일부러", "wrong_words": ["일부로"], "description": "어떤 목적이나 생각을 가지고', '알면서도 마음을 숨기고'를 뜻하는 부사는 '일부러'입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"type":"spelling", "title":"일부러 vs 일부로", "right_words":"일부러", "wrong_words": ["일부로"], "description": "어떤 목적이나 생각을 가지고', '알면서도 마음을 숨기고'를 뜻하는 부사는 '일부러'입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
-{"type":"spelling", "title":"카드 '결제 vs 결재'", "right_words":"결제", "wrong_words": ["결재"], "description": "'증권 또는 대금을 주고받아 매매 당사자 사이의 거래 관계를 끝맺는 일.'에는 '결제'를 씁니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"type":"spelling", "title":"카드 '결제 vs 결재'", "right_words":"결제", "wrong_words": ["결재"], "description": "'증권 또는 대금을 주고받아 매매 당사자 사이의 거래 관계를 끝맺는 일.'에는 '결제'를 씁니다.", "helpful_info": "계산은 '제'가 할게요~", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
-{"type":"spelling", "title":"안절부절 '하니  vs 못하니'", "right_words":"안절부절못하니", "wrong_words": ["안절부절하니"], "description": "'안절부절못하다'는 '마음이 초조하고 불안하여 어찌할 바를 모르다.'는 뜻이 있는 표준어입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"type":"spelling", "title":"안절부절 '하다 vs 못하다'", "right_words":"안절부절못하다", "wrong_words": ["안절부절하다"], "description": "'안절부절못하다'는 '마음이 초조하고 불안하여 어찌할 바를 모르다.'는 뜻이 있는 표준어입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
-{"type":"spelling", "title":"담궈라 vs 담가라", "right_words":"담가라", "wrong_words": ["담궈라"], "description": "'담그다'는 어간 '담그-' 뒤에 모음으로 시작하는 어미 '-아/-아서'가 붙으면 '담가, 담가서'와 같이 활용하는 용언입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"type":"spelling", "title":"담궈라 vs 담가라", "right_words":"담가라", "wrong_words": ["담궈라"], "description": "'담그다'는 어간 '담그-' 뒤에 모음으로 시작하는 어미 '-아/-아서'가 붙으면 '담가, 담가서'와 같이 활용하는 용언입니다. 간장은 담구지 않고 담급니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"몇 시예요 vs 몇 시에요", "right_words":"몇 시예요", "wrong_words": ["몇 시에요"], "description": "받침 없는 명사 뒤에는 '-이에요'의 준말인 ‘-예요’가 쓰이므로 ‘몇 시예요?’가 맞는 말입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
-{"type":"spelling", "title":"모밀국수 vs 메밀국수", "right_words":"메밀국수", "wrong_words": ["모밀국수"], "description": "'메밀가루'로 만든 국수이므로 '메밀국수' 입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"type":"spelling", "title":"'모밀 vs 메밀'국수", "right_words":"메밀", "wrong_words": ["모밀"], "description": "'모밀'이 아니라 '메밀'이 맞으며, '메밀가루'로 만든 국수이므로 '메밀국수' 입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"심술 '깨나 vs 꽤나'", "right_words":"깨나", "wrong_words": ["꽤나"], "description": "어느 정도 이상의 뜻을 나타내는 보조사 ‘깨나’가 있으며, 이는 '심술깨나 부리겠더라.'와 같이 쓰입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
-{"type":"spelling", "title":"뒤치'다꺼리 vs 닥거리 vs 닥꺼리'", "right_words":"뒤치다꺼리", "wrong_words": ["뒤치닥거리", "뒤치닥꺼리"], "description": "'뒤치닥거리'와 '뒤치닥꺼리'는 '뒤치다꺼리'의 잘못된 표현입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"type":"spelling", "title":"뒤치닥거리 vs 뒤치다꺼리", "right_words":"뒤치다꺼리", "wrong_words": ["뒤치닥거리"], "description": "'짓거리'처럼 명사 뒤에 '비하'의 뜻을 더하는 접미사 '-거리'와 '뒤치닥'의 결합으로 보아 '뒤치닥거리'로 쓰는 것은 잘못된 사용입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
-{"type":"spelling", "title":"사사하다 vs 사사받다", "right_words":"사사한", "wrong_words": ["사사받은"], "description": "'사사하다'는 '스승으로 삼고 가르침을 받다'라는 뜻으로, 이미 '(가르침을) 받는다'는 의미가 들어있습니다. 그렇기에 '사사받다'라는 표현은 옳지 않습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"type":"spelling", "title":"사사하다 vs 사사받다", "right_words":"사사하다", "wrong_words": ["사사받다"], "description": "'사사하다'는 '스승으로 삼고 가르침을 받다'라는 뜻으로, 이미 '(가르침을) 받는다'는 의미가 들어있습니다. 그렇기에 '사사받다'라는 표현은 옳지 않습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"밤을 '새다 vs 새우다'", "right_words":"새우다", "wrong_words": ["새다"], "description": "'새우다'는 타동사이므로 '밤을 새우다'를 '밤을 새다'로 쓰는 것은 잘못된 표현입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
-{"type":"spelling", "title":"나태해지기 '십상 vs 쉽상' 이다", "right_words":"십상", "wrong_words": ["쉽상"], "description": "열에 여덟이나 아홉 정도로 거의 예외가 없음을 뜻하는 말은 '십상(十常)[=십상팔구(十常八九)]'입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"type":"spelling", "title":"'십상 vs 쉽상'이다.", "right_words":"십상", "wrong_words": ["쉽상"], "description": "열에 여덟이나 아홉 정도로 거의 예외가 없음을 뜻하는 말은 '십상(十常)[=십상팔구(十常八九)]'입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
-{"type":"spelling", "title":"어쭙잖게 vs 어줍잖게", "right_words":"어쭙잖게", "wrong_words": ["어줍잖게"], "description": "비웃음을 살 만큼 언행이 분수에 넘치는 데가 있다는 뜻의 단어는 ‘어쭙잖다’입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"type":"spelling", "title":"몰아붙이다 vs 몰아부치다", "right_words":"몰아붙이다", "wrong_words": ["몰아부치다"], "description": "'몰아붙이다'의 의미로 '모라부치다, 몰아붙이다, 몰아부치다'를 쓰는 경우가 있으나 '몰아붙이다'만 표준어로 인정합니다. '밀어붙이다'의 경우도 '붙이다'가 맞습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
-{"type":"spelling", "title":"몰아붙이다 vs 몰아부치다", "right_words":"몰아붙이다", "wrong_words": ["몰아부치다"], "description": "'몰아붙이다'의 의미로 '모라부치다, 몰아붙이다, 몰아부치다'를 쓰는 경우가 있으나 '몰아붙이다'만 표준어로 인정합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"type":"spelling", "title":"붉은빛을 '띠다 vs 띄다'", "right_words":"띠다", "wrong_words": ["띄다"], "description": "'띤다'는 '빛깔이나 색채 따위를 가지다.'의 뜻으로 이 문장에서는 '띤다'로 적습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
-{"type":"spelling", "title":"붉은빛을 '띤다 vs 띈다'", "right_words":"띤다", "wrong_words": ["띈다"], "description": "'띤다'는 '빛깔이나 색채 따위를 가지다.'의 뜻으로 이 문장에서는 '띤다'로 적습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
-{"type":"spelling", "title":"까무라치다 vs 까무러지다", "right_words":"까무러질", "wrong_words": ["까무라칠"], "description": "'까무러지다'는 '정신이 가물가물하여지다'라는 뜻을 가진 동사입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
-{"type":"spelling", "title":"웬만하면 vs 왠만하면", "right_words":"웬만하면", "wrong_words": ["왠만하면"], "description": "웬만하면'이 맞습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"type":"spelling", "title":"까무라치다 vs 까무러지다", "right_words":"까무러지다", "wrong_words": ["까무라치다"], "description": "'까무러지다'는 '정신이 가물가물하여지다'라는 뜻을 가진 동사입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"매치기 vs 메치기", "right_words":"메치기", "wrong_words": ["매치기"], "description": "'매치기'는 '메치기'의 잘못된 표현입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"널따랗다 vs 넓따랗다 vs 넓다랗다", "right_words":"널따랗다", "wrong_words": ["넓따랗다", "넓다랗다."], "description": "'꽤 넓다'라는 뜻의 형용사는 '널따랗다'입니다. '넓다'에서 겹받침의 끝소리가 드러나지 않기 때문에 소리대로 적습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
-{"type":"spelling", "title":"내 옆에 '있음에 vs 있으매'", "right_words":"있으매", "wrong_words": ["있음에"], "description": "어미 '-으매'는 이유나 근거를 나타내는 연결어미로서 '-음에'는 '-으매'로 고쳐 써야 옳습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
-{"type":"spelling", "title":"잠시 '들르다 vs 들리다'", "right_words":"들를게요", "wrong_words": ["들릴게요"], "description": "'방문하다'라는 의미를 가진 서술어는 '들르다'입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
-{"type":"spelling", "title":"'결제 vs 결재' 서류", "right_words":"결재", "wrong_words": ["결제"], "description": "'결정할 권한이 있는 상관이 부하가 제출한 안건을 검토하여 허가하거나 승인함'을 뜻하는 '결재'가 정확한 표현입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"type":"spelling", "title":"잠시 '들르다 vs 들리다'", "right_words":"들르다", "wrong_words": ["들리다"], "description": "들르자'가 맞습니다. 지나는 길에 잠깐 들어가 머무르는 것을 나타낼 때 '들르다'를 씁니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"귀뜸 vs 귀띔", "right_words":"귀띔", "wrong_words": ["귀뜸"], "description": "'상대편이 눈치로 알아차릴 수 있도록 미리 일깨워 주는 것'은 '귀띔'입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
@@ -381,8 +283,6 @@
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"날개짓 vs 날갯짓", "right_words":"날갯짓", "wrong_words": ["날개짓"], "description": "순 우리말로 된 합성어로서 앞말이 모음으로 끝나고, 뒷말의 첫소리가 된소리로 나기 때문에 날갯짓으로 표기 합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
-{"type":"spelling", "title":"뒤치닥거리 vs 뒤치다꺼리", "right_words":"뒤치다꺼리", "wrong_words": ["뒤치닥거리"], "description": "'짓거리'처럼 명사 뒤에 '비하'의 뜻을 더하는 접미사 '-거리'와 '뒤치닥'의 결합으로 보아 '뒤치닥거리'로 쓰는 것은 잘못된 사용입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
 {"type":"spelling", "title":"혼꾸멍나다 vs 혼구멍나다", "right_words":"혼꾸멍났다", "wrong_words": ["혼구멍났다"], "description": "'혼나다'를 속되게 이르는 말은 '혼꾸멍나다'로 표기해야 합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"'찝쩍대는 vs 찝적대는'", "right_words":"찝쩍대는", "wrong_words": ["찝적대는"], "description": "자꾸 남을 건드려 성가시게 한다는 뜻의 단어는 '찝쩍대다'로, '집적대다'보다 센 표현입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
@@ -406,10 +306,6 @@
 {"type":"spelling", "title":"대화로서 vs 대화로써", "right_words":"대화로써", "wrong_words": ["대화로서"], "description": "어떤 일의 수단이나 도구를 나타내는 격 조사는 ‘-로써’입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"인사말을 '건내다 vs 건네다'", "right_words":"건넸다", "wrong_words": ["건냈다"], "description": "'남에게 말을 붙이다'는 '건네다'가 바른 표현 입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
-{"type":"spelling", "title":"'깨방정 vs 개방정' 그만 떨어라.", "right_words":"개방정", "wrong_words": ["깨방정"], "description": "온갖 점잖지 못한 말이나 행동을 낮잡아 이르는 말은 '개방정'입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
-{"type":"spelling", "title":"왠 말 vs 웬 말", "right_words":"웬 말", "wrong_words": ["왠 말"], "description": "'어찌 된’의 뜻을 나타내는 관형사는 ‘웬’이므로, '웬 말인가?'와 같이 씁니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"쑥쓰럽다 vs 쑥스럽다", "right_words":"쑥스러운", "wrong_words": ["쑥쓰러운"], "description": "'ㄱ, ㅂ' 받침 뒤에서 나는 된소리는, 같은 음절이나 비슷한 음절이 겹쳐 나는 경우가 아니면 된소리로 적지 않습니다. 따라서 '쑥스럽다'로 적습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
@@ -435,8 +331,6 @@
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"오뚜기 vs 오뚝이", "right_words":"오뚝이", "wrong_words": ["오뚜기"], "description": "'밑을 무겁게 하여 아무렇게나 굴려도 일어나는 장난감'을 일컫는 표준어는 '오뚝이' 입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
-{"type":"spelling", "title":"웬지 vs 왠지", "right_words":"왠지", "wrong_words": ["웬지"], "description": "'왜 그런지 모르게 또는 뚜렷한 이유도 없이' 라는 뜻을 나타내는 부사 '왠지'가 있습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
 {"type":"spelling", "title":"꺼메졌네 vs 꺼매졌네", "right_words":"꺼메졌네", "wrong_words": ["꺼매졌네"], "description": "'꺼매졌네'는 틀린 말입니다 .'꺼멓다'는 'ㅓ'가 들어 있으므로 모음조화에 따라 '꺼메지다'가 됩니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"서점에 '들렀다 vs 들렸다'", "right_words":"들렀다", "wrong_words": ["들렸다"], "description": "'들렀다'가 맞는 표현입니다. '지나는 길에 잠깐 들어가 머무르다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
@@ -453,8 +347,6 @@
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"'칠흑 vs 칠흙' 같은 밤", "right_words":"칠흑", "wrong_words": ["칠흙"], "description": "", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
-{"type":"spelling", "title":"'곤욕을 vs 곤혹을' 느꼈다", "right_words":"곤혹을 느꼈다", "wrong_words": ["곤욕을 느꼈다"], "description": "'곤혹’은 ‘곤혹을 느끼다’와 같이, '곤욕’은 주로 ‘곤욕을 치르다/곤욕을 겪다/곤욕을 당하다’와 같이 쓰입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
 {"type":"spelling", "title":"윤년'이에요 vs 이예요'", "right_words":"윤년이에요", "wrong_words": ["윤년이예요"], "description": "'이다'의 어간 '이-'에 어미 '-에요'가 붙은 것이므로, '윤년이에요'가 옳은 표현입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"오지랍 vs 오지랖", "right_words":"오지랖", "wrong_words": ["오지랍"], "description": "'오지랍'은 '오지랖'의 잘못된 표현입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
@@ -463,15 +355,9 @@
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"바래 왔던 vs 바라 왔던", "right_words":"바라 왔던", "wrong_words": ["바래 왔던"], "description": "'바라 오다'의 과거 혹은 완료의 의미는 보조 용언에 '-았-'을 결합하여 '바라 왔다'와 같이 씁니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
-{"type":"spelling", "title":"이슈란 vs 이슈난", "right_words":"이슈난", "wrong_words": ["이슈란"], "description": "'구분된 지면'의 뜻을 나타내는 말로, 고유어와 외래어 뒤에는 ‘난’을, 한자어 뒤에는 ‘란’을 씁니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
 {"type":"spelling", "title":"일찌기 vs 일찍이", "right_words":"일찍이", "wrong_words": ["일찌기"], "description": "'일정한 시간보다 이르게'라는 의미로는 '일찍이'가 맞는 표현입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"심술머리 vs 심술딱지", "right_words":"심술딱지", "wrong_words": ["심술머리"], "description": "‘심술’을 속되게 이르는 말은 '심술딱지'입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
-{"type":"spelling", "title":"틈틈이 vs 틈틈히", "right_words":"틈틈이", "wrong_words": ["틈틈히"], "description": "'틈틈히'는 '틈틈이'의 잘못된 표현입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
-{"type":"spelling", "title":"굳은살 '박힌 vs 박인'", "right_words":"박인", "wrong_words": ["박힌"], "description": "'손바닥, 발바닥 따위에 굳은살이 생기다.'라는 뜻을 가진 동사는 ‘박이다’이므로, '박인'으로 적습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"대충 '걷잡다 vs 겉잡다'", "right_words":"겉잡아서", "wrong_words": ["걷잡아서"], "description": "'겉으로 보고 대강 짐작하여 헤아리는 것'을 뜻하는 '겉잡다'가 정확한 표현입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
@@ -531,8 +417,6 @@
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"'얼룩빼기vs얼룩배기'", "right_words":"얼룩빼기", "wrong_words": ["얼룩배기"], "description": "겉이 얼룩얼룩한 동물이나 물건을 뜻하는 단어는 '얼룩빼기'입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
-{"type":"spelling", "title":"가시 '돋힌 vs 돋친'", "right_words":"돋친", "wrong_words": ["돋힌"], "description": "흔히 '돋히다'로 쓰는 말은 '돋치다'로 써야 합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
 {"type":"spelling", "title":"어깨죽지 vs 어깻죽지", "right_words":"어깻죽지", "wrong_words": ["어깨죽지"], "description": "순 우리말로 된 합성어로서 앞말이 모음으로 끝나고, 뒷말의 첫소리가 된소리로 나기 때문에 어깻죽지로 표기 합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"'채신 vs 체신' 없이", "right_words":"채신", "wrong_words": ["체신"], "description": "처신(處身)'을 낮잡아 이르는 말은 '채신'입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
@@ -553,8 +437,6 @@
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"걷어채다 vs 걷어채이다", "right_words":"걷어채다", "wrong_words": ["걷어채이다"], "description": "'걷어차다'에 피동 접사 '-이-'가 두 번 들어간 표현인 '걷어채이다'는 잘못된 형태입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
-{"type":"spelling", "title":"도착할 때 '즈음 vs 쯤'", "right_words":"즈음", "wrong_words": ["쯤"], "description": "'즈음'이 맞는 말입니다. ‘즈음’은 ‘일이 어찌 될 무렵’을 뜻하는 의존 명사로, 관형어인 앞말과 띄어 적습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
 {"type":"spelling", "title":"'고난도 vs 고난이도' 문제", "right_words":"고난도", "wrong_words": ["고난이도"], "description": "‘고난이도’라는 말의 쓰임은 잘못되었습니다. ‘어렵고 쉬운 정도’의 의미인 ‘난이도’에 ‘높다’라는 말이 붙었기 때문입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"생존률 vs 생존율", "right_words":"생존율", "wrong_words": ["생존률"], "description": "받침이 있는 말 다음에는 '률, 렬'로 적고, 받침이 없거나 'ㄴ'받침이나 모음 뒤에서는 '율, 열'로 적습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
@@ -563,11 +445,7 @@
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"섬찟섬찟하다 vs 섬짓섬짓하다", "right_words":"섬찟섬찟한", "wrong_words": ["섬짓섬짓한"], "description": "갑자기 소름이 끼치도록 끔찍하다는 뜻을 가진 단어는 '섬찟섬찟하다'입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
-{"type":"spelling", "title":"발간 년도 vs 발간 연도", "right_words":"발간 연도", "wrong_words": ["발간 년도"], "description": "편의상 구분한 일 년 동안의 기간 또는 앞의 말에 해당하는 그해'를 이르는 말로 명사 '연도(年度)'를 사용합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
 {"type":"spelling", "title":"말도 '안 돼 vs 않 돼'", "right_words":"안 돼", "wrong_words": ["않 돼"], "description": "'안'은 부사 '아니'의 준말입니다. '안'과 동사 '되다'는 각각의 단어이기에 '안 돼'라고 적습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
-{"type":"spelling", "title":"서류를 '지르밟다 vs 즈려밟다'.", "right_words":"지르밟다", "wrong_words": ["즈려밟다"], "description": "위에서 내리눌러 밟는 것을 뜻할 때에는 '지르밟다'가 맞는 표현입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"'엉큼한 vs 응큼한' 속셈", "right_words":"엉큼한", "wrong_words": ["응큼한"], "description": "엉뚱한 욕심을 품고 분수에 넘치는 일을 하려는 태도가 있다는 뜻의 단어는 '엉큼하다'입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
@@ -591,13 +469,7 @@
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"잘다랗다 vs 잗다랗다", "right_words":"잗다랗게", "wrong_words": ["잘다랗게"], "description": "꽤 잘다는 의미를 가진 단어는 '잗다랗다'이며, '잗다랗게'로 활용할 수 있습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
-{"type":"spelling", "title":"'웬일 vs 왠일'로", "right_words":"웬일", "wrong_words": ["왠일"], "description": "'어찌 된’의 뜻을 나타내는 관형사는 ‘웬’이므로, '어찌 된 일로'라는 함의를 가진 '웬일'이 맞는 말입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
-{"type":"spelling", "title":"‘짤다란 vs 짤따란 vs 짧다란 vs 짧따란’", "right_words":"짤따란", "wrong_words": ["짤다란", "짧다란", "짧따란"], "description": "짤따란'이 맞습니다. '짤따란'은 형용사 '짤따랗다'에서 왔습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
 {"type":"spelling", "title":"동고동락 vs 동거동락", "right_words":"동고동락", "wrong_words": ["동거동락"], "description": "'동거동락'은 '동고동락'의 잘못된 표현입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
-{"type":"spelling", "title":"'갯수 vs 개수'를 세다.", "right_words":"개수", "wrong_words": ["갯수"], "description": "두 음절로 된 한자어 '곳간(庫間), 셋방(貰房), 숫자(數字), 찻간(車間), 툇간(退間), 횟수(回數)'에만 사이시옷을 받치어 적습니다. ‘個數’는 이에 속하지 않으므로 ‘개수’로 씁니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"날염 vs 나염", "right_words":"날염", "wrong_words": ["나염"], "description": "피륙에 부분적으로 착색하여 무늬가 나타나게 염색하는 방법을 '날염'이라고 합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
@@ -607,13 +479,9 @@
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"불길을 '걷잡다 vs 겉잡다'", "right_words":"걷잡을 수 없이", "wrong_words": ["겉잡을 수 없이"], "description": "'한 방향으로 치우쳐 흘러가는 형세 따위를 붙들어 잡다.'라는 뜻의 동사는 '걷잡다'입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
-{"type":"spelling", "title":"'사기충전 vs 사기충천'하다.", "right_words":"사기충천", "wrong_words": ["사기충전"], "description": "'사기충전'이 아니라 '사기충천'이 맞습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
 {"type":"spelling", "title":"자금이 '달립니다 vs 딸립니다'", "right_words":"달립니다", "wrong_words": ["딸립니다"], "description": "능력이나 힘이 모자라다는 뜻을 나타내는 '달리다'라는 동사가 있습니다. '딸리다'는 표준어가 아닙니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"깨달음 vs 깨닳음", "right_words":"깨달음", "wrong_words": ["깨닳음"], "description": "생각하고 궁리하다가 알게 되는 것을 뜻하는 단어는 '깨달음'입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
-{"type":"spelling", "title":"'곤욕vs곤혹'을 당했다.", "right_words":"곤욕을 당했다", "wrong_words": ["곤혹을 당했다"], "description": "'곤욕’은 주로 ‘곤욕을 치르다/곤욕을 겪다/곤욕을 당하다’와 같이, ‘곤혹’은 ‘곤혹을 느끼다’와 같이 쓰이고 있습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"뒤풀이 vs 뒷풀이", "right_words":"뒤풀이", "wrong_words": ["뒷풀이"], "description": "‘뒤풀이'로 적습니다. 된소리나 거센소리 앞에서는 사이시옷을 쓰지 않기로 한 규정에 따라 '뒤'라 적습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
@@ -622,10 +490,6 @@
 {"type":"spelling", "title":"마구간 vs 마굿간", "right_words":"마구간", "wrong_words": ["마굿간"], "description": "'마구간'으로 적습니다. 한자 합성어는 사이시옷을 쓰지 않는 것이 원칙입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"게임으'로서 vs 로써'", "right_words":"게임으로써", "wrong_words": ["게임으로서"], "description": "어떤 일의 수단이나 도구를 나타내는 격 조사는 ‘-로써’입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
-{"type":"spelling", "title":"라면이 '붇지 vs 불지' 않았어.", "right_words":"붇지", "wrong_words": ["불지"], "description": "'물에 젖어서 부피가 커지다.'라는 뜻을 나타내는 동사는 ‘붇다’입니다. 모음 앞에서는 'ㄹ'로 바뀌지만, 이 경우에는 '붇지'가 옳습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
-{"type":"spelling", "title":"거에요 vs 거예요", "right_words":"거예요", "wrong_words": ["거에요"], "description": "‘거예요’가 맞습니다. ‘이거 왜 이런 거예요?’처럼 ‘거예요’로 써야 합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"나의 '막냇동생 vs 막내동생'", "right_words":"막냇동생", "wrong_words": ["막내동생"], "description": "막내로 태어난 동생을 뜻하는 단어는 '막냇동생'입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
@@ -651,10 +515,6 @@
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"도롱뇽 vs 도룡뇽", "right_words":"도롱뇽", "wrong_words": ["도룡뇽"], "description": "'도룡뇽'은 '도롱뇽'의 잘못된 표현입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
-{"type":"spelling", "title":"계산기로 '계제 vs 게재' 해라.", "right_words":"계제", "wrong_words": ["게재"], "description": "셈을 따져서 제할 것을 제한다는 뜻의 말은 '계제'입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
-{"type":"spelling", "title":"웬일 vs 왠일", "right_words":"웬일", "wrong_words": ["왠일"], "description": "웬일'이 맞습니다. '어찌 된, 어떠한'의 뜻을 나타낼 때는 '웬'으로 표기합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
 {"type":"spelling", "title":"우려먹다 vs 울궈먹다", "right_words":"우려먹었다", "wrong_words": ["울궈먹었다"], "description": "'울궈먹다'는 비표준어로 '우려먹다'가 올바른 표현입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"착한 사람이 '되라 vs 돼라'", "right_words":"돼라", "wrong_words": ["되라"], "description": "'돼라'는 '되-'에 '-어라'라는 어미가 결합된 말입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
@@ -674,8 +534,6 @@
 {"type":"spelling", "title":"'유래없는 vs 유례없는'", "right_words":"유례없는", "wrong_words": ["유래없는"], "description": "같거나 비슷한 예'는 '유례', '사물이나 일이 생겨난 바'는 '유래'입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"선물'이에요 vs 이예요'", "right_words":"선물이에요", "wrong_words": ["선물이예요"], "description": "'이다'의 어간 '이-'에 어미 '-에요'가 붙은 것이므로, '선물이에요'가 옳은 표현입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
-{"type":"spelling", "title":"얼굴의 '부기 vs 붓기'", "right_words":"부기", "wrong_words": ["붓기"], "description": "'부종(浮腫)으로 인하여 부은 상태'를 뜻하는, 의학 전문어 '부기(浮氣)'로 사용합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"'파투 vs 파토'가 나다.", "right_words":"파투", "wrong_words": ["파토"], "description": "일이 잘못되어 흐지부지되는 것은 '파투(破鬪)'입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
@@ -719,8 +577,6 @@
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"'느즈막 vs 느지막'하게 일어났다.", "right_words":"느지막", "wrong_words": ["느즈막"], "description": "시간이 매우 늦음을 뜻하는 단어는 '느지막'입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
-{"type":"spelling", "title":"입술이 '퍼래요 vs 퍼레요'", "right_words":"퍼레요", "wrong_words": ["퍼래요"], "description": "'퍼레요'가 맞는 표현입니다. '퍼렇다'의 어간 ‘퍼렇-’ 뒤에 어미 ‘-어’가 붙으면 ‘퍼레’가 됩니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
 {"type":"spelling", "title":"밀어붙이고 vs 밀어부치고", "right_words":"밀어붙이고", "wrong_words": ["밀어부치고"], "description": "'붙이다'가 맞는 말입니다. '붙다'의 의미가 살아 있기 때문에 '붙이다'로 적고, 그렇지 않으면 '부치다'로 적습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"주쳇덩어리 vs 주쳇바가지", "right_words":"주쳇덩어리", "wrong_words": ["주쳇바가지"], "description": "주체하기가 매우 어려운 일이나 물건 또는 그런 사람을 비유적으로 이르는 말은 '주쳇덩어리'입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
@@ -729,13 +585,9 @@
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"배었어 vs 뱄어 vs 베였어 vs 벴어", "right_words":"베였어", "wrong_words": ["배었어", "뱄어", "벴어"], "description": "‘날이 있는 물건으로 상처를 내다.’라는 뜻으로는 ‘베다’를 사용하며, ‘베다’의 피동형 ‘베이었다’가 준 형태인 ‘베였다’를 쓰면 됩니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
-{"type":"spelling", "title":"'천생 vs 천상' 여자", "right_words":"천생", "wrong_words": ["천상"], "description": "'천생'의 의미로 '천상'을 쓰는 경우가 있으나 '천생'만 표준어로 인정합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
 {"type":"spelling", "title":"불연듯 vs 불현듯", "right_words":"불현듯", "wrong_words": ["불연듯"], "description": "'불연듯'은 '불현듯'의 잘못된 표현입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
-{"type":"spelling", "title":"징역 '10개월 vs 10월'", "right_words":"10월", "wrong_words": ["10개월"], "description": "기수(基數) 뒤에 쓰이는, 달을 세는 단위인 ‘월’은 주로 형을 선고하거나 구형할 때 쓰입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
-{"type":"spelling", "title":"모자가 '벗어지다 vs 벗겨지다'", "right_words":"벗겨졌어", "wrong_words": ["벗어졌어"], "description": "'덮이거나 씌워진 물건이 외부의 힘에 의하여 떼어지거나 떨어지다.’라는 뜻을 나타내는 경우에는 ‘벗겨지다’를 쓰게됩니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"type":"spelling", "title":"모자가 '벗어지다 vs 벗겨지다'", "right_words":"벗겨지다", "wrong_words": ["벗어지다"], "description": "'덮이거나 씌워진 물건이 외부의 힘에 의하여 떼어지거나 떨어지다.’라는 뜻을 나타내는 경우에는 ‘벗겨지다’를 쓰게됩니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"추스르다 vs 추스리다", "right_words":"추스르다", "wrong_words": ["추스리다"], "description": "특별한 이유 없이 'ㄹ'을 덧붙여 '추슬리다/추슬르다'로 쓰는 것은 잘못된 사용으로 '추스르다'가 표준어입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
@@ -752,8 +604,6 @@
 {"type":"spelling", "title":"아둥바둥 vs 아등바등", "right_words":"아등바등", "wrong_words": ["아둥바둥"], "description": "'무엇을 이루려고 애쓰거나 우겨 대는 모양'을 뜻하는 단어는 '아등바등'입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"죔죔 vs 잼잼", "right_words":"죔죔", "wrong_words": ["잼잼"], "description": "젖먹이에게 죄암질을 하라는 뜻으로 내는 소리는 '죄암죄암'이며, 준말은 '죔죔'으로 표기합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
-{"type":"spelling", "title":"'흐리멍텅 vs 흐리멍덩'해지다.", "right_words":"흐리멍덩", "wrong_words": ["흐리멍텅"], "description": "'흐리멍덩'이 맞는 말입니다. '흐리멍텅하다', '흐리멍텅히'는 ‘흐리멍덩하다’, '흐리멍덩히'의 북한어입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"풍비박산 vs 풍지박산", "right_words":"풍비박산", "wrong_words": ["풍지박산"], "description": "'풍지박산'은 '풍비박산'의 잘못된 표현입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
@@ -775,8 +625,6 @@
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"'철석같이 vs 철썩같이' 믿다", "right_words":"철석같이", "wrong_words": ["철썩같이"], "description": "마음이나 의지, 약속 따위가 매우 굳고 단단함을 뜻하는 부사는 '철석(鐵石)같이'입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
-{"type":"spelling", "title":"바지랑 '웃옷 vs 윗옷'", "right_words":"윗옷", "wrong_words": ["웃옷"], "description": "아래에 입는 옷과 대립되는, 위에 입는 옷을 가리키는 말은 '윗-'을 쓴 '윗옷'이 표준어입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
 {"type":"spelling", "title":"'염두에 vs 염두해' 두다", "right_words":"염두에 두다", "wrong_words": ["염두해 두다"], "description": "'염두'는 '생각할 때 있어서 가장 우선 순위'라는 뜻을 가진 단어이므로, '염두에 두다'라고 해야 바른 표현입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"환골탈퇴 vs 환골탈태", "right_words":"환골탈태", "wrong_words": ["환골탈퇴"], "description": "'환골탈퇴'는 '환골탈태'의 잘못된 표현입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
@@ -791,8 +639,6 @@
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"'재야 vs 제야'의 고수", "right_words":"재야", "wrong_words": ["제야"], "description": "초야에 파묻혀 있다는 의미는 '재야(在野)'를 사용 합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
-{"type":"spelling", "title":"지나치게 '짓궂다 vs 짖궂다'.", "right_words":"짓궂다", "wrong_words": ["짖궂다"], "description": "장난으로 남을 귀찮게 하고 괴롭히는 것을 뜻하는 단어는 '짓궂다'입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
 {"type":"spelling", "title":"이 햄스터는 '얼룩이 vs 얼루기'다.", "right_words":"얼루기", "wrong_words": ["얼룩이"], "description": "얼룩얼룩한 점이나 무늬. 또는 그런 점이나 무늬가 있는 짐승이나 물건을 뜻하는 단어는 '얼루기'입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"외종질 vs 외조카", "right_words":"외종질", "wrong_words": ["외조카"], "description": "외사촌의 아들을 이르는 말은 '외종질'입니다. '조카'는 주로 친조카를 이르는 말입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
@@ -801,21 +647,13 @@
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"벼라별 vs 별의별 vs 별에별", "right_words":"별의별", "wrong_words": ["벼라별", "별에별"], "description": "'벼라별'과 '별에별'은 '별의별'의 잘못된 표현입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
-{"type":"spelling", "title":"'사단 vs 사달'이 나다.", "right_words":"사달", "wrong_words": ["사단"], "description": "'사달'의 의미로 '사단'을 사용하는 경우가 있으나 '사달'만 표준어로 인정합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
 {"type":"spelling", "title":"늘이고 vs 늘리고", "right_words":"늘리고", "wrong_words": ["늘이고"], "description": "'수나 분량, 시간 따위가 본디보다 많아지다.'라는 뜻을 나타내는 '늘다'의 사동사인 '늘리다'를 사용합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
-{"type":"spelling", "title":"초콜릿이 '달디달다 vs 다디달다'.", "right_words":"다디달다", "wrong_words": ["달디달다"], "description": "'달디달다'가 아니라 '다디달다'가 맞는 말입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"'채납 vs 체납'하다.", "right_words":"채납", "wrong_words": ["체납"], "description": "의견을 받아들이는 것은 '채납(採納)', 세금 따위를 내지 못해 밀리는 것은 '체납(滯納)'입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"고둥 vs 고동", "right_words":"고둥", "wrong_words": ["고동"], "description": "소라, 총알고둥 따위처럼 대개 말려 있는 껍데기를 가지는 종류를 이르는 말은 '고둥'입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
-{"type":"spelling", "title":"'스포츠란 vs 스포츠난'에 실리다.", "right_words":"스포츠난", "wrong_words": ["스포츠란"], "description": "'구분된 지면'의 뜻을 나타내는 말로, 고유어와 외래어 뒤에는 ‘난’을, 한자어 뒤에는 ‘란’을 씁니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
 {"type":"spelling", "title":"'짓궂은 vs 짖궂은'", "right_words":"짓궂은", "wrong_words": ["짖궂은"], "description": "장난스럽게 남을 괴롭히고 귀찮게 한다는 뜻의 단어는 '짓궂다'입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
-{"type":"spelling", "title":"일이 '익숙지 vs 익숙치' 않다.", "right_words":"익숙지", "wrong_words": ["익숙치"], "description": "'익숙하지'가 줄면, '익숙지'의 형태로 적습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"간지럼  '태우다 vs 피우다'", "right_words":"태워", "wrong_words": ["피워"], "description": "'간지럼'은 '타다' 혹은 '태우다'와 같이 쓰시는 것이 올바른 표현입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
@@ -847,13 +685,9 @@
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"시뿌예지다 vs 시뿌얘지다", "right_words":"시뿌예졌다", "wrong_words": ["시뿌얘졌다"], "description": "'시뿌옇게 되다'라는 뜻을 가진 동사로, 모음 조화를 잘 지킨 표현은 '시뿌예지다'입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
-{"type":"spelling", "title":"내 발을 '우겨넣다 vs 욱여넣다'.", "right_words":"욱여넣다", "wrong_words": ["우겨넣다"], "description": "‘주위에서 중심으로 함부로 밀어 넣다.’라는 뜻을 나타내는 말은 ‘욱여넣다’입니다. ", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
 {"type":"spelling", "title":"눈에 '띠게 vs 띄게'", "right_words":"띄게", "wrong_words": ["띠게"], "description": "‘눈에 띄다’와 같이 쓰시면 됩니다. 이때 ‘띄다’는 ‘뜨이다’의 준말로 사용됩니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"있을 거야 vs 있을 꺼야", "right_words":"있을 거야", "wrong_words": ["있을 꺼야"], "description": "'있을 거야'가 맞는 말 입니다. 발음은 [꺼]로 나지만, 표기는 ‘거’로 합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
-{"type":"spelling", "title":"'올런지 vs 올는지'", "right_words":"올는지", "wrong_words": ["올런지"], "description": "'오다'와 '-ㄹ는지'가 결합한 '올는지'가 올바른 표현입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"빈털털이 vs 빈털터리", "right_words":"빈털터리", "wrong_words": ["빈털털이"], "description": "'가진 것이 없는 가난뱅이'를 뜻하는 말의 올바른 표기는 '빈털터리'입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
@@ -869,11 +703,7 @@
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"'시뻘게지다vs시뻘개지다'", "right_words":"시뻘게졌다", "wrong_words": ["시뻘개졌다"], "description": "'시뻘겋게 되다'라는 뜻을 가진 동사로, 모음 조화를 잘 지킨 표현은 '시뻘게지다'입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
-{"type":"spelling", "title":"'금새 vs 금세' 괜찮아졌다.", "right_words":"금세", "wrong_words": ["금새"], "description": "표준어인 '금세'가 맞는 말입니다. '지금 바로’의 뜻으로 쓰이는 부사 ‘금세’는 ‘금시에’가 줄어든 말입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
 {"type":"spelling", "title":"'웃옷 vs 윗옷'을 입었다", "right_words":"웃옷", "wrong_words": ["윗옷"], "description": "맨 겉에 입는 옷을 이르는 말은 ‘웃옷’이 표준어입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
-{"type":"spelling", "title":"머리가 '벗어지다 vs 벗겨지다'.", "right_words":"벗어지다", "wrong_words": ["벗겨지다"], "description": "'덮이거나 씌워진 물건이 흘러내리거나 떨어져 나가다.'의 뜻을 나타내는 경우에는 '벗어지다'를 사용합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"좋은 데가 vs 좋은 대가", "right_words":"좋은 데가", "wrong_words": ["좋은 대가"], "description": "'곳'이나 '장소'의 뜻을 나타내는 '데'는 의존명사이므로 앞말과 띄어 적습니다. 따라서 '놀기 좋은 데가 있니?'가 맞는 말입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
@@ -899,8 +729,6 @@
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"이상스럽다 vs 요상스럽다", "right_words":"이상스러운", "wrong_words": ["요상스러운"], "description": "보기에 이상한데가 있을 때, '이상스럽다'라고 표현합니다. '요상스럽다'는 '이상스럽다'의 잘못된 표현입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
-{"type":"spelling", "title":"'졸업년도 vs 졸업연도'가 다르다.", "right_words":"졸업연도", "wrong_words": ["졸업년도"], "description": "'편의상 구분한 일 년 동안의 기간 또는 앞의 말에 해당하는 그해'를 이르는 말로 명사 '연도(年度)'를 사용합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
 {"type":"spelling", "title":"과녁을 '맞쳤다 vs 맞혔다'", "right_words":"맞혔다", "wrong_words": ["맞쳤다"], "description": "'맞혔다'가 맞습니다. '쏘거나 던지거나 한 물체가 어떤 물체에 닿다.'의 뜻을 나타내는 '맞다'의 사동사 '맞히다'를 써야 합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"번번히 vs 번번이", "right_words":"번번이", "wrong_words": ["번번히"], "description": "첩어 또는 준첩어인 명사 뒤인 경우 이로 적습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
@@ -925,8 +753,6 @@
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"청취율 vs 청취률", "right_words":"청취율", "wrong_words": ["청취률"], "description": "받침이 있는 말 다음에는 '률, 렬'로 적고, 받침이 없거나 'ㄴ'받침이나 모음 뒤에서는 '율, 열'로 적습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
-{"type":"spelling", "title":"금새 vs 금세", "right_words":"금세", "wrong_words": ["금새"], "description": "‘금세’가 맞습니다. "비가 오고 나니 금세 날씨가 선선해졌네요." 와 같이 ‘금세’라고 써야 합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
 {"type":"spelling", "title":"치근덕거리다 vs 추근덕거리다", "right_words":"치근덕거리니", "wrong_words": ["추근덕거리니"], "description": "성가실 정도로 끈덕지게 자꾸 귀찮게 군다는 뜻을 가진 단어는 '치근덕거리다'입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"아슴푸레하다 vs 아스름하다", "right_words":"아슴푸레하게", "wrong_words": ["아스름하게"], "description": "빛이 약하거나 멀어서 조금 어둑하고 희미하다는 뜻을 가진 단어는 '아슴푸레하다'입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
@@ -936,8 +762,6 @@
 {"type":"spelling", "title":"친구를 '골리다 vs 곯리다'", "right_words":"골리면", "wrong_words": ["곯리면"], "description": "'상대편을 놀리어 약을 올리거나 골이 나게 하다.'의 의미를 나타내는 말은 '골리다'입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"속을 '썩이다 vs 썩히다'", "right_words":"썩인다", "wrong_words": ["썩힌다"], "description": "'걱정이나 근심으로 몹시 괴로운 상태가 되게 한다'는 것을 의미하는 '썩이다'가 정확한 표현입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
-{"type":"spelling", "title":"핼쑥하다 vs 핼쓱하다", "right_words":"핼쑥해졌다", "wrong_words": ["핼쓱해졌다"], "description": "'핼쓱하다'는 '핼쑥하다'의 잘못된 표현입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"시끌벅적 vs 시끌벅쩍", "right_words":"시끌벅적", "wrong_words": ["시끌벅쩍"], "description": "'시끌벅쩍'은 '시끌벅적'의 잘못된 표현입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
@@ -955,8 +779,6 @@
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"'켕기는 vs 캥기는' 구석이 있다.", "right_words":"켕기는", "wrong_words": ["캥기는"], "description": "마음속으로 겁을 내고 불안해한다는 뜻의 단어는 '켕기다'입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
-{"type":"spelling", "title":"이거 '얼마예요 vs 얼마에요'?", "right_words":"얼마예요", "wrong_words": ["얼마에요"], "description": "'-에요'는 어미이며, '예요'는 서술격 조사 어간 '이-' 뒤에 어미 '-에요'가 붙은 '이에요'의 준말입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
 {"type":"spelling", "title":"모르는구나 vs 모르구나", "right_words":"모르는구나", "wrong_words": ["모르구나"], "description": "동사 어간 뒤에는 '-는구나'가 붙으므로, 동사 '모르다'는 '모르는구나'와 같이 활용합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"한창 vs 한참", "right_words":"한창", "wrong_words": ["한참"], "description": "'한참'은 '시간이 상당히 지나는 동안'이라는 뜻을 가지며, '한창'은 '어떤 일이 가장 활기 있고 왕성하게 일어나는 모양'을 이릅니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
@@ -966,8 +788,6 @@
 {"type":"spelling", "title":"'쓰레받기 vs 쓰레받이'를 들다.", "right_words":"쓰레받기", "wrong_words": ["쓰레받이"], "description": "비로 쓴 쓰레기를 담아 내는 기구는 '쓰레받기'입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"하마트면 vs 하마터면", "right_words":"하마터면", "wrong_words": ["하마트면"], "description": "'조금만 잘못하였더라면'의 의미로는 '하마터면'이 정확한 표현입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
-{"type":"spelling", "title":"돌아갔을'런지 vs 는지'", "right_words":"돌아갔을는지", "wrong_words": ["돌아갔을런지"], "description": "'-ㄹ는지'가 맞습니다. '-ㄹ는지'는 뒤 절이 나타내는 일과 상관이 있는 어떤 일의 실현 가능성에 대한 의문을 나타내는 어미로 사용합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"결단나다 vs 결딴나다", "right_words":"결딴났다", "wrong_words": ["결단났다"], "description": "‘결딴났다’가 맞습니다. “보증을 잘못 서 살림이 결딴났다.”처럼 ‘결딴’이라고 씁니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
@@ -985,8 +805,6 @@
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"송편을 '빗다 vs 빚다'", "right_words":"빚는다", "wrong_words": ["빗는다"], "description": "“가루를 반죽하여 송편, 만두 따위를 만들다.”라는 뜻을 나타내는 말은 ‘빚다’입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
-{"type":"spelling", "title":"'닦달 vs 닥달'했다.", "right_words":"닦달", "wrong_words": ["닥달"], "description": "‘남을 단단히 윽박질러서 혼을 냄’이라는 뜻을 나타내는 말은 ‘닦달’입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
 {"type":"spelling", "title":"아지랑이 vs 아지랭이", "right_words":"아지랑이", "wrong_words": ["아지랭이"], "description": "'아지랑이'가 맞습니다. 표준어에서는 'ㅣ'모음 역행 동화 현상이 일어난 말들은 표준어로 인정하지 않고 있습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"높을손가 vs 높을쏜가", "right_words":"높을쏜가", "wrong_words": ["높을손가"], "description": "'-을쏜가'는 예스러운 표현으로, 의문의 형식을 빌려 앞의 내용을 강하게 부인할 때 쓰는 종결 어미입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
@@ -998,8 +816,6 @@
 {"type":"spelling", "title":"모를려야 vs 모르려야", "right_words":"모르려야", "wrong_words": ["모를려야"], "description": "'모르다'와 '-려고 하여야'의 뜻을 가진 '-려야'가 합해져서 '모르려야'로 표기합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"'푸르뎅뎅하다vs푸르딩딩하다'", "right_words":"푸르뎅뎅한", "wrong_words": ["푸르딩딩한"], "description": "고르지 않게 푸르스름하다는 뜻을 가진 단어의 옳은 표현은 '푸르뎅뎅하다'입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
-{"type":"spelling", "title":"'부기 vs 붓기'가 심하다.", "right_words":"부기", "wrong_words": ["붓기"], "description": "'부종(浮腫)으로 인하여 부은 상태'를 뜻하는, 의학 전문어 '부기(浮氣)'로 사용합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"자살률 vs 자살율", "right_words":"자살률", "wrong_words": ["자살율"], "description": "받침이 있는 말 다음에는 '률, 렬'로 적고, 받침이 없거나 'ㄴ'받침이나 모음 뒤에서는 '율, 열'로 적습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
@@ -1013,10 +829,6 @@
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"알은  척 vs 아는 척", "right_words":"아는 척", "wrong_words": ["알은 척"], "description": "'아는 척하다'다 맞는 말로, '알지 못하면서 아는 것처럼 거짓으로 그럴듯하게 꾸민다'는 뜻을 나타냅니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
-{"type":"spelling", "title":"'닭개장 vs 닭계장'이 맛있다.", "right_words":"닭개장", "wrong_words": ["닭계장"], "description": "'닭개장'은 쇠고기 대신에 닭고기를 넣어 육개장처럼 끓인 음식을 이르는 말로 '닭'과 '개장'이 결합한 말이라고 할 수 있습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
-{"type":"spelling", "title":"'게제 vs 계제'가 아니다.", "right_words":"계제", "wrong_words": ["게제"], "description": "어떤 일을 할 수 있게 된 형편이나 기회를 뜻하는 단어로 '계제'가 바른 표현입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
 {"type":"spelling", "title":"애달파 vs 애닲아", "right_words":"애달파", "wrong_words": ["애닲아"], "description": "'애닯으니, 애닯아서’ 등의 활용형이 실현되는 일이 없어 고어로 처리하고, '애달파'를 표준어로 삼았습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"'밑동vs밑둥'", "right_words":"밑동", "wrong_words": ["밑둥"], "description": "긴 물건의 맨 아랫동아리나 나무줄기에서 뿌리에 가까운 부분을 일컫는 말은 ‘밑동’입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
@@ -1028,8 +840,6 @@
 {"type":"spelling", "title":"얼굴이 '흙빛 vs 흑빛'으로 변하다.", "right_words":"흙빛", "wrong_words": ["흑빛"], "description": "푸른빛을 약간 띤 검은빛을 '흙빛'이라고 합니다. 흔히 어둡고 경직된 표정이나 얼굴빛을 비유적으로 이릅니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"'옴짝달싹 vs 옴싹달싹'", "right_words":"옴짝달싹", "wrong_words": ["옴싹달싹"], "description": "몸을 아주 조금 움직이는 모양은 '옴짝달싹'입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
-{"type":"spelling", "title":"이 자리를 '빌어 vs 빌려'", "right_words":"빌려", "wrong_words": ["빌어"], "description": "남의 물건을 돌려주기로 하고 쓰는 것은 '빌리다'이므로, '빌려'가 맞는 말입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"흙빛 vs 흑빛", "right_words":"흙빛", "wrong_words": ["흑빛"], "description": "푸른빛을 약간 띤 검은빛을 '흙빛'이라고 합니다. 흔히 어둡고 경직된 표정이나 얼굴빛을 비유적으로 이릅니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
@@ -1045,15 +855,9 @@
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"'겉잡을 vs 걷잡을' 수 없이", "right_words":"걷잡을 수 없이", "wrong_words": ["겉잡을 수 없이"], "description": "'한 방향으로 치우쳐 흘러가는 형세 따위를 붙들어 잡다'라는 뜻으로 쓰이는 서술어는 '걷잡다'입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
-{"type":"spelling", "title":"'매치기 vs 메치기'에 성공하다.", "right_words":"메치기", "wrong_words": ["매치기"], "description": "유도에서, 상대편의 자세를 무너뜨린 다음 기술을 걸어서 던지거나 쓰러뜨리는 기술을 통틀어 이르는 말로 '메치기'가 바른 표현입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
 {"type":"spelling", "title":"빨강색 vs 빨강", "right_words":"빨강", "wrong_words": ["빨강색"], "description": "'빨강색'은 틀린 표현입니다. '빨강'은 '빨간 빛깔'을 뜻하는 말이므로, 그 뒤에 '색'을 붙여 '빨강색'이라고 할 필요가 없습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
-{"type":"spelling", "title":"심술'깨나 vs 꽤나'", "right_words":"깨나", "wrong_words": ["꽤나"], "description": "어느 정도 이상의 뜻을 나타내는 보조사 ‘깨나’가 있으며, 이는 '심술깨나 부리겠더라.'와 같이 쓰입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
 {"type":"spelling", "title":"짭쪼름 vs 짭조름", "right_words":"짭조름", "wrong_words": ["짭쪼름"], "description": "조금 짠맛이 있다는 표현은 '짭조름하다' 입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
-{"type":"spelling", "title":"출발할 때 '즈음 vs 쯤'", "right_words":"즈음", "wrong_words": ["쯤"], "description": "'즈음'이 맞는 말입니다. ‘즈음’은 ‘일이 어찌 될 무렵’을 뜻하는 의존 명사로, 관형어인 앞말과 띄어 적습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"'흑기사 vs 흙기사'", "right_words":"흑기사", "wrong_words": ["흙기사"], "description": "곤혹스러워하는 일을 대신 해주는 사람을 비유적으로 이르는 말은 '흑기사'입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
@@ -1087,8 +891,6 @@
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"어떻하면 vs 어떻해 vs 어떡하면 vs 어떠카면", "right_words":"어떡하면", "wrong_words": ["어떻하면", "어떻해", "어떠카면"], "description": "'어떻게'는 '어떠하다'가 줄어든 '어떻다'에 어미 '-게'가 붙은 활용형이고, '어떡하지'는 '어떻게 하지'라는 구가 줄어든 말입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
-{"type":"spelling", "title":"웬지 vs 왠지", "right_words":"왠지", "wrong_words": ["웬지"], "description": "왠지'가 맞습니다. '왠지'는 '왜인지'에서 줄어든 말입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
 {"type":"spelling", "title":"엉겁결 vs 엉겹결", "right_words":"엉겁결", "wrong_words": ["엉겹결"], "description": "'엉겹결'은 '엉겁결'의 잘못된 표현입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"골똘이 vs 골똘히", "right_words":"골똘히", "wrong_words": ["골똘이"], "description": "'한 가지 일에 온 정신을 쏟아 딴생각이 없이'라는 뜻을 가진 부사는 '골똘히'입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
@@ -1098,8 +900,6 @@
 {"type":"spelling", "title":"'장농vs장롱'", "right_words":"장롱", "wrong_words": ["장농"], "description": "옷 따위를 넣어 두는 장과 농을 아울러 이르는 말은 '장롱'입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"'따뜻히 vs 따뜻이' 안아주다.", "right_words":"따뜻이", "wrong_words": ["따뜻히"], "description": "'하다'가 붙는 어근의 끝소리가 'ㅅ'인 경우 이로 적습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
-{"type":"spelling", "title":"지금 '몇 시예요 vs 몇 시에요'?", "right_words":"몇 시예요", "wrong_words": ["몇 시에요"], "description": "받침 없는 명사 뒤에는 '-이에요'의 준말인 ‘-예요’가 쓰이므로 ‘몇 시예요?’가 맞는 말입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"갈겨쓰다 vs 날려쓰다", "right_words":"갈겨쓴", "wrong_words": ["날려쓴"], "description": "글씨를 아무렇게나 마구 쓴다는 의미의 '갈기다'와 '쓰다'가 합쳐진 말로, '갈겨쓰다'가 맞는 표현입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
@@ -1118,8 +918,6 @@
 {"type":"spelling", "title":"값을 '치렀다 vs 치뤘다'", "right_words":"치렀다.", "wrong_words": ["치뤘다."], "description": "주어야 할 돈을 내주다', '어떤 일을 겪어 내다'라는 뜻의 단어는 '치르다'입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"재능을 '썩히다 vs 썩이다'", "right_words":"썩히다", "wrong_words": ["썩이다"], "description": "'썩히다'는 '물건이나 사람 또는 재능 따위가 제대로 쓰이지 못하고 내버려진 상태에 있다'를 나타내는 '썩다'의 사동사입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
-{"type":"spelling", "title":"정치란 vs 정치난", "right_words":"정치란", "wrong_words": ["정치난"], "description": "'구분된 지면'의 뜻을 나타내는 말로, 고유어와 외래어 뒤에는 ‘난’을, 한자어 뒤에는 ‘란’을 씁니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"'늦깎이 vs 늦깍이'", "right_words":"늦깎이", "wrong_words": ["늦깍이"], "description": "'늦-'에 '깎-'과 '-이'가 결합한 말로 볼 수 있으므로 '늦깎이'로 적습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
@@ -1165,10 +963,6 @@
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"한글 '창재 vs창제'", "right_words":"한글 창제", "wrong_words": ["한글 창재"], "description": ""전에 없던 것을 처음으로 만들거나 제정함."이라는 뜻을 가진 단어는 '창제'입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
-{"type":"spelling", "title":"'어따 vs 얻다' 대고", "right_words":"얻다", "wrong_words": ["어따"], "description": "“어디에다 대고 반말이야?”와 같은 문맥이라면, “얻다 대고 반말이야?”와 같이 ‘얻다’를 쓸 수 있습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
-{"type":"spelling", "title":"돼지'껍질 vs 껍데기'", "right_words":"껍질", "wrong_words": ["껍데기"], "description": "'껍질'은 딱딱하지 않은 물체의 겉을 싸고 있는 질긴 물질의 켜를 말하기에, '돼지 껍질'이 맞는 말입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
 {"type":"spelling", "title":"있다가 vs 이따가", "right_words":"이따가", "wrong_words": ["있다가"], "description": "이따가'가 맞습니다. “이따가 비가 온대.”처럼 ‘이따가’는 ‘조금 지난 뒤에’를 뜻합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"짖밟히다 vs 짓밟히다", "right_words":"짓밟히다", "wrong_words": ["짖밟히다"], "description": "'함부로 마구 밟히다'라는 뜻의 동사는 '짓밟히다' 입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
@@ -1185,17 +979,11 @@
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"'시시덕거리다 vs 히히덕거리다' ", "right_words":"시시덕거린다", "wrong_words": ["히히덕거린다"], "description": "실없이 웃으면서 조금 큰 소리로 계속 이야기한다는 의미를 가진 단어는 '시시덕거리다'입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
-{"type":"spelling", "title":"'갈래야 vs 가려야' 가기 힘든 곳", "right_words":"가려야", "wrong_words": ["갈래야"], "description": "'갈래야'는 비표준어로 '가려야'의 잘못된 표현입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
 {"type":"spelling", "title":"맛보기 vs 맛배기", "right_words":"맛보기", "wrong_words": ["맛배기"], "description": "'맛으로 먹으려고 조금 차린 음식'이라는 의미를 담은 단어는 '맛보기'입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"손실률 vs 손실율", "right_words":"손실률", "wrong_words": ["손실율"], "description": "받침이 있는 말 다음에는 '률, 렬'로 적고, 받침이 없거나 'ㄴ'받침이나 모음 뒤에서는 '율, 열'로 적습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"속속들이 vs 속속이", "right_words":"속속들이", "wrong_words": ["속속이"], "description": "'깊은 속까지 샅샅이'를 뜻하는 부사는 '속속들이'입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
-{"type":"spelling", "title":"면허 '경신 vs 갱신'", "right_words":"갱신", "wrong_words": ["경신"], "description": "법률관계의 존속 기간이 끝났을 때 그 기간을 연장하는 일과 관련되는 경우 '면허 갱신'처럼 쓰입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
-{"type":"spelling", "title":"신기록을 '경신했다 vs 갱신했다'.", "right_words":"경신했다", "wrong_words": ["갱신했다"], "description": "'기록경기 따위에서, 종전의 기록을 깨뜨림.'이라는 뜻을 나타내는 경우에는 '경신'을 씁니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"배냇짓 vs 배내웃음", "right_words":"배냇짓", "wrong_words": ["배내웃음"], "description": "갓난아이가 자면서 웃거나 눈, 코, 입 따위를 쫑긋거리는 짓을 뜻하는 단어는 '배냇짓'입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
@@ -1235,8 +1023,6 @@
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"바등거리다 vs 바둥거리다", "right_words":"바둥거려도", "wrong_words": ["바등거려도"], "description": "'바동거리다'보다 큰 느낌을 주는 '바둥거리다'가 맞는 표현입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
-{"type":"spelling", "title":"결제 vs 결재", "right_words":"결재", "wrong_words": ["결제"], "description": "결재'가 맞습니다. ‘결재’는 회사에서 안건을 검토하거나 승인함을 뜻합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
 {"type":"spelling", "title":"낡은 '기차간 vs 기찻간'", "right_words":"기차간", "wrong_words": ["기찻간"], "description": "'기차간'으로 적습니다. 한자 합성어는 사이시옷을 쓰지 않는 것이 원칙입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"덩굴 vs 덩쿨", "right_words":"덩굴", "wrong_words": ["덩쿨"], "description": "'덩굴’은 ‘넝쿨’과 함께 복수 표준어이지만, ‘덩쿨’은 비표준어로 잘못된 표현입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
@@ -1250,8 +1036,6 @@
 {"type":"spelling", "title":"'흙받기 vs 흙받이'를 갖고 있다.", "right_words":"흙받기", "wrong_words": ["흙받이"], "description": "흙손질할 때 이긴 시멘트나 흙을 받쳐 드는 연장은 '흙받기'입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"'짭짤하다 vs 짭잘하다'", "right_words":"짭짤하다.", "wrong_words": ["짭잘하다."], "description": "감칠맛 있게 조금 짜다', '일이 잘되어 실속이 있다'는 뜻의 단어는 '짭짤하다'입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
-{"type":"spelling", "title":"문화란 vs 문화난", "right_words":"문화란", "wrong_words": ["문화난"], "description": "'구분된 지면'의 뜻을 나타내는 말로, 고유어와 외래어 뒤에는 ‘난’을, 한자어 뒤에는 ‘란’을 씁니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"자국눈 vs 자취눈", "right_words":"자국눈", "wrong_words": ["자취눈"], "description": "겨우 발자국이 날 만큼 적게 내린 눈은 '자국눈'입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
@@ -1268,10 +1052,6 @@
 {"type":"spelling", "title":"티읕 vs 티긑", "right_words":"티읕", "wrong_words": ["티긑"], "description": "한글 자모의 이름은 <한글 맞춤법 통일안>에서 정해진 것으로, '티읕'이 올바른 표현입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"'얽히고설킨 vs 얽히고섥힌' 갈등", "right_words":"얽히고설킨", "wrong_words": ["얽히고섥힌"], "description": "이리저리 뒤섞이다', '이리저리 복잡하게 되다'라는 뜻의 단어는 '얽히고설키다'입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
-{"type":"spelling", "title":"'애당초 vs 애시당초' 안 될 일", "right_words":"애당초", "wrong_words": ["애시당초"], "description": "일의 맨 처음을 뜻하는 단어는 '애당초'입니다. ‘애시당초'는 틀린 표현입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
-{"type":"spelling", "title":"걷어'붙이고 vs 부치고'", "right_words":"붙이고", "wrong_words": ["부치고"], "description": "'붙이다'가 맞는 말입니다. '붙다'의 의미가 살아 있기 때문에 '붙이다'로 적고, 그렇지 않으면 '부치다'로 적습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"노동량 vs 노동양", "right_words":"노동량", "wrong_words": ["노동양"], "description": "'노동량'이 맞습니다. '량'은 한자어 다음에, '양'은 한자어를 제외한 고유어와 외래어 다음에 결합하는 특징이 있습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
@@ -1331,8 +1111,6 @@
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"우연히 vs 우연이", "right_words":"우연히", "wrong_words": ["우연이"], "description": "'우연히'가 맞는 말입니다. 부사의 끝음절이 '히'로만 나거나 '이'나 '히'로 나는 것은 '-히'로 적는다.”라고 규정하고 있습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
-{"type":"spelling", "title":"사단 vs 사달", "right_words":"사달", "wrong_words": ["사단"], "description": "사달'이 맞습니다. '사고나 탈'의 의미로 '사달'을 씁니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
 {"type":"spelling", "title":"'갈음하다vs가름하다'", "right_words":"갈음하겠다.", "wrong_words": ["가름하겠다"], "description": "‘가름’은 나누는 것을, ‘갈음’은 대신하는 것을 뜻하므로 '갈음하다'가 맞습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"성대묘사 vs 성대모사", "right_words":"성대모사", "wrong_words": ["성대묘사"], "description": "'성대묘사'는 '성대모사'의 잘못된 표현입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
@@ -1361,8 +1139,6 @@
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"'괴나리봇짐 vs 개나리봇짐'을 지고 나서다.", "right_words":"괴나리봇짐", "wrong_words": ["개나리봇짐"], "description": "걸어서 먼 길을 떠날 때에 보자기에 싸서 어깨에 메는 작은 짐을 '괴나리봇짐'이라 합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
-{"type":"spelling", "title":"'주꾸미 vs 쭈꾸미' 요리", "right_words":"주꾸미", "wrong_words": ["쭈꾸미"], "description": "문어과의 연체동물을 일컫는 말의 표준어는 '주꾸미'입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
 {"type":"spelling", "title":"'먹을쏘냐vs먹을소냐'", "right_words":"먹을쏘냐", "wrong_words": ["먹을소냐?"], "description": "'-ㄹ쏘냐'는 ‘어찌 그럴 리가 있겠느냐’의 뜻으로 강한 부정을 나타내는 종결 어미입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"수군거리다 vs 수근거리다", "right_words":"수군거렸다", "wrong_words": ["수근거렸다"], "description": "남이 알아듣지 못하도록 낮은 목소리로 자꾸 가만가만 이야기할 때는 '수군거리다'로 표현해야 합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
@@ -1374,10 +1150,6 @@
 {"type":"spelling", "title":"웃통 vs 위통", "right_words":"웃통", "wrong_words": ["위통"], "description": "‘웃통'이 맞습니다. '아래, 위’의 대립이 없는 단어는 ‘웃-’으로 발음되는 형태를 표준어로 삼도록 규정합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"에두르다 vs 애두르다", "right_words":"에둘러", "wrong_words": ["애둘러"], "description": "바로 말하지 않고 짐작하여 알아듣도록 둘러댄다는 뜻을 가진 단어는 '에두르다'로 표기합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
-{"type":"spelling", "title":"'나지막히 vs 나지막이' 속삭이다.", "right_words":"나지막이", "wrong_words": ["나지막히"], "description": "부사화 접미사 '-이/히'의 구별은 일반화가 모든 경우에 반드시 적용된다고 보기는 어렵지만, 'ㄱ'받침 뒤에서는 '이'로 쓰입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
-{"type":"spelling", "title":"며칠 vs 몇 일", "right_words":"며칠", "wrong_words": ["몇 일"], "description": "‘며칠’이 맞습니다. “오늘이 몇 월 며칠이지?”처럼 ‘며칠’로 써야 합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"샅샅이 vs 샅샅히", "right_words":"샅샅이", "wrong_words": ["샅샅히"], "description": "첩어 또는 준첩어인 명사 뒤인 경우 이로 적습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
@@ -1418,8 +1190,6 @@
 {"type":"spelling", "title":"몸져눕다 vs 몸저눕다", "right_words":"몸져누워 있다.", "wrong_words": ["몸저누워 있다."], "description": "병이나 고통이 심하여 몸을 가누지 못하는 것은 '몸져눕다'입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"인사말 vs 인삿말", "right_words":"인사말", "wrong_words": ["인삿말"], "description": "사이시옷을 받쳐 적지 않고 '인사말'과 같이 적습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
-{"type":"spelling", "title":"그렇게 '몰아붙이다 vs 몰아부치다'.", "right_words":"몰아붙이다", "wrong_words": ["몰아부치다"], "description": "'몰아붙이다'의 의미로 '모라부치다, 몰아붙이다, 몰아부치다'를 쓰는 경우가 있으나 '몰아붙이다'만 표준어로 인정합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"치울께 vs 치울게", "right_words":"치울게", "wrong_words": ["치울께"], "description": "어떤 행동을 할 것을 약속하는 뜻을 나타내는 종결 어미는 ‘-ㄹ게’이므로, '치울게'와 같이 적습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
@@ -1505,8 +1275,6 @@
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"'간절이 vs 간절히' 원하면", "right_words":"간절히", "wrong_words": ["간절이"], "description": "'간절이'는 '간절히'의 잘못된 표현입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
-{"type":"spelling", "title":"'며칠 vs 몇일' 동안", "right_words":"며칠", "wrong_words": ["몇일"], "description": "'몇일'은 '며칠'의 잘못된 표기입니다. 여기서 '며칠'은 '여러 날'의 의미로 쓰입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
 {"type":"spelling", "title":"팼다 vs 패였다 vs 패었다", "right_words":"패었다.", "wrong_words": ["팼다.", "패였다."], "description": "패었다'가 맞습니다. '패다'는 준말로 '팼다'처럼 줄인 형태로 쓸 수 없습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"'치고받고 vs 치고박고' 싸우다.", "right_words":"치고받고", "wrong_words": ["치고박고"], "description": "서로 다투거나 때리면서 싸운다는 뜻의 단어는 '치고받다'입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
@@ -1528,8 +1296,6 @@
 {"type":"spelling", "title":"덤터기 vs 덤테기", "right_words":"덤터기", "wrong_words": ["덤테기"], "description": "억울한 누명이나 오명을 뜻하는 단어는 '덤터기'입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"'구름량 vs 구름양'이 적다.", "right_words":"구름양", "wrong_words": ["구름량"], "description": "'구름양'이 맞습니다. '양'은 한자어를 제외한 고유어와 외래어 다음에, '량'은 한자어 다음에 결합하는 특징이 있습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
-{"type":"spelling", "title":"'귀뜸 vs 귀띔' 해줘.", "right_words":"귀띔", "wrong_words": ["귀뜸"], "description": "'상대편이 눈치로 알아차릴 수 있도록 미리 슬그머니 일깨워 줌'을 이르는 말은 '귀띔'입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"띄워 주다 vs 띄어 주다", "right_words":"띄워 주었다", "wrong_words": ["띄어 주었다"], "description": "'물속이나 지면 따위의 위에 있음'을 뜻하는 '뜨다'의 사동사 '띄우다'에 '주다'가 결합해서 '띄워 주다'가 맞는 표현입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
@@ -1653,8 +1419,6 @@
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"'천장 vs 천정'", "right_words":"천장", "wrong_words": ["천정"], "description": "방의 윗면인 반자의 겉면을 뜻하는 단어는 '천장'입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
-{"type":"spelling", "title":"명절을 '세다 vs 쇠다'.", "right_words":"쇠다", "wrong_words": ["세다"], "description": "'쇠다'의 의미로 '쉬다', '세다'를 쓰는 경우가 있으나 '쇠다'만 표준어로 사용합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
 {"type":"spelling", "title":"또아리 vs 똬리", "right_words":"똬리", "wrong_words": ["또아리"], "description": "짐을 머리에 일 때 머리에 받치는 고리 모양의 물건은 '똬리'입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"되레 vs 되려", "right_words":"되레", "wrong_words": ["되려"], "description": "‘되레’가 맞습니다. ‘되레 건강 망쳐’처럼 씁니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
@@ -1673,13 +1437,11 @@
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"모둠 vs 모듬", "right_words":"모둠", "wrong_words": ["모듬"], "description": "모둠'이 맞습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
-{"type":"spelling", "title":"양파 '껍질 vs 껍데기'", "right_words":"껍질", "wrong_words": ["껍데기"], "description": "'껍질'은 물체의 겉을 싸고 있는 단단하지 않은 물질을 의미합니다. 양파의 경우 '껍질'과 함께 쓰는 것이 적절합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
 {"type":"spelling", "title":"감소율 vs 감소률", "right_words":"감소율", "wrong_words": ["감소률"], "description": "받침이 있는 말 다음에는 '률, 렬'로 적고, 받침이 없거나 'ㄴ'받침이나 모음 뒤에서는 '율, 열'로 적습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"'괘념 vs 궤념'치 않는다.", "right_words":"괘념", "wrong_words": ["궤념"], "description": "마음에 두고 걱정하거나 잊지 아니한다는 뜻의 단어는 '괘념(掛念)하다'입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
-{"type":"spelling", "title":"'요세 vs 요새' 아프다.", "right_words":"요새", "wrong_words": ["요세"], "description": "'요사이'의 준말로 '요새'가 맞습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"type":"spelling", "title":"'요세 vs 요새' 아프다.", "right_words":"요새", "wrong_words": ["요세"], "description": "'요사이'의 준말로 '요새'가 맞습니다. 유사한 단어로는 '금시에'의 준말인 '금세'가 있습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"썩다 vs 썪다", "right_words":"썩어서", "wrong_words": ["썪어서"], "description": "사람 몸의 일부가 균의 침입으로 기능을 잃게 된 것을 뜻하는 단어는 '썩다'입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
@@ -1696,10 +1458,6 @@
 {"type":"spelling", "title":"배풀다 vs 베풀다", "right_words":"베풀다", "wrong_words": ["배풀다"], "description": "일을 차리어 벌인다는 뜻을 가진 단어는 '베풀다'입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"챙피 vs 창피", "right_words":"창피하다", "wrong_words": ["챙피하다"], "description": "'챙피'는 '창피'의 잘못된 표현입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
-{"type":"spelling", "title":"'북어국 vs 북엇국'으로 해장하다.", "right_words":"북엇국", "wrong_words": ["북어국"], "description": "순 우리말과 한자어의 합성어에서, 앞말이 모음으로 끝나고, 뒷말의 첫소리가 된소리로 나기 때문에 '북엇국'으로 표기합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
-{"type":"spelling", "title":"'우레 vs 우뢰'와 같은 함성", "right_words":"우레", "wrong_words": ["우뢰"], "description": "'우레'가 맞는 말입니다. 예전에는 '우뢰(雨雷)'로 쓰기도 했는데 이는 '우레'를 한자어로 잘못 인식하여 적은 것입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"치사률 vs 치사율", "right_words":"치사율", "wrong_words": ["치사률"], "description": "받침이 있는 말 다음에는 '률, 렬'로 적고, 받침이 없거나 'ㄴ'받침이나 모음 뒤에서는 '율, 열'로 적습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
@@ -1730,8 +1488,6 @@
 {"type":"spelling", "title":"참으로 '희안하다 vs 희한하다'.", "right_words":"희한하다", "wrong_words": ["희안하다"], "description": "매우 드물거나 신기한 일을 표현할 때 '희한하다'고 합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"빼뚤어지다 vs 빼뚜러지다", "right_words":"빼뚤어졌더라", "wrong_words": ["빼뚜러졌더라"], "description": "바르지 않고 한쪽으로 조금 기울어지거나 쏠린다는 뜻을 가진 단어는 '빼뚤어지다'로 써야 합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
-{"type":"spelling", "title":"'곰곰이 vs 곰곰히' 생각한다.", "right_words":"곰곰이", "wrong_words": ["곰곰히"], "description": "부사에 '-이'가 붙어서 부사가 되는 경우에, 그 어근이나 부사의 원형을 밝히어 적는다.'는 규정에 따라 '곰곰이'로 적습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"웃고명 vs 윗고명", "right_words":"웃고명", "wrong_words": ["윗고명"], "description": "‘아래, 위’의 대립이 없는 단어는 ‘웃-’으로 써야하며, '웃고명'이 맞습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
@@ -1785,8 +1541,6 @@
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"'졸리다vs졸립다'", "right_words":"졸리다", "wrong_words": ["졸립다"], "description": "졸립다'는 방언에서 나타나는 표현이고, 표준어는 '졸리다'입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
-{"type":"spelling", "title":"빛을 '띤다 vs 띈다'.", "right_words":"띤다", "wrong_words": ["띈다"], "description": "'띤다'는 '빛깔이나 색채 따위를 가지다.'의 뜻으로 이 문장에서는 '띤다'로 적습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
 {"type":"spelling", "title":"김치찌개 vs 김치찌게", "right_words":"김치찌개", "wrong_words": ["김치찌게"], "description": "김치를 넣고 끓인 찌개의 올바른 표기법은 '김치찌개'입니다. '김치찌게'는 틀린 표현입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"자그마치 vs 자그만치", "right_words":"자그마치", "wrong_words": ["자그만치"], "description": "예상보다 훨씬 많이 또는 적지 않게'라는 뜻의 단어는 '자그마치'입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
@@ -1833,8 +1587,6 @@
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"맞상 vs 겸상", "right_words":"겸상", "wrong_words": ["맞상"], "description": "고유어인 '맞상'보다 한자어 '겸상'이 더 널리 쓰여 '겸상'이 표준어가 되었습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
-{"type":"spelling", "title":"문을 '잠가라 vs 잠궈라'.", "right_words":"잠가라", "wrong_words": ["잠궈라"], "description": "'잠그다'는 어간 '잠그-' 뒤에 모음으로 시작하는 어미 '-아/-아서'가 붙으면 '잠가, 잠가서'와 같이 활용하는 용언입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
 {"type":"spelling", "title":"기꺼히 vs 기꺼이", "right_words":"기꺼이", "wrong_words": ["기꺼히"], "description": "'ㅂ' 불규칙 용언의 어간 뒤인 경우 이로 적습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"소곤소곤 vs 소근소근", "right_words":"소곤소곤", "wrong_words": ["소근소근"], "description": "남이 알아듣지 못하도록 작은 목소리로 자꾸 가만가만 이야기하는 소리나 모양은 '소곤소곤'입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
@@ -1855,8 +1607,6 @@
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"여남은 vs 여라문", "right_words":"여남은", "wrong_words": ["여라문"], "description": "'여남은'은 수사와 관형사로 쓰일 수 있으며, '열(十)'과 '남-(餘)'이 합쳐진 합성어로 볼 수 있습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
-{"type":"spelling", "title":"'삼가 vs 삼가해' 주십시오.", "right_words":"삼가 주십시오", "wrong_words": ["삼가해 주십시오"], "description": "표준어는 '삼가하다'가 아니고, '삼가다'이며, '삼가다'의 어간 '삼가-' 뒤에 어미 '-아'가 붙으면, '삼가'의 형태로 활용합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
 {"type":"spelling", "title":"아리까리하다 vs 아리송하다", "right_words":"아리송하다", "wrong_words": ["아리까리하다"], "description": "분간하기 어렵다는 뜻을 나타내는 단어는 '아리송하다'입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"'맞있게 vs 맛있게' 먹었다", "right_words":"맛있게", "wrong_words": ["맞있게"], "description": "'음식의 맛이 좋다'는 뜻인 '맛있다'의 부사형으로 쓰이는 단어는 '맛있게'입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
@@ -1875,8 +1625,6 @@
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"꺼슬꺼슬하다 vs 꺼실꺼실하다", "right_words":"꺼슬꺼슬하다", "wrong_words": ["꺼실꺼실하다"], "description": "살결이나 물건의 거죽이 매끄럽지 않고 꺼칠하거나 뻣뻣하다는 뜻을 가진 단어는 '꺼슬꺼슬하다'입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
-{"type":"spelling", "title":"'십상 vs 쉽상'이다.", "right_words":"십상", "wrong_words": ["쉽상"], "description": "열에 여덟이나 아홉 정도로 거의 예외가 없음을 뜻하는 말은 '십상(十常)[=십상팔구(十常八九)]'입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
 {"type":"spelling", "title":"아이를 '낱다 vs 낳다'.", "right_words":"낳았다", "wrong_words": ["낱았다"], "description": "배 속의 아이, 새끼, 알을 몸 밖으로 내놓는다는 뜻을 가진 단어는 '낳다'입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"여드레 vs 여드래", "right_words":"여드레", "wrong_words": ["여드래"], "description": "'여덟 날'은 '여드레'로 표기해야 합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
@@ -1890,8 +1638,6 @@
 {"type":"spelling", "title":"'짓밟힌 vs 짖밟힌'", "right_words":"짓밟힌", "wrong_words": ["짖밟힌"], "description": "짓-'은 '마구, 함부로, 몹시, 심한'의 뜻을 더하는 접두사입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"저기에 '들러 vs 들려'", "right_words":"들러", "wrong_words": ["들려"], "description": "'들러'가 맞는 표현입니다. '지나는 길에 잠깐 들어가 머무르다.'라는 뜻입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
-{"type":"spelling", "title":"'발간 년도 vs 발간 연도'가 잘못되었다.", "right_words":"발간 연도", "wrong_words": ["발간 년도"], "description": "'편의상 구분한 일 년 동안의 기간 또는 앞의 말에 해당하는 그해'를 이르는 말로 명사 '연도(年度)'를 사용합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"깝치다 vs 깝죽거리다", "right_words":"깝죽거린다", "wrong_words": ["깝친다"], "description": "신이 나서 몸을 자꾸 방정맞게 움직인다는 의미를 가진 단어는 '깝죽거리다'입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
@@ -1911,7 +1657,7 @@
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"'늙으막 vs 늘그막'에 자식을 얻다.", "right_words":"늘그막", "wrong_words": ["늙으막"], "description": "'늙어가는 무렵'을 뜻하는 단어는 '늘그막'으로, '늙으막'은 잘못된 표기입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
-{"type":"spelling", "title":"80년도 vs 80연도", "right_words":"80년도", "wrong_words": ["80연도"], "description": "해를 뜻하는 말 뒤에 쓰고, '일정한 기간 단위로서의 그해'를 이르는 말로 의존 명사 '년도(年度)'를 사용합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"type":"spelling", "title":"80'년도 vs 연도'", "right_words":"년도", "wrong_words": ["연도"], "description": "해를 뜻하는 말 뒤에 쓰고, '일정한 기간 단위로서의 그해'를 이르는 말로 의존 명사 '년도(年度)'를 사용합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"가까히 vs 가까이", "right_words":"가까이", "wrong_words": ["가까히"], "description": "'ㅂ' 불규칙 용언의 어간 뒤인 경우 이로 적습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
@@ -1930,10 +1676,6 @@
 {"type":"spelling", "title":" '개곡 vs 계곡' 물놀이", "right_words":"계곡", "wrong_words": ["개곡"], "description": "'물이 흐르는 골짜기'를 뜻하는 단어는 '계곡'입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"'쌀뜬물vs쌀뜨물' 세수", "right_words":"쌀뜨물", "wrong_words": ["쌀뜬물"], "description": "쌀을 씻고 난 뿌연 물을 뜻하는 단어는 '쌀뜨물'입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
-{"type":"spelling", "title":"좋을는지 vs 좋을런지", "right_words":"좋을는지", "wrong_words": ["좋을런지"], "description": "좋을는지'가 맞습니다. '좋다'에 '-을는지'가 붙은 말입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
-{"type":"spelling", "title":"'웃옷 vs 윗옷'을 입었다.", "right_words":"웃옷", "wrong_words": ["윗옷"], "description": "맨 겉에 입는 옷을 이르는 말은 ‘웃옷’이 표준어입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"마음을 '단단이 vs 단단히' 먹다.", "right_words":"단단히", "wrong_words": ["단단이"], "description": "‘-하다’가 붙는 어근 뒤에는 ‘히’가 붙습니다. '단단하다' 뒤에 '히'가 붙어 '단단히'라 적습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
@@ -1989,8 +1731,6 @@
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"'어떻던 vs 어떻든' 니가 좋다.", "right_words":"어떻든", "wrong_words": ["어떻던"], "description": "어느 것이 일어나도 뒤 절의 내용이 성립하는 데 아무런 상관이 없음을 나타내는 연결 어미로 ‘-든’이 쓰여야 합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
-{"type":"spelling", "title":"왜 '안절부절하니 vs 못하니'?", "right_words":"안절부절못하니", "wrong_words": ["안절부절하니"], "description": "'안절부절못하다'는 '마음이 초조하고 불안하여 어찌할 바를 모르다.'는 뜻이 있는 표준어입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
 {"type":"spelling", "title":"살쾡이 vs 삵괭이", "right_words":"살쾡이", "wrong_words": ["삵괭이"], "description": "'삵괭이'의 발음 [삭꽹이]는 언어 현실과 달라, '살쾡이'를 표준어로 삼았습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"잊힌 vs 잊혀진", "right_words":"잊힌", "wrong_words": ["잊혀진"], "description": "‘잊힌’이 맞습니다. ‘잊힌 이름’, “잊힌 역사를 다시 기억해야 한다.”처럼 써야 합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
@@ -2008,8 +1748,6 @@
 {"type":"spelling", "title":"'옳바른 vs 올바른'", "right_words":"올바른", "wrong_words": ["옳바른"], "description": "말이나 생각, 행동 따위가 옳고 바르다는 뜻의 단어는 '올바르다'입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"둘러메다 vs 둘쳐메다", "right_words":"둘러메다", "wrong_words": ["둘쳐메다"], "description": "들어 올려서 어깨에 매는 것을 뜻하는 단어는 '둘러메다'입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
-{"type":"spelling", "title":"'구레나룻 vs 구렛나루'가 길다.", "right_words":"구레나룻", "wrong_words": ["구렛나루"], "description": "귀밑에서 턱까지 잇따라 난 수염을 이르는 말은 ‘구레나룻’이며, 이는 [구레나룯]으로 발음합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"오랜만이다 vs 오랫만이다", "right_words":"오랜만이다", "wrong_words": ["오랫만이다"], "description": "본말인 '오래간만'이나 준말인 '오랜만'을 모두 쓸 수 있습니다. '오랫만이다'는 틀린 표현입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
@@ -2053,8 +1791,6 @@
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"노곤하다 vs 노근하다", "right_words":"노곤하다", "wrong_words": ["노근하다"], "description": "‘노곤(勞困)’이란 한자어에 ‘-하다’가 결합한 '노곤하다'가 맞는 표현입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
-{"type":"spelling", "title":"'눈곱 vs 눈꼽'이 생긴다.", "right_words":"눈곱", "wrong_words": ["눈꼽"], "description": "'눈곱'은 기원적으로는 '눈'과 '곱'이 결합한 말입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
 {"type":"spelling", "title":"목메다 vs 목매다", "right_words":"목매지", "wrong_words": ["목메지"], "description": "‘목매지’가 맞습니다. ‘목매다’는 한 곳에 전적으로 의지한다는 뜻으로, “몸무게에 목매지 말고 건강하게 운동하자.”처럼 씁니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"'살코기vs살고기'", "right_words":"살코기", "wrong_words": ["살고기"], "description": "살'과 '고기'가 만나면서 'ㅎ'소리가 덧나기 때문에 '살코기'로 표기합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
@@ -2063,15 +1799,9 @@
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"'엉겁결 vs 엉겹결'에 하다.", "right_words":"엉겁결", "wrong_words": ["엉겹결"], "description": "'엉겹결'은 '엉겁결'의 잘못된 표현입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
-{"type":"spelling", "title":"들르다 vs 들리다", "right_words":"들르자.", "wrong_words": ["들리자."], "description": "들르자'가 맞습니다. 지나는 길에 잠깐 들어가 머무르는 것을 나타낼 때 '들르다'를 씁니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
 {"type":"spelling", "title":"멋쩍다 vs 멋적다", "right_words":"멋쩍은지", "wrong_words": ["멋적은지"], "description": "어색하고 쑥스럽다는 의미를 가진 단어는 '멋쩍다'로 표기합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"'가느다랗다vs가느랗다'", "right_words":"가느다랗다", "wrong_words": ["가느랗다"], "description": "아주 가늘다는 뜻을 가진 단어는 '가느다랗다'입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
-{"type":"spelling", "title":"'장마비 vs 장맛비'가 멈추지 않는다.", "right_words":"장맛비", "wrong_words": ["장마비"], "description": "순 우리말로 된 합성어로서 앞말이 모음으로 끝나고, 뒷말의 첫소리가 된소리로 나기 때문에 장맛비로 표기 합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
-{"type":"spelling", "title":"술을 '담궈라 vs 담가라'.", "right_words":"담가라", "wrong_words": ["담궈라"], "description": "'담그다'는 어간 '담그-' 뒤에 모음으로 시작하는 어미 '-아/-아서'가 붙으면 '담가, 담가서'와 같이 활용하는 용언입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"'물받이 vs 물받기'", "right_words":"물받이", "wrong_words": ["물받기"], "description": "물받이'는 '물'과 어간 '받-'에 사물이나 사람, 일의 뜻을 더하는 접미사 '-이'가 합쳐진 단어입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
@@ -2142,8 +1872,6 @@
 {"type":"spelling", "title":"앳되다 vs 애띠다", "right_words":"앳되었다", "wrong_words": ["애띠었다"], "description": "애티가 있어 어려 보인다는 의미를 가진 단어는 '앳되다'입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"피라미 vs 피래미", "right_words":"피라미", "wrong_words": ["피래미"], "description": "'ㅣ'모음 역행동화가 일어난 형태인 '피래미'는 잘못된 표현입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
-{"type":"spelling", "title":"'모밀국수 vs 메밀국수'가 먹고 싶다.", "right_words":"메밀국수", "wrong_words": ["모밀국수"], "description": "'모밀국수'가 아닌 '메밀국수'가 맞습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"이자율 vs 이자률", "right_words":"이자율", "wrong_words": ["이자률"], "description": "받침이 있는 말 다음에는 '률, 렬'로 적고, 받침이 없거나 'ㄴ'받침이나 모음 뒤에서는 '율, 열'로 적습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
@@ -2224,8 +1952,6 @@
 {"type":"spelling", "title":"부딪히다 vs 부딫히다", "right_words":"부딪혔다", "wrong_words": ["부딫혔다"], "description": "기본형 '부딪다'에 피동 접사 '-히-'가 결합한 것이므로 '부딪히다'로 써야 합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"저기 '얹쳐있다 vs 얹혀있다'.", "right_words":"얹혀 있다", "wrong_words": ["얹쳐 있다"], "description": "'얹다'의 피동사로 쓰이는 단어는 '얹히다'입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
-{"type":"spelling", "title":"이따 '뵈요 vs 봬요'.", "right_words":"봬요", "wrong_words": ["뵈요"], "description": "'뵈요'와 같이, 어간 '뵈-' 뒤에 어미가 붙지 않고, 바로 보조사 '-요'가 붙을 수가 없습니다. 그러므로 '봬요'가 맞는 말입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"입맛이 '땡기다 vs 당기다'.", "right_words":"당기다", "wrong_words": ["땡기다"], "description": "'입맛이 돋우어진다'라는 뜻을 나타낼 때는 '당기다'가 사용되며, '땡기다'는 다른 표현입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
@@ -2316,8 +2042,6 @@
 {"type":"spelling", "title":"'집게발 vs 집개발'", "right_words":"집게발", "wrong_words": ["집개발"], "description": "게, 가재 따위의 발끝이 집게처럼 생긴 발은 '집게발'입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"겹겹히 vs 겹겹이", "right_words":"겹겹이", "wrong_words": ["겹겹히"], "description": "첩어 또는 준첩어인 명사 뒤인 경우 이로 적습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
-{"type":"spelling", "title":"'설레임 vs 설렘'으로 가득찬 거리", "right_words":"설렘", "wrong_words": ["설레임"], "description": "'설레이다' 혹은 '설레임'으로 쓰이기도 하지만, 표준어로는 '설레다'이므로, 명사형도 '설렘'이 표준어입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"'통틀어 vs 통털어'", "right_words":"통틀어", "wrong_words": ["통털어"], "description": "'있는 대로 모두 합하여'를 뜻하는 단어는 '통틀어'로, '통틀다'의 부사 형태입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
@@ -2511,8 +2235,6 @@
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"가파라 vs 가팔라", "right_words":"가팔라", "wrong_words": ["가파라"], "description": "‘가팔라’가 맞습니다. ‘물가 상승률이 가팔라’처럼 ‘가팔라’라고 써야 합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
-{"type":"spelling", "title":"'부조금 vs 부주금'을 내다.", "right_words":"부조금", "wrong_words": ["부주금"], "description": "부조로 내는 돈을 '부조금'이라 한다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
 {"type":"spelling", "title":"여의다 vs 여위다", "right_words":"여의다", "wrong_words": ["여위다"], "description": "부모나 사랑하는 사람이 죽어서 이별한 것은 '여의다'고, 살이 빠져 파리하게 된 것은 '여위다'입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"적금을 '달달이 vs 다달이' 붓다.", "right_words":"다달이", "wrong_words": ["달달이"], "description": "'달달이'는 '다달이'의 잘못된 표현입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
@@ -2621,7 +2343,7 @@
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"'영락없다vs영낙없다'", "right_words":"영락없는", "wrong_words": ["영낙없는"], "description": "조금도 틀리지 않고 꼭 들어맞을 때, ‘영락없다’로 표현합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
-{"type":"spelling", "title":"'결제 vs 결재' 서류", "right_words":"결재", "wrong_words": ["결제"], "description": "계산하는 것이 '결제'이고 서류를 확인하는 것은 '결재'입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"type":"spelling", "title":"'결제 vs 결재' 서류", "right_words":"결재", "wrong_words": ["결제"], "description": "계산하는 것이 '결제'이고 서류를 확인하는 것은 '결재'입니다. '결재'는 '결정할 권한이 있는 상관이 부하가 제출한 안건을 검토하여 허가하거나 승인함'을 뜻합니다.", "helpful_info": "오늘도 결재 받으러 가야 하는데 부장님이 항상 반려해서 '재'수 없어", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"애닯다 vs 애달프다", "right_words":"애달픈", "wrong_words": ["애닯은"], "description": "'애닯다'는 현재 고어로 처리되고 있으며, 마음이 안타깝거나 쓰라린다는 뜻을 지닌 표준어는 '애달프다'입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
@@ -2633,13 +2355,9 @@
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"나무라다 vs 나무래다", "right_words":"나무라다", "wrong_words": ["나무래다"], "description": "잘못을 꾸짖어 알아듣도록 말한다는 뜻을 가진 단어는 '나무라다'입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
-{"type":"spelling", "title":"빌려 vs 빌어", "right_words":"빌려", "wrong_words": ["빌어"], "description": "빌려'가 맞습니다. “이 자리를 빌려 응원해 주신 팬 여러분께 감사드리고 싶습니다.”처럼 말할 수 있습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
 {"type":"spelling", "title":"코보 vs 코주부", "right_words":"코주부", "wrong_words": ["코보"], "description": "코가 큰 사람을 놀림조로 이르는 말은 '코주부'입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"염두해 두다 vs 염두에 두다", "right_words":"염두에", "wrong_words": ["염두해"], "description": "‘염두에’가 맞습니다. ‘염두에 둔 결정’, ‘건강을 염두에 두고 있다면’처럼 씁니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
-{"type":"spelling", "title":"넓다랗다 vs 널따랗다", "right_words":"널따란", "wrong_words": ["넓다란"], "description": "‘널따란’이 맞습니다.  “새집은 거실이 널따랗네.”처럼 ‘널따랗다’라고 씁니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"배때기 vs 배때지", "right_words":"배때기", "wrong_words": ["배때지"], "description": "‘배때기’가 맞습니다. “배때기가 불렀다.”, “자기 배때기 불릴 생각만 하다가는 큰일 난다.”처럼 씁니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
@@ -2679,8 +2397,6 @@
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"멀끄러미 vs 물끄러미", "right_words":"물끄러미", "wrong_words": ["멀끄러미"], "description": "우두커니 한곳만 바라보는 모양을 뜻하는 단어는 '물끄러미'입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
-{"type":"spelling", "title":"웬만하다 vs 웬간하다", "right_words":"웬만하면", "wrong_words": ["웬간하면"], "description": "허용되는 범위에서 크게 벗어나지 않은 상태에 있을 때 '웬만하다'로 써야 옳은 표현입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
 {"type":"spelling", "title":"조취 vs 조치", "right_words":"조치", "wrong_words": ["조취"], "description": "‘조치’가 맞습니다.  “자꾸 우기시면 법적 조치를 취하겠습니다.”처럼 씁니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"밥:는 vs 밤:는 vs 발:는", "right_words":"밤:", "wrong_words": ["밥:", "발:"], "description": "밤:는'이 맞습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
@@ -2689,15 +2405,9 @@
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"깡충깡충 vs 깡총깡총", "right_words":"깡충깡충", "wrong_words": ["깡총깡총"], "description": "깡충깡충'이 맞습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
-{"type":"spelling", "title":"'웃어른 vs 윗어른'을 공경하다.", "right_words":"웃어른", "wrong_words": ["윗어른"], "description": "'윗어른'은 '웃어른'의 잘못된 표현입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
 {"type":"spelling", "title":"국기 게양 vs 국기 계양", "right_words":"게양", "wrong_words": ["계양"], "description": "‘게양’이 맞습니다. ‘개천절은 국기 게양하는 날’, ‘태극기 게양하는 법’처럼 ‘게양’이라고 써야 합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"살으렴 vs 살렴", "right_words":"살렴.", "wrong_words": ["살으렴."], "description": "살렴'이 맞습니다. '살다'처럼 받침 ㄹ이 있는 동사 뒤에는 '렴'이 붙습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
-{"type":"spelling", "title":"'떡볶이 vs 떡볶기'를 먹다.", "right_words":"떡볶이", "wrong_words": ["떡볶기"], "description": "가래떡을 적당한 크기로 잘라 여러 가지 채소를 넣고 양념을 하여 볶은 음식은 '떡볶이'가 맞습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
-{"type":"spelling", "title":"애당초 vs 애시당초", "right_words":"애당초", "wrong_words": ["애시당초"], "description": "애당초'가 맞습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"빨래를 '겆다 vs 걷다'.", "right_words":"걷었다", "wrong_words": ["겆었다"], "description": "늘어진 것을 말아 올리거나 열어 젖힌다는 뜻을 가진 단어는 '걷다'입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
@@ -2786,8 +2496,6 @@
 {"type":"spelling", "title":"가르마 vs 가리마", "right_words":"가르마", "wrong_words": ["가리마"], "description": "이마에서 정수리까지의 머리카락을 양쪽으로 갈랐을 때 생기는 금을 뜻하는 단어는 '가르마'입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"'웃입술 vs 윗입술'을 움직이다.", "right_words":"윗입술", "wrong_words": ["웃입술"], "description": "'아랫입술'과 대립되는 이 말은 '윗입술'과 같이 적습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
-{"type":"spelling", "title":"곰곰이 vs 곰곰히", "right_words":"곰곰이", "wrong_words": ["곰곰히"], "description": "곰곰이'가 맞습니다. '곰곰'과 같은 부사 뒤에는 접사 '-이'를 붙입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"그립다 vs 그리웁다", "right_words":"그립다", "wrong_words": ["그리웁다"], "description": "보고 싶거나 만나고 싶은 마음이 간절하다는 뜻을 가진 단어는 '그립다'입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
@@ -2949,8 +2657,6 @@
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"뒷풀이 vs 뒤풀이", "right_words":"뒤풀이", "wrong_words": ["뒷풀이"], "description": "‘뒤풀이'로 적습니다. 된소리나 거센소리 앞에서는 사이시옷을 쓰지 않기로 한 규정에 따라 '뒤'라 적습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
-{"type":"spelling", "title":"‘밀어붙이다 vs 밀어부치다다’", "right_words":"밀어붙이다", "wrong_words": ["밀어부치다"], "description": "'밀어붙이다'가 맞습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
 {"type":"spelling", "title":"웅덩이 vs 웅뎅이", "right_words":"웅덩이", "wrong_words": ["웅뎅이"], "description": "'웅덩이'가 맞습니다. '웅뎅이'는 'ㅣ'모음 역행동화에 의한 잘못된 표현입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"들이마시다 vs 들어마시다", "right_words":"들이마시다", "wrong_words": ["들어마시다"], "description": "공기나 냄새 따위를 입이나 코로 빨아들인다는 의미의 단어는 '들이마시다'입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
@@ -3008,8 +2714,6 @@
 {"type":"spelling", "title":"순대국 vs 순댓국", "right_words":"순댓국", "wrong_words": ["순대국"], "description": "‘순댓국’이 맞습니다. ‘냄새 없이 깔끔한 순댓국’처럼 씁니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"쏟아지다 vs 쏫아지다", "right_words":"쏟아진다.", "wrong_words": ["쏫아진다."], "description": "액체가 한꺼번에 바깥으로 나오는 것을 뜻하는 말은 '쏟아지다'입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
-{"type":"spelling", "title":"‘구레나루 vs 구렛나루 vs 구레나룻’", "right_words":"구레나룻", "wrong_words": ["구레나루", "구렛나루"], "description": "구레나룻'이 맞습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"불을 켜다 vs 불을 키다", "right_words":"켜라고", "wrong_words": ["키라고"], "description": "켜라고'가 맞습니다. '켜다'에서 왔으므로 '켜라고'로 씁니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
@@ -3147,8 +2851,6 @@
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"차이다 vs 채이다", "right_words":"차인", "wrong_words": ["채인"], "description": "차인'이 맞습니다. 기본형 '차이다'에서 왔습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
-{"type":"spelling", "title":"설레임 vs 설렘", "right_words":"설렘", "wrong_words": ["설레임"], "description": "'설렘'이 맞습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
 {"type":"spelling", "title":"제사날 vs 제삿날", "right_words":"제삿날", "wrong_words": ["제사날"], "description": "‘제삿날’이 맞습니다. ‘가족들이 모이는 제삿날’처럼 쓸 수 있습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"쪼그리다 vs 쪼구리다", "right_words":"쪼그리고", "wrong_words": ["쪼구리고"], "description": "팔다리를 오그려 몸을 작게 옴츠리는 것을 뜻할 때는 '쪼그리다'가 옳은 표현입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
@@ -3184,8 +2886,6 @@
 {"type":"spelling", "title":"모자라다 vs 모자르다", "right_words":"모자란", "wrong_words": ["모자른"], "description": "모자란'이 맞습니다. '모자라다'가 맞는 표기입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"사뭇 vs 사못", "right_words":"사뭇", "wrong_words": ["사못"], "description": "'아주 딴판으로'의 의미를 지닌 부사는 '사뭇'입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
-{"type":"spelling", "title":"삼가다 vs 삼가하다", "right_words":"삼가", "wrong_words": ["삼가해"], "description": "삼가 주세요'가 맞습니다. '삼가하다'는 '삼가다'의 잘못된 말입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"안 vs 않", "right_words":"안", "wrong_words": ["않"], "description": "‘안’이 맞습니다. ‘안’은 ‘아니’의 준말로 “그러면 안 돼.”, “아직 문 안 열었어.”처럼 쓸 수 있습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
@@ -3237,17 +2937,13 @@
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"'지우개 vs 지우게'", "right_words":"지우개", "wrong_words": ["지우게"], "description": "글씨나 그림 따위를 지우는 물건은 '지우개'라고 써야 합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
-{"type":"spelling", "title":"담그다 vs 담구다", "right_words":"담갔다", "wrong_words": ["담궜다"], "description": "‘담갔다’가 맞습니다. ‘담그다’는 ‘빨래를 비눗물에 담갔다가’, ‘식염수에 30분 넘게 담근 렌즈’처럼 씁니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
 {"type":"spelling", "title":"가위표 vs 엑스표", "right_words":"가위표", "wrong_words": ["엑스표"], "description": "'가위표'가 맞습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"깃들다 vs 깃들이다", "right_words":"깃들었다.", "wrong_words": ["깃들였다."], "description": "깃들었다'가 맞습니다. 어떤 것이 아늑하게 어리거나 스미는 것을 나타낼 때는 '깃들다'를 씁니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"먹먹하다 vs 멍멍하다", "right_words":"먹먹해서", "wrong_words": ["멍멍해서"], "description": "먹먹해서'가 맞습니다. 귀가 막힌 듯이 소리가 잘 들리지 않는 경우에는 '먹먹하다'를 씁니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
-{"type":"spelling", "title":"담가 vs 담궈", "right_words":"담가", "wrong_words": ["담궈", "담아"], "description": "‘담가’가 맞습니다. "김장 김치를 담가 보려고요."처럼 ‘담가’를 써야 합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
-{"type":"spelling", "title":"‘껍데기 vs 껍떼기 vs 껍때기’", "right_words":"껍데기", "wrong_words": ["껍때기"], "description": "껍데기'가 맞습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"type":"spelling", "title":"‘껍데기 vs 껍떼기 vs 껍때기’", "right_words":"껍데기", "wrong_words": ["껍때기"], "description": "달걀이나 조개 등의 겉을 싸고 있는 단단한 물질을 뜻하는 말에는 '껍데기'가 맞습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"녹슨 vs 녹슬은", "right_words":"녹슨", "wrong_words": ["녹슬은"], "description": "녹슨'이 맞습니다. '녹슬다'처럼 받침 ㄹ 있는 단어는 뒤에 ㄴ이 오면 받침 ㄹ이 탈락합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
@@ -3409,8 +3105,6 @@
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"야반도주 vs 야밤도주", "right_words":"야반도주", "wrong_words": ["야밤도주"], "description": "야반도주'가 맞습니다. 한자 ‘반 반(半)’ 자를 쓰므로 '야반도주'로 표기해야 합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
-{"type":"spelling", "title":"메밀 vs 모밀", "right_words":"메밀", "wrong_words": ["모밀"], "description": "메밀'이 맞습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
 {"type":"spelling", "title":"웃어른 vs 웃어른", "right_words":"웃어른", "wrong_words": ["윗어른"], "description": "웃어른'이 맞습니다. 아래위 대립이 없는 경우 '웃-'을 붙입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"통털어 vs 통틀어", "right_words":"통틀어", "wrong_words": ["통털어"], "description": "통틀어'가 맞습니다. 기본형 '통틀다'에서 온 말입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
@@ -3422,8 +3116,6 @@
 {"type":"spelling", "title":"무치다 vs 묻히다", "right_words":"무치다", "wrong_words": ["묻히다"], "description": "나물을 무치다'가 맞습니다. '나물에 양념을 넣고 섞는 것'을 나타낼 때는 '무치다'를 씁니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"낯설은 vs 낯선", "right_words":"낯선", "wrong_words": ["낯설은"], "description": "낯선'이 맞습니다. '낯설다'처럼 받침 ㄹ 있는 단어는 뒤에 ㄴ이 오면 받침 ㄹ이 탈락합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
-{"type":"spelling", "title":"목 '베개 vs 베게 vs 배개 vs 배게'", "right_words":"베개", "wrong_words": ["배개"], "description": "베개'가 맞습니다. '베개'의 '베-'는 동사 '베다'에서 왔습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"일찌기 vs 일찍이", "right_words":"일찍이", "wrong_words": ["일찌기"], "description": "일찍이'가 맞습니다. '일찍' 뒤에 접사 '-이'가 붙어서 만들어진 말입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
@@ -3466,8 +3158,6 @@
 {"type":"spelling", "title":"불란을 일으키다 vs 분란을 일으키다", "right_words":"분란을 일으키지", "wrong_words": ["불란을 일으키지"], "description": "‘분란을 일으키지’가 맞습니다.  “이런 일로 집안에 분란이 일어나다니.”처럼 ‘분란’이라고 씁니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"먹이다 vs 먹히다", "right_words":"먹였다.", "wrong_words": ["먹혔다."], "description": "먹였다'가 맞습니다. 다른 사람에게 음식 등을 먹게 하는 경우에는 '먹이다'를 씁니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
-{"index":{"_index":"words"}}
-{"type":"spelling", "title":"떡볶이 vs 떡볶기", "right_words":"떡볶이", "wrong_words": ["떡뽀끼", "떡볶기", "떡복이"], "description": "‘떡볶이’가 맞습니다. “떡볶이 레시피 좀 알려주세요!”처럼 ‘떡볶이’로 써야 합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
 {"type":"spelling", "title":"눈꼬리 vs 눈초리", "right_words":"눈초리", "wrong_words": ["눈꼬리"], "description": "눈초리'가 맞습니다. ‘눈초리’는 ‘사나운 눈초리’처럼 눈에 나타나는 표정을 나타낼 때 씁니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
