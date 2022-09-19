@@ -107,21 +107,372 @@
 {"index":{"_index":"words"}}
 {"type":"spacing", "title":"수개월 vs 수 개월", "right_words":"수개월", "wrong_words": ["수 개월"], "description": "'수개월'은 두서너 달 또는 여러 달을 뜻하는, 하나의 단어이므로, '수개월'과 같이 적습니다.", "helpful_info": "'수개월'은 한 단어임을 기억하세요!", "hits":0, "scraps":0, "created_at": "2022-05-17T05:48:49.850Z"}
 {"index":{"_index":"words"}}
-{"type":"spacing", "title":"할 거 vs 할거", "right_words":"할 거", "wrong_words": ["할거"], "description": "'할 거'에서의 '거'는 '것'의 구어적 표현입니다. '것'은 의존 명사로, 띄어쓰는 게 맞습니다.", "helpful_info": "'것'은 띄어쓰는 것! '거'도 띄어쓰는 거!", "hits":0, "scraps":0, "created_at": "2022-05-18T05:48:49.850Z"}
+{"type":"spacing", "title":"답변드렸다 vs 답변 드렸다", "right_words":"답변드렸다", "wrong_words": ["답변 드렸다"], "description": "'답변'과 같은 명사 뒤에 '공손한 행위'의 뜻을 더하는 접미사 '-드리다'는 '답변드렸다'와 같이 붙여 씁니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
-{"type":"spacing", "title":"할 수 vs 할수", "right_words":"할 수", "wrong_words": ["할수"], "description": "'할 수'에서의 '수'는 의존 명사입니다. 의존 명사는 띄어쓰는 게 맞습니다.", "helpful_info": "양 옆의 글자가 물(水)에 빠지지 않게 띄어쓰기를 해주세요!", "hits":0, "scraps":0, "created_at": "2022-05-17T05:48:49.850Z"}
+{"type":"spacing", "title":"따라했다 vs 따라 했다", "right_words":"따라 했다", "wrong_words": ["따라했다"], "description": "'-을 따라 하다'에서, '따르다'와 '하다'는 각각의 단어이므로 띄어 적습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
-{"type":"spacing", "title":"할 거 vs 할거", "right_words":"할 거", "wrong_words": ["할거"], "description": "'할 거'에서의 '거'는 '것'의 구어적 표현입니다. '것'은 의존 명사로, 띄어쓰는 게 맞습니다.", "helpful_info": "'것'은 띄어쓰는 것! '거'도 띄어쓰는 거!", "hits":0, "scraps":0, "created_at": "2022-05-18T05:48:49.850Z"}
+{"type":"spacing", "title":"사흘간 vs 사흘 간", "right_words":"사흘간", "wrong_words": ["사흘 간"], "description": "'동안'의 뜻을 더하는 ‘간’은 접미사이므로, '사흘간'과 같이, 앞말에 붙여 적습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
-{"type":"spacing", "title":"할 수 vs 할수", "right_words":"할 수", "wrong_words": ["할수"], "description": "'할 수'에서의 '수'는 의존 명사입니다. 의존 명사는 띄어쓰는 게 맞습니다.", "helpful_info": "양 옆의 글자가 물(水)에 빠지지 않게 띄어쓰기를 해주세요!", "hits":0, "scraps":0, "created_at": "2022-05-17T05:48:49.850Z"}
+{"type":"spacing", "title":"검토한바 vs 검토한 바", "right_words":"검토한바", "wrong_words": ["검토한 바"], "description": "'-바'가 앞뒤 문맥을 연결시켜주는 연결 어미로 사용되면 앞말에 붙여 적습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
-{"type":"spacing", "title":"할 거 vs 할거", "right_words":"할 거", "wrong_words": ["할거"], "description": "'할 거'에서의 '거'는 '것'의 구어적 표현입니다. '것'은 의존 명사로, 띄어쓰는 게 맞습니다.", "helpful_info": "'것'은 띄어쓰는 것! '거'도 띄어쓰는 거!", "hits":0, "scraps":0, "created_at": "2022-05-18T05:48:49.850Z"}
+{"type":"spacing", "title":"오래 전부터 vs 오래전 부터 vs 오래전부터", "right_words":"오래전부터", "wrong_words": ["오래 전부터", "오래전 부터"], "description": "‘상당한 시간이 지나간 과거’라는 뜻을 나타내는 ‘오래전’은 한 단어이며, 그 뒤에 조사 '부터'가 붙으면, ‘오래전부터’와 같이 적습니다", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
-{"type":"spacing", "title":"할 수 vs 할수", "right_words":"할 수", "wrong_words": ["할수"], "description": "'할 수'에서의 '수'는 의존 명사입니다. 의존 명사는 띄어쓰는 게 맞습니다.", "helpful_info": "양 옆의 글자가 물(水)에 빠지지 않게 띄어쓰기를 해주세요!", "hits":0, "scraps":0, "created_at": "2022-05-17T05:48:49.850Z"}
+{"type":"spacing", "title":"해질 녘 vs 해 질녘 vs 해 질 녘", "right_words":"해 질 녘", "wrong_words": ["해질 녘", "해 질녘"], "description": "'해 질 녘'은 '(해가) 지다'의 관형사형인 '(해가) 질' 뒤에 의존 명사 '녘'이 쓰인 것으로, '해(가) 질 녘'과 같이 띄어쓰기합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
-{"type":"spacing", "title":"할 거 vs 할거", "right_words":"할 거", "wrong_words": ["할거"], "description": "'할 거'에서의 '거'는 '것'의 구어적 표현입니다. '것'은 의존 명사로, 띄어쓰는 게 맞습니다.", "helpful_info": "'것'은 띄어쓰는 것! '거'도 띄어쓰는 거!", "hits":0, "scraps":0, "created_at": "2022-05-18T05:48:49.850Z"}
+{"type":"spacing", "title":"예쁜데다가 vs 예쁜 데다가", "right_words":"예쁜 데다가", "wrong_words": ["예쁜데다가"], "description": ""의존 명사 '데' 뒤에 더해지는 대상을 나타내는 격 조사 '에다가'를 붙여 '얼굴도 예쁜 데(에)다가'와 같이 표현합니다. "", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
-{"type":"spacing", "title":"할 수 vs 할수", "right_words":"할 수", "wrong_words": ["할수"], "description": "'할 수'에서의 '수'는 의존 명사입니다. 의존 명사는 띄어쓰는 게 맞습니다.", "helpful_info": "양 옆의 글자가 물(水)에 빠지지 않게 띄어쓰기를 해주세요!", "hits":0, "scraps":0, "created_at": "2022-05-17T05:48:49.850Z"}
+{"type":"spacing", "title":"'굴러들어왔는지'의 올바른 띄어쓰기는?", "right_words":"굴러들어 왔는지", "wrong_words": ["굴러들어왔는지", "굴러 들어왔는지"], "description": "'굴러들어서 온다'는 뜻이므로, '굴러들어 왔는지도'로 띄어 써야 합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
-{"type":"spacing", "title":"할 거 vs 할거", "right_words":"할 거", "wrong_words": ["할거"], "description": "'할 거'에서의 '거'는 '것'의 구어적 표현입니다. '것'은 의존 명사로, 띄어쓰는 게 맞습니다.", "helpful_info": "'것'은 띄어쓰는 것! '거'도 띄어쓰는 거!", "hits":0, "scraps":0, "created_at": "2022-05-18T05:48:49.850Z"}
+{"type":"spacing", "title":"실감 나다 vs 실감나다", "right_words":"실감 나다", "wrong_words": ["실감나다"], "description": "‘실감 나다’와 같이 적습니다. ‘실감’과 ‘나다’는 개별적인 단어입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
 {"index":{"_index":"words"}}
+{"type":"spacing", "title":"멀 뿐더러 vs 멀뿐더러", "right_words":"멀뿐더러", "wrong_words": ["멀 뿐더러"], "description": "‘-ㄹ뿐더러’는 어떤 일이 그것만으로 그치지 않고 나아가 다른 일이 더 있음을 나타내는 연결 어미로, 앞말과 붙여서 사용합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"수개월 vs 수 개월", "right_words":"수개월", "wrong_words": ["수 개월"], "description": "'수개월'은 두서너 달 또는 여러 달을 뜻하는, 하나의 단어이므로, '수개월'과 같이 적습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"흉내낸다 vs 흉내 낸다", "right_words":"흉내 낸다", "wrong_words": ["흉내낸다"], "description": "'흉내 내다'의 '내다'는 '다른 사람의 모양이나 행동을 따라 하다.'라는 뜻의 동사로 '흉내' 와 결합되었기에 띄어쓰기 합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"애교살 vs 애교 살", "right_words":"애교 살", "wrong_words": ["애교살"], "description": "'애교'에 '살'이 붙은 형태는 하나의 낱말로 인정되지 않습니다. 그러므로 '애교 살'이 맞는 말입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"산속 vs 산 속", "right_words":"산속", "wrong_words": ["산 속"], "description": "'산 속'은 '산속'과 같이 한 단어로 굳어져 쓰이고, 한 단어인 '산내', '산중'과 동의어이므로 한 단어로 인정되었습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"'일대일 vs 일 대 일'로 맞섰다", "right_words":"일대일", "wrong_words": ["일 대 일"], "description": "‘한 사람이 한 사람을 상대함.’이라는 뜻을 나타낼 때는 명사 ‘일대일’을 씁니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"'몇천만 명 vs 몇 천만 명'은 족히 돼 보였다", "right_words":"몇천만 명", "wrong_words": ["몇 천만 명"], "description": "얼마의 수를 막연히 이를 때에는 '몇천'과 같이 붙여서 씁니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"'버르장머리하고는'의 올바른 띄어쓰기는?", "right_words":"버르장머리하고는", "wrong_words": ["버르장머리 하고는", "버르장 머리 하고는"], "description": "'버르장머리/꼬락서리하고는'으로 붙여 씁니다. '하고는'은 못마땅하게 생각하는 대상임을 강조하여 나타내는 조사의 쓰임이므로 앞말에 붙여서 쓰실 수 있습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"할까봐 vs 할까 봐", "right_words":"할까 봐", "wrong_words": ["할까봐"], "description": "앞말이 뜻하는 상황이 될 것 같아 두려워함을 나타내는 보조 형용사 '보다'는 '할까 봐'와 같이 본용언과 띄어 적습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"일 년만에 vs 일 년 만에", "right_words":"일 년 만에", "wrong_words": ["일 년만에"], "description": "'만'이 시간의 경과를 나타낼 때는 의존 명사이므로 앞말과 띄어 써야 합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"'다음 번 vs 다음번'에 가자", "right_words":"다음번", "wrong_words": ["다음 번"], "description": "'다음번'은 '자네는 다음번에 가도록 하지'처럼 '정해지지 않은 미래에 올 차례에 쓰입니다. 그러므로 이 문장에서는 '다음번'이 맞는 말입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"보란듯이 vs 보란 듯이", "right_words":"보란 듯이", "wrong_words": ["보란듯이"], "description": "'보란' 뒤에 의존 명사 '듯이'가 쓰인 것입니다. 따라서 '보란 듯이'와 같이 '보란'과 '듯이'를 띄어 적어야 합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"물속 vs 물 속", "right_words":"물속", "wrong_words": ["물 속"], "description": "‘물속’의 경우 그 쓰임이 인정되어 한 단어로 사전에 올라 있습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"그 뿐만 아니라 vs 그뿐만 아니라", "right_words":"그뿐만 아니라", "wrong_words": ["그 뿐만 아니라"], "description": "보조사 '뿐'은 체언이나 부사어 뒤에 쓰여 한정의 의미를 나타내며 조사이므로 앞말과 붙여 써야합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"몇천 년 vs 몇 천 년", "right_words":"몇천 년", "wrong_words": ["몇 천 년"], "description": "얼마의 수를 막연히 이를 때에는 '몇천'과 같이 붙여서 씁니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"집채만하다 vs 집채만 하다", "right_words":"만 하다 ", "wrong_words": ["만하다"], "description": "'집채만 하다'에서 '-만'은 '앞말이 나타내는 대상이나 내용 정도에 달함'을 나타내는 보조사이므로 '하다'와 띄어씁니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"'몇천만 명 vs 몇 천만 명'이었습니까?", "right_words":"몇 천만 명", "wrong_words": ["몇천만 명"], "description": "'몇'이 의문의 뜻을 나타낼 때에는 '몇'을 '천만'과 띄어 적습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"얼마만인가 vs 얼마 만인가", "right_words":"얼마 만인가", "wrong_words": ["얼마만인가"], "description": "동안이 얼마간 계속되었음을 나타내는 의존 명사 '만'이 쓰일 문맥이므로, '얼마 만인가'와 같이 표현합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"말없이 vs 말 없이", "right_words":"말없이", "wrong_words": ["말 없이"], "description": "‘없이’가 다른 말과 결합하여 합성어를 만든 ‘말없이’와 같은 경우에는, 앞말에 붙여 적습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"'굴러들어오네요'의 올바른 띄어쓰기는?", "right_words":"굴러 들어오네요", "wrong_words": ["굴러들어 오네요", "굴러들어오네요"], "description": "“호박이 굴러 들어오네요.”는 호박이 '굴러서 들어온다'는 뜻이므로, '굴러 들어온다'로 띄어 씁니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"보고싶어 vs 보고 싶어", "right_words":"보고 싶어", "wrong_words": ["보고싶어"], "description": "‘-고 싶다’ 구성으로 쓰이는 보조 용언 '싶다'는 본용언에 붙여 쓰는 것이 허용되지 않기 때문에, '보고 싶다'와 같이 띄어 적습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"'물잔 vs 물 잔'을 건네주세요", "right_words":"물 잔", "wrong_words": ["물잔"], "description": "'물잔'과 같은 한 단어는 인정되지 않으므로, 각각의 단어인 '물'과 '잔'을 띄어 '물 잔'과 같이 적습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"차질없이 vs 차질 없이", "right_words":"차질 없이", "wrong_words": ["차질없이"], "description": "‘없이’가 부사로 쓰일 때에는 '차질 없이'와 같이 앞말과 띄어 적습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"5월 25일 자 신문 vs 5월 25일자 신문", "right_words":"5월 25일 자 신문", "wrong_words": ["5월 25일자 신문"], "description": "'날짜’를 나타내는 명사 ‘자’는 ‘5월 25일 자 신문’과 같이 앞말과 띄어 적습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"밤낮없이 vs 밤 낮 없이 vs 밤낮 없이", "right_words":"밤낮없이", "wrong_words": ["밤 낮 없이", "밤낮 없이"], "description": "‘없이’가 다른 말과 결합하여 합성어를 만든 ‘밤낮없이’와 같은 경우에는, 앞말에 붙여 적습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"물건값 vs 물건 값", "right_words":"물건값", "wrong_words": ["물건 값"], "description": "일부 명사 뒤에 붙어 ‘가격’, ‘비용’의 뜻을 나타내는 ‘값’은, 앞말에 붙여 씁니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"오늘 못한 부분은 '다음 날 vs 다음날'", "right_words":"다음 날", "wrong_words": ["다음날"], "description": "오늘의 다음인 '내일'을 가리킬 때는 '다음 날'과 같이 띄어 씁니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"예쁠 뿐만 아니라 vs 예쁠뿐만 아니라", "right_words":"예쁠 뿐만 아니라", "wrong_words": ["예쁠뿐만 아니라"], "description": "'다만 어떠하거나 어찌할 따름'이라는 뜻을 나타내는 의존 명사로 쓰이는 경우에는 '-뿐만 아니라'로 띄어 씁니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"남김없이 vs 남김 없이", "right_words":"남김없이", "wrong_words": ["남김 없이"], "description": "‘없이’가 다른 말과 결합하여 합성어를 만든 ‘남김없이’와 같은 경우에는, 앞말에 붙여 적습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"오늘 자 신문 vs 오늘자 신문", "right_words":"오늘 자 신문", "wrong_words": ["오늘자 신문"], "description": "'날짜’를 나타내는 명사 ‘자’는 ‘오늘 자 신문’과 같이 앞말과 띄어 적습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"살맛 난다 vs 살맛난다", "right_words":"살맛 난다", "wrong_words": ["살맛난다"], "description": "‘살맛 난다’와 같이 적습니다. ‘살맛’과 ‘난다’는 개별적인 단어입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"쌀값 vs 쌀 값", "right_words":"쌀값", "wrong_words": ["쌀 값"], "description": "일부 명사 뒤에 붙어 ‘가격’, ‘비용’의 뜻을 나타내는 ‘값’은, 앞말에 붙여 씁니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"살펴보았듯이 vs 살펴보았 듯이", "right_words":"살펴보았듯이", "wrong_words": ["살펴보았 듯이"], "description": "어간 '살펴보-' 뒤에 선어말 어미 '-았-', 연결 어미 '-듯이'가 붙은 활용형이므로, '살펴보았듯이'와 같이 붙여 적어야 합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"하루만에 vs 하루 만에", "right_words":"하루 만에", "wrong_words": ["하루만에"], "description": "동안이 얼마간 계속되었음을 나타내는 의존 명사 '만'이 쓰일 문맥이므로, '하루 만에'와 같이 표현합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"예고없이 vs 예고 없이", "right_words":"예고 없이", "wrong_words": ["예고없이"], "description": "‘없이’가 부사로 쓰일 때에는 '예고 없이'와 같이 앞말과 띄어 적습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"'다음 날 vs 다음날'을 기약했다", "right_words":"다음날", "wrong_words": ["다음 날"], "description": "정하여지지 아니한 미래의 어떤 날'을 가리킬 때는 '다음날'을 씁니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"현주소 vs 현 주소", "right_words":"현주소", "wrong_words": ["현 주소"], "description": "‘현주소’는 현재의 상황, 처지, 실태 따위를 비유적으로 이를 때 쓰는 말로서, ‘현주소’와 같이 쓰입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"할 수 없지 vs 할수 없지 vs 할수없지", "right_words":"할 수 없지", "wrong_words": ["할수 없지", "할수없지"], "description": "관형사형과 의존명사의 결합으로, 의존 명사인 '수'는 관형사형인 앞말 '할' 과 띄어 적습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"'동기간의 vs 동기 간의' 우애", "right_words":"동기간의", "wrong_words": ["동기 간의"], "description": "'동기간'은 합성어로 인정되므로, 모든 음절을 붙여 적을 수 있습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"한잔할까 vs 한잔 할까 vs 한 잔할까", "right_words":"한잔할까", "wrong_words": ["한잔 할까", "한 잔할까"], "description": "한잔하다'가 맞습니다. '한잔하다'는 하나의 단어로 붙여 씁니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"하지마 vs 하지 마", "right_words":"하지 마", "wrong_words": ["하지마"], "description": "'하지 마.'의 '마'는 동사 '말다'의 활용형입니다. 동사 '말다'는 하나의 단어로, 앞말과 띄어 "하지 마."와 같이 적습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"'한 두번 vs 한두 번' 해 본 솜씨가 아니야", "right_words":"한두 번", "wrong_words": ["한 두번"], "description": "'한두'는 일부 단위를 나타내는 말 앞에 쓰여 그 수량이 하나나 둘임을 나타내는 관형사로, 합성어이므로 모든 음절을 붙여 적습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"잘나가는 vs 잘 나가는", "right_words":"잘나가는", "wrong_words": ["잘 나가는"], "description": "‘사회적으로 계속 성공하다.’라는 뜻으로 동사 '잘나가다'를 써서 '가장 잘나가는'과 같이 적습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"사랑할거야 vs 사랑할 거야", "right_words":"사랑할 거야", "wrong_words": ["사랑할거야"], "description": "'거'가 의존 명사이므로, 관형사형인 앞말과 띄어 '사랑할 거야.'와 같이 적습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"걱정마 vs 걱정 마", "right_words":"걱정 마", "wrong_words": ["걱정마"], "description": "'걱정 마.'의 '마'는 동사 '말다'의 활용형입니다. 동사 '말다'는 하나의 단어로, 앞말과 띄어 "걱정 마."와 같이 적습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"질문드렸다 vs 질문 드렸다", "right_words":"질문드렸다", "wrong_words": ["질문 드렸다"], "description": "'질문'과 같은 명사 뒤에 '공손한 행위'의 뜻을 더하는 접미사 '-드리다'는 '질문드렸다'와 같이 붙여 씁니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"맥없이 vs 맥 없이", "right_words":"맥없이", "wrong_words": ["맥 없이"], "description": "‘없이’가 다른 말과 결합하여 합성어를 만든 ‘맥없이’와 같은 경우에는, 앞말에 붙여 적습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"잘한다 vs 잘 한다", "right_words":"잘한다", "wrong_words": ["잘 한다"], "description": "‘좋고 훌륭하게 하다’의 뜻을 나타내는 동사 ‘잘하다’와 같이 씁니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"'친구간의 vs 친구 간의' 우정이 돈독하다", "right_words":"친구 간의", "wrong_words": ["친구간의"], "description": "합성어가 아닌 경우인 '친구 간의'는 각 단어를 띄어 적습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"오늘밤 vs 오늘 밤", "right_words":"오늘 밤에", "wrong_words": ["오늘밤에"], "description": "'오늘'과 '밤'은 각각의 단어이므로, '오늘 밤'과 같이 띄어 적습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"그러지마 vs 그러지 마", "right_words":"그러지 마", "wrong_words": ["그러지마"], "description": "'그러지 마.'의 '마'는 동사 '말다'의 활용형입니다. 동사 '말다'는 하나의 단어로, 앞말과 띄어 "그러지 마."와 같이 적습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"머리 속 vs 머릿속", "right_words":"머릿속", "wrong_words": ["머리 속"], "description": "상상이나 생각이 이루어지거나 지식 따위가 저장된다고 믿는 머리 안의 추상적인 공간을 이르는 말은 '머릿속'입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"사고없이 vs 사고 없이", "right_words":"사고 없이", "wrong_words": ["사고없이"], "description": "‘없이’가 부사로 쓰일 때에는 '사고 없이'와 같이 앞말과 띄어 적습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"'다음 번 vs 다음번'은 네 차례다", "right_words":"다음 번", "wrong_words": ["다음번"], "description": "'다음 번'은 '다음 번 면담은 네 차례이다'처럼 바로 뒤이어 오는 차례에 쓰이기 때문에, '다음 번'과 같이 씁니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"천 원밖에 vs 천 원 밖에", "right_words":"천 원밖에", "wrong_words": ["천 원 밖에"], "description": "조사 '밖에'가 쓰일 때는 서술어가 부정을 나타내는 말들이 오며, 이때의 '밖에'는 띄어 쓰지 않습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"바닷속 vs 바닷 속", "right_words":"바닷속", "wrong_words": ["바닷 속"], "description": "‘바닷속’의 순우리말 표기인 '바닷속'과 같이 씁니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"말씀드렸다 vs 말씀 드렸다", "right_words":"말씀드렸다", "wrong_words": ["말씀 드렸다"], "description": "'말씀'과 같은 명사 뒤에 '공손한 행위'의 뜻을 더하는 접미사 '-드리다'는 '말씀드렸다'와 같이 붙여 씁니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"십 년만에 vs 십 년 만에", "right_words":"십 년 만에", "wrong_words": ["십 년만에"], "description": "동안이 얼마간 계속되었음을 나타내는 의존 명사 '만'이 쓰일 문맥이므로, '십 년 만에'와 같이 표현합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"내남없이 vs 내남 없이", "right_words":"내남없이", "wrong_words": ["내남 없이"], "description": "‘없이’가 다른 말과 결합하여 합성어를 만든 ‘내남없이’와 같은 경우에는, 앞말에 붙여 적습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"아프기 밖에 vs 아프기밖에", "right_words":"아프기밖에", "wrong_words": ["아프기 밖에"], "description": "조사 '밖에'가 쓰일 때는 서술어가 부정을 나타내는 말들이 오며, 이때의 '밖에'는 띄어 쓰지 않습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"가고싶어 vs 가고 싶어", "right_words":"가고 싶어", "wrong_words": ["가고싶어"], "description": "‘-고 싶다’ 구성으로 쓰이는 보조 용언 '싶다'는 본용언에 붙여 쓰는 것이 허용되지 않기 때문에, '가고 싶다'와 같이 띄어 적습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"이런게 vs 이런 게", "right_words":"이런 게", "wrong_words": ["이런게"], "description": "'게'는, '것'을 구어적으로 이르는 말입니다. 의존 명사 '거'는 앞말과 띄어 적기에, '이런 게'가 맞습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"첫번째 vs 첫 번째", "right_words":"첫 번째", "wrong_words": ["첫번째"], "description": "'첫 번째'는 관형사 '첫'과 차례나 횟수를 나타내는 의존 명사 '번째'가 이어진 말로, 띄어 쓰는 것이 맞습니다", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"공부 밖에 vs 공부밖에", "right_words":"공부밖에", "wrong_words": ["공부 밖에"], "description": "조사 '밖에'가 쓰일 때는 서술어가 부정을 나타내는 말들이 오며, 이때의 '밖에'는 띄어 쓰지 않습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"징후없이 vs 징후 없이", "right_words":"징후 없이", "wrong_words": ["징후없이"], "description": "‘없이’가 부사로 쓰일 때에는 '징후 없이'와 같이 앞말과 띄어 적습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"먹을거다 vs 먹을 거다", "right_words":"먹을 거다", "wrong_words": ["먹을거다"], "description": "의존 명사 '거'의 곡용형인 '거다(거+-이다)'는 '먹을 거다'와 같이 띄어 적습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"기름값 vs 기름 값", "right_words":"기름값", "wrong_words": ["기름 값"], "description": "일부 명사 뒤에 붙어 ‘가격’, ‘비용’의 뜻을 나타내는 ‘값’은, 앞말에 붙여 씁니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"'일대일 vs 일 대 일'로 마쳤다", "right_words":"일 대 일", "wrong_words": ["일대일"], "description": "'일 대 일'이 맞습니다. 사물과 사물의 대비나 대립을 나타내는 의존 명사 ‘대’는 앞뒤의 말과 띄어 씁니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"'코앞 vs 코 앞'으로 다가왔다", "right_words":"코앞", "wrong_words": ["코 앞"], "description": "곧 닥칠 미래를 비유적으로 이르는 '코앞'은 한 단어로 인정되므로, '코앞'으로 적습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"'부부간에 vs 부부 간에' 금실이 좋다", "right_words":"부부간에", "wrong_words": ["부부 간에"], "description": "'부부간'은 합성어로 인정되므로, 모든 음절을 붙여 적을 수 있습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"'남매간에 vs 남매 간에' 의가 좋다", "right_words":"남매간에", "wrong_words": ["남매 간에"], "description": "'남매간'은 합성어로 인정되므로, 모든 음절을 붙여 적을 수 있습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"미워할거다 vs 미워할 거다", "right_words":"미워할 거다", "wrong_words": ["미워할거다"], "description": "의존 명사 '거'의 곡용형인 '거다(거+-이다)'는 '미워할 거다'와 같이 띄어 적습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"'자매간에 vs 자매 간에' 우애가 남다르다", "right_words":"자매간에", "wrong_words": ["자매 간에"], "description": "'자매간'은 합성어로 인정되므로, 모든 음절을 붙여 적을 수 있습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"스물여섯 vs 스물 여섯", "right_words":"스물여섯", "wrong_words": ["스물 여섯"], "description": "'스물여섯', '서른여섯'과 같이 붙여서 씁니다. 단, '만(萬)' 단위로 띄어 적습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"준비할걸. vs 준비할 걸.", "right_words":"준비할걸.", "wrong_words": ["준비할 걸."], "description": "준비할걸'이 맞습니다. 'ㄹ걸'은 어미로 앞말과 붙여 씁니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"'한 번 vs 한번' 놀러 오세요", "right_words":"한번", "wrong_words": ["한 번"], "description": "횟수 '한 번'과는 다른 의미일 때는 하나의 단어이므로 붙여 써야 합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"'형제간에 vs 형제 간에' 우애가 좋다", "right_words":"형제간에", "wrong_words": ["형제 간에"], "description": "'형제간'은 합성어로 인정되므로, 모든 음절을 붙여 적을 수 있습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"살고 싶어요 vs 살고싶어요", "right_words":"살고 싶어요", "wrong_words": ["살고싶어요"], "description": "'살고 싶어요'가 맞는 말입니다. ‘-고 싶다’ 구성으로 쓰이는 보조 용언 '싶다'는 본용언에 붙여 쓰는 것이 허용되지 않습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"1시부터 5시까지 vs 1시 부터 5시 까지", "right_words":"1시부터 5시까지", "wrong_words": ["1시 부터 5시 까지"], "description": "'부터'와 '까지'는 조사이므로 앞말에 붙여 씁니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"여러가지 vs 여러 가지", "right_words":"여러 가지", "wrong_words": ["여러가지"], "description": "여러 가지'가 맞습니다. '가지'는 의존명사이기 때문에 앞말과 띄어 써야 합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"내거야 vs 내 거야", "right_words":"내 거야", "wrong_words": ["내거야"], "description": "'내'와 의존 명사 '거'는 각각의 단어이므로, '내 거'와 같이 띄어 적습니다. '내 거야'가 맞는 말입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"너밖에 vs 너 밖에", "right_words":"너밖에", "wrong_words": ["너 밖에"], "description": "조사 '밖에'가 쓰일 때는 서술어가 부정을 나타내는 말들이 오며, 이때의 '밖에'는 띄어 쓰지 않습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"홍길동씨 vs 홍길동 씨", "right_words":"홍길동 씨", "wrong_words": ["홍길동씨"], "description": "성과 이름 다음에 붙는 호칭어는 띄어 써야 합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"'술잔 vs 술 잔'을 기울인다", "right_words":"술잔", "wrong_words": ["술 잔"], "description": "‘술잔'이 맞습니다. '잔’이 ‘술잔’의 뜻으로 쓰이기도 하므로, ‘술잔’을 ‘잔’의 동의어로 처리하여 사전에 싣고 있습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"도망갈거다 vs 도망갈 거다", "right_words":"도망갈 거다", "wrong_words": ["도망갈거다"], "description": "의존 명사 '거'의 곡용형인 '거다(거+-이다)'는 '도망갈 거다'와 같이 띄어 적습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"할지 vs 할 지", "right_words":"할지", "wrong_words": ["할 지"], "description": "할지'가 맞습니다. 추측에 대한 막연한 의문을 나타내는 'ㄹ지/을지'는 어미로 앞말과 붙여 써야 합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"운전 중 vs 운전중", "right_words":"운전 중", "wrong_words": ["운전중"], "description": "‘무엇을 하는 동안’ 또는 ‘어떤 상태에 있는 동안’이라는 뜻을 나타내는 의존 명사 ‘중’은 앞말과 띄어 적습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"알던바와는 vs 알던 바와는", "right_words":"알던 바와는", "wrong_words": ["알던바와는"], "description": "'-바'가 '앞에서 말한 내용 그 자체나 일 따위'를 나타낼 경우에는 '의존명사'로 쓰이며, 의존명사는 앞말과 띄어 적습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"쌀가격 vs 쌀 가격", "right_words":"쌀 가격", "wrong_words": ["쌀가격"], "description": "물건이 지니고 있는 가치를 돈으로 나타낸 것이라는 의미를 가진 '가격’은, 앞말과 띄어 씁니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"좋을텐데. vs 좋을 텐데.", "right_words":"좋을 텐데.", "wrong_words": ["좋을텐데."], "description": "좋을 텐데'가 맞습니다. '텐데'는 의존명사 '터'와 'ㄴ데'가 합쳐진 말로 앞말과 띄어 써야 합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"예쁜데 vs 예쁜 데", "right_words":"예쁜데", "wrong_words": ["예쁜 데"], "description": "어떤 일을 설명하기 위해 그 대상과 상관되는 상황을 미리 말하고 있는 문맥이므로, '-ㄴ데'를 붙여 '예쁜데'와 같이 표현합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"한데 vs 한 데", "right_words":"한데", "wrong_words": ["한 데"], "description": "한데'가 맞습니다. '한데'는 하나의 단어로 붙여 써야 합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"못해서 vs 못 해서", "right_words":"못해서", "wrong_words": ["못 해서"], "description": "‘노래를 못하다(음치)’와 같은 문맥에서는 ‘못하다’를 씁니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"흉내내다 vs 흉내 내다", "right_words":"흉내 냈다.", "wrong_words": ["흉내냈다."], "description": "'흉내 냈다'가 맞습니다. 하나의 단어가 아니기 때문에 ‘흉내 내다’로 띄어서 씁니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"'백만 스물하나'와 '백만스물하나'", "right_words":"백만 스물하나, 백만 스물둘", "wrong_words": ["백만스물하나, 백만스물둘"], "description": "숫자는 '만(萬)' 단위로 띄어 적습니다. ", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"먹고살다 vs 먹고 살다", "right_words":"먹고살기", "wrong_words": ["먹고 살기"], "description": "먹고살기'가 맞습니다. 생계를 유지하는 것을 나타낼 때는 '먹고살다'로 붙여 씁니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"결판내다 vs 결판 내다", "right_words":"결판내자.", "wrong_words": ["결판 내자."], "description": "결판내자'가 맞습니다. '결판내다'는 하나의 단어로 굳어졌기 때문에 붙여서 씁니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"내일밤 vs 내일 밤", "right_words":"내일 밤에", "wrong_words": ["내일밤에"], "description": "'내일'과 '밤'은 각각의 단어이므로, '내일 밤'과 같이 띄어 적습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"'문앞 vs 문 앞'에 다다랐다", "right_words":"문 앞", "wrong_words": ["문앞"], "description": "‘문앞’과 같은 한 단어는 인정되지 않으므로, '문 앞'과 같이 띄어 적습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"오랜만에 vs 오랜 만에", "right_words":"오랜만에", "wrong_words": ["오랜 만에"], "description": "'오랜만'은 '오래간만'의 준말로 띄어 쓸 이유가 없는 말입니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"오차장님 vs 오 차장님", "right_words":"오 차장님", "wrong_words": ["오차장님"], "description": "성과 이름 다음에 붙는 호칭어는 띄어 써야 합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"그런게 vs 그런 게", "right_words":"그런 게", "wrong_words": ["그런게"], "description": "'게'는, '것'을 구어적으로 이르는 말입니다. 의존 명사 '거'는 앞말과 띄어 적기에, '그런 게'가 맞습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"너부터 vs 너 부터", "right_words":"너부터", "wrong_words": ["너 부터"], "description": "'부터'는 조사이므로 앞말에 붙여 씁니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"며칠째 vs 며칠 째", "right_words":"며칠째", "wrong_words": ["며칠 째"], "description": "며칠째'가 맞습니다. '째'는 접사로 앞말과 붙여 써야 합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"선물같은 vs 선물 같은", "right_words":"선물 같은", "wrong_words": ["선물같은"], "description": "선물 같은'이 맞습니다. '같은'은 형용사 '같다'에서 왔으므로 앞말과 띄어 써야 합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"할 수밖에 vs 할 수밖에 vs 할 수밖에 vs 할 수 밖에", "right_words":"할 수밖에", "wrong_words": ["할수밖에", "할수 밖에", "할 수 밖에"], "description": "할 수밖에'가 맞습니다. '수'는 의존명사로 앞말과 띄어 써야 하고 '밖에'는 조사로 앞말과 붙여 써야 합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"차 한대 vs 차 한 대 vs 차한대", "right_words":"차 한 대", "wrong_words": ["차 한대", "차한대"], "description": "의존 명사 ‘대’는 그 앞의 수관형사 ‘한/두/세’ 등과 띄어, ‘차 한(두/세) 대’와 같이 씁니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"오십여년 vs 오십여 년 vs 오십 여 년 vs 오십 여년", "right_words":"오십여 년", "wrong_words": ["오십 여 년", "오십 여년"], "description": "오십여 년'이 맞습니다. '여'는 접사로 앞말과 붙여 쓰고 '년'은 의존명사로 앞말과 띄어 써야 합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"기름가격 vs 기름 가격", "right_words":"기름 가격", "wrong_words": ["기름가격"], "description": "물건이 지니고 있는 가치를 돈으로 나타낸 것이라는 의미를 가진 '가격’은, 앞말과 띄어 씁니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"현관 밖에는 vs 현관밖에는", "right_words":"현관 밖에는", "wrong_words": ["현관밖에는"], "description": "이 문장에서 '밖에'는 명사 '밖[外]'에 조사 '에'가 결합한 형태로 앞말과 띄어 써야 합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"바꾼 것은 '로션뿐 vs 로션 뿐'", "right_words":"로션뿐", "wrong_words": ["로션 뿐"], "description": "‘바꾼 것은 로션뿐’처럼 붙여 쓰는 게 맞습니다. ‘뿐’은 조사로 앞 말과 붙여 씁니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"제7장 vs 제 7장", "right_words":"제7장", "wrong_words": ["제 7장"], "description": "제7장'이 맞습니다. '제'는 접사로 앞말과 붙여 써야 합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"저런게 vs 저런 게", "right_words":"저런 게", "wrong_words": ["저런게"], "description": "'게'는, '것'을 구어적으로 이르는 말입니다. 의존 명사 '거'는 앞말과 띄어 적기에, '저런 게'가 맞습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"그정도 vs 그 정도", "right_words":"그 정도", "wrong_words": ["그정도"], "description": "그 정도'가 맞습니다. '정도'는 명사로 앞말과 띄어 써야 합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"물건가격 vs 물건 가격", "right_words":"물건 가격", "wrong_words": ["물건가격"], "description": "물건이 지니고 있는 가치를 돈으로 나타낸 것이라는 의미를 가진 '가격’은, 앞말과 띄어 씁니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"하는대로 vs 하는 대로", "right_words":"하는 대로", "wrong_words": ["하는대로"], "description": "'하는 대로'가 맞습니다. “어떤 모양이나 상태와 같이 어떤 상태나 행동이 나타나는 그 즉시.”라는 뜻을 나타내는 말은 ‘대로’입니다. 그리고 이 ‘대로’는 의존 명사이므로, 앞말과 띄어 적습니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"일주일만에 vs 일주일 만에", "right_words":"일주일 만에", "wrong_words": ["일주일만에"], "description": "일주일 만에'가 맞습니다. 기간이나 동안을 나타내는 '만'은 의존명사로 앞말과 띄어 써야 합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"한번 vs 한 번", "right_words":"한번", "wrong_words": ["한 번"], "description": "한번'이 맞습니다. 이때의 '한번'은 '하나의 횟수'가 아니라 '시도'의 의미를 갖고 있으므로 붙여 써야 합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"전 좌석 vs 전좌석", "right_words":"전 좌석", "wrong_words": ["전좌석"], "description": "‘전 좌석'처럼 띄어 쓰는 게 맞습니다. ‘전(全)’은 뒤에 오는 명사와 띄어 써야 합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"갈거야 vs 갈 거야", "right_words":"갈 거야", "wrong_words": ["갈거야"], "description": "갈 거야'가 맞습니다. '거'는 의존명사로 앞말과 띄어 써야 합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"먹기는커녕 vs 먹기는 커녕", "right_words":"먹기는커녕", "wrong_words": ["먹기는 커녕"], "description": "먹기는커녕'이 맞습니다. '는커녕'은 조사로 앞말과 붙여 써야 합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":">그림같이b> 아름답다.", "right_words":"그림같이", "wrong_words": ["그림 같이"], "description": "'그림같이'가 맞습니다. '처럼'의 의미를 나타내는 '같이'는 조사로서 앞말과 붙여 써야 합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"자연환경 vs 자연 환경", "right_words":"자연환경", "wrong_words": ["자연 환경"], "description": "자연환경'이 맞습니다. '자연환경'은 하나의 단어로 굳어졌기 때문에 붙여서 씁니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"들통나다 vs 들통 나다", "right_words":"들통나", "wrong_words": ["들통 나"], "description": "들통나'가 맞습니다. '들통나다'는 하나의 단어로 굳어졌기 때문에 붙여서 씁니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"바람나다 vs 바람 나다", "right_words":"바람난", "wrong_words": ["바람 난"], "description": "바람난'이 맞습니다. '바람나다'는 하나의 단어로 굳어졌기 때문에 붙여서 씁니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"소리때문에 vs 소리 때문에", "right_words":"소리 때문에", "wrong_words": ["소리때문에"], "description": "소리 때문에'가 맞습니다. '때문'은 의존명사로 앞말과 띄어 써야 합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"기분탓 vs 기분 탓", "right_words":"기분 탓", "wrong_words": ["기분탓"], "description": "기분 탓'이 맞습니다. '탓'은 명사로 앞말과 띄어 써야 합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"기간내 vs 기간 내", "right_words":"기간 내", "wrong_words": ["기간내"], "description": "기간 내'가 맞습니다. '내'는 의존명사로 앞말과 띄어 써야 합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"겁나다 vs 겁 나다", "right_words":"겁나서", "wrong_words": ["겁 나서"], "description": "겁나서'가 맞습니다. '겁나다'는 하나의 단어로 굳어졌기 때문에 붙여서 씁니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"인사드리다 vs 인사 드리다", "right_words":"인사드리다", "wrong_words": ["인사 드리다"], "description": "인사드리다'가 맞습니다. '드리다'는 존대를 나타내는 접사로 앞말과 붙여 씁니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"아는만큼 vs 아는 만큼", "right_words":"아는 만큼", "wrong_words": ["아는만큼"], "description": "아는 만큼'이 맞습니다. 형용사나 동사 뒤에 오는 '만큼'은 의존명사로 앞말과 띄어 써야 합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"까먹을 뻔 vs 까먹을뻔", "right_words":"까먹을 뻔", "wrong_words": ["까먹을뻔"], "description": "까먹을 뻔'이 맞습니다. '뻔'은 의존명사로 앞말과 띄어 써야 합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"어찌할바를 vs 어찌할 바를", "right_words":"어찌할 바를", "wrong_words": ["어찌할바를"], "description": "어찌할 바를'이 맞습니다. '바'는 의존명사로 앞말과 띄어 써야 합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"못잤다. vs 못 잤다.", "right_words":"못 잤다.", "wrong_words": ["못잤다."], "description": "못 잤다'가 맞습니다. '못'는 부사로 뒷말과 띄어 써야 합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"근무중 vs 근무 중", "right_words":"근무 중", "wrong_words": ["근무중"], "description": "‘근무 중’처럼 띄어 쓰는 게 맞습니다. ‘3년 째 근무 중’, ‘모처럼 재택근무 중’처럼 써야 합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"하루내지이틀 vs 하루내지 이틀 vs 하루 내지 이틀", "right_words":"하루 내지 이틀", "wrong_words": ["하루내지이틀", "하루내지 이틀"], "description": "하루 내지 이틀'이 맞습니다. '내지'는 부사로 앞뒤 모두 띄어 써야 합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"도망가다 vs 도망 가다", "right_words":"도망갔다.", "wrong_words": ["도망 갔다."], "description": "도망갔다'가 맞습니다. '도망가다'는 하나의 단어로 굳어졌기 때문에 붙여서 씁니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"종류별 vs 종류 별", "right_words":"종류별", "wrong_words": ["종류 별"], "description": "종류별'이 맞습니다. '별'은 새로운 단어를 만드는 접사이기 때문에 앞말과 붙여 써야 합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"기타등등 vs 기타 등등", "right_words":"기타 등등", "wrong_words": ["기타등등"], "description": "기타 등등'이 맞습니다. '등등'은 의존명사로 앞말과 띄어 써야 합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"동료간 vs 동료 간", "right_words":"동료 간", "wrong_words": ["동료간"], "description": "동료 간'이 맞습니다. '사이'나 '관계'를 나타내는 '간'은 의존명사이기 때문에 앞말과 띄어 써야 합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"지금또한 vs 지금 또한", "right_words":"지금 또한", "wrong_words": ["지금또한"], "description": "지금 또한'이 맞습니다. '또한'은 부사로 앞말과 띄어 써야 합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"1 대 2 vs 1대 2 vs 1대2", "right_words":"1 대 2", "wrong_words": ["1대 2", "1대2"], "description": "1 대 2'가 맞습니다. '대'처럼 두 말을 이어주는 의존명사는 앞뒤 모두 띄어 써야 합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"쇠고기 3 근 vs 쇠고기 3근", "right_words":"3근", "wrong_words": ["3 근"], "description": "3근'이 맞습니다. 앞말이 아라비아 숫자일 때는 붙여 씁니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"떠난지 vs 떠난 지", "right_words":"떠난 지", "wrong_words": ["떠난지"], "description": "떠난 지'가 맞습니다. 흐른 시간을 나타내는 '지'는 의존명사로 앞말과 띄어 써야 합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"각사람 vs 각 사람", "right_words":"각 사람", "wrong_words": ["각사람"], "description": "각 사람'이 맞습니다. '각'은 관형사로 앞말과 띄어 써야 합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"12과 vs 12 과", "right_words":"12과", "wrong_words": ["12 과"], "description": "12과'가 맞습니다. 앞말이 아라비아 숫자일 때는 붙여 씁니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"가족밖에 vs 가족 밖에", "right_words":"가족밖에", "wrong_words": ["가족 밖에"], "description": "가족밖에'가 맞습니다. '오직'의 뜻으로 쓰이는 '밖에'는 조사이기 때문에 앞말과 붙여 써야 합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"열살 vs 열 살", "right_words":"열 살", "wrong_words": ["열살"], "description": "열 살'이 맞습니다. '살'은 나이를 세는 의존명사로 앞말과 띄어 써야 합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"오랜만 vs 오랜 만", "right_words":"오랜만", "wrong_words": ["오랜 만"], "description": "‘오랜만’처럼 붙여 쓰는 게 맞습니다. ‘오랜만에 연락 온 친구를 만났다’처럼 붙여 써야 합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"괜찮은척 vs 괜찮은 척", "right_words":"괜찮은 척", "wrong_words": ["괜찮은척"], "description": "괜찮은 척'이 맞습니다. '척'은 의존명사로 앞말과 띄어 써야 합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"김지영씨 vs 김지영 씨", "right_words":"김지영 씨", "wrong_words": ["김지영씨"], "description": "‘김지영 씨’처럼 띄어 쓰는 게 맞습니다. ‘씨’는 “김지영 씨, 들어오세요.”처럼 띄어 써야 합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"그사람 vs 그 사람", "right_words":"그 사람", "wrong_words": ["그사람"], "description": "그 사람'이 맞습니다. '그'는 관형사로 뒷말과 띄어 써야 합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"다섯마리 vs 다섯 마리", "right_words":"다섯 마리", "wrong_words": ["다섯마리"], "description": "다섯 마리'가 맞습니다. '마리'는 동물을 세는 의존명사로 앞말과 띄어 써야 합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"운전중 vs 운전 중", "right_words":"운전 중", "wrong_words": ["운전중"], "description": "‘운전 중’처럼 띄어 쓰는 게 맞습니다. ‘중(中)’은 ‘운전 중 휴대전화 금지’처럼 띄어 씁니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"형보다 vs 형 보다", "right_words":"형보다", "wrong_words": ["형 보다"], "description": "형보다'가 맞습니다. 비교를 나타내는 '보다'는 조사로 앞말과 붙여 써야 합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"그럴줄알았다 vs 그럴줄 알았다 vs 그럴 줄 알았다", "right_words":"그럴 줄 알았다", "wrong_words": ["그럴줄 알았다"], "description": "그럴 줄 알았다'가 맞습니다. '줄'는 의존명사로 앞말과 뒷말 띄어 써야 합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"생길경우 vs 생길 경우", "right_words":"생길 경우", "wrong_words": ["생길경우"], "description": "생길 경우'가 맞습니다. '경우'는 의존명사로 앞말과 띄어 써야 합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"열 바퀴 vs 열바퀴", "right_words":"열 바퀴", "wrong_words": ["열바퀴"], "description": "열 바퀴'가 맞습니다. '바퀴'는 의존명사로 앞말과 띄어 써야 합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"한개 vs 한 개", "right_words":"한 개", "wrong_words": ["한개"], "description": "한 개'가 맞습니다. '개'는 물건을 세는 의존명사로 앞말과 띄어 써야 합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"것이다 vs 것 이다", "right_words":"것이다", "wrong_words": ["것 이다"], "description": "‘것이다’처럼 붙여 쓰는 게 맞습니다. ‘결국 우리 팀이 이길 것이다’처럼 ‘것’과 ‘이다’는 붙여 써야 합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"열켤레 vs 열 켤레", "right_words":"열 켤레", "wrong_words": ["열켤레"], "description": "열 켤레'가 맞습니다. '켤레'는 짝이 되는 것들을 세는 의존명사로 앞말과 띄어 써야 합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"백포기 vs 백 포기", "right_words":"백 포기", "wrong_words": ["백포기"], "description": "백 포기'가 맞습니다. '포기'는 의존명사로 앞말과 띄어 써야 합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"사과, 배 등 vs 사과, 배등", "right_words":"배 등", "wrong_words": ["배등"], "description": "사과, 배 등'이 맞습니다. '등'은 의존명사이기 때문에 앞말과 띄어 써야 합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"한 모금 vs 한모금", "right_words":"한 모금", "wrong_words": ["한모금"], "description": "한 모금'이 맞습니다. '모금'은 의존명사로 앞말과 띄어 써야 합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"첫월급 vs 첫 월급", "right_words":"첫 월급", "wrong_words": ["첫월급"], "description": "첫 월급'이 맞습니다. '첫'은 관형사로 뒷말과 띄어 써야 합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"여러 분 vs 여러분", "right_words":"여러분", "wrong_words": ["여러 분"], "description": "‘여러분’처럼 붙여 쓰는 게 맞습니다. '여러분'은 듣는 사람을 높이는 대명사로 붙여 씁니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"좋을때 vs 좋을 때", "right_words":"좋을 때", "wrong_words": ["좋을때"], "description": "좋을 때'가 맞습니다. '때'는 의존명사로 앞말과 띄어 써야 합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"시인겸 소설가 vs 시인 겸 소설가", "right_words":"시인 겸", "wrong_words": ["시인겸"], "description": "시인 겸 소설가'처럼 띄어 쓰는 게 맞습니다. ‘가수 겸 배우’처럼 띄어 써야 합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"차 여섯 대 vs 차 여섯대", "right_words":"여섯 대", "wrong_words": ["여섯대"], "description": "여섯 대'가 맞습니다. '대'는 차나 악기를 세는 의존명사로 앞말과 띄어 써야 합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"꽃처럼 vs 꽃 처럼", "right_words":"꽃처럼", "wrong_words": ["꽃 처럼"], "description": "꽃처럼'이 맞습니다. '처럼'은 조사로 앞말과 붙여 써야 합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"한 권 vs 한권", "right_words":"한 권", "wrong_words": ["한권"], "description": "‘한 권’처럼 띄어 쓰는 게 맞습니다. ‘권’은 "딱 한 권만 읽어 보세요."처럼 앞말과 띄어 씁니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"아침부터 저녁까지", "right_words":"아침부터 저녁까지", "wrong_words": ["아침 부터 저녁 까지"], "description": "'아침부터 저녁까지'가 맞습니다. '부터'와 '까지'는 조사로 앞말과 붙여 써야 합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"두벌 vs 두 벌", "right_words":"두 벌", "wrong_words": ["두벌"], "description": "두 벌'이 맞습니다. '벌'은 옷을 세는 의존명사로 앞말과 띄어 써야 합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"주택 두 채 vs 주택 두채", "right_words":"두 채", "wrong_words": ["두채"], "description": "두 채'가 맞습니다. '채'는 주택을 세는 의존명사로 앞말과 띄어 써야 합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"교환및 환불 vs 교환 및 환불", "right_words":"교환 및 환불", "wrong_words": ["교환및 환불"], "description": "교환 및 환불'이 맞습니다. '및'은 부사로 앞뒤 모두 띄어 써야 합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
+{"index":{"_index":"words"}}
+{"type":"spacing", "title":"갈수있다 vs 갈수 있다 vs 갈 수 있다", "right_words":"갈 수 있다", "wrong_words": ["갈수있다", "갈수 있다"], "description": "갈 수 있다'가 맞습니다. '수'는 의존명사로 앞말과 뒷말 모두 띄어 써야 합니다.", "helpful_info": "", "related": "", "hits":0, "scraps":0, "created_at": "2022-08-18T05:48:49.850Z"}
