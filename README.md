@@ -22,6 +22,11 @@ http://www.hanall.site/
 ## 시연 영상
 https://user-images.githubusercontent.com/76686872/191525168-e23fdf2f-ac09-4e73-9fdb-70934abbf963.mp4
 
+## Contributions
+| FrontEnd | BackEnd |
+| --- | --- |
+| Kim Seohyun([seohyun319](https://github.com/seohyun319)) | Kim Gyeongmin([gyeongminK](https://github.com/gyeongminK)) |
+| <img src="https://user-images.githubusercontent.com/76686872/191528312-65c782e6-e109-4e14-8e95-0621d0fd4536.png" width="180px" height = "180px" /> | <img src="https://user-images.githubusercontent.com/76686872/191528395-808b5357-4a7f-4fc5-abcf-722b944e7d37.png" width="180px" height = "180px" /> |
 
 ---
 
