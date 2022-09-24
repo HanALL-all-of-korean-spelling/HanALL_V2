@@ -120,3 +120,12 @@ export interface QuestionInputs {
   title: string;
   question: string;
 }
+
+// 정보(철자/띄어쓰기) 글 작성
+export interface InfoInputs {
+  title: string;
+  right_words: string;
+  wrong_words: string;
+  description: string;
+  helpful_info: string;
+}

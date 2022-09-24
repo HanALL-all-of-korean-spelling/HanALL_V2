@@ -1,4 +1,5 @@
 import axios from "axios";
+import { InfoInputs } from "../../types";
 
 // spacing
 export const getSpacingList = (sort: string, page: number) => {
@@ -12,9 +13,54 @@ export const getSpacingList = (sort: string, page: number) => {
     });
 };
 
+export const postSpacing = (inputs: InfoInputs) => {
+  return axios
+    .post("/api/spacings", inputs)
+    .then((response) => {
+      return response.data;
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+};
+
 export const getSpacingDetail = (id: string) => {
   return axios
     .get("/api/spacings/" + id)
+    .then((response) => {
+      return response.data;
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+};
+
+export const updateSpacingDetail = (
+  id: string,
+  title: string,
+  right_words: string,
+  wrong_words: string,
+  helpful_info: string
+) => {
+  const body = {
+    title: title,
+    right_words: right_words,
+    wrong_words: wrong_words,
+    helpful_info: helpful_info,
+  };
+  return axios
+    .put("/api/spacings/" + id, body)
+    .then((response) => {
+      return response.data;
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+};
+
+export const deleteSpacingDetail = (id: string) => {
+  return axios
+    .delete("/api/spacings/" + id)
     .then((response) => {
       return response.data;
     })
@@ -47,9 +93,54 @@ export const getSpellingList = (sort: string, page: number) => {
     });
 };
 
+export const postSpelling = (inputs: InfoInputs) => {
+  return axios
+    .post("/api/spellings", inputs)
+    .then((response) => {
+      return response.data;
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+};
+
 export const getSpellingDetail = (id: string | string[]) => {
   return axios
     .get("/api/spellings/" + id)
+    .then((response) => {
+      return response.data;
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+};
+
+export const updateSpellingDetail = (
+  id: string,
+  title: string,
+  right_words: string,
+  wrong_words: string,
+  helpful_info: string
+) => {
+  const body = {
+    title: title,
+    right_words: right_words,
+    wrong_words: wrong_words,
+    helpful_info: helpful_info,
+  };
+  return axios
+    .put("/api/spellings/" + id, body)
+    .then((response) => {
+      return response.data;
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+};
+
+export const deleteSpellingDetail = (id: string) => {
+  return axios
+    .delete("/api/spellings/" + id)
     .then((response) => {
       return response.data;
     })
