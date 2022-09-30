@@ -1,5 +1,5 @@
-import type { NextPage } from "next";
-import React, { useEffect, useState } from "react";
+import type { GetStaticProps, NextPage } from "next";
+import React, { useState } from "react";
 import { getSpacingList } from "../src/services/user-service";
 import { useAppSelector } from "../src/_app/hooks";
 import { getTest } from "../src/_reducer/testReducer";
@@ -9,19 +9,9 @@ import { Title } from "../src/component/Title/Title";
 import { PaginationView } from "../src/component/PaginationView/PaginationView";
 import { SearchBar } from "../src/component/SearchPage/SearchBar";
 
-const Spacing: NextPage = () => {
-  const [spacings, setSpacings] = useState<IPageList>();
+const Spacing: NextPage<{ spacings: IPageList }> = ({ spacings }) => {
   const [sort, setSort] = useState<string>("created_at");
   const page = useAppSelector(getTest).page;
-
-  const getData = async () => {
-    const list = await getSpacingList(sort, page);
-    setSpacings(list);
-  };
-
-  useEffect(() => {
-    getData();
-  }, [sort, page]);
 
   const selectSort = () => {
     return (
@@ -84,3 +74,12 @@ const Spacing: NextPage = () => {
 };
 
 export default Spacing;
+
+export const getStaticProps: GetStaticProps = async () => {
+  const spacings = await getSpacingList("created_at", 1);
+  return {
+    props: {
+      spacings,
+    },
+  };
+};

@@ -1,5 +1,5 @@
-import type { NextPage } from "next";
-import React, { useEffect, useState } from "react";
+import type { GetStaticProps, NextPage } from "next";
+import React, { useState } from "react";
 import { getSpellingList } from "../src/services/user-service";
 import { useAppSelector } from "../src/_app/hooks";
 import { getTest } from "../src/_reducer/testReducer";
@@ -9,19 +9,9 @@ import { Title } from "../src/component/Title/Title";
 import { PaginationView } from "../src/component/PaginationView/PaginationView";
 import { SearchBar } from "../src/component/SearchPage/SearchBar";
 
-const Spelling: NextPage = () => {
-  const [spellings, setSpellings] = useState<IPageList>();
+const Spelling: NextPage<{ spellings: IPageList }> = ({ spellings }) => {
   const [sort, setSort] = useState<string>("created_at");
   const page = useAppSelector(getTest).page;
-
-  const getData = async () => {
-    const list = await getSpellingList(sort, page);
-    setSpellings(list);
-  };
-
-  useEffect(() => {
-    getData();
-  }, [sort, page]);
 
   const selectSort = () => {
     return (
@@ -86,3 +76,12 @@ const Spelling: NextPage = () => {
 };
 
 export default Spelling;
+
+export const getStaticProps: GetStaticProps = async () => {
+  const spellings = await getSpellingList("created_at", 1);
+  return {
+    props: {
+      spellings,
+    },
+  };
+};
