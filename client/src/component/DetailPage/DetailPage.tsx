@@ -1,27 +1,19 @@
 import Link from "next/link";
-import React, { useState, useEffect } from "react";
+import { useRouter } from "next/router";
+import React, { useState } from "react";
 import { IDetail } from "../../../types";
-import {
-  getSpellingDetail,
-  scrapSpacing,
-  scrapSpelling,
-} from "../../services/user-service";
+import { scrapSpacing, scrapSpelling } from "../../services/user-service";
 import { useAppSelector } from "../../_app/hooks";
 import { getUser } from "../../_reducer/userReducer";
 import { ShowAlertToast } from "../AlertToast/AlertToast";
 import { Button } from "../Button/Button";
 import { Title } from "../Title/Title";
-
-export const DetailPage = ({ id }: { id: string | string[] }) => {
-  const [detailInfo, setDetailInfo] = useState<IDetail>();
+export const DetailPage = ({ detailInfo }: { detailInfo: IDetail }) => {
+  const router = useRouter();
+  const id = router.query.id as string;
   const user = useAppSelector(getUser).user;
   const [isOpen, setIsOpen] = useState(false);
   const [messageContent, setMessageContent] = useState("");
-
-  const getData = async () => {
-    const detail = await getSpellingDetail(id);
-    setDetailInfo(detail);
-  };
 
   const selectDetailInfo = () => {
     if (detailInfo?.type === "spacing") {
@@ -33,20 +25,16 @@ export const DetailPage = ({ id }: { id: string | string[] }) => {
 
   const setScrapAlert = async () => {
     const res = await selectDetailInfo();
-    if (res?.status === 200) {
-      setIsOpen(true);
+    // 성공하면 response.data 리턴해서 status가 없음
+    if (!res?.status) {
       setMessageContent("스크랩 완료");
-    } else {
       setIsOpen(true);
+    } else {
+      // 실패하면 에러 메시지 세팅
       setMessageContent(res?.data);
+      setIsOpen(true);
     }
   };
-
-  useEffect(() => {
-    if (id) {
-      getData();
-    }
-  }, [id]);
 
   return (
     <>

@@ -32,7 +32,7 @@ const requestPut = (url: string, body?: any) => {
       return response.data;
     })
     .catch((error) => {
-      console.log(error);
+      return error.response;
     });
 };
 
@@ -53,11 +53,11 @@ export const getSpacingList = (sort: string, page: number) => {
 };
 
 export const postSpacing = (inputs: InfoInputs) => {
-  requestPost("/spacings", inputs);
+  return requestPost("/spacings", inputs);
 };
 
 export const getSpacingDetail = (id: string) => {
-  requestGet("/spacings/" + id);
+  return requestGet("/spacings/" + id);
 };
 
 export const updateSpacingDetail = (
@@ -80,21 +80,21 @@ export const deleteSpacingDetail = (id: string) => {
   return requestDelete("/spacings/" + id);
 };
 
-export const scrapSpacing = (id: string | string[]) => {
+export const scrapSpacing = (id: string) => {
   return requestPut("/spacings/" + id + "/scraps");
 };
 
 // spelling
 export const getSpellingList = (sort: string, page: number) => {
-  requestGet("/spellings?sort=" + sort + "&page=" + page);
+  return requestGet("/spellings?sort=" + sort + "&page=" + page);
 };
 
 export const postSpelling = (inputs: InfoInputs) => {
   return requestPost("/spellings", inputs);
 };
 
-export const getSpellingDetail = (id: string | string[]) => {
-  requestGet("/spellings/" + id);
+export const getSpellingDetail = (id: string) => {
+  return requestGet("/spellings/" + id);
 };
 
 export const updateSpellingDetail = (
@@ -117,13 +117,13 @@ export const deleteSpellingDetail = (id: string) => {
   return requestDelete("/spellings/" + id);
 };
 
-export const scrapSpelling = (id: string | string[]) => {
+export const scrapSpelling = (id: string) => {
   return requestPut("/spellings/" + id + "/scraps");
 };
 
 // search
-export const getSearchResult = (searchText: string | string[]) => {
-  return requestGet('/spellings?text="' + searchText + '"');
+export const getSearchResult = (searchText: string) => {
+  return requestGet('/spellings?text="' + encodeURI(searchText) + '"');
 };
 
 // main
