@@ -1,5 +1,4 @@
-import type { NextPage } from "next";
-import React, { useState, useEffect } from "react";
+import type { GetServerSideProps, NextPage } from "next";
 import { useRouter } from "next/router";
 import { ISearch } from "../../types";
 import { getSearchResult } from "../../src/services/user-service";
@@ -11,31 +10,19 @@ import { OutlineBox } from "../../src/component/OutlineBox/OutlineBox";
 import { MWContainer } from "../../src/component/MWContainer/MWContainer";
 import { SearchBar } from "../../src/component/SearchPage/SearchBar";
 
-const Search: NextPage = () => {
-  const [result, setResult] = useState<ISearch>();
-
+const Search: NextPage<{ result?: ISearch }> = ({ result }) => {
   const router = useRouter();
-  const searchText = String(router.query.searchText);
-
-  useEffect(() => {
-    const getData = async () => {
-      if (searchText) {
-        const search = await getSearchResult(searchText);
-        setResult(search);
-      }
-    };
-    getData();
-  }, [searchText]);
+  const searchText = router.query.searchText as string;
 
   return (
     <div>
       <SearchBar initialText={searchText} />
-      {result && result.detail ? (
+      {result?.detail ? (
         <div>
           <RightWrong result={result} />
           <MWContainer>
             <OutlineBox>
-              <DetailPage id={result.detail._id} />
+              <DetailPage detailInfo={result.detail?._source} />
             </OutlineBox>
             <SimilarResults result={result} />
           </MWContainer>
@@ -51,3 +38,13 @@ const Search: NextPage = () => {
 };
 
 export default Search;
+
+export const getServerSideProps: GetServerSideProps = async (context) => {
+  const searchText = context.params?.searchText as string;
+  const result = await getSearchResult(searchText);
+  return {
+    props: {
+      result,
+    },
+  };
+};
