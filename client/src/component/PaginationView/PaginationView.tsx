@@ -1,17 +1,20 @@
-import { useAppDispatch } from "../../_app/hooks";
-import { setPage } from "../../_reducer/testReducer";
+import { useRouter } from "next/router";
 import Pagination from "@mui/material/Pagination";
 
 export const PaginationView = ({
   total,
   current,
+  sort,
 }: {
   total: number;
   current: number;
+  sort: string;
 }) => {
-  const dispatch = useAppDispatch();
+  const router = useRouter();
   const handleChange = (event: React.ChangeEvent<unknown>, value: number) => {
-    dispatch(setPage(value));
+    router.push({
+      query: { page: value, sort: sort },
+    });
   };
 
   return (

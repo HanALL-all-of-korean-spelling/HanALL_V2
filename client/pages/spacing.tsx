@@ -1,8 +1,7 @@
-import type { GetStaticProps, NextPage } from "next";
+import type { GetServerSideProps, NextPage } from "next";
+import { useRouter } from "next/router";
 import React, { useState } from "react";
 import { getSpacingList } from "../src/services/user-service";
-import { useAppSelector } from "../src/_app/hooks";
-import { getTest } from "../src/_reducer/testReducer";
 import { IPageList } from "../types";
 import { InfoListPage } from "../src/component/InfoListPage/InfoListPage";
 import { Title } from "../src/component/Title/Title";
@@ -11,7 +10,8 @@ import { SearchBar } from "../src/component/SearchPage/SearchBar";
 
 const Spacing: NextPage<{ spacings: IPageList }> = ({ spacings }) => {
   const [sort, setSort] = useState<string>("created_at");
-  const page = useAppSelector(getTest).page;
+  const router = useRouter();
+  const page = router.query.page as string;
 
   const selectSort = () => {
     return (
@@ -66,7 +66,11 @@ const Spacing: NextPage<{ spacings: IPageList }> = ({ spacings }) => {
       {spacings && (
         <>
           <InfoListPage list={spacings.result} type={sort} />
-          <PaginationView total={spacings.total_page} current={page} />
+          <PaginationView
+            total={spacings.total_page}
+            current={+page}
+            sort={sort}
+          />
         </>
       )}
     </div>
@@ -75,8 +79,10 @@ const Spacing: NextPage<{ spacings: IPageList }> = ({ spacings }) => {
 
 export default Spacing;
 
-export const getStaticProps: GetStaticProps = async () => {
-  const spacings = await getSpacingList("created_at", 1);
+export const getServerSideProps: GetServerSideProps = async (context) => {
+  const page = context.query?.page as string;
+  const sort = context.query?.sort as string;
+  const spacings = await getSpacingList(sort, +page);
   return {
     props: {
       spacings,

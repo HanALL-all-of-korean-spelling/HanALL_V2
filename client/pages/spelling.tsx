@@ -1,8 +1,7 @@
-import type { GetStaticProps, NextPage } from "next";
+import type { GetServerSideProps, NextPage } from "next";
+import { useRouter } from "next/router";
 import React, { useState } from "react";
 import { getSpellingList } from "../src/services/user-service";
-import { useAppSelector } from "../src/_app/hooks";
-import { getTest } from "../src/_reducer/testReducer";
 import { IPageList } from "../types";
 import { InfoListPage } from "../src/component/InfoListPage/InfoListPage";
 import { Title } from "../src/component/Title/Title";
@@ -11,7 +10,8 @@ import { SearchBar } from "../src/component/SearchPage/SearchBar";
 
 const Spelling: NextPage<{ spellings: IPageList }> = ({ spellings }) => {
   const [sort, setSort] = useState<string>("created_at");
-  const page = useAppSelector(getTest).page;
+  const router = useRouter();
+  const page = router.query.page as string;
 
   const selectSort = () => {
     return (
@@ -67,7 +67,11 @@ const Spelling: NextPage<{ spellings: IPageList }> = ({ spellings }) => {
         {spellings && (
           <>
             <InfoListPage list={spellings.result} type={sort} />
-            <PaginationView total={spellings.total_page} current={page} />
+            <PaginationView
+              total={spellings.total_page}
+              current={+page}
+              sort={sort}
+            />
           </>
         )}
       </>
@@ -77,8 +81,10 @@ const Spelling: NextPage<{ spellings: IPageList }> = ({ spellings }) => {
 
 export default Spelling;
 
-export const getStaticProps: GetStaticProps = async () => {
-  const spellings = await getSpellingList("created_at", 1);
+export const getServerSideProps: GetServerSideProps = async (context) => {
+  const page = context.query?.page as string;
+  const sort = context.query?.sort as string;
+  const spellings = await getSpellingList(sort, +page);
   return {
     props: {
       spellings,
