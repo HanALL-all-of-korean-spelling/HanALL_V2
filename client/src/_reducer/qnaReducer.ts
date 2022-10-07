@@ -58,7 +58,7 @@ export const QnaSlice = createSlice({
     },
     editQuestion: (state, action) => {
       const findItem = state.qnaList.result.find(
-        (question) => question._id == action.payload.id
+        (question) => question._id === action.payload.id
       );
       if (findItem) {
         findItem._source.title = action.payload.title;
@@ -73,7 +73,7 @@ export const QnaSlice = createSlice({
     },
     addAnswer: (state, action) => {
       const findItem = state.qnaList.result.find(
-        (question) => question._id == action.payload.id
+        (question) => question._id === action.payload.id
       );
       if (findItem) {
         findItem._source.answer_flag = true;
