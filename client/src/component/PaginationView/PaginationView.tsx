@@ -1,5 +1,8 @@
-import { useRouter } from "next/router";
-import Pagination from "@mui/material/Pagination";
+import Link from "next/link";
+import Pagination, {
+  PaginationRenderItemParams,
+} from "@mui/material/Pagination";
+import PaginationItem from "@mui/material/PaginationItem";
 
 export const PaginationView = ({
   total,
@@ -8,24 +11,32 @@ export const PaginationView = ({
 }: {
   total: number;
   current: number;
-  sort: string;
+  sort?: string;
 }) => {
-  const router = useRouter();
-  const handleChange = (event: React.ChangeEvent<unknown>, value: number) => {
-    router.push({
-      query: { page: value, sort: sort },
-    });
+  const handleQuery = (
+    sort: string | undefined,
+    item: PaginationRenderItemParams
+  ) => {
+    if (sort) return { page: item.page, sort: sort };
+    else return { page: item.page };
   };
 
   return (
-    <div>
-      <Pagination
-        count={total}
-        page={current}
-        onChange={handleChange}
-        style={style}
-      />
-    </div>
+    <Pagination
+      page={current}
+      count={total}
+      style={style}
+      boundaryCount={0}
+      showFirstButton
+      showLastButton
+      size="small"
+      siblingCount={2}
+      renderItem={(item) => (
+        <Link href={{ query: handleQuery(sort, item) }} passHref>
+          <PaginationItem {...item} />
+        </Link>
+      )}
+    />
   );
 };
 
