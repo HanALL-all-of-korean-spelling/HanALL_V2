@@ -1,31 +1,18 @@
-import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { IMainList } from "../../../types";
-import {
-  getMainSpacingList,
-  getMainSpellingList,
-} from "../../services/user-service";
 import { InfoListPage } from "../InfoListPage/InfoListPage";
 import { Button } from "../Button/Button";
 import { Title } from "../Title/Title";
-import style from "./MainPage.module.scss";
 import { MWContainer } from "../MWContainer/MWContainer";
+import style from "./MainPage.module.scss";
 
-export const MainInfo = () => {
-  const [spellingList, setSpellingList] = useState<IMainList>();
-  const [spacingList, setSpacingList] = useState<IMainList>();
-
-  const getData = async () => {
-    const spelling = await getMainSpellingList();
-    const spacing = await getMainSpacingList();
-    setSpellingList(spelling);
-    setSpacingList(spacing);
-  };
-
-  useEffect(() => {
-    getData();
-  }, []);
-
+export const MainInfo = ({
+  spellingList,
+  spacingList,
+}: {
+  spellingList: IMainList;
+  spacingList: IMainList;
+}) => {
   const renderMainInfo = (list: IMainList, title: string, link: string) => {
     return (
       <div className={style.MainInfo}>

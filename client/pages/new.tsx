@@ -31,7 +31,7 @@ const NewInfo: NextPage = () => {
 
   const handleSubmit = async (e: any) => {
     e.preventDefault();
-    if (selectedCategory == "spelling") {
+    if (selectedCategory === "spelling") {
       await postSpelling(inputs);
     } else {
       await postSpacing(inputs);

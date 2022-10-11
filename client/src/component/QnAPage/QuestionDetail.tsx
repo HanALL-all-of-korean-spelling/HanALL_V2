@@ -30,7 +30,7 @@ export const QuestionDetail = ({
 
   // 글 작성자인지 체크
   let isWriter = false;
-  if (user.user?.nickname == qnaDetail.question?._source.nickname) {
+  if (user.user?.nickname === qnaDetail.question?._source.nickname) {
     isWriter = true;
   }
 

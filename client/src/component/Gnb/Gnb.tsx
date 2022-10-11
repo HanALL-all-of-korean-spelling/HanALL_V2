@@ -22,10 +22,22 @@ export default function Gnb() {
         <Link href="/" passHref>
           <div>메인</div>
         </Link>
-        <Link href="/spelling" passHref>
+        <Link
+          href={{
+            pathname: "/spelling",
+            query: { page: 1, sort: "hits" },
+          }}
+          passHref
+        >
           <div>철자 정보</div>
         </Link>
-        <Link href="/spacing" passHref>
+        <Link
+          href={{
+            pathname: "/spacing",
+            query: { page: 1, sort: "hits" },
+          }}
+          passHref
+        >
           <div>띄어쓰기 정보</div>
         </Link>
         <Link href="/qna" passHref>

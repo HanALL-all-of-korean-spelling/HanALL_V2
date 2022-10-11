@@ -22,11 +22,11 @@ export const InfoListPage = ({
         >
           <div>
             <div>{info._source.title}</div>
-            {type == "hits" && <div>{info._source.hits}</div>}
-            {type == "created_at" && (
+            {type === "hits" && <div>{info._source.hits}</div>}
+            {type === "created_at" && (
               <div>{info._source.created_at?.substring(0, 10)}</div>
             )}
-            {type == "scraps" && <div>{info._source.scraps}</div>}
+            {type === "scraps" && <div>{info._source.scraps}</div>}
           </div>
         </Link>
       );

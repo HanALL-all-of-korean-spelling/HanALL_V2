@@ -18,7 +18,7 @@ export const UserSlice = createSlice({
   reducers: {
     setUser: (state, action) => {
       state.user = action.payload;
-      if (state.user?.email == "matji1349@gmail.com") {
+      if (state.user?.email === "matji1349@gmail.com") {
         state.isAdmin = true;
       }
     },

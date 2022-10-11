@@ -11,7 +11,7 @@ export const SearchBar = ({ initialText }: { initialText?: string }) => {
   const [searchText, setSearchText] = useState<string>(initialText);
 
   return (
-    <div className={style.SearchBar}>
+    <form onSubmit={(e) => e.preventDefault()} className={style.SearchBar}>
       <Input
         placeholder="궁금한 맞춤법을 검색하세요"
         value={searchText}
@@ -21,8 +21,10 @@ export const SearchBar = ({ initialText }: { initialText?: string }) => {
         fullWidth
       ></Input>
       <Link href="/search/[searchText]" as={`/search/${searchText}`} passHref>
-        <Button color="yellow">검색</Button>
+        <Button type="submit" color="yellow">
+          검색
+        </Button>
       </Link>
-    </div>
+    </form>
   );
 };
