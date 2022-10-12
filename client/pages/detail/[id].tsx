@@ -14,18 +14,18 @@ const Detail: NextPage<{ detailInfo: IDetail }> = ({ detailInfo }) => {
 export default Detail;
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const spacings: IPageList = await getSpacingList("created_at", 1);
-  const spellings: IPageList = await getSpellingList("created_at", 1);
+  const spacings: IPageList = await getSpacingList("hits", 1);
+  const spellings: IPageList = await getSpellingList("hits", 1);
 
-  const spacingPaths = spacings.result.map((spacing) => ({
+  const spacingPaths = spacings?.result?.map((spacing) => ({
     params: { id: spacing._id },
   }));
-  const spellingPaths = spellings.result.map((spelling) => ({
+  const spellingPaths = spellings?.result?.map((spelling) => ({
     params: { id: spelling._id },
   }));
 
   return {
-    paths: [...spacingPaths, ...spellingPaths],
+    paths: spacingPaths,
     fallback: true, // build때 만들어지지 않은 path도 추후 요청 들어오면 만들 것
   };
 };

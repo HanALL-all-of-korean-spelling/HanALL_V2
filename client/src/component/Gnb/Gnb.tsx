@@ -40,7 +40,7 @@ export default function Gnb() {
         >
           <div>띄어쓰기 정보</div>
         </Link>
-        <Link href="/qna" passHref>
+        <Link href={{ pathname: "/qna", query: { page: 1 } }} passHref>
           <div>문의 게시판</div>
         </Link>
         <Link href="/scrap" passHref>
