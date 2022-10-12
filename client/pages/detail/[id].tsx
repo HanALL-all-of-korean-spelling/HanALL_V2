@@ -25,7 +25,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   }));
 
   return {
-    paths: [...spacingPaths, ...spellingPaths],
+    paths: spacingPaths,
     fallback: true, // build때 만들어지지 않은 path도 추후 요청 들어오면 만들 것
   };
 };
