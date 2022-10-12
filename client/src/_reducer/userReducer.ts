@@ -20,6 +20,8 @@ export const UserSlice = createSlice({
       state.user = action.payload;
       if (state.user?.email === "matji1349@gmail.com") {
         state.isAdmin = true;
+      } else {
+        state.isAdmin = false;
       }
     },
     setUserScore: (state, action) => {
