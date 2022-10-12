@@ -1,0 +1,19 @@
+.SelectSort {
+  display: flex;
+  div {
+    padding: 0 0.3rem;
+    margin: 0.4rem 0;
+    border-right: 2px solid darkgray;
+    font-size: 0.9rem;
+  }
+  div:last-child {
+    border: 0;
+  }
+  .bold {
+    font-weight: bold;
+  }
+  .normal {
+    font-weight: normal;
+    color: gray;
+  }
+}

@@ -1,7 +1,7 @@
+import { useRouter } from "next/router";
 import React, { useState, useEffect } from "react";
 import { getQuestionDetail, getQuestions } from "../../services/qna-service";
 import { useAppDispatch, useAppSelector } from "../../_app/hooks";
-import { getTest } from "../../_reducer/testReducer";
 import { QuestionDetail } from "./QuestionDetail";
 import { SmallText } from "../Title/Title";
 import { PaginationView } from "../PaginationView/PaginationView";
@@ -20,10 +20,11 @@ import {
 } from "../../_reducer/qnaReducer";
 
 export const QuestionList = () => {
+  const router = useRouter();
   const dispatch = useAppDispatch();
   const [id, setId] = useState<string>("");
   const [expanded, setExpanded] = React.useState<string | false>(false);
-  const page = useAppSelector(getTest).page;
+  const page = router.query.page as string;
   const qnaList = useAppSelector(getQnaList);
   const qnaDetail = useAppSelector(getQnaDetail);
 
@@ -34,7 +35,7 @@ export const QuestionList = () => {
 
   useEffect(() => {
     const getData = async () => {
-      const list = await getQuestions(page);
+      const list = await getQuestions(+page);
       const detail = await getQuestionDetail(id);
       dispatch(setQnaList(list));
       dispatch(setQnaDetail(detail));
@@ -79,7 +80,7 @@ export const QuestionList = () => {
       {qnaList && (
         <div>
           <div className={style.QuestionList}>{renderQna}</div>
-          <PaginationView total={qnaList?.total_page} current={page} />
+          <PaginationView total={qnaList?.total_page} current={+page} />
         </div>
       )}
     </>

@@ -1,24 +1,11 @@
 import Link from "next/link";
-import React, { useState, useEffect } from "react";
 import { IToday } from "../../../types";
-import { getTodayInfo } from "../../services/user-service";
 import { Button } from "../Button/Button";
 import { OutlineBox } from "../OutlineBox/OutlineBox";
 import { Title } from "../Title/Title";
 import style from "./MainPage.module.scss";
 
-export const TodaySpelling = () => {
-  const [todayInfo, setTodayInfo] = useState<IToday>();
-
-  const getData = async () => {
-    const info = await getTodayInfo();
-    setTodayInfo(info);
-  };
-
-  useEffect(() => {
-    getData();
-  }, []);
-
+export const TodaySpelling = ({ todayInfo }: { todayInfo: IToday }) => {
   return (
     <div>
       {todayInfo && (
