@@ -16,7 +16,13 @@ export const MainInfo = ({
   const renderMainInfo = (list: IMainList, title: string, link: string) => {
     return (
       <div className={style.MainInfo}>
-        <Link href={link} passHref>
+        <Link
+          href={{
+            pathname: link,
+            query: { page: 1, sort: "hits" },
+          }}
+          passHref
+        >
           <div className="flex-between">
             <Title>{title}</Title>
             <Button color="white" outline>
