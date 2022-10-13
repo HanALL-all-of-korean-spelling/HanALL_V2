@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { FormEvent, useState } from "react";
 import { QuestionInputs } from "../../../types";
 import { postQuestions } from "../../services/qna-service";
 import { useAppDispatch } from "../../_app/hooks";
@@ -23,7 +23,7 @@ export const QuestionInput = () => {
     });
   };
 
-  const handleSubmit = async (e: any) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const res = await postQuestions(inputs);
     if (res?.status === 201) {

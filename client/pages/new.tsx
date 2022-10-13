@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import { useState } from "react";
+import { FormEvent, useState } from "react";
 import { InfoInputs } from "../types";
 import { postSpacing, postSpelling } from "../src/services/user-service";
 import { Button } from "../src/component/common/Button/Button";
@@ -29,7 +29,7 @@ const NewInfo: NextPage = () => {
     setSelectedCategory(e.target.value);
   };
 
-  const handleSubmit = async (e: any) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (selectedCategory === "spelling") {
       await postSpelling(inputs);

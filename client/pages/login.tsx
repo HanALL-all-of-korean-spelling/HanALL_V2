@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { FormEvent, useState } from "react";
 import Link from "next/link";
 import { getUserInfo, login } from "../src/services/auth-service";
 import { useAppDispatch } from "../src/_app/hooks";
@@ -23,7 +23,7 @@ export default function Login() {
     });
   };
 
-  const handleSubmit = async (e: any) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const res = await login(inputs);
     if (res?.status === 200) {
