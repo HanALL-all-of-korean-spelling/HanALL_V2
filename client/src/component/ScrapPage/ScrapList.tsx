@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { IRelated } from "../../../types";
-import { ListView } from "../ListView/ListView";
+import { ListView } from "../common/ListView/ListView";
 
 export const ScrapList = ({ scraps }: { scraps: IRelated[] }) => {
   const renderList =

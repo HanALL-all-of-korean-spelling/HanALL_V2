@@ -6,9 +6,9 @@ import { useAppSelector } from "../src/_app/hooks";
 import { getUser } from "../src/_reducer/userReducer";
 import { getScrapList } from "../src/services/auth-service";
 import { ScrapList } from "../src/component/ScrapPage/ScrapList";
-import { Title } from "../src/component/Title/Title";
-import { MWContainer } from "../src/component/MWContainer/MWContainer";
-import { Button } from "../src/component/Button/Button";
+import { Title } from "../src/component/common/Title/Title";
+import { MWContainer } from "../src/component/common/MWContainer/MWContainer";
+import { Button } from "../src/component/common/Button/Button";
 import { MyInfo } from "../src/component/ScrapPage/MyInfo";
 
 const Scrap: NextPage = () => {

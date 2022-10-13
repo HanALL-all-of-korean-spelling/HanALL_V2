@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
-import { Button } from "../Button/Button";
-import { Input } from "../Input/Input";
+import { Button } from "../common/Button/Button";
+import { Input } from "../common/Input/Input";
 import style from "./SearchPage.module.scss";
 
 export const SearchBar = ({ initialText }: { initialText?: string }) => {

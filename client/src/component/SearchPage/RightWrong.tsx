@@ -1,6 +1,6 @@
 import React from "react";
 import { ISearch } from "../../../types";
-import { Title } from "../Title/Title";
+import { Title } from "../common/Title/Title";
 import style from "./SearchPage.module.scss";
 
 export const RightWrong = ({ result }: { result: ISearch }) => {

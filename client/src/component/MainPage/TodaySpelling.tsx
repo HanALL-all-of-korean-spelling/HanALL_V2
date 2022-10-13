@@ -1,8 +1,8 @@
 import Link from "next/link";
 import { IToday } from "../../../types";
-import { Button } from "../Button/Button";
-import { OutlineBox } from "../OutlineBox/OutlineBox";
-import { Title } from "../Title/Title";
+import { Button } from "../common/Button/Button";
+import { OutlineBox } from "../common/OutlineBox/OutlineBox";
+import { Title } from "../common/Title/Title";
 import style from "./MainPage.module.scss";
 
 export const TodaySpelling = ({ todayInfo }: { todayInfo: IToday }) => {

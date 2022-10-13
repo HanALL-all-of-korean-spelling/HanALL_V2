@@ -3,8 +3,8 @@ import Link from "next/link";
 import { logout } from "../../services/auth-service";
 import { useAppDispatch, useAppSelector } from "../../_app/hooks";
 import { getUser, setUser } from "../../_reducer/userReducer";
-import { Button } from "../Button/Button";
-import { AlertToast } from "../AlertToast/AlertToast";
+import { Button } from "../common/Button/Button";
+import { AlertToast } from "../common/AlertToast/AlertToast";
 
 export const UserNickname = () => {
   const dispatch = useAppDispatch();

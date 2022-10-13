@@ -1,9 +1,9 @@
 import Link from "next/link";
 import { IMainList } from "../../../types";
 import { InfoListPage } from "../InfoListPage/InfoListPage";
-import { Button } from "../Button/Button";
-import { Title } from "../Title/Title";
-import { MWContainer } from "../MWContainer/MWContainer";
+import { Button } from "../common/Button/Button";
+import { Title } from "../common/Title/Title";
+import { MWContainer } from "../common/MWContainer/MWContainer";
 import style from "./MainPage.module.scss";
 
 export const MainInfo = ({

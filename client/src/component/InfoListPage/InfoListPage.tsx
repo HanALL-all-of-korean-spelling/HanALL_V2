@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import { IList } from "../../../types";
-import { ListView } from "../ListView/ListView";
+import { ListView } from "../common/ListView/ListView";
 
 export const InfoListPage = ({
   list,

@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { AlertToast } from "../src/component/AlertToast/AlertToast";
-import { Button } from "../src/component/Button/Button";
-import { Input } from "../src/component/Input/Input";
+import { AlertToast } from "../src/component/common/AlertToast/AlertToast";
+import { Button } from "../src/component/common/Button/Button";
+import { Input } from "../src/component/common/Input/Input";
 import { join } from "../src/services/auth-service";
 import { JoinInputs } from "../types/auth";
 

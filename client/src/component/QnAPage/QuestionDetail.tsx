@@ -8,9 +8,9 @@ import { useAppDispatch, useAppSelector } from "../../_app/hooks";
 import { editQuestion, deleteQuestion } from "../../_reducer/qnaReducer";
 import { getUser } from "../../_reducer/userReducer";
 import { AnswerInput } from "./AnswerInput";
-import { Button } from "../Button/Button";
-import { Input } from "../Input/Input";
-import { SmallText } from "../Title/Title";
+import { Button } from "../common/Button/Button";
+import { Input } from "../common/Input/Input";
+import { SmallText } from "../common/Title/Title";
 import style from "./QnaPage.module.scss";
 
 export const QuestionDetail = ({

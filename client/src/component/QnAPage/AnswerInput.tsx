@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { postAnswer } from "../../services/qna-service";
 import { useAppDispatch } from "../../_app/hooks";
 import { addAnswer } from "../../_reducer/qnaReducer";
-import { Button } from "../Button/Button";
-import { Input } from "../Input/Input";
+import { Button } from "../common/Button/Button";
+import { Input } from "../common/Input/Input";
 
 export const AnswerInput = ({ id }: { id: string }) => {
   const dispatch = useAppDispatch();

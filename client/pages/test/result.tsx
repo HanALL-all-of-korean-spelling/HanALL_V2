@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import { useAppSelector } from "../../src/_app/hooks";
 import { getTest } from "../../src/_reducer/testReducer";
 import { getUser } from "../../src/_reducer/userReducer";
-import { Button } from "../../src/component/Button/Button";
+import { Button } from "../../src/component/common/Button/Button";
 import { MyInfo } from "../../src/component/ScrapPage/MyInfo";
 import css from "styled-jsx/css";
 

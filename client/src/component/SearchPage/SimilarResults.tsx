@@ -1,8 +1,8 @@
 import Link from "next/link";
 import React from "react";
 import { ISearch } from "../../../types";
-import { ListView } from "../ListView/ListView";
-import { Title } from "../Title/Title";
+import { ListView } from "../common/ListView/ListView";
+import { Title } from "../common/Title/Title";
 
 export const SimilarResults = ({ result }: { result: ISearch }) => {
   const renderSimilarResult =

@@ -4,8 +4,8 @@ import { putTestResult } from "../../services/auth-service";
 import { useAppDispatch } from "../../_app/hooks";
 import { setTotalScore } from "../../_reducer/testReducer";
 import { setUserScore } from "../../_reducer/userReducer";
-import { Title } from "../Title/Title";
-import { Button } from "../Button/Button";
+import { Title } from "../common/Title/Title";
+import { Button } from "../common/Button/Button";
 import css from "styled-jsx/css";
 
 export const TestList = ({ quizzes }: { quizzes: ITest[] }) => {

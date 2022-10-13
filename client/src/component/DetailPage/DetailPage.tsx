@@ -5,9 +5,10 @@ import { IDetail } from "../../../types";
 import { scrapSpacing, scrapSpelling } from "../../services/user-service";
 import { useAppSelector } from "../../_app/hooks";
 import { getUser } from "../../_reducer/userReducer";
-import { ShowAlertToast } from "../AlertToast/AlertToast";
-import { Button } from "../Button/Button";
-import { Title } from "../Title/Title";
+import { ShowAlertToast } from "../common/AlertToast/AlertToast";
+import { Button } from "../common/Button/Button";
+import { Title } from "../common/Title/Title";
+
 export const DetailPage = ({ detailInfo }: { detailInfo: IDetail }) => {
   const router = useRouter();
   const id = router.query.id as string;
