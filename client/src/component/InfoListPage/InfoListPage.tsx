@@ -10,10 +10,9 @@ export const InfoListPage = ({
   list: IList[];
   type: string;
 }) => {
-  const renderList =
-    list &&
-    list.map((info) => {
-      return (
+  return (
+    <ListView>
+      {list?.map((info) => (
         <Link
           href="/detail/[id]"
           as={`/detail/${info._id}`}
@@ -29,8 +28,7 @@ export const InfoListPage = ({
             {type === "scraps" && <div>{info._source.scraps}</div>}
           </div>
         </Link>
-      );
-    });
-
-  return <ListView>{renderList}</ListView>;
+      ))}
+    </ListView>
+  );
 };

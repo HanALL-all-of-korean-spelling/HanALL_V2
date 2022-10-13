@@ -4,10 +4,9 @@ import { IRelated } from "../../../types";
 import { ListView } from "../common/ListView/ListView";
 
 export const ScrapList = ({ scraps }: { scraps: IRelated[] }) => {
-  const renderList =
-    scraps &&
-    scraps.map((info) => {
-      return (
+  return (
+    <ListView>
+      {scraps?.map((info) => (
         <>
           <Link href="/detail/[id]" as={`/detail/${info.id}`} passHref>
             <div key={info.id}>
@@ -16,8 +15,7 @@ export const ScrapList = ({ scraps }: { scraps: IRelated[] }) => {
             </div>
           </Link>
         </>
-      );
-    });
-
-  return <>{scraps && <ListView>{renderList}</ListView>}</>;
+      ))}
+    </ListView>
+  );
 };

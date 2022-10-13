@@ -27,7 +27,13 @@ export const TestList = ({ quizzes }: { quizzes: ITest[] }) => {
     }
   };
 
-  const AnswerButton = (name: string | string[], isRight: boolean) => {
+  const AnswerButton = ({
+    name,
+    isRight,
+  }: {
+    name: string | string[];
+    isRight: boolean;
+  }) => {
     return (
       <Button
         fullWidth
@@ -41,19 +47,6 @@ export const TestList = ({ quizzes }: { quizzes: ITest[] }) => {
     );
   };
 
-  const renderTestList =
-    quizzes &&
-    quizzes.map((quiz) => {
-      return (
-        <div key={quiz._id}>
-          <style jsx>{style}</style>
-          <Title color="black">다음 중 옳은 표현을 고르세요.</Title>
-          {AnswerButton(quiz._source.right_words, true)}
-          {AnswerButton(quiz._source.wrong_words, false)}
-        </div>
-      );
-    });
-
   // 점수 보기 버튼 클릭
   const onClickResult = async () => {
     dispatch(setTotalScore(score));
@@ -63,7 +56,14 @@ export const TestList = ({ quizzes }: { quizzes: ITest[] }) => {
 
   return (
     <>
-      <div>{renderTestList}</div>
+      {quizzes?.map((quiz) => (
+        <div key={quiz._id}>
+          <style jsx>{style}</style>
+          <Title color="black">다음 중 옳은 표현을 고르세요.</Title>
+          <AnswerButton name={quiz._source.right_words} isRight={true} />
+          <AnswerButton name={quiz._source.wrong_words} isRight={false} />
+        </div>
+      ))}
       <Button fullWidth shadow onClick={onClickResult}>
         점수 보기
       </Button>
