@@ -1,8 +1,8 @@
 import Link from "next/link";
 import { IToday } from "../../../types";
-import { Button } from "../common/Button/Button";
 import { OutlineBox } from "../common/OutlineBox/OutlineBox";
 import { Title } from "../common/Title/Title";
+import { RelatedInfo } from "../DetailPage/RelatedInfo";
 import style from "./MainPage.module.scss";
 
 export const TodaySpelling = ({ todayInfo }: { todayInfo: IToday }) => {
@@ -22,19 +22,8 @@ export const TodaySpelling = ({ todayInfo }: { todayInfo: IToday }) => {
               <div>{todayInfo._source.description}</div>
               <div>{todayInfo._source.helpful_info}</div>
             </div>
-            {todayInfo._source.related?.id && (
-              <Link
-                href="/detail/[id]/"
-                as={`/detail/${todayInfo._source.related?.id}`}
-                passHref
-              >
-                <Button color="white" outline shadow>
-                  <div>친구</div>
-                  <Title size="small" color="blue" normal>
-                    {todayInfo._source.related.title}
-                  </Title>
-                </Button>
-              </Link>
+            {todayInfo._source.related && (
+              <RelatedInfo related={todayInfo._source.related} />
             )}
           </div>
         </OutlineBox>

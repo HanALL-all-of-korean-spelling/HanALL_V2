@@ -8,6 +8,7 @@ import { getUser } from "../../_reducer/userReducer";
 import { ShowAlertToast } from "../common/AlertToast/AlertToast";
 import { Button } from "../common/Button/Button";
 import { SmallText, Title } from "../common/Title/Title";
+import { RelatedInfo } from "./RelatedInfo";
 import style from "./DetailPage.module.scss";
 
 export const DetailPage = ({ detailInfo }: { detailInfo: IDetail }) => {
@@ -79,18 +80,7 @@ export const DetailPage = ({ detailInfo }: { detailInfo: IDetail }) => {
               {ShowAlertToast(isOpen, messageContent)}
             </div>
           </div>
-          {detailInfo.related?.id && (
-            <Link
-              href="/detail/[id]"
-              as={`/detail/${detailInfo.related?.id}`}
-              passHref
-            >
-              <Button color="white" outline shadow>
-                친구
-                <Title size="small">{detailInfo.related.title}</Title>
-              </Button>
-            </Link>
-          )}
+          {detailInfo.related && <RelatedInfo related={detailInfo.related} />}
         </div>
       )}
     </>

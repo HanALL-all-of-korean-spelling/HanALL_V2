@@ -40,3 +40,12 @@
     justify-content: flex-end;
   }
 }
+
+.RelatedInfo {
+  button {
+    padding: 0.6rem;
+    div:first-child {
+      min-width: fit-content;
+    }
+  }
+}
