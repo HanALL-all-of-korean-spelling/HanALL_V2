@@ -6,7 +6,7 @@ import { setTotalScore } from "../../_reducer/testReducer";
 import { setUserScore } from "../../_reducer/userReducer";
 import { Title } from "../common/Title/Title";
 import { Button } from "../common/Button/Button";
-import css from "styled-jsx/css";
+import style from "./ScrapPage.module.scss";
 
 export const TestList = ({ quizzes }: { quizzes: ITest[] }) => {
   const dispatch = useAppDispatch();
@@ -57,8 +57,7 @@ export const TestList = ({ quizzes }: { quizzes: ITest[] }) => {
   return (
     <>
       {quizzes?.map((quiz) => (
-        <div key={quiz._id}>
-          <style jsx>{style}</style>
+        <div key={quiz._id} className={style.TestList}>
           <Title color="black">다음 중 옳은 표현을 고르세요.</Title>
           <AnswerButton name={quiz._source.right_words} isRight={true} />
           <AnswerButton name={quiz._source.wrong_words} isRight={false} />
@@ -70,9 +69,3 @@ export const TestList = ({ quizzes }: { quizzes: ITest[] }) => {
     </>
   );
 };
-
-const style = css`
-  div {
-    margin-bottom: 4rem;
-  }
-`;

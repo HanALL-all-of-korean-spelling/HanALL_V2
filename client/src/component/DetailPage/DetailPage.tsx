@@ -7,7 +7,8 @@ import { useAppSelector } from "../../_app/hooks";
 import { getUser } from "../../_reducer/userReducer";
 import { ShowAlertToast } from "../common/AlertToast/AlertToast";
 import { Button } from "../common/Button/Button";
-import { Title } from "../common/Title/Title";
+import { SmallText, Title } from "../common/Title/Title";
+import style from "./DetailPage.module.scss";
 
 export const DetailPage = ({ detailInfo }: { detailInfo: IDetail }) => {
   const router = useRouter();
@@ -40,88 +41,57 @@ export const DetailPage = ({ detailInfo }: { detailInfo: IDetail }) => {
   return (
     <>
       {detailInfo && (
-        <>
-          <style jsx>{`
-            .cont {
-              max-width: 20rem;
-              display: flex;
-              flex-direction: column;
-              align-items: center;
-            }
-            .cont > div:first-child {
-              margin-bottom: 2rem;
-            }
-            div {
-              margin: 0.2rem;
-            }
-            .contDesc {
-              margin: 1rem 0 2rem;
-            }
-            .contDesc > div {
-              margin-bottom: 1.2rem;
-            }
-            .BtnCont {
-              margin-bottom: 2rem;
-            }
-          `}</style>
-          <div className="cont">
+        <div className={style.DetailPage}>
+          <Title>{detailInfo.title}</Title>
+          <div className={style.topInfo}>
             <div>
-              <Title>{detailInfo.title}</Title>
-              <div className="flex-row flex-end">
-                <div className="flex-row mr-1">
-                  <div className="mr-05">조회수</div>
-                  <div>{detailInfo.hits}</div>
-                </div>
-                <div className="flex-row">
-                  <div className="mr-05">보관</div>
-                  <div>{detailInfo.scraps}</div>
-                </div>
-              </div>
+              <SmallText>조회수</SmallText>
+              <div>{detailInfo.hits}</div>
             </div>
             <div>
-              <div className="flex-row">
-                <Title size="small">😄 옳은 표현:</Title>
-                <div>{detailInfo.right_words}</div>
-              </div>
-              <div className="flex-row">
-                <Title size="small">🤔 틀린 표현:</Title>
-                <div>{detailInfo.wrong_words}</div>
-              </div>
-              <div className="contDesc">
-                <div>{detailInfo.description}</div>
-                <div>{detailInfo.helpful_info}</div>
-              </div>
-
-              <div className="BtnCont flex-end">
-                <Button
-                  color="white"
-                  shadow
-                  onClick={() =>
-                    user
-                      ? setScrapAlert()
-                      : alert("스크랩하려면 로그인해주세요")
-                  }
-                >
-                  보관하기
-                </Button>
-                {ShowAlertToast(isOpen, messageContent)}
-              </div>
-
-              {detailInfo.related?.id && (
-                <Link
-                  href="/detail/[id]"
-                  as={`/detail/${detailInfo.related?.id}`}
-                  passHref
-                >
-                  <Button color="white" outline shadow>
-                    친구
-                    <Title size="small">{detailInfo.related.title}</Title>
-                  </Button>
-                </Link>
-              )}
+              <SmallText>보관</SmallText>
+              <div>{detailInfo.scraps}</div>
             </div>
           </div>
-        </>
+          <div>
+            <div className={style.answer}>
+              <div>😄 옳은 표현:</div>
+              <div>{detailInfo.right_words}</div>
+            </div>
+            <div className={style.answer}>
+              <div>🤔 틀린 표현:</div>
+              <div>{detailInfo.wrong_words}</div>
+            </div>
+            <div className={style.content}>
+              <div>{detailInfo.description}</div>
+              <div>{detailInfo.helpful_info}</div>
+            </div>
+            <div className={style.BtnCont}>
+              <Button
+                color="white"
+                shadow
+                onClick={() =>
+                  user ? setScrapAlert() : alert("스크랩하려면 로그인해주세요")
+                }
+              >
+                보관하기
+              </Button>
+              {ShowAlertToast(isOpen, messageContent)}
+            </div>
+          </div>
+          {detailInfo.related?.id && (
+            <Link
+              href="/detail/[id]"
+              as={`/detail/${detailInfo.related?.id}`}
+              passHref
+            >
+              <Button color="white" outline shadow>
+                친구
+                <Title size="small">{detailInfo.related.title}</Title>
+              </Button>
+            </Link>
+          )}
+        </div>
       )}
     </>
   );
