@@ -3,8 +3,8 @@ import React, { useState, useEffect } from "react";
 import { getQuestionDetail, getQuestions } from "../../services/qna-service";
 import { useAppDispatch, useAppSelector } from "../../_app/hooks";
 import { QuestionDetail } from "./QuestionDetail";
-import { SmallText } from "../Title/Title";
-import { PaginationView } from "../PaginationView/PaginationView";
+import { SmallText } from "../common/Title/Title";
+import { PaginationView } from "../common/PaginationView/PaginationView";
 import style from "./QnaPage.module.scss";
 
 import Accordion from "@mui/material/Accordion";

@@ -3,7 +3,7 @@ import classNames from "classnames";
 import style from "./Button.module.scss";
 
 type buttonType = {
-  children: any;
+  children: React.ReactNode;
   color: string;
   shadow?: boolean;
   outline?: boolean;

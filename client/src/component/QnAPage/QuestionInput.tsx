@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { FormEvent, useState } from "react";
 import { QuestionInputs } from "../../../types";
 import { postQuestions } from "../../services/qna-service";
 import { useAppDispatch } from "../../_app/hooks";
 import { addQuestion } from "../../_reducer/qnaReducer";
-import { ShowAlertToast } from "../AlertToast/AlertToast";
-import { Button } from "../Button/Button";
-import { Input } from "../Input/Input";
+import { ShowAlertToast } from "../common/AlertToast/AlertToast";
+import { Button } from "../common/Button/Button";
+import { Input } from "../common/Input/Input";
 import style from "./QnaPage.module.scss";
 
 export const QuestionInput = () => {
@@ -23,7 +23,7 @@ export const QuestionInput = () => {
     });
   };
 
-  const handleSubmit = async (e: any) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const res = await postQuestions(inputs);
     if (res?.status === 201) {

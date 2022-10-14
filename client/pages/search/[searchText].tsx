@@ -5,9 +5,9 @@ import { getSearchResult } from "../../src/services/user-service";
 import { DetailPage } from "../../src/component/DetailPage/DetailPage";
 import { RightWrong } from "../../src/component/SearchPage/RightWrong";
 import { SimilarResults } from "../../src/component/SearchPage/SimilarResults";
-import { Button } from "../../src/component/Button/Button";
-import { OutlineBox } from "../../src/component/OutlineBox/OutlineBox";
-import { MWContainer } from "../../src/component/MWContainer/MWContainer";
+import { Button } from "../../src/component/common/Button/Button";
+import { OutlineBox } from "../../src/component/common/OutlineBox/OutlineBox";
+import { MWContainer } from "../../src/component/common/MWContainer/MWContainer";
 import { SearchBar } from "../../src/component/SearchPage/SearchBar";
 
 const Search: NextPage<{ result?: ISearch }> = ({ result }) => {

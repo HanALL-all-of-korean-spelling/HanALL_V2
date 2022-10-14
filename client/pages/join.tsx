@@ -1,7 +1,7 @@
-import { useState } from "react";
-import { AlertToast } from "../src/component/AlertToast/AlertToast";
-import { Button } from "../src/component/Button/Button";
-import { Input } from "../src/component/Input/Input";
+import { FormEvent, useState } from "react";
+import { AlertToast } from "../src/component/common/AlertToast/AlertToast";
+import { Button } from "../src/component/common/Button/Button";
+import { Input } from "../src/component/common/Input/Input";
 import { join } from "../src/services/auth-service";
 import { JoinInputs } from "../types/auth";
 
@@ -18,7 +18,7 @@ export default function Join() {
     });
   };
 
-  const handleSubmit = async (e: any) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const res = await join(inputs);
     if (res?.data === "이미 가입하셨습니다.") {

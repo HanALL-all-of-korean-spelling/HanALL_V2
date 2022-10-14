@@ -1,12 +1,12 @@
-import { useState } from "react";
+import { FormEvent, useState } from "react";
 import Link from "next/link";
 import { getUserInfo, login } from "../src/services/auth-service";
 import { useAppDispatch } from "../src/_app/hooks";
 import { setUser } from "../src/_reducer/userReducer";
 import { LoginInputs } from "../types/auth";
-import { Input } from "../src/component/Input/Input";
-import { Button } from "../src/component/Button/Button";
-import { AlertToast } from "../src/component/AlertToast/AlertToast";
+import { Input } from "../src/component/common/Input/Input";
+import { Button } from "../src/component/common/Button/Button";
+import { AlertToast } from "../src/component/common/AlertToast/AlertToast";
 
 export default function Login() {
   const initialValues: LoginInputs = { email: "", password: "" };
@@ -23,7 +23,7 @@ export default function Login() {
     });
   };
 
-  const handleSubmit = async (e: any) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const res = await login(inputs);
     if (res?.status === 200) {

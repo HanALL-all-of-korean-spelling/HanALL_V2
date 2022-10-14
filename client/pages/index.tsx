@@ -8,7 +8,7 @@ import { IMainList, IToday } from "../types";
 import { MainInfo } from "../src/component/MainPage/MainInfo";
 import { TodaySpelling } from "../src/component/MainPage/TodaySpelling";
 import { SearchBar } from "../src/component/SearchPage/SearchBar";
-import { MWContainer } from "../src/component/MWContainer/MWContainer";
+import { MWContainer } from "../src/component/common/MWContainer/MWContainer";
 
 const Home: NextPage<{
   todayInfo: IToday;

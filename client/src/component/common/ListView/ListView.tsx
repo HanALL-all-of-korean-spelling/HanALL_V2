@@ -2,7 +2,7 @@ import React from "react";
 import style from "./ListView.module.scss";
 
 type listType = {
-  children: any;
+  children: React.ReactNode;
 };
 
 export const ListView = ({ children }: listType) => {

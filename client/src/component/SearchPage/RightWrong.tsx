@@ -1,6 +1,6 @@
 import React from "react";
 import { ISearch } from "../../../types";
-import { Title } from "../Title/Title";
+import { Title } from "../common/Title/Title";
 import style from "./SearchPage.module.scss";
 
 export const RightWrong = ({ result }: { result: ISearch }) => {
@@ -13,7 +13,7 @@ export const RightWrong = ({ result }: { result: ISearch }) => {
       {result.flag ? (
         <>당신은 맞춤법 지킴이!😀</>
       ) : (
-        <div>우리 같이 맞춤법을 지켜요!😮🦾</div>
+        <>우리 같이 맞춤법을 지켜요!😮🦾</>
       )}
     </div>
   );

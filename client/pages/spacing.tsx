@@ -4,10 +4,10 @@ import React, { useState } from "react";
 import { getSpacingList } from "../src/services/user-service";
 import { IPageList } from "../types";
 import { InfoListPage } from "../src/component/InfoListPage/InfoListPage";
-import { Title } from "../src/component/Title/Title";
-import { PaginationView } from "../src/component/PaginationView/PaginationView";
+import { Title } from "../src/component/common/Title/Title";
+import { PaginationView } from "../src/component/common/PaginationView/PaginationView";
 import { SearchBar } from "../src/component/SearchPage/SearchBar";
-import { SelectSort } from "../src/component/SelectSort/SelectSort";
+import { SelectSort } from "../src/component/common/SelectSort/SelectSort";
 
 const Spacing: NextPage<{ spacings: IPageList }> = ({ spacings }) => {
   const router = useRouter();
