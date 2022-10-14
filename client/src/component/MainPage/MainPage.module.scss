@@ -5,7 +5,15 @@
   justify-content: center;
   min-width: 14rem;
 
-  div {
+  div,
+  a {
     margin: 0.5rem 0;
+  }
+}
+
+.MainInfo {
+  div:first-child {
+    display: flex;
+    justify-content: space-between;
   }
 }

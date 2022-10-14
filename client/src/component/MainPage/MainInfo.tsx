@@ -23,7 +23,7 @@ export const MainInfo = ({
           }}
           passHref
         >
-          <div className="flex-between">
+          <div>
             <Title>{title}</Title>
             <Button color="white" outline>
               더보기
