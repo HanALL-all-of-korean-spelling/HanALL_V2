@@ -3,6 +3,7 @@ import { useState } from "react";
 import { UserNickname } from "../User/UserNickname";
 import ListRoundedIcon from "@mui/icons-material/ListRounded";
 import style from "./Gnb.module.scss";
+import Image from "next/image";
 
 export default function Gnb() {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,7 +21,15 @@ export default function Gnb() {
         onClick={onClickClose}
       >
         <Link href="/" passHref>
-          <div>메인</div>
+          <section>
+            <Image
+              src="/images/hanall_logo.svg"
+              alt="logo"
+              width={30}
+              height={30}
+            />
+            <div>메인</div>
+          </section>
         </Link>
         <Link
           href={{
