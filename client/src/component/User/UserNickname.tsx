@@ -28,13 +28,13 @@ export const UserNickname = () => {
       {user ? (
         <>
           <div>{user.nickname}님</div>
-          <Button color="white" onClick={onClickLogout}>
+          <Button color="lightYellow" onClick={onClickLogout}>
             로그아웃
           </Button>
         </>
       ) : (
         <Link href="/login" passHref>
-          <Button color="white">로그인하기</Button>
+          <Button color="lightYellow">로그인하기</Button>
         </Link>
       )}
       {ShowMessage(isLogout)}

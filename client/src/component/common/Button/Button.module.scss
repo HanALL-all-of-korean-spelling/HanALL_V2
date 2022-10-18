@@ -13,7 +13,6 @@
   }
   &.outline {
     border: 1.5px solid $concept-yellow;
-    padding: 1.2rem;
   }
   &.fullWidth {
     width: 100%;
@@ -25,14 +24,17 @@
   border: none;
   border-radius: 10px;
   padding: 0 1rem;
-  margin-left: 0.5rem;
   cursor: pointer;
-  height: 2rem;
+  min-height: 2rem;
   background-color: $concept-yellow;
   display: inline-flex;
   justify-content: center;
   align-items: center;
   min-width: fit-content;
+
+  & + & {
+    margin-left: 0.5rem;
+  }
 
   &.yellow {
     @include button-color($concept-yellow);
@@ -40,6 +42,13 @@
 
   &.pink {
     @include button-color($concept-pink);
+  }
+
+  &.lightYellow {
+    @include button-color(lighten($concept-yellow, 15%));
+    &:hover {
+      background: lighten($concept-yellow, 8%);
+    }
   }
 
   &.lightPink {
