@@ -15,13 +15,12 @@
   &.pink {
     color: $concept-pink;
   }
-  &.blue {
+  &.blue,
+  &.blueMargin {
     color: #88a2ff;
+  }
+  &.blueMargin {
     margin: 1.2rem 0 0.4rem;
-    &.normal {
-      font-weight: normal;
-      margin: 0;
-    }
   }
 
   // size

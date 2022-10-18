@@ -24,18 +24,18 @@ export const MainInfo = ({
           passHref
         >
           <div>
-            <Title>{title}</Title>
+            <Title color="black">{title}</Title>
             <Button color="white" outline>
               더보기
             </Button>
           </div>
         </Link>
         <div>
-          <Title color="blue" size="small">
+          <Title color="blueMargin" size="small">
             다른 사람들이 많이 봤어요!
           </Title>
           <InfoListPage list={list.hits_order} type="hits" />
-          <Title color="blue" size="small">
+          <Title color="blueMargin" size="small">
             새로 추가됐어요!
           </Title>
           <InfoListPage list={list.created_at_order} type="created_at" />

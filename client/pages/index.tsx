@@ -22,7 +22,7 @@ const Home: NextPage<{
           width: 60rem;
         }
       `}</style>
-      <SearchBar />
+      <SearchBar showLogo />
       <MWContainer>
         <TodaySpelling todayInfo={todayInfo} />
         <MainInfo spellingList={spellingList} spacingList={spacingList} />
