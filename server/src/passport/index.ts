@@ -28,6 +28,7 @@ declare global {
       scraps: scraps;
       rank: string;
       point: number;
+      is_admin: boolean;
     }
   }
 }
@@ -99,7 +100,13 @@ const JWTVerify = async (jwtPayload: any, done: any) => {
       },
     });
     // 유저 데이터가 있다면 유저 데이터 전송
+    console.log("user:", user.body.hits.hits[0]._source.email);
+    let is_admin: boolean = false;
     if (user) {
+      if (user.body.hits.hits[0]._source.email === process.env.ADMIN_EMAIL) {
+        is_admin = true;
+      }
+      user.body.hits.hits[0]._source.is_admin = is_admin;
       done(null, user.body.hits.hits[0]);
       return;
     }
