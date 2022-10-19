@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { IMainList } from "../../../types";
-import { InfoListPage } from "../InfoListPage/InfoListPage";
+import { InfoList } from "../InfoListPage/InfoList";
 import { Button } from "../common/Button/Button";
 import { Title } from "../common/Title/Title";
 import { MWContainer } from "../common/MWContainer/MWContainer";
@@ -34,11 +34,11 @@ export const MainInfo = ({
           <Title color="blueMargin" size="small">
             다른 사람들이 많이 봤어요!
           </Title>
-          <InfoListPage list={list.hits_order} type="hits" />
+          <InfoList list={list.hits_order} type="hits" />
           <Title color="blueMargin" size="small">
             새로 추가됐어요!
           </Title>
-          <InfoListPage list={list.created_at_order} type="created_at" />
+          <InfoList list={list.created_at_order} type="created_at" />
         </div>
       </div>
     );
