@@ -2,6 +2,7 @@ import express, { Request, Response, NextFunction } from "express";
 const router = express.Router();
 const esClient = require("../models/connection.ts");
 import passport from "passport";
+import { SrvRecord } from "dns";
 const index: String = "words";
 
 router
@@ -152,7 +153,7 @@ router
     passport.authenticate("jwt", { session: false }),
     async (req: Request, res: Response, next: NextFunction) => {
       //console.log(req.user);
-      if (req.user?._source.email != "matji1349@gmail.com") {
+      if (req.user?._source.is_admin === false) {
         return res.status(400).send("잘못된 접근입니다.");
       }
       try {
@@ -247,7 +248,7 @@ router
   .put(
     passport.authenticate("jwt", { session: false }),
     async (req: Request, res: Response, next: NextFunction) => {
-      if (req.user?._source.email != "matji1349@gmail.com") {
+      if (req.user?._source.is_admin === false) {
         res.status(400).send("잘못된 접근입니다.");
       }
       try {
@@ -274,7 +275,7 @@ router
   .delete(
     passport.authenticate("jwt", { session: false }),
     async (req: Request, res: Response, next: NextFunction) => {
-      if (req.user?._source.email != "matji1349@gmail.com") {
+      if (req.user?._source.is_admin === false) {
         return res.status(400).send("잘못된 접근입니다.");
       }
       try {
