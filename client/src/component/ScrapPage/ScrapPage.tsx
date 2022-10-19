@@ -2,11 +2,12 @@ import { useAppSelector } from "../../_app/hooks";
 import { getUser } from "../../_reducer/userReducer";
 import { MyInfo } from "./MyInfo";
 import { ScrapInfo } from "./ScrapInfo";
+import style from "./ScrapPage.module.scss";
 
 export const ScrapPage = () => {
   const user = useAppSelector(getUser).user;
   return (
-    <div>
+    <div className={style.ScrapPage}>
       {user ? (
         <div>
           <MyInfo user={user} />

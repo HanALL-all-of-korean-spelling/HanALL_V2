@@ -6,6 +6,7 @@ import { ScrapList } from "./ScrapList";
 import { MWContainer } from "../common/MWContainer/MWContainer";
 import { Title } from "../common/Title/Title";
 import { Button } from "../common/Button/Button";
+import style from "./ScrapPage.module.scss";
 
 export const ScrapInfo = () => {
   const router = useRouter();
@@ -24,7 +25,7 @@ export const ScrapInfo = () => {
   return (
     <>
       {scraps ? (
-        <div>
+        <div className={style.ScrapInfo}>
           <Button onClick={() => router.push("/test")}>시험 응시</Button>
           <MWContainer>
             <div>
