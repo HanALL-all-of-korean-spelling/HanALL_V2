@@ -1,9 +1,8 @@
-import React from "react";
 import classNames from "classnames";
 import style from "./Title.module.scss";
 
 type titleType = {
-  children: string;
+  children: React.ReactNode;
   color: string;
   size: string;
   normal?: boolean;

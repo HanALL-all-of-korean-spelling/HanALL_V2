@@ -11,7 +11,6 @@ export const ScrapList = ({ scraps }: { scraps: IRelated[] }) => {
           <Link href="/detail/[id]" as={`/detail/${info.id}`} passHref>
             <div key={info.id}>
               <div>{info.title}</div>
-              <div></div>
             </div>
           </Link>
         </>
