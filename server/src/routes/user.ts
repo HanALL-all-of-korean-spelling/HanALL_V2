@@ -13,8 +13,9 @@ router.get(
   passport.authenticate("jwt", { session: false }),
   (req: Request, res: Response, next: NextFunction) => {
     try {
-      const email = req.user?._source.email;
+      const user_id = req.user?._id;
       const nickname = req.user?._source.nickname;
+      const is_admin = req.user?._source.is_admin;
 
       // 한 번도 포인트를 얻지 못 한 경우
       let point = 0;
@@ -27,7 +28,7 @@ router.get(
       if (req.user?._source.rank) {
         rank = req.user?._source.rank;
       }
-      return res.json({ email, nickname, rank, point });
+      return res.json({ user_id, nickname, rank, point, is_admin });
     } catch (error) {
       console.error(error);
       next(error);
