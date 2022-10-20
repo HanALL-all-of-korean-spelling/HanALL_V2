@@ -43,43 +43,39 @@ export const QuestionList = () => {
     getData();
   }, [id, page]);
 
-  const renderQna =
-    qnaList?.result &&
-    qnaList.result.map((qna) => {
-      return (
-        <Accordion
-          key={qna._id}
-          onClick={() => setId(qna._id)}
-          expanded={expanded === qna._id}
-          onChange={handleChange(qna._id)}
-        >
-          {/* 문의 타이틀 */}
-          <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-            <div className={style.titleCont}>
-              <div>{qna._source.title}</div>
-              <div>
-                {qna._source.answer_flag ? (
-                  <MarkChatReadOutlinedIcon className={style.icon} />
-                ) : (
-                  <div></div>
-                )}
-                <SmallText>{qna._source.created_at.substring(0, 10)}</SmallText>
-              </div>
-            </div>
-          </AccordionSummary>
-          {/* 문의 상세 내용 */}
-          <AccordionDetails>
-            {qnaDetail && <QuestionDetail id={id} qnaDetail={qnaDetail} />}
-          </AccordionDetails>
-        </Accordion>
-      );
-    });
-
   return (
     <>
       {qnaList && (
-        <div>
-          <div className={style.QuestionList}>{renderQna}</div>
+        <div className={style.QuestionList}>
+          {qnaList?.result?.map((qna) => (
+            <Accordion
+              key={qna._id}
+              onClick={() => setId(qna._id)}
+              expanded={expanded === qna._id}
+              onChange={handleChange(qna._id)}
+            >
+              {/* 문의 타이틀 */}
+              <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+                <div className={style.titleCont}>
+                  <div>{qna._source.title}</div>
+                  <div>
+                    {qna._source.answer_flag ? (
+                      <MarkChatReadOutlinedIcon className={style.icon} />
+                    ) : (
+                      <div></div>
+                    )}
+                    <SmallText>
+                      {qna._source.created_at.substring(0, 10)}
+                    </SmallText>
+                  </div>
+                </div>
+              </AccordionSummary>
+              {/* 문의 상세 내용 */}
+              <AccordionDetails>
+                {qnaDetail && <QuestionDetail id={id} qnaDetail={qnaDetail} />}
+              </AccordionDetails>
+            </Accordion>
+          ))}
           <PaginationView total={qnaList?.total_page} current={+page} />
         </div>
       )}
