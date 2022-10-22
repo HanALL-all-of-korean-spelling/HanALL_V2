@@ -56,7 +56,7 @@ export const LoginForm = () => {
         minLength={8}
       />
       <Button type="submit">Login</Button>
-      <div>
+      <div className={style.infoText}>
         <div>한올이 처음이라면?</div>
         <Link href="/join" passHref>
           <div>회원가입하러 가기</div>

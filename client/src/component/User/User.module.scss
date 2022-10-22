@@ -1,19 +1,21 @@
-.LoginForm {
-  display: flex;
-  height: 90vh;
-  align-items: center;
-  justify-content: center;
-  align-content: center;
-  flex-direction: column;
-  margin: 5px 0px;
-}
-
+.LoginForm,
 .JoinForm {
   display: flex;
   height: 90vh;
-  align-items: center;
   justify-content: center;
   align-content: center;
   flex-direction: column;
-  margin: 5px 0px;
+  button {
+    margin-top: 1rem;
+  }
+}
+
+.infoText {
+  margin-top: 1.4rem;
+  text-align: center;
+  div:last-child {
+    margin-top: 0.2rem;
+    color: #88a2ff;
+    cursor: pointer;
+  }
 }
