@@ -25,16 +25,18 @@ export const MyInfo = ({ user, score }: { user: IUser; score?: number }) => {
           <strong>{user.rank}</strong>
         </div>
       </div>
-      <Button
-        fullWidth
-        color="lightPink"
-        shadow
-        onClick={() => {
-          router.push("/scrap");
-        }}
-      >
-        보관함으로 돌아가기
-      </Button>
+      {score && (
+        <Button
+          fullWidth
+          color="lightPink"
+          shadow
+          onClick={() => {
+            router.push("/scrap");
+          }}
+        >
+          보관함으로 돌아가기
+        </Button>
+      )}
     </>
   );
 };

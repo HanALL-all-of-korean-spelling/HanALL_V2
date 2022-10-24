@@ -1,0 +1,8 @@
+@import "../../../styles/_settings.media.module.scss";
+
+.InfoListPage {
+  width: 30rem;
+  @include mobile {
+    width: 100%;
+  }
+}

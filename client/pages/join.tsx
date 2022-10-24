@@ -1,71 +1,8 @@
-import { FormEvent, useState } from "react";
-import { AlertToast } from "../src/component/common/AlertToast/AlertToast";
-import { Button } from "../src/component/common/Button/Button";
-import { Input } from "../src/component/common/Input/Input";
-import { join } from "../src/services/auth-service";
-import { JoinInputs } from "../types/auth";
+import { NextPage } from "next";
+import { JoinForm } from "../src/component/User/JoinForm";
 
-export default function Join() {
-  const initialValues: JoinInputs = { email: "", password: "", nickname: "" };
-  const [inputs, setInputs] = useState<JoinInputs>(initialValues);
-  const [isAlert, setIsAlert] = useState(false);
+const Join: NextPage = () => {
+  return <JoinForm />;
+};
 
-  const handleInputChange = (e: React.ChangeEvent<any>) => {
-    e.persist();
-    setInputs({
-      ...inputs,
-      [e.target.name]: e.target.value,
-    });
-  };
-
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    const res = await join(inputs);
-    if (res?.data === "이미 가입하셨습니다.") {
-      setIsAlert(true);
-    }
-  };
-
-  return (
-    <form onSubmit={handleSubmit}>
-      <style jsx>{`
-        form {
-          display: flex;
-          height: 90vh;
-          align-items: center;
-          justify-content: center;
-          align-content: center;
-          flex-direction: column;
-          margin: 5px 0px;
-        }
-      `}</style>
-      <Input
-        type="email"
-        name="email"
-        placeholder="email"
-        onChange={handleInputChange}
-        value={inputs.email}
-        required
-      />
-      <Input
-        type="password"
-        name="password"
-        placeholder="Password"
-        onChange={handleInputChange}
-        value={inputs.password}
-        required
-        minLength={8}
-      />
-      <Input
-        type="nickname"
-        name="nickname"
-        placeholder="nickname"
-        onChange={handleInputChange}
-        value={inputs.nickname}
-        required
-      />
-      <Button type="submit">join</Button>
-      {isAlert && <AlertToast message="이미 가입된 이메일입니다." />}
-    </form>
-  );
-}
+export default Join;

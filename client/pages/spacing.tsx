@@ -1,36 +1,10 @@
 import type { GetServerSideProps, NextPage } from "next";
-import { useRouter } from "next/router";
-import React, { useState } from "react";
 import { getSpacingList } from "../src/services/user-service";
 import { IPageList } from "../types";
 import { InfoListPage } from "../src/component/InfoListPage/InfoListPage";
-import { Title } from "../src/component/common/Title/Title";
-import { PaginationView } from "../src/component/common/PaginationView/PaginationView";
-import { SearchBar } from "../src/component/SearchPage/SearchBar";
-import { SelectSort } from "../src/component/common/SelectSort/SelectSort";
 
 const Spacing: NextPage<{ spacings: IPageList }> = ({ spacings }) => {
-  const router = useRouter();
-  const page = router.query.page as string;
-  const sort = router.query.sort as string;
-
-  return (
-    <div>
-      <SearchBar />
-      <Title>띄어쓰기 정보</Title>
-      {spacings && (
-        <>
-          <SelectSort sort={sort} page={+page} />
-          <InfoListPage list={spacings.result} type={sort} />
-          <PaginationView
-            total={spacings.total_page}
-            current={+page}
-            sort={sort}
-          />
-        </>
-      )}
-    </div>
-  );
+  return <InfoListPage data={spacings} typeTitle="띄어쓰기" />;
 };
 
 export default Spacing;
