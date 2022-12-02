@@ -58,14 +58,14 @@ services:
         limits:
           memory: 10g
 
-  # kibana:
-  #   image: docker.elastic.co/kibana/kibana:7.13.0
-  #   container_name: kibana
-  #   ports:
-  #     - 5601:5601
-  #   environment:
-  #     ELASTICSEARCH_URL: http://43.201.48.36:9200/
-  #     ELASTICSEARCH_HOSTS: http://43.201.48.36:9200/
+  kibana:
+    image: docker.elastic.co/kibana/kibana:7.13.0
+    container_name: kibana
+    ports:
+      - 5601:5601
+    environment:
+      ELASTICSEARCH_URL: http://43.201.48.36:9200/
+      ELASTICSEARCH_HOSTS: http://43.201.48.36:9200/
 
 volumes:
   data:
