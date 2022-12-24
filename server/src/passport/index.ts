@@ -77,8 +77,8 @@ const passportVerify = async (email: String, password: String, done: any) => {
 };
 
 const cookieExtractor = (req: Request) => {
-  const { token } = req.cookies;
-  return token;
+  const { accesstoken } = req.cookies;
+  return accesstoken;
 };
 
 const JWTConfig = {

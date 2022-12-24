@@ -32,40 +32,40 @@ services:
       - ./server:/app
     environment:
       - NODE_ENV=development
-      - ES_HOST=43.201.48.36
+      - ES_HOST=elasticsearch
 
-  # elasticsearch:
-  #   build:
-  #     dockerfile: Dockerfile.dev
-  #     context: ./elasticsearch
-  #   container_name: elasticsearch
-  #   environment:
-  #     - node.name=elasticsearch
-  #     - cluster.name=es-docker-cluster
-  #     - cluster.initial_master_nodes=elasticsearch
-  #     - bootstrap.memory_lock=true
-  #     - ES_JAVA_OPTS=-Xms750m -Xmx750m
-  #   ulimits:
-  #     memlock:
-  #       soft: -1
-  #       hard: -1
-  #   volumes:
-  #     - data:/usr/share/elasticsearch/data
-  #   ports:
-  #     - 9200:9200
-  #   deploy:
-  #     resources:
-  #       limits:
-  #         memory: 10g
+  elasticsearch:
+    build:
+      dockerfile: Dockerfile.dev
+      context: ./elasticsearch
+    container_name: elasticsearch
+    environment:
+      - node.name=elasticsearch
+      - cluster.name=es-docker-cluster
+      - cluster.initial_master_nodes=elasticsearch
+      - bootstrap.memory_lock=true
+      - ES_JAVA_OPTS=-Xms750m -Xmx750m
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    volumes:
+      - data:/usr/share/elasticsearch/data
+    ports:
+      - 9200:9200
+    deploy:
+      resources:
+        limits:
+          memory: 10g
 
-  # kibana:
-  #   image: docker.elastic.co/kibana/kibana:7.13.0
-  #   container_name: kibana
-  #   ports:
-  #     - 5601:5601
-  #   environment:
-  #     ELASTICSEARCH_URL: http://43.201.48.36:9200/
-  #     ELASTICSEARCH_HOSTS: http://43.201.48.36:9200/
+  kibana:
+    image: docker.elastic.co/kibana/kibana:7.13.0
+    container_name: kibana
+    ports:
+      - 5601:5601
+    environment:
+      ELASTICSEARCH_URL: http://elasticsearch:9200/
+      ELASTICSEARCH_HOSTS: http://elasticsearch:9200/
 
 volumes:
   data:
