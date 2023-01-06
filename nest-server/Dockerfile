@@ -8,7 +8,7 @@ COPY ./package.json ./
 
 RUN npm install
 
-ENV NODE_PATH /app/node_modules/
+# ENV NODE_PATH /app/node_modules/
 
 COPY . .
 

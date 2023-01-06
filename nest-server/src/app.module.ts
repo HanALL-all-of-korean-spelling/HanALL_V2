@@ -1,10 +1,31 @@
-import { Module } from '@nestjs/common';
+import { Module, OnModuleInit } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
+import { TypeOrmModule } from '@nestjs/typeorm';
+import { ConfigModule } from '@nestjs/config';
 
 @Module({
-  imports: [],
+  imports: [
+    ConfigModule.forRoot({
+      envFilePath: '.env',
+      isGlobal: true,
+    }),
+    TypeOrmModule.forRoot({
+      type: 'mysql',
+      host: process.env.MYSQL_HOST,
+      port: 3306,
+      username: process.env.MYSQL_USER_NAME,
+      password: process.env.MYSQL_PASSWORD,
+      database: process.env.MYSQL_DB_NAME,
+      entities: [],
+      synchronize: false,
+    }),
+  ],
   controllers: [AppController],
   providers: [AppService],
 })
-export class AppModule {}
+export class AppModule {
+  OnModuleInit() {
+    console.log('Ddd');
+  }
+}
