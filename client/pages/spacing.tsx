@@ -6,7 +6,7 @@ import { IPageList } from "../types";
 import { InfoListPage } from "../src/component/InfoListPage/InfoListPage";
 
 // const Spacing: NextPage<{ spacings: IPageList }> = ({ spacings }) => {
-const Spacing = () => {
+const Spacing: NextPage = () => {
   const router = useRouter();
   const sort = router.query.sort as string;
   const page = router.query.page as string;
@@ -20,7 +20,7 @@ const Spacing = () => {
     getData();
   }, [sort, page]);
 
-  return spacings && <InfoListPage data={spacings} typeTitle="띄어쓰기" />;
+  return <InfoListPage data={spacings} typeTitle="띄어쓰기" />;
 };
 
 export default Spacing;
