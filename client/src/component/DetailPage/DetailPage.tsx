@@ -61,7 +61,13 @@ export const DetailPage = ({ detailInfo }: { detailInfo: IDetail }) => {
             </div>
             <div className={style.answer}>
               <div>🤔 틀린 표현:</div>
-              <div>{detailInfo.wrong_words}</div>
+              <div>
+                {detailInfo.wrong_words.map((word, index) =>
+                  index === detailInfo.wrong_words.length - 1
+                    ? word
+                    : `${word}, `
+                )}
+              </div>
             </div>
             <div className={style.content}>
               <div>{detailInfo.description}</div>

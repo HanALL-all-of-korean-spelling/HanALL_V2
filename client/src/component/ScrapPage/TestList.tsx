@@ -60,7 +60,9 @@ export const TestList = ({ quizzes }: { quizzes: ITest[] }) => {
         <div key={quiz._id} className={style.TestList}>
           <Title color="black">다음 중 옳은 표현을 고르세요.</Title>
           <AnswerButton name={quiz._source.right_words} isRight={true} />
-          <AnswerButton name={quiz._source.wrong_words} isRight={false} />
+          {quiz._source.wrong_words.map((word) => (
+            <AnswerButton name={word} isRight={false} key={word} />
+          ))}
         </div>
       ))}
       <Button fullWidth shadow onClick={onClickResult}>
