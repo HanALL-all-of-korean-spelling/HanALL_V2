@@ -1,25 +1,25 @@
 version: "3.7"
 services:
-  client:
-    build:
-      dockerfile: Dockerfile.dev
-      context: ./client
-    restart: always
-    volumes:
-      - /app/static
-      - /app/node_modules
-      - ./client:/app
-    container_name: client
-    stdin_open: true
+  # client:
+  #   build:
+  #     dockerfile: Dockerfile.dev
+  #     context: ./client
+  #   restart: always
+  #   volumes:
+  #     - /app/static
+  #     - /app/node_modules
+  #     - ./client:/app
+  #   container_name: client
+  #   stdin_open: true
 
-  nginx:
-    restart: always
-    build:
-      dockerfile: Dockerfile
-      context: ./nginx
-    container_name: nginx
-    ports:
-      - "3000:80"
+  # nginx:
+  #   restart: always
+  #   build:
+  #     dockerfile: Dockerfile
+  #     context: ./nginx
+  #   container_name: nginx
+  #   ports:
+  #     - "3000:80"
 
   # server:
   #   build:
@@ -43,8 +43,11 @@ services:
       - /app/static
       - /app/node_modules
       - ./nest-server:/app
-    environment:
-      - NODE_ENV=development
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mysql
+    env_file: .env
 
   # elasticsearch:
   #   build:
@@ -86,13 +89,13 @@ services:
     ports:
       - 3307:3306
     environment:
-      - MYSQL_ROOT_PASSWORD = ${MYSQL_PASSWORD}
-      - TZ = Asia/Seoul
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
     volumes:
-      - ./db/mysql/data:/var/lib/mysql
-      - ./db/mysql/init:/docker-entrypoint-initdb.d
+      - mysql-data:/var/lib/mysql
     platform: linux/x86_64
+    env_file: .env
 
 volumes:
-  data:
-    driver: local
+  mysql-data: {}
