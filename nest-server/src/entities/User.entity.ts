@@ -22,10 +22,13 @@ export class User {
   nickname: string;
 
   @Column('varchar', { comment: '등급', length: 50 })
-  rank: string;
+  userRank: string;
 
   @Column({ type: 'int', comment: '획득 점수' })
-  point: number;
+  userPoint: number;
+
+  @Column({ type: 'int', comment: '어드민 계정 여부' })
+  isAdmin: number;
 
   @CreateDateColumn({ name: 'createTime', type: 'timestamp' })
   createTime: Date | null;
