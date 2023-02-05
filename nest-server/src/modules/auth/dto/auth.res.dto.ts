@@ -8,16 +8,13 @@ export class LoginResDto {
   refreshtoken: string;
 
   @ApiProperty()
+  userId: number;
+
+  @ApiProperty()
   email: string;
 
   @ApiProperty()
   nickname: string;
-
-  @ApiProperty()
-  rank: string;
-
-  @ApiProperty()
-  point: number;
 
   @ApiProperty()
   isAdmin: number;
@@ -25,16 +22,13 @@ export class LoginResDto {
 
 export class AccessCheckResDto {
   @ApiProperty()
+  userId: number;
+
+  @ApiProperty()
   email: string;
 
   @ApiProperty()
   nickname: string;
-
-  @ApiProperty()
-  rank: string;
-
-  @ApiProperty()
-  point: number;
 
   @ApiProperty()
   isAdmin: number;
@@ -45,16 +39,13 @@ export class RefreshCheckResDto {
   accesstoken: string;
 
   @ApiProperty()
+  userId: number;
+
+  @ApiProperty()
   email: string;
 
   @ApiProperty()
   nickname: string;
-
-  @ApiProperty()
-  rank: string;
-
-  @ApiProperty()
-  point: number;
 
   @ApiProperty()
   isAdmin: number;

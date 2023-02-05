@@ -3,6 +3,7 @@ import { ConfigService } from '@nestjs/config';
 import { JwtService } from '@nestjs/jwt';
 import { InjectRepository } from '@nestjs/typeorm';
 import { User } from 'src/entities/User.entity';
+import { maskingEmail } from 'src/utils/maskingModule';
 import { Repository } from 'typeorm';
 import { UsersRepository } from '../users/users.repository';
 import { LoginReqDto, UserWithToken } from './dto/auth.req.dto';
@@ -16,25 +17,23 @@ export class AuthService {
   ) {}
 
   async checkAccessToken(user: User) {
-    const userEmail = this.maskingEmail(user.email);
+    const userEmail = maskingEmail(user.email);
     const userData = {
+      userId: user.id,
       email: userEmail,
       nickname: user.nickname,
-      rank: user.userRank,
-      point: user.userPoint,
       isAdmin: user.isAdmin,
     };
     return userData;
   }
 
   async checkRefreshToken(user: UserWithToken) {
-    const userEmail = this.maskingEmail(user.email);
+    const userEmail = maskingEmail(user.email);
     const userData = {
       accesstoken: user.accesstoken,
+      userId: user.id,
       email: userEmail,
       nickname: user.nickname,
-      rank: user.userRank,
-      point: user.userPoint,
       isAdmin: user.isAdmin,
     };
     return userData;
@@ -49,7 +48,7 @@ export class AuthService {
       throw new BadRequestException(
         '이메일 또는 비밀번호가 일치하지 않습니다.',
       );
-    const userEmail = this.maskingEmail(user.email);
+    const userEmail = maskingEmail(user.email);
     const accesstoken: string = this.jwtService.sign(
       { userId: user.id },
       {
@@ -69,21 +68,11 @@ export class AuthService {
     const userData = {
       accesstoken: accesstoken,
       refreshtoken: refreshtoken,
+      userId: user.id,
       email: userEmail,
       nickname: user.nickname,
-      rank: user.userRank,
-      point: user.userPoint,
       isAdmin: user.isAdmin,
     };
     return userData;
-  }
-
-  maskingEmail(email: string) {
-    const strLength = email.split('@')[0].length - 3;
-    const userEmail = email.replace(
-      new RegExp('.(?=.{0,' + strLength + '}@)', 'g'),
-      '*',
-    );
-    return userEmail;
   }
 }

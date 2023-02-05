@@ -1,12 +1,19 @@
 import {
   BadRequestException,
+  ForbiddenException,
+  forwardRef,
+  Inject,
   Injectable,
   InternalServerErrorException,
+  NotFoundException,
 } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { JoinReqDto } from './dto/users.req.dto';
 import { UsersRepository } from './users.repository';
 import * as bcrypt from 'bcrypt';
+import { User } from 'src/entities/User.entity';
+import { AuthService } from '../auth/auth.service';
+import { maskingEmail } from 'src/utils/maskingModule';
 
 @Injectable()
 export class UsersService {
@@ -36,5 +43,19 @@ export class UsersService {
       throw new InternalServerErrorException('회원가입에 실패했습니다.');
     }
     return createUser;
+  }
+
+  async mypage(user: User, userId: number) {
+    if (user.id !== userId) {
+      throw new ForbiddenException('접근 권한이 없습니다.');
+    }
+    const userEmail = maskingEmail(user.email);
+    const userData = {
+      email: userEmail,
+      nickname: user.nickname,
+      userRank: user.userRank,
+      userPoint: user.userPoint,
+    };
+    return userData;
   }
 }
