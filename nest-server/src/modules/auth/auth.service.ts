@@ -4,12 +4,13 @@ import { JwtService } from '@nestjs/jwt';
 import { InjectRepository } from '@nestjs/typeorm';
 import { User } from 'src/entities/User.entity';
 import { Repository } from 'typeorm';
+import { UsersRepository } from '../users/users.repository';
 import { LoginReqDto, UserWithToken } from './dto/auth.req.dto';
 
 @Injectable()
 export class AuthService {
   constructor(
-    @InjectRepository(User) private userRepository: Repository<User>,
+    private usersRepository: UsersRepository,
     private jwtService: JwtService,
     private configService: ConfigService,
   ) {}
@@ -40,12 +41,10 @@ export class AuthService {
   }
 
   async login(loginReqDto: LoginReqDto) {
-    const user = await this.userRepository.findOne({
-      where: {
-        email: loginReqDto.email,
-        passwd: loginReqDto.passwd,
-      },
-    });
+    const user = await this.usersRepository.findOneByEmailPwd(
+      loginReqDto.email,
+      loginReqDto.passwd,
+    );
     if (!user)
       throw new BadRequestException(
         '이메일 또는 비밀번호가 일치하지 않습니다.',

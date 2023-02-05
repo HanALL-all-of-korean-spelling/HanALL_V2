@@ -8,10 +8,3 @@ export const AccessCheck = createParamDecorator(
     return req.user;
   },
 );
-
-// export const RefreshCheck = createParamDecorator(
-//     (data, ctx: ExecutionContext): User => {
-//       const req = ctx.switchToHttp().getRequest();
-//       return req.user;
-//     },
-//   );
