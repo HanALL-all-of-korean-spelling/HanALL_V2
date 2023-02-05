@@ -2,6 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { User } from 'src/entities/User.entity';
 import { Repository } from 'typeorm';
+import { JoinReqDto } from './dto/users.req.dto';
 
 @Injectable()
 export class UsersRepository {
@@ -14,6 +15,16 @@ export class UsersRepository {
     return user;
   }
 
+  async findOneByEmail(email: string): Promise<User> {
+    const user = await this.usersRepository.findOneBy({ email });
+    return user;
+  }
+
+  async findOneByNickname(nickname: string): Promise<User> {
+    const user = await this.usersRepository.findOneBy({ nickname });
+    return user;
+  }
+
   async findOneByEmailPwd(email: string, passwd: string): Promise<User> {
     const user = await this.usersRepository.findOne({
       where: {
@@ -22,5 +33,24 @@ export class UsersRepository {
       },
     });
     return user;
+  }
+
+  async create(joinReqDto: JoinReqDto) {
+    try {
+      const { email, passwd, nickname } = joinReqDto;
+      const newUser = this.usersRepository.create({
+        email: email,
+        passwd: passwd,
+        nickname: nickname,
+        isAdmin: 0,
+        userPoint: 0,
+        userRank: '맞춤법 초보',
+      });
+      await this.usersRepository.save(newUser);
+      return true;
+    } catch (err) {
+      console.log('CREATE USER', err);
+      return false;
+    }
   }
 }
