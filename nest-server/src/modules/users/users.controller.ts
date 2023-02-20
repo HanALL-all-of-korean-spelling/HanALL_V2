@@ -39,6 +39,7 @@ export class UsersController {
 
   @Get('/:userId')
   @ApiOperation({ summary: '회원 정보 확인' })
+  @ApiSecurity('accesstokenAuth')
   @ApiResponse({ status: 200, type: MypageResDto })
   @ApiResponse({ status: 401, description: 'accesstoken 검증 실패' })
   @ApiResponse({ status: 403, description: '접근 권한 없음' })
