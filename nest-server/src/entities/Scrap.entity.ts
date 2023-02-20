@@ -7,7 +7,7 @@ import {
   ManyToOne,
   JoinColumn,
 } from 'typeorm';
-import { Post } from './Post.entity';
+import { WordPost } from './WordPost.entity';
 import { User } from './User.entity';
 
 @Entity('scrap', { schema: 'hanall_project' })
@@ -19,9 +19,9 @@ export class Scrap {
   @JoinColumn()
   user: User;
 
-  @ManyToOne(() => Post)
+  @ManyToOne(() => WordPost)
   @JoinColumn()
-  post: Post;
+  post: WordPost;
 
   @CreateDateColumn({ name: 'createTime', type: 'timestamp' })
   createTime: Date | null;

@@ -12,8 +12,8 @@ import {
 } from 'typeorm';
 import { RightWord } from './RightWord.entity';
 
-@Entity('post', { schema: 'hanall_project' })
-export class Post {
+@Entity('wordPost', { schema: 'hanall_project' })
+export class WordPost {
   @PrimaryGeneratedColumn({ type: 'int', name: 'id', comment: 'Primary Key' })
   id: number;
 
@@ -30,10 +30,10 @@ export class Post {
   @Column('varchar', { comment: '쉽게 외우는 방법', length: 1000 })
   helpfulInfo: string;
 
-  @Column({ type: 'int', comment: '조회수' })
+  @Column({ type: 'int', comment: '조회수', default: 0 })
   hitCount: number;
 
-  @Column({ type: 'int', comment: '보관 횟수' })
+  @Column({ type: 'int', comment: '보관 횟수', default: 0 })
   scrapCount: number;
 
   @Column({ type: 'int', comment: '연관 게시글', nullable: true })
