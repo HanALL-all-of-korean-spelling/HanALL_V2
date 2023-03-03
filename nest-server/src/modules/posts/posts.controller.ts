@@ -8,11 +8,19 @@ import {
   ParseIntPipe,
   Post,
   Query,
+  UseGuards,
 } from '@nestjs/common';
-import { ApiOperation, ApiQuery, ApiResponse, ApiTags } from '@nestjs/swagger';
+import {
+  ApiOperation,
+  ApiQuery,
+  ApiResponse,
+  ApiSecurity,
+  ApiTags,
+} from '@nestjs/swagger';
 import { SortType } from 'src/entities/enums/sortType.enum';
 import { WordType } from 'src/entities/enums/wordType.enum';
 import { WordPost } from 'src/entities/WordPost.entity';
+import { AdminGuard } from '../auth/guards/admin.guard';
 import { CreatePostReqDto } from './dto/posts.req.dto';
 import { GetPostListResDto, GetPostResDto } from './dto/posts.res.dto';
 import { PostsService } from './posts.service';
@@ -24,9 +32,11 @@ export class PostsController {
 
   @Post('/')
   @ApiOperation({ summary: '맞춤법 정보 게시글 작성' })
+  @ApiSecurity('accesstokenAuth')
   @ApiResponse({ status: 200, type: Boolean })
   @ApiResponse({ status: 400, description: '이메일/닉네임 중복' })
   @ApiResponse({ status: 503, description: '회원가입 실패' })
+  @UseGuards(AdminGuard)
   async createPost(@Body() createPostReqDto: CreatePostReqDto) {
     const userData = await this.postsService.createPost(createPostReqDto);
     return userData;
