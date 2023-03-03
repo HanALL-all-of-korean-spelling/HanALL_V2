@@ -17,4 +17,8 @@ export class QuestionsService {
     }
     return true;
   }
+
+  async getQuestion(page: number) {
+    return await this.questionsRepository.findMany(page);
+  }
 }

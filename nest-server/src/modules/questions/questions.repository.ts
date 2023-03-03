@@ -12,6 +12,16 @@ export class QuestionsRepository {
     private questionsRepository: Repository<Question>,
   ) {}
 
+  async findMany(page: number): Promise<Question[]> {
+    const question = await this.questionsRepository.find({
+      take: 10 * page,
+      order: {
+        createTime: 'DESC',
+      },
+    });
+    return question;
+  }
+
   async findOneById(id: number): Promise<Question> {
     const question = await this.questionsRepository.findOneBy({ id });
     return question;
