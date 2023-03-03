@@ -2,7 +2,9 @@ import {
   Body,
   Controller,
   Get,
+  Param,
   ParseIntPipe,
+  Patch,
   Post,
   Query,
   UseGuards,
@@ -45,5 +47,24 @@ export class QuestionsController {
   @ApiResponse({ status: 503, description: '문의글 조회 실패' })
   async getQuestion(@Query('page', ParseIntPipe) page: number) {
     return await this.questionsService.getQuestion(page);
+  }
+
+  @Patch('/:questionId')
+  @ApiOperation({ summary: '문의글 수정' })
+  @ApiSecurity('accesstokenAuth')
+  @ApiResponse({ status: 200, type: Boolean })
+  @ApiResponse({ status: 403, description: '접근 권한 오류' })
+  @ApiResponse({ status: 503, description: '문의글 수정 실패' })
+  @UseGuards(AccessTokenGuard)
+  async modifyQuestion(
+    @AccessCheck() user: User,
+    @Param('questionId', ParseIntPipe) questionId: number,
+    @Body() createQuestionDto: CreateQuestionDto,
+  ) {
+    return await this.questionsService.modifyQuestion(
+      questionId,
+      user,
+      createQuestionDto,
+    );
   }
 }

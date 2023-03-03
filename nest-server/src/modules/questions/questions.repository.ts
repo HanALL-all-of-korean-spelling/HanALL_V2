@@ -23,7 +23,12 @@ export class QuestionsRepository {
   }
 
   async findOneById(id: number): Promise<Question> {
-    const question = await this.questionsRepository.findOneBy({ id });
+    const question = await this.questionsRepository.findOne({
+      where: { id: id },
+      relations: {
+        user: true,
+      },
+    });
     return question;
   }
 
@@ -39,6 +44,26 @@ export class QuestionsRepository {
       return true;
     } catch (err) {
       console.log('CREATE QUESTION', err);
+      return false;
+    }
+  }
+
+  async update(questionId: number, updateQuestionDto: CreateQuestionDto) {
+    try {
+      const { title, content } = updateQuestionDto;
+      const updateQuestion = await this.questionsRepository.update(
+        {
+          id: questionId,
+        },
+        {
+          title: title,
+          content: content,
+        },
+      );
+      if (updateQuestion.affected) return true;
+      else return false;
+    } catch (err) {
+      console.log('UPDATE QUESTION', err);
       return false;
     }
   }
