@@ -60,6 +60,9 @@ export class PostsService {
   }
 
   async getPost(postId: number): Promise<WordPost> {
-    return await this.postRepository.findOneById(postId);
+    let postData: any = await this.postRepository.findOneById(postId);
+    postData.type = postData.rightWord.type;
+    postData.rightWord = { name: postData.rightWord.name };
+    return postData;
   }
 }

@@ -28,9 +28,6 @@ export class GetPostListResDto {
 export class RightWordInPostDto {
   @ApiProperty()
   name: string;
-
-  @ApiProperty()
-  type: string;
 }
 
 export class WrongWordInPostDto {
