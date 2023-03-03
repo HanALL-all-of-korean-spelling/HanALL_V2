@@ -1,6 +1,7 @@
 import {
   Body,
   Controller,
+  Delete,
   Get,
   Param,
   ParseIntPipe,
@@ -66,5 +67,19 @@ export class QuestionsController {
       user,
       createQuestionDto,
     );
+  }
+
+  @Delete('/:questionId')
+  @ApiOperation({ summary: '문의글 삭제' })
+  @ApiSecurity('accesstokenAuth')
+  @ApiResponse({ status: 200, type: Boolean })
+  @ApiResponse({ status: 403, description: '접근 권한 오류' })
+  @ApiResponse({ status: 503, description: '문의글 삭제 실패' })
+  @UseGuards(AccessTokenGuard)
+  async deleteQuestion(
+    @AccessCheck() user: User,
+    @Param('questionId', ParseIntPipe) questionId: number,
+  ) {
+    return await this.questionsService.deleteQuestion(questionId, user);
   }
 }

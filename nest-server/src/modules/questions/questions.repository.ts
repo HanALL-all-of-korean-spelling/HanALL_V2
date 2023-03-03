@@ -67,4 +67,17 @@ export class QuestionsRepository {
       return false;
     }
   }
+
+  async delete(questionId: number) {
+    try {
+      const deleteQuestion = await this.questionsRepository.softDelete({
+        id: questionId,
+      });
+      if (deleteQuestion.affected) return true;
+      else return false;
+    } catch (err) {
+      console.log('DELETE QUESTION', err);
+      return false;
+    }
+  }
 }
