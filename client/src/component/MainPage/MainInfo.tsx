@@ -10,8 +10,8 @@ export const MainInfo = ({
   spellingList,
   spacingList,
 }: {
-  spellingList: IMainList;
-  spacingList: IMainList;
+  spellingList?: IMainList;
+  spacingList?: IMainList;
 }) => {
   const renderMainInfo = (list: IMainList, title: string, link: string) => {
     return (
