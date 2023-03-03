@@ -35,7 +35,7 @@ export class AuthService {
       userId: user.id,
       email: userEmail,
       nickname: user.nickname,
-      isAdmin: user.isAdmin,
+      isAdmin: Boolean(user.isAdmin),
     };
     return userData;
   }
@@ -71,7 +71,7 @@ export class AuthService {
       userId: user.id,
       email: userEmail,
       nickname: user.nickname,
-      isAdmin: user.isAdmin,
+      isAdmin: Boolean(user.isAdmin),
     };
     return userData;
   }
