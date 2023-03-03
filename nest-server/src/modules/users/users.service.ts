@@ -36,6 +36,7 @@ export class UsersService {
       throw new BadRequestException('이미 사용 중인 닉네임입니다.');
     }
     const hashedPwd: string = await bcrypt.hash(joinReqDto.passwd, 10);
+    console.log('hashedPwd', hashedPwd);
     joinReqDto.passwd = hashedPwd;
 
     const createUser = await this.usersRepository.create(joinReqDto);

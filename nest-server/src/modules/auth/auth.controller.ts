@@ -29,24 +29,12 @@ import { RefreshTokenGuard } from './guards/refreshtoken.guard';
 export class AuthController {
   constructor(private authService: AuthService) {}
 
-  @Get('/login')
+  @Post('/login')
   @ApiOperation({ summary: '로그인' })
   @ApiResponse({ status: 200, type: LoginResDto })
   @ApiResponse({ status: 400, description: '로그인 실패' })
   async login(@Body() loginReqDto: LoginReqDto) {
-    const userData = await this.authService.login(loginReqDto);
-    return userData;
-  }
-
-  @Get('/access')
-  @ApiOperation({ summary: 'accesstoken 검증' })
-  @ApiSecurity('accesstokenAuth')
-  @ApiResponse({ status: 200, type: AccessCheckResDto })
-  @ApiResponse({ status: 401, description: 'accesstoken 검증 실패' })
-  @UseGuards(AccessTokenGuard)
-  async checkAccessToken(@AccessCheck() user: User) {
-    const userData = await this.authService.checkAccessToken(user);
-    return userData;
+    return await this.authService.login(loginReqDto);
   }
 
   @Get('/refresh')
@@ -56,7 +44,6 @@ export class AuthController {
   @ApiResponse({ status: 401, description: 'refreshtoken 검증 실패' })
   @UseGuards(RefreshTokenGuard)
   async checkRefreshToken(@AccessCheck() user: UserWithToken) {
-    const userData = await this.authService.checkRefreshToken(user);
-    return userData;
+    return await this.authService.checkRefreshToken(user);
   }
 }

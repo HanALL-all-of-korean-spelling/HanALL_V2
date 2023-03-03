@@ -5,18 +5,16 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { User } from 'src/entities/User.entity';
 import { Repository } from 'typeorm';
 import { Request } from 'express';
+import { UsersRepository } from 'src/modules/users/users.repository';
 
 @Injectable()
 export class JwtAccessStrategy extends PassportStrategy(
   Strategy,
   'accesstoken',
 ) {
-  constructor(
-    @InjectRepository(User)
-    private usersRepository: Repository<User>,
-  ) {
+  constructor(private usersRepository: UsersRepository) {
     const cookieExtractor = (req: Request) => {
-      const { accesstoken } = req.cookies;
+      const accesstoken = req.headers['accesstoken'];
       return accesstoken;
     };
     super({
@@ -25,8 +23,8 @@ export class JwtAccessStrategy extends PassportStrategy(
     });
   }
   async validate(payload) {
-    const { id } = payload;
-    const user: User = await this.usersRepository.findOneBy({ id });
+    const { userId } = payload;
+    const user: User = await this.usersRepository.findOneById(userId);
     return user;
   }
 }

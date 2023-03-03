@@ -15,7 +15,7 @@ async function bootstrap() {
       {
         type: 'apiKey',
         name: 'accesstoken',
-        in: 'cookie',
+        in: 'header',
       },
       'accesstokenAuth',
     )
@@ -23,7 +23,7 @@ async function bootstrap() {
       {
         type: 'apiKey',
         name: 'refreshtoken',
-        in: 'cookie',
+        in: 'header',
       },
       'refreshtokenAuth',
     )

@@ -7,6 +7,7 @@ import { maskingEmail } from 'src/utils/maskingModule';
 import { Repository } from 'typeorm';
 import { UsersRepository } from '../users/users.repository';
 import { LoginReqDto, UserWithToken } from './dto/auth.req.dto';
+import * as bcrypt from 'bcrypt';
 
 @Injectable()
 export class AuthService {
@@ -40,11 +41,10 @@ export class AuthService {
   }
 
   async login(loginReqDto: LoginReqDto) {
-    const user = await this.usersRepository.findOneByEmailPwd(
-      loginReqDto.email,
-      loginReqDto.passwd,
-    );
-    if (!user)
+    const { email, passwd } = loginReqDto;
+    const user = await this.usersRepository.findOneByEmail(email);
+    const pwdCheck = await bcrypt.compare(passwd, user.passwd);
+    if (!pwdCheck)
       throw new BadRequestException(
         '이메일 또는 비밀번호가 일치하지 않습니다.',
       );

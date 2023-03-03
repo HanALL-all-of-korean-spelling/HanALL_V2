@@ -7,19 +7,19 @@ import { Repository } from 'typeorm';
 import { JwtService } from '@nestjs/jwt';
 import { ConfigService } from '@nestjs/config';
 import { Request } from 'express';
+import { UsersRepository } from 'src/modules/users/users.repository';
 
 export class JwtRefreshStrategy extends PassportStrategy(
   Strategy,
   'refreshtoken',
 ) {
   constructor(
-    @InjectRepository(User)
-    private usersRepository: Repository<User>,
+    private usersRepository: UsersRepository,
     private jwtService: JwtService,
     private configService: ConfigService,
   ) {
     const cookieExtractor = (req: Request) => {
-      const { refreshtoken } = req.cookies;
+      const refreshtoken = req.headers['refreshtoken'];
       return refreshtoken;
     };
     super({
@@ -29,10 +29,10 @@ export class JwtRefreshStrategy extends PassportStrategy(
   }
 
   async validate(payload) {
-    const { id } = payload;
-    let user: any = await this.usersRepository.findOneBy({ id });
+    const { userId } = payload;
+    let user: any = await this.usersRepository.findOneById(userId);
     const accessToken: string = this.jwtService.sign(
-      { id },
+      { userId },
       {
         secret: this.configService.get('JWT_ACCESS_KEY'),
         algorithm: 'HS256',
