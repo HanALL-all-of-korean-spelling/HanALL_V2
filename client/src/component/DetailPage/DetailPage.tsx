@@ -11,7 +11,7 @@ import { SmallText, Title } from "../common/Title/Title";
 import { RelatedInfo } from "./RelatedInfo";
 import style from "./DetailPage.module.scss";
 
-export const DetailPage = ({ detailInfo }: { detailInfo: IDetail }) => {
+export const DetailPage = ({ detailInfo }: { detailInfo?: IDetail }) => {
   const router = useRouter();
   const id = router.query.id as string;
   const user = useAppSelector(getUser).user;
@@ -61,7 +61,13 @@ export const DetailPage = ({ detailInfo }: { detailInfo: IDetail }) => {
             </div>
             <div className={style.answer}>
               <div>🤔 틀린 표현:</div>
-              <div>{detailInfo.wrong_words}</div>
+              <div>
+                {detailInfo.wrong_words?.map((word, index) =>
+                  index === detailInfo.wrong_words.length - 1
+                    ? word
+                    : `${word}, `
+                )}
+              </div>
             </div>
             <div className={style.content}>
               <div>{detailInfo.description}</div>

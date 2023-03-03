@@ -56,11 +56,20 @@ export const TestList = ({ quizzes }: { quizzes: ITest[] }) => {
 
   return (
     <>
+      {/* TODO: 퀴즈 데이터 형태 변경 백엔드에 제안
+        [{
+          id: string,
+          word: string,
+          isRight: boolean,
+        }]
+      */}
       {quizzes?.map((quiz) => (
         <div key={quiz._id} className={style.TestList}>
           <Title color="black">다음 중 옳은 표현을 고르세요.</Title>
           <AnswerButton name={quiz._source.right_words} isRight={true} />
-          <AnswerButton name={quiz._source.wrong_words} isRight={false} />
+          {quiz._source.wrong_words.map((word) => (
+            <AnswerButton name={word} isRight={false} key={word} />
+          ))}
         </div>
       ))}
       <Button fullWidth shadow onClick={onClickResult}>
