@@ -6,7 +6,7 @@ import {
 import { User } from 'src/entities/User.entity';
 import { QuestionsRepository } from '../questions/questions.repository';
 import { AnswersRepository } from './answers.repository';
-import { CreateAnswerDto } from './dto/answers.req.dto';
+import { CreateAnswerDto, UpdateAnswerDto } from './dto/answers.req.dto';
 
 @Injectable()
 export class AnswersService {
@@ -37,8 +37,21 @@ export class AnswersService {
   async getAnswer(id: number) {
     const answer = await this.answersRepository.findOneById(id);
     if (!answer) {
-      throw new BadRequestException('존재하지 않는 답변입니다.');
+      throw new BadRequestException('해당 답변을 찾을 수 없습니다.');
     }
     return answer;
+  }
+
+  async modifyAnswer(id: number, updateAnswerDto: UpdateAnswerDto) {
+    const { content } = updateAnswerDto;
+    const answer = await this.answersRepository.findOneById(id);
+    if (!answer) {
+      throw new BadRequestException('해당 답변을 찾을 수 없습니다.');
+    }
+    const updateAnswer = await this.answersRepository.update(id, content);
+    if (!updateAnswer) {
+      throw new InternalServerErrorException('답변 수정에 실패했습니다.');
+    }
+    return true;
   }
 }

@@ -43,9 +43,8 @@ export class AnswersRepository {
     }
   }
 
-  async update(answerId: number, updateAnswerDto: CreateAnswerDto) {
+  async update(answerId: number, content: string) {
     try {
-      const { content } = updateAnswerDto;
       const updateAnswer = await this.answersRepository.update(
         {
           id: answerId,

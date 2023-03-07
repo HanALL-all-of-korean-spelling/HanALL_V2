@@ -4,6 +4,7 @@ import {
   Get,
   Param,
   ParseIntPipe,
+  Patch,
   Post,
   UseGuards,
 } from '@nestjs/common';
@@ -19,7 +20,7 @@ import { AccessCheck } from '../auth/decorators/userAuth.decorator';
 import { AccessTokenGuard } from '../auth/guards/accesstoken.guard';
 import { AdminGuard } from '../auth/guards/admin.guard';
 import { AnswersService } from './answers.service';
-import { CreateAnswerDto } from './dto/answers.req.dto';
+import { CreateAnswerDto, UpdateAnswerDto } from './dto/answers.req.dto';
 import { AnswerResDto } from './dto/answers.res.dto';
 
 @ApiTags('Answer')
@@ -42,5 +43,17 @@ export class AnswersController {
   @ApiResponse({ status: 200, type: AnswerResDto })
   async getAnswer(@Param('id', ParseIntPipe) id: number) {
     return await this.answersService.getAnswer(id);
+  }
+
+  @Patch('/:id')
+  @ApiOperation({ summary: '답변 수정' })
+  @ApiSecurity('accesstokenAuth')
+  @ApiResponse({ status: 200, type: AnswerResDto })
+  @UseGuards(AdminGuard)
+  async modifyAnswer(
+    @Param('id', ParseIntPipe) id: number,
+    @Body() updateAnswerDto: UpdateAnswerDto,
+  ) {
+    return await this.answersService.modifyAnswer(id, updateAnswerDto);
   }
 }

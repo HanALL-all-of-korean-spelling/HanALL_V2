@@ -10,3 +10,9 @@ export class CreateAnswerDto {
   @IsNotEmpty()
   content: string;
 }
+
+export class UpdateAnswerDto {
+  @ApiProperty()
+  @IsNotEmpty()
+  content: string;
+}
