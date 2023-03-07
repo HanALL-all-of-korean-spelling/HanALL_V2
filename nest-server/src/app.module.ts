@@ -7,6 +7,7 @@ import { AuthModule } from './modules/auth/auth.module';
 import { UsersModule } from './modules/users/users.module';
 import { PostsModule } from './modules/posts/posts.module';
 import { QuestionsModule } from './modules/questions/questions.module';
+import { AnswersModule } from './modules/answers/answers.module';
 
 @Module({
   imports: [
@@ -28,6 +29,7 @@ import { QuestionsModule } from './modules/questions/questions.module';
     UsersModule,
     PostsModule,
     QuestionsModule,
+    AnswersModule,
   ],
   controllers: [AppController],
   providers: [AppService],
