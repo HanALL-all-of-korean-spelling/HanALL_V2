@@ -6,12 +6,16 @@ import {
 } from '@nestjs/common';
 import { NotFoundError } from 'rxjs';
 import { User } from 'src/entities/User.entity';
+import { AnswersRepository } from '../answers/answers.repository';
 import { CreateQuestionDto } from './dto/questions.req.dto';
 import { QuestionsRepository } from './questions.repository';
 
 @Injectable()
 export class QuestionsService {
-  constructor(private questionsRepository: QuestionsRepository) {}
+  constructor(
+    private questionsRepository: QuestionsRepository,
+    private answersRepository: AnswersRepository,
+  ) {}
 
   async createQuestion(user: User, createQuestionDto: CreateQuestionDto) {
     const question = await this.questionsRepository.create(
@@ -25,7 +29,15 @@ export class QuestionsService {
   }
 
   async getQuestion(page: number) {
-    return await this.questionsRepository.findMany(page);
+    let questionList: any = await this.questionsRepository.findMany(page);
+    for (let i = 0; i < questionList.length; i++) {
+      const answerCheck = await this.answersRepository.findOneByQuestionId(
+        questionList[i].id,
+      );
+      if (answerCheck) questionList[i].isAnswered = true;
+      else questionList[i].isAnswered = false;
+    }
+    return questionList;
   }
 
   async modifyQuestion(

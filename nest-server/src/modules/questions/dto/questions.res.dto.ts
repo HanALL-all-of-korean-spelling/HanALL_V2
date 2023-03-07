@@ -12,6 +12,9 @@ export class QuestionsResDto {
   content: string;
 
   @ApiProperty()
+  isAnswered: boolean;
+
+  @ApiProperty()
   createTime: Date;
 
   @ApiProperty()

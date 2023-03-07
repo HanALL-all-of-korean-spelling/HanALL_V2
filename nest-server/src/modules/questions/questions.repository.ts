@@ -15,6 +15,7 @@ export class QuestionsRepository {
   async findMany(page: number): Promise<Question[]> {
     const question = await this.questionsRepository.find({
       take: 10 * page,
+      skip: 10 * (page - 1),
       order: {
         createTime: 'DESC',
       },
