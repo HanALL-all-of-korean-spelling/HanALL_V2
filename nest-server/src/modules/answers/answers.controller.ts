@@ -1,6 +1,7 @@
 import {
   Body,
   Controller,
+  Delete,
   Get,
   Param,
   ParseIntPipe,
@@ -48,12 +49,23 @@ export class AnswersController {
   @Patch('/:id')
   @ApiOperation({ summary: '답변 수정' })
   @ApiSecurity('accesstokenAuth')
-  @ApiResponse({ status: 200, type: AnswerResDto })
+  @ApiResponse({ status: 200, type: Boolean })
+  @ApiResponse({ status: 503, description: '답변 수정 실패' })
   @UseGuards(AdminGuard)
   async modifyAnswer(
     @Param('id', ParseIntPipe) id: number,
     @Body() updateAnswerDto: UpdateAnswerDto,
   ) {
     return await this.answersService.modifyAnswer(id, updateAnswerDto);
+  }
+
+  @Delete('/:id')
+  @ApiOperation({ summary: '답변 삭제' })
+  @ApiSecurity('accesstokenAuth')
+  @ApiResponse({ status: 200, type: Boolean })
+  @ApiResponse({ status: 503, description: '답변 삭제 실패' })
+  @UseGuards(AdminGuard)
+  async deleteAnswer(@Param('id', ParseIntPipe) id: number) {
+    return await this.answersService.deleteAnswer(id);
   }
 }

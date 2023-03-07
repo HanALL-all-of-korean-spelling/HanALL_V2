@@ -54,4 +54,16 @@ export class AnswersService {
     }
     return true;
   }
+
+  async deleteAnswer(id: number) {
+    const answer = await this.answersRepository.findOneById(id);
+    if (!answer) {
+      throw new BadRequestException('해당 답변을 찾을 수 없습니다.');
+    }
+    const deleteAnswer = await this.answersRepository.delete(id);
+    if (!deleteAnswer) {
+      throw new InternalServerErrorException('답변 삭제에 실패했습니다.');
+    }
+    return true;
+  }
 }
