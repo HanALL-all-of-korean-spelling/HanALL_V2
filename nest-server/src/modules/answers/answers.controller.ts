@@ -1,16 +1,26 @@
-import { Body, Controller, Post, UseGuards } from '@nestjs/common';
+import {
+  Body,
+  Controller,
+  Get,
+  Param,
+  ParseIntPipe,
+  Post,
+  UseGuards,
+} from '@nestjs/common';
 import {
   ApiOperation,
   ApiResponse,
   ApiSecurity,
   ApiTags,
 } from '@nestjs/swagger';
+import { Answer } from 'src/entities/Answer.entity';
 import { User } from 'src/entities/User.entity';
 import { AccessCheck } from '../auth/decorators/userAuth.decorator';
 import { AccessTokenGuard } from '../auth/guards/accesstoken.guard';
 import { AdminGuard } from '../auth/guards/admin.guard';
 import { AnswersService } from './answers.service';
 import { CreateAnswerDto } from './dto/answers.req.dto';
+import { AnswerResDto } from './dto/answers.res.dto';
 
 @ApiTags('Answer')
 @Controller('answers')
@@ -25,5 +35,12 @@ export class AnswersController {
   @UseGuards(AdminGuard)
   async createAnswer(@Body() createAnswerDto: CreateAnswerDto) {
     return await this.answersService.createAnswer(createAnswerDto);
+  }
+
+  @Get('/:id')
+  @ApiOperation({ summary: '답변 조회' })
+  @ApiResponse({ status: 200, type: AnswerResDto })
+  async getAnswer(@Param('id', ParseIntPipe) id: number) {
+    return await this.answersService.getAnswer(id);
   }
 }

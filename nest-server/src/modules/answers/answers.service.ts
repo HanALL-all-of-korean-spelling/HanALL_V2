@@ -33,4 +33,12 @@ export class AnswersService {
     }
     return true;
   }
+
+  async getAnswer(id: number) {
+    const answer = await this.answersRepository.findOneById(id);
+    if (!answer) {
+      throw new BadRequestException('존재하지 않는 답변입니다.');
+    }
+    return answer;
+  }
 }

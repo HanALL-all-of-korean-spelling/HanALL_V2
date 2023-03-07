@@ -13,6 +13,12 @@ export class AnswersRepository {
     private answersRepository: Repository<Answer>,
   ) {}
 
+  async findOneById(id: number): Promise<Answer> {
+    return await this.answersRepository.findOne({
+      where: { id: id },
+    });
+  }
+
   async findOneByQuestionId(questionId: number): Promise<Answer> {
     const answer = await this.answersRepository.findOne({
       where: { question: { id: questionId } },
