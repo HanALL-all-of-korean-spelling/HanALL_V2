@@ -34,8 +34,8 @@ export class QuestionsService {
       const answerCheck = await this.answersRepository.findOneByQuestionId(
         questionList[i].id,
       );
-      if (answerCheck) questionList[i].isAnswered = true;
-      else questionList[i].isAnswered = false;
+      if (answerCheck) questionList[i].answerId = answerCheck.id;
+      else questionList[i].answerId = null;
     }
     return questionList;
   }

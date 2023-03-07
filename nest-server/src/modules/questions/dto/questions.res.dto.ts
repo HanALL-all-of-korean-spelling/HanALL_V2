@@ -12,7 +12,7 @@ export class QuestionsResDto {
   content: string;
 
   @ApiProperty()
-  isAnswered: boolean;
+  answerId: number;
 
   @ApiProperty()
   createTime: Date;
