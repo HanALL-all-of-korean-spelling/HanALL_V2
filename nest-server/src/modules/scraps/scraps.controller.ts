@@ -1,5 +1,6 @@
 import {
   Controller,
+  Get,
   Param,
   ParseIntPipe,
   Post,
@@ -14,6 +15,7 @@ import {
 import { User } from 'src/entities/User.entity';
 import { AccessCheck } from '../auth/decorators/userAuth.decorator';
 import { AccessTokenGuard } from '../auth/guards/accesstoken.guard';
+import { GetScrapListResDto } from './dto/scraps.res.dto';
 import { ScrapsService } from './scraps.service';
 
 @ApiTags('Scrap')
@@ -32,5 +34,14 @@ export class ScrapsController {
     @Param('postId', ParseIntPipe) postId: number,
   ) {
     return await this.scrapsService.createScrap(user, postId);
+  }
+
+  @Get('/')
+  @ApiOperation({ summary: '보관함 조회' })
+  @ApiSecurity('accesstokenAuth')
+  @ApiResponse({ status: 200, type: GetScrapListResDto })
+  @UseGuards(AccessTokenGuard)
+  async getScrapList(@AccessCheck() user: User) {
+    return await this.scrapsService.getScrapList(user);
   }
 }

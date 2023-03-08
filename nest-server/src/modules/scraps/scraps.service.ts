@@ -31,4 +31,7 @@ export class ScrapsService {
     }
     return true;
   }
+  async getScrapList(user: User) {
+    return await this.scrapsRepository.findManyByUserId(user.id);
+  }
 }

@@ -28,6 +28,15 @@ export class ScrapsRepository {
       where: {
         user: { id: userId },
       },
+      select: {
+        post: {
+          id: true,
+          title: true,
+        },
+      },
+      relations: {
+        post: true,
+      },
     });
   }
 
