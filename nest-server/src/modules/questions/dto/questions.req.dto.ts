@@ -3,10 +3,10 @@ import { IsEmail, IsNotEmpty, IsString } from 'class-validator';
 
 export class CreateQuestionDto {
   @ApiProperty()
-  @IsNotEmpty()
+  @IsString()
   title: string;
 
   @ApiProperty()
-  @IsNotEmpty()
+  @IsString()
   content: string;
 }

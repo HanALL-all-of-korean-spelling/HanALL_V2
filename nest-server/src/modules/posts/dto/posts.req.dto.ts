@@ -5,7 +5,7 @@ import { WordType } from 'src/entities/enums/wordType.enum';
 
 export class CreatePostReqDto {
   @ApiProperty()
-  @IsEmail()
+  @IsString()
   title: string;
 
   @ApiProperty()
