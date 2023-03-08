@@ -8,6 +8,7 @@ import { UsersModule } from './modules/users/users.module';
 import { PostsModule } from './modules/posts/posts.module';
 import { QuestionsModule } from './modules/questions/questions.module';
 import { AnswersModule } from './modules/answers/answers.module';
+import { ScrapsModule } from './modules/scraps/scraps.module';
 
 @Module({
   imports: [
@@ -30,6 +31,7 @@ import { AnswersModule } from './modules/answers/answers.module';
     PostsModule,
     QuestionsModule,
     AnswersModule,
+    ScrapsModule,
   ],
   controllers: [AppController],
   providers: [AppService],

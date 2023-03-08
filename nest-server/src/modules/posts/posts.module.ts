@@ -18,5 +18,6 @@ import { WrongWordRepository } from '../words/repositories/wrongWord.repository'
     WrongWordRepository,
   ],
   controllers: [PostsController],
+  exports: [PostsRepsitory],
 })
 export class PostsModule {}
