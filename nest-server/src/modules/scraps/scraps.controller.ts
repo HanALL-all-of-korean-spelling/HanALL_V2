@@ -49,7 +49,7 @@ export class ScrapsController {
   @Delete('/:scrapId')
   @ApiOperation({ summary: '보관글 삭제' })
   @ApiSecurity('accesstokenAuth')
-  @ApiResponse({ status: 200, type: GetScrapListResDto })
+  @ApiResponse({ status: 200, type: Boolean })
   @ApiResponse({ status: 503, description: '보관글 삭제 실패' })
   @UseGuards(AccessTokenGuard)
   async deleteScrap(
