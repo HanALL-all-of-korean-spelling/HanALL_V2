@@ -2,6 +2,7 @@ import {
   BadRequestException,
   Injectable,
   InternalServerErrorException,
+  NotFoundException,
 } from '@nestjs/common';
 import { User } from 'src/entities/User.entity';
 import { QuestionsRepository } from '../questions/questions.repository';
@@ -19,7 +20,7 @@ export class AnswersService {
     const { questionId, content } = createAnswerDto;
     const question = await this.questionsRepository.findOneById(questionId);
     if (!question) {
-      throw new BadRequestException('해당 문의글을 찾을 수 없습니다.');
+      throw new NotFoundException('해당 문의글을 찾을 수 없습니다.');
     }
     const answerCheck = await this.answersRepository.findOneByQuestionId(
       questionId,
@@ -37,7 +38,7 @@ export class AnswersService {
   async getAnswer(id: number) {
     const answer = await this.answersRepository.findOneById(id);
     if (!answer) {
-      throw new BadRequestException('해당 답변을 찾을 수 없습니다.');
+      throw new NotFoundException('해당 답변을 찾을 수 없습니다.');
     }
     return answer;
   }
@@ -46,7 +47,7 @@ export class AnswersService {
     const { content } = updateAnswerDto;
     const answer = await this.answersRepository.findOneById(id);
     if (!answer) {
-      throw new BadRequestException('해당 답변을 찾을 수 없습니다.');
+      throw new NotFoundException('해당 답변을 찾을 수 없습니다.');
     }
     const updateAnswer = await this.answersRepository.update(id, content);
     if (!updateAnswer) {
@@ -58,7 +59,7 @@ export class AnswersService {
   async deleteAnswer(id: number) {
     const answer = await this.answersRepository.findOneById(id);
     if (!answer) {
-      throw new BadRequestException('해당 답변을 찾을 수 없습니다.');
+      throw new NotFoundException('해당 답변을 찾을 수 없습니다.');
     }
     const deleteAnswer = await this.answersRepository.delete(id);
     if (!deleteAnswer) {
