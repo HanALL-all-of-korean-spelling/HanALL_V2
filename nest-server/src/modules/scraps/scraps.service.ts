@@ -1,5 +1,6 @@
 import {
   BadRequestException,
+  ForbiddenException,
   Injectable,
   InternalServerErrorException,
   NotFoundException,
@@ -33,5 +34,20 @@ export class ScrapsService {
   }
   async getScrapList(user: User) {
     return await this.scrapsRepository.findManyByUserId(user.id);
+  }
+
+  async deleteScrap(user: User, scrapId: number) {
+    const scrap = await this.scrapsRepository.findOneById(scrapId);
+    if (!scrap) {
+      throw new BadRequestException('해당 보관 내역이 존재하지 않습니다.');
+    }
+    if (scrap.user.id !== user.id) {
+      throw new ForbiddenException('삭제할 수 없는 보관글입니다.');
+    }
+    const deleteScrap = await this.scrapsRepository.delete(scrapId);
+    if (!deleteScrap) {
+      throw new InternalServerErrorException('보관글 삭제에 실패했습니다.');
+    }
+    return true;
   }
 }

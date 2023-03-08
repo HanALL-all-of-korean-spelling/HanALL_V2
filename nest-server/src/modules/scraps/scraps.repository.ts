@@ -23,6 +23,17 @@ export class ScrapsRepository {
     });
   }
 
+  async findOneById(id: number): Promise<Scrap> {
+    return await this.scrapsRepository.findOne({
+      where: {
+        id: id,
+      },
+      relations: {
+        user: true,
+      },
+    });
+  }
+
   async findManyByUserId(userId: number): Promise<Scrap[]> {
     return await this.scrapsRepository.find({
       where: {

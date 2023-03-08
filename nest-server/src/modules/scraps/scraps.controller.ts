@@ -1,5 +1,6 @@
 import {
   Controller,
+  Delete,
   Get,
   Param,
   ParseIntPipe,
@@ -23,6 +24,15 @@ import { ScrapsService } from './scraps.service';
 export class ScrapsController {
   constructor(private scrapsService: ScrapsService) {}
 
+  @Get('/')
+  @ApiOperation({ summary: '보관함 조회' })
+  @ApiSecurity('accesstokenAuth')
+  @ApiResponse({ status: 200, type: GetScrapListResDto })
+  @UseGuards(AccessTokenGuard)
+  async getScrapList(@AccessCheck() user: User) {
+    return await this.scrapsService.getScrapList(user);
+  }
+
   @Post('/:postId')
   @ApiOperation({ summary: '보관하기' })
   @ApiSecurity('accesstokenAuth')
@@ -36,12 +46,16 @@ export class ScrapsController {
     return await this.scrapsService.createScrap(user, postId);
   }
 
-  @Get('/')
-  @ApiOperation({ summary: '보관함 조회' })
+  @Delete('/:scrapId')
+  @ApiOperation({ summary: '보관글 삭제' })
   @ApiSecurity('accesstokenAuth')
   @ApiResponse({ status: 200, type: GetScrapListResDto })
+  @ApiResponse({ status: 503, description: '보관글 삭제 실패' })
   @UseGuards(AccessTokenGuard)
-  async getScrapList(@AccessCheck() user: User) {
-    return await this.scrapsService.getScrapList(user);
+  async deleteScrap(
+    @AccessCheck() user: User,
+    @Param('scrapId', ParseIntPipe) scrapId: number,
+  ) {
+    return await this.scrapsService.deleteScrap(user, scrapId);
   }
 }
