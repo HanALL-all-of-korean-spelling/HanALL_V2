@@ -42,9 +42,7 @@ export class UsersRepository {
         email: email,
         passwd: passwd,
         nickname: nickname,
-        isAdmin: 0,
-        userPoint: 0,
-        userRank: '맞춤법 초보',
+        isAdmin: false,
       });
       await this.usersRepository.save(newUser);
       return true;

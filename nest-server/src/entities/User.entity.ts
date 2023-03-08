@@ -21,14 +21,14 @@ export class User {
   @Column('varchar', { comment: '닉네임', length: 20 })
   nickname: string;
 
-  @Column('varchar', { comment: '등급', length: 50 })
-  userRank: string;
+  @Column({ type: 'int', comment: '등급', default: 1 })
+  userRank: number;
 
-  @Column({ type: 'int', comment: '획득 점수' })
+  @Column({ type: 'int', comment: '획득 점수', default: 0 })
   userPoint: number;
 
-  @Column({ type: 'int', comment: '어드민 계정 여부' })
-  isAdmin: number;
+  @Column({ type: 'int', comment: '어드민 계정 여부', default: false })
+  isAdmin: boolean;
 
   @CreateDateColumn({ name: 'createTime', type: 'timestamp' })
   createTime: Date | null;

@@ -36,8 +36,4 @@ import { ScrapsModule } from './modules/scraps/scraps.module';
   controllers: [AppController],
   providers: [AppService],
 })
-export class AppModule {
-  OnModuleInit() {
-    console.log('Ddd');
-  }
-}
+export class AppModule {}
