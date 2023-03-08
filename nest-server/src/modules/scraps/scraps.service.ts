@@ -8,6 +8,7 @@ import {
 import { NotFoundError } from 'rxjs';
 import { User } from 'src/entities/User.entity';
 import { PostsRepsitory } from '../posts/posts.repository';
+import { WrongWordRepository } from '../words/repositories/wrongWord.repository';
 import { ScrapsRepository } from './scraps.repository';
 
 @Injectable()
@@ -15,6 +16,7 @@ export class ScrapsService {
   constructor(
     private scrapsRepository: ScrapsRepository,
     private postsRepository: PostsRepsitory,
+    private wrongWordRepository: WrongWordRepository,
   ) {}
 
   async createScrap(user: User, postId: number) {
@@ -49,5 +51,27 @@ export class ScrapsService {
       throw new InternalServerErrorException('보관글 삭제에 실패했습니다.');
     }
     return true;
+  }
+
+  async getTestList(user: User) {
+    const scrapList = await this.scrapsRepository.findManyRandomOrder(user.id);
+    let testList = [];
+    for (let i = 0; i < scrapList.length; i++) {
+      const wrongWordList =
+        await this.wrongWordRepository.findManyByRightWordId(
+          scrapList[i].post.rightWord.id,
+        );
+      const wordList = [
+        {
+          word: scrapList[i].post.rightWord.name,
+          isRight: true,
+        },
+      ];
+      for (let j = 0; j < wrongWordList.length; j++) {
+        wordList.push({ word: wrongWordList[j].name, isRight: false });
+      }
+      testList.push({ id: scrapList[i].id, wordList: wordList });
+    }
+    return testList;
   }
 }

@@ -58,4 +58,13 @@ export class ScrapsController {
   ) {
     return await this.scrapsService.deleteScrap(user, scrapId);
   }
+
+  @Get('/test')
+  @ApiOperation({ summary: '학습하기 리스트 조회' })
+  @ApiSecurity('accesstokenAuth')
+  @ApiResponse({ status: 200, type: GetScrapListResDto })
+  @UseGuards(AccessTokenGuard)
+  async getTestList(@AccessCheck() user: User) {
+    return await this.scrapsService.getTestList(user);
+  }
 }

@@ -51,6 +51,18 @@ export class ScrapsRepository {
     });
   }
 
+  async findManyRandomOrder(userId: number): Promise<Scrap[]> {
+    return await this.scrapsRepository
+      .createQueryBuilder('scrap')
+      .leftJoinAndSelect('scrap.post', 'post')
+      .leftJoinAndSelect('scrap.user', 'user')
+      .leftJoinAndSelect('post.rightWord', 'rw')
+      //.select(['scrap.id', 'rw.id', 'rw.name'])
+      .where('user.id = :userId', { userId: userId })
+      .orderBy('RAND()')
+      .getMany();
+  }
+
   async create(user: User, post: WordPost) {
     try {
       const newScrap = this.scrapsRepository.create({
