@@ -9,7 +9,7 @@ export const MyInfo = ({ user, score }: { user: IUser; score?: number }) => {
   return (
     <>
       <div className={style.MyInfo}>
-        {score && (
+        {score !== undefined && (
           <div>
             {user.nickname} 님의 점수는
             <strong>{score * 10}</strong>
@@ -25,7 +25,7 @@ export const MyInfo = ({ user, score }: { user: IUser; score?: number }) => {
           <strong>{user.rank}</strong>
         </div>
       </div>
-      {score && (
+      {score !== undefined && (
         <Button
           fullWidth
           color="lightPink"
