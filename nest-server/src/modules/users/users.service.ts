@@ -8,12 +8,15 @@ import {
   NotFoundException,
 } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
-import { JoinReqDto } from './dto/users.req.dto';
+import { JoinReqDto, UpdatePointReqDto } from './dto/users.req.dto';
 import { UsersRepository } from './users.repository';
 import * as bcrypt from 'bcrypt';
 import { User } from 'src/entities/User.entity';
 import { AuthService } from '../auth/auth.service';
 import { maskingEmail } from 'src/utils/maskingModule';
+import { MypageResDto } from './dto/users.res.dto';
+import { rankConvert } from 'src/utils/rankConvertModule';
+import { Rank } from 'src/entities/enums/rank.enum';
 
 @Injectable()
 export class UsersService {
@@ -45,16 +48,31 @@ export class UsersService {
     return createUser;
   }
 
-  async mypage(user: User, userId: number) {
-    if (user.id !== userId) {
-      throw new ForbiddenException('접근 권한이 없습니다.');
-    }
+  async mypage(user: User): Promise<MypageResDto> {
     const userEmail = maskingEmail(user.email);
+    const rank: Rank = rankConvert(user.userRank);
     const userData = {
       email: userEmail,
       nickname: user.nickname,
-      userRank: user.userRank,
+      userRank: rank,
       userPoint: user.userPoint,
+    };
+    return userData;
+  }
+
+  async updatePoint(
+    user: User,
+    updatePointReqDto: UpdatePointReqDto,
+  ): Promise<MypageResDto> {
+    const { plusPoint } = updatePointReqDto;
+    const { email, nickname, userPoint, userRank } =
+      await this.usersRepository.updatePoint(user, plusPoint);
+    const rank: Rank = rankConvert(userRank);
+    const userData: MypageResDto = {
+      email: email,
+      nickname: nickname,
+      userRank: rank,
+      userPoint: userPoint,
     };
     return userData;
   }

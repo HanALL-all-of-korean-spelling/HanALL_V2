@@ -51,4 +51,13 @@ export class UsersRepository {
       return false;
     }
   }
+
+  async updatePoint(user: User, point: number): Promise<User> {
+    user.userPoint += point;
+    if (user.userPoint > 20) user.userRank = 2;
+    if (user.userPoint > 40) user.userRank = 3;
+    if (user.userPoint > 60) user.userRank = 4;
+    const updatedUser = await this.usersRepository.save(user);
+    return updatedUser;
+  }
 }

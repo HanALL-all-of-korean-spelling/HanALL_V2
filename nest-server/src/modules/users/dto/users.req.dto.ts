@@ -1,5 +1,5 @@
 import { ApiProperty } from '@nestjs/swagger';
-import { IsEmail, IsString } from 'class-validator';
+import { IsEmail, IsNumber, IsString } from 'class-validator';
 
 export class JoinReqDto {
   @ApiProperty()
@@ -13,4 +13,10 @@ export class JoinReqDto {
   @ApiProperty()
   @IsString()
   nickname: string;
+}
+
+export class UpdatePointReqDto {
+  @ApiProperty()
+  @IsNumber()
+  plusPoint: number;
 }

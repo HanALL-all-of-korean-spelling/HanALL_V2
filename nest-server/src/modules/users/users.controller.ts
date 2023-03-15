@@ -4,6 +4,7 @@ import {
   Get,
   Param,
   ParseIntPipe,
+  Patch,
   Post,
   UseGuards,
   UseInterceptors,
@@ -16,7 +17,7 @@ import {
 } from '@nestjs/swagger';
 import { User } from 'src/entities/User.entity';
 import { AccessCheck } from '../auth/decorators/userAuth.decorator';
-import { JoinReqDto } from './dto/users.req.dto';
+import { JoinReqDto, UpdatePointReqDto } from './dto/users.req.dto';
 import { AccessTokenGuard } from '../auth/guards/accesstoken.guard';
 import { RefreshTokenGuard } from '../auth/guards/refreshtoken.guard';
 import { UsersService } from './users.service';
@@ -37,18 +38,27 @@ export class UsersController {
     return userData;
   }
 
-  @Get('/:userId')
+  @Get('/')
   @ApiOperation({ summary: '회원 정보 확인' })
   @ApiSecurity('accesstokenAuth')
   @ApiResponse({ status: 200, type: MypageResDto })
   @ApiResponse({ status: 401, description: 'accesstoken 검증 실패' })
   @ApiResponse({ status: 403, description: '접근 권한 없음' })
   @UseGuards(AccessTokenGuard)
-  async mypage(
-    @AccessCheck() user: User,
-    @Param('userId', ParseIntPipe) userId: number,
-  ) {
-    const userData = await this.usersService.mypage(user, userId);
+  async mypage(@AccessCheck() user: User) {
+    const userData = await this.usersService.mypage(user);
     return userData;
+  }
+
+  @Patch('/point')
+  @ApiOperation({ summary: '포인트 추가' })
+  @ApiSecurity('accesstokenAuth')
+  @ApiResponse({ status: 200, type: MypageResDto })
+  @UseGuards(AccessTokenGuard)
+  async updatePoint(
+    @AccessCheck() user: User,
+    @Body() updatePointReqDto: UpdatePointReqDto,
+  ) {
+    return await this.usersService.updatePoint(user, updatePointReqDto);
   }
 }

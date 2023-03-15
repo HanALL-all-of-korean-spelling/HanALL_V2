@@ -1,4 +1,5 @@
 import { ApiProperty } from '@nestjs/swagger';
+import { Rank } from 'src/entities/enums/rank.enum';
 
 export class MypageResDto {
   @ApiProperty()
@@ -8,7 +9,7 @@ export class MypageResDto {
   nickname: string;
 
   @ApiProperty()
-  userRank: string;
+  userRank: Rank;
 
   @ApiProperty()
   userPoint: number;
