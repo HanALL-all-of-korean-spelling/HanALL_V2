@@ -11,12 +11,13 @@ export const InfoListPage = ({
   data,
   typeTitle,
 }: {
-  data: IPageList;
+  data?: IPageList;
   typeTitle: string;
 }) => {
   const router = useRouter();
   const page = router.query.page as string;
   const sort = router.query.sort as string;
+
   return (
     <div className={style.InfoListPage}>
       <SearchBar />

@@ -5,7 +5,7 @@ import { Title } from "../common/Title/Title";
 import { RelatedInfo } from "../DetailPage/RelatedInfo";
 import style from "./MainPage.module.scss";
 
-export const TodaySpelling = ({ todayInfo }: { todayInfo: IToday }) => {
+export const TodaySpelling = ({ todayInfo }: { todayInfo?: IToday }) => {
   return (
     <div>
       {todayInfo && (
