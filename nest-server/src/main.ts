@@ -27,7 +27,7 @@ async function bootstrap() {
       },
       'refreshtokenAuth',
     )
-    .setBasePath('api')
+    .addServer('/api')
     .build();
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup(`${process.env.SWAGGER_URL}/api-docs`, app, document);
