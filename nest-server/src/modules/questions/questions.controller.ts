@@ -32,7 +32,7 @@ export class QuestionsController {
   @Post('/')
   @ApiOperation({ summary: '문의글 작성' })
   @ApiSecurity('accesstokenAuth')
-  @ApiResponse({ status: 200, type: Boolean })
+  @ApiResponse({ status: 201, type: Boolean })
   @ApiResponse({ status: 503, description: '문의글 작성 실패' })
   @UseGuards(AccessTokenGuard)
   async createQuestion(

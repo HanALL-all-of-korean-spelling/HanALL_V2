@@ -31,7 +31,7 @@ export class AuthController {
 
   @Post('/login')
   @ApiOperation({ summary: '로그인' })
-  @ApiResponse({ status: 200, type: LoginResDto })
+  @ApiResponse({ status: 201, type: LoginResDto })
   @ApiResponse({ status: 400, description: '로그인 실패' })
   async login(@Body() loginReqDto: LoginReqDto) {
     return await this.authService.login(loginReqDto);

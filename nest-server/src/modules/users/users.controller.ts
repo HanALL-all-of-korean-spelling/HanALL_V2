@@ -30,7 +30,7 @@ export class UsersController {
 
   @Post('/')
   @ApiOperation({ summary: '회원가입' })
-  @ApiResponse({ status: 200, type: Boolean })
+  @ApiResponse({ status: 201, type: Boolean })
   @ApiResponse({ status: 400, description: '이메일/닉네임 중복' })
   @ApiResponse({ status: 503, description: '회원가입 실패' })
   async join(@Body() joinReqDto: JoinReqDto) {

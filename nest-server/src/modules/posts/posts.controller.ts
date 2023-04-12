@@ -33,7 +33,7 @@ export class PostsController {
   @Post('/')
   @ApiOperation({ summary: '맞춤법 정보 게시글 작성' })
   @ApiSecurity('accesstokenAuth')
-  @ApiResponse({ status: 200, type: Boolean })
+  @ApiResponse({ status: 201, type: Boolean })
   @ApiResponse({ status: 400, description: '이메일/닉네임 중복' })
   @ApiResponse({ status: 503, description: '회원가입 실패' })
   @UseGuards(AdminGuard)

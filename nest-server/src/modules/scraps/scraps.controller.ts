@@ -36,7 +36,7 @@ export class ScrapsController {
   @Post('/:postId')
   @ApiOperation({ summary: '보관하기' })
   @ApiSecurity('accesstokenAuth')
-  @ApiResponse({ status: 200, type: Boolean })
+  @ApiResponse({ status: 201, type: Boolean })
   @ApiResponse({ status: 503, description: '보관하기 실패' })
   @UseGuards(AccessTokenGuard)
   async createScrap(

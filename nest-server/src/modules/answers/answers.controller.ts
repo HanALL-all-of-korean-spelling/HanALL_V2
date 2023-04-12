@@ -32,7 +32,7 @@ export class AnswersController {
   @Post('/')
   @ApiOperation({ summary: '답변 작성' })
   @ApiSecurity('accesstokenAuth')
-  @ApiResponse({ status: 200, type: Boolean })
+  @ApiResponse({ status: 201, type: Boolean })
   @ApiResponse({ status: 503, description: '답변 작성 실패' })
   @UseGuards(AdminGuard)
   async createAnswer(@Body() createAnswerDto: CreateAnswerDto) {
