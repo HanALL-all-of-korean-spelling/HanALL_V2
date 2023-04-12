@@ -56,6 +56,7 @@ export class UsersService {
       nickname: user.nickname,
       userRank: rank,
       userPoint: user.userPoint,
+      isAdmin: user.isAdmin,
     };
     return userData;
   }
@@ -73,6 +74,7 @@ export class UsersService {
       nickname: nickname,
       userRank: rank,
       userPoint: userPoint,
+      isAdmin: user.isAdmin,
     };
     return userData;
   }

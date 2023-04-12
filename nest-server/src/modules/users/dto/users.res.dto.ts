@@ -13,4 +13,7 @@ export class MypageResDto {
 
   @ApiProperty()
   userPoint: number;
+
+  @ApiProperty()
+  isAdmin: boolean;
 }

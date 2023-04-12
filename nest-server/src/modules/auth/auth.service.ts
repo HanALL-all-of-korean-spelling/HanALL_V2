@@ -72,6 +72,8 @@ export class AuthService {
       email: userEmail,
       nickname: user.nickname,
       isAdmin: Boolean(user.isAdmin),
+      userRank: user.userRank,
+      userPoint: user.userPoint,
     };
     return userData;
   }

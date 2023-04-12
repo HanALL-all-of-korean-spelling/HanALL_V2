@@ -1,4 +1,5 @@
 import { ApiProperty } from '@nestjs/swagger';
+import { Rank } from 'src/entities/enums/rank.enum';
 
 export class LoginResDto {
   @ApiProperty()
@@ -18,6 +19,12 @@ export class LoginResDto {
 
   @ApiProperty()
   isAdmin: number;
+
+  @ApiProperty()
+  userRank: Rank;
+
+  @ApiProperty()
+  userPoint: number;
 }
 
 export class AccessCheckResDto {
