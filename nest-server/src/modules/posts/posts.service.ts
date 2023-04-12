@@ -67,7 +67,7 @@ export class PostsService {
   }
 
   async getRandomPost() {
-    const today = new Date().getDate();
+    const today: number = new Date().getDate();
     return await this.postRepository.findOneByRanDom(today);
   }
 }
