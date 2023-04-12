@@ -65,4 +65,9 @@ export class PostsService {
     postData.rightWord = { name: postData.rightWord.name };
     return postData;
   }
+
+  async getRandomPost() {
+    const today = new Date().getDate();
+    return await this.postRepository.findOneByRanDom(today);
+  }
 }

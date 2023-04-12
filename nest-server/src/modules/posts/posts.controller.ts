@@ -58,6 +58,14 @@ export class PostsController {
     return postsData;
   }
 
+  @Get('/today')
+  @ApiOperation({ summary: '오늘의 맞춤법 조회' })
+  @ApiResponse({ status: 200, type: GetPostResDto })
+  async getRandomPost() {
+    const postsData = await this.postsService.getRandomPost();
+    return postsData;
+  }
+
   @Get('/:postId')
   @ApiOperation({ summary: '맞춤법 게시글 조회' })
   @ApiResponse({ status: 200, type: GetPostResDto })

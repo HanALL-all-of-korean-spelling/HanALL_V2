@@ -81,6 +81,15 @@ export class PostsRepsitory {
     return post;
   }
 
+  async findOneByRanDom(date: number): Promise<WordPost> {
+    const post = await this.postsRepository
+      .createQueryBuilder('posts')
+      .innerJoinAndSelect('posts.rightWord', 'rightWord')
+      .orderBy(`RAND(${date})`)
+      .getOne();
+    return post;
+  }
+
   async create(createPostDbDto: CreatePostDbDto) {
     try {
       const { title, description, helpfulInfo, rightWordId } = createPostDbDto;
