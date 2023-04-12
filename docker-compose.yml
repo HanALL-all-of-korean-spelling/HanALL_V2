@@ -1,72 +1,101 @@
 version: "3.7"
 services:
-  client:
-    build:
-      dockerfile: Dockerfile.dev
-      context: ./client
-    restart: always
-    volumes:
-      - /app/static
-      - /app/node_modules
-      - ./client:/app
-    container_name: client
-    stdin_open: true
+  # client:
+  #   build:
+  #     dockerfile: Dockerfile.dev
+  #     context: ./client
+  #   restart: always
+  #   volumes:
+  #     - /app/static
+  #     - /app/node_modules
+  #     - ./client:/app
+  #   container_name: client
+  #   stdin_open: true
 
-  nginx:
-    restart: always
+  # nginx:
+  #   restart: always
+  #   build:
+  #     dockerfile: Dockerfile
+  #     context: ./nginx
+  #   container_name: nginx
+  #   ports:
+  #     - "3000:80"
+
+  # server:
+  #   build:
+  #     dockerfile: Dockerfile.dev
+  #     context: ./server
+  #   container_name: server
+  #   volumes:
+  #     - /app/static
+  #     - /app/node_modules
+  #     - ./server:/app
+  #   environment:
+  #     - NODE_ENV=development
+  #     - ES_HOST=elasticsearch
+
+  nest-server:
     build:
       dockerfile: Dockerfile
-      context: ./nginx
-    container_name: nginx
-    ports:
-      - "3000:80"
-
-  server:
-    build:
-      dockerfile: Dockerfile.dev
-      context: ./server
-    container_name: server
+      context: ./nest-server
+    container_name: nest-server
     volumes:
       - /app/static
       - /app/node_modules
-      - ./server:/app
-    environment:
-      - NODE_ENV=development
-      - ES_HOST=elasticsearch
+      - ./nest-server:/app
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mysql
+    env_file: .env
 
-  elasticsearch:
-    build:
-      dockerfile: Dockerfile.dev
-      context: ./elasticsearch
-    container_name: elasticsearch
+  # elasticsearch:
+  #   build:
+  #     dockerfile: Dockerfile.dev
+  #     context: ./elasticsearch
+  #   container_name: elasticsearch
+  #   environment:
+  #     - node.name=elasticsearch
+  #     - cluster.name=es-docker-cluster
+  #     - cluster.initial_master_nodes=elasticsearch
+  #     - bootstrap.memory_lock=true
+  #     - ES_JAVA_OPTS=-Xms750m -Xmx750m
+  #   ulimits:
+  #     memlock:
+  #       soft: -1
+  #       hard: -1
+  #   volumes:
+  #     - data:/usr/share/elasticsearch/data
+  #   ports:
+  #     - 9200:9200
+  #   deploy:
+  #     resources:
+  #       limits:
+  #         memory: 10g
+
+  # kibana:
+  #   image: docker.elastic.co/kibana/kibana:7.13.0
+  #   container_name: kibana
+  #   ports:
+  #     - 5601:5601
+  #   environment:
+  #     ELASTICSEARCH_URL: http://elasticsearch:9200/
+  #     ELASTICSEARCH_HOSTS: http://elasticsearch:9200/
+
+  mysql:
+    image: library/mysql:8.0
+    container_name: mysql
+    restart: always
+    ports:
+      - 3307:3306
     environment:
-      - node.name=elasticsearch
-      - cluster.name=es-docker-cluster
-      - cluster.initial_master_nodes=elasticsearch
-      - bootstrap.memory_lock=true
-      - ES_JAVA_OPTS=-Xms750m -Xmx750m
-    ulimits:
-      memlock:
-        soft: -1
-        hard: -1
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
     volumes:
-      - data:/usr/share/elasticsearch/data
-    ports:
-      - 9200:9200
-    deploy:
-      resources:
-        limits:
-          memory: 10g
-
-  kibana:
-    image: docker.elastic.co/kibana/kibana:7.13.0
-    container_name: kibana
-    ports:
-      - 5601:5601
-    environment:
-      ELASTICSEARCH_URL: http://elasticsearch:9200/
-      ELASTICSEARCH_HOSTS: http://elasticsearch:9200/
+      - mysql-data:/var/lib/mysql
+    platform: linux/x86_64
+    env_file: .env
 
 volumes:
-  data:
-    driver: local
+  mysql-data: {}
