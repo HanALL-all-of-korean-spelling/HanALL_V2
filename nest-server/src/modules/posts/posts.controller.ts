@@ -74,4 +74,12 @@ export class PostsController {
   async getPost(@Param('postId', ParseIntPipe) postId: number) {
     return await this.postsService.getPost(postId);
   }
+
+  @Post('/init-data')
+  @ApiOperation({ summary: '초기 맞춤법 정보 삽입' })
+  @ApiResponse({ status: 201, type: Boolean })
+  // @UseGuards(AdminGuard)
+  async createInitPost() {
+    return await this.postsService.insertWordsData();
+  }
 }

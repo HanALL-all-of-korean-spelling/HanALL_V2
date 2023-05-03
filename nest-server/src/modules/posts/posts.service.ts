@@ -6,8 +6,10 @@ import {
 import { SortType } from 'src/entities/enums/sortType.enum';
 import { WordType } from 'src/entities/enums/wordType.enum';
 import { WordPost } from 'src/entities/WordPost.entity';
+import { wordsData } from 'words-data';
 import { RightWordRepository } from '../words/repositories/rightWord.repository';
 import { WrongWordRepository } from '../words/repositories/wrongWord.repository';
+import { CreatePostDbDto } from './dto/posts.db.dto';
 import { CreatePostReqDto } from './dto/posts.req.dto';
 import { GetPostListResDto, GetPostResDto } from './dto/posts.res.dto';
 import { PostsRepsitory } from './posts.repository';
@@ -69,5 +71,38 @@ export class PostsService {
   async getRandomPost() {
     const today: number = new Date().getDate();
     return await this.postRepository.findOneByRanDom(today);
+  }
+
+  async insertWordsData() {
+    console.log('length', wordsData.length);
+    let num: number = 0;
+    for (let word of wordsData) {
+      console.log(num);
+      const checkExist = await this.rightWordRepository.findOneByName(
+        word.right_words,
+      );
+      if (!checkExist) {
+        const wordType =
+          word.type === 'spelling' ? WordType.spelling : WordType.spacing;
+        const rightWordId = await this.rightWordRepository.create(
+          word.right_words,
+          wordType,
+        );
+        for (let wrongWord of word.wrong_words) {
+          await this.wrongWordRepository.create(wrongWord, rightWordId);
+        }
+        const createPostDto: CreatePostDbDto = {
+          title: word.title,
+          description: word.description,
+          helpfulInfo: word.helpful_info,
+          rightWordId: rightWordId,
+        };
+        await this.postRepository.create(createPostDto);
+      } else {
+        console.log('중복 - ', word.right_words);
+      }
+      num++;
+    }
+    return true;
   }
 }

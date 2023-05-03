@@ -38,19 +38,11 @@ import { WordPost } from './entities/WordPost.entity';
     QuestionsModule,
     AnswersModule,
     ScrapsModule,
-    TypeOrmModule.forFeature([RightWord, WrongWord, WordPost]),
   ],
   controllers: [AppController],
-  providers: [
-    AppService,
-    RightWordRepository,
-    WrongWordRepository,
-    PostsRepsitory,
-  ],
+  providers: [AppService],
 })
 export class AppModule {
   constructor(private appService: AppService) {}
-  async onModuleInit() {
-    //await this.appService.insertWordsData();
-  }
+  async onModuleInit() {}
 }
