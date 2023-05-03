@@ -54,6 +54,7 @@ export class PostsRepsitory {
       relations: ['rightWord'],
       select: {
         rightWord: {
+          id: true,
           name: true,
           type: true,
         },
