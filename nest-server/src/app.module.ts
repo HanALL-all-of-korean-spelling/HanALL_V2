@@ -1,4 +1,4 @@
-import { Module, OnModuleInit } from '@nestjs/common';
+import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
@@ -9,6 +9,12 @@ import { PostsModule } from './modules/posts/posts.module';
 import { QuestionsModule } from './modules/questions/questions.module';
 import { AnswersModule } from './modules/answers/answers.module';
 import { ScrapsModule } from './modules/scraps/scraps.module';
+import { RightWordRepository } from './modules/words/repositories/rightWord.repository';
+import { WrongWordRepository } from './modules/words/repositories/wrongWord.repository';
+import { PostsRepsitory } from './modules/posts/posts.repository';
+import { RightWord } from './entities/RightWord.entity';
+import { WrongWord } from './entities/WrongWord.entity';
+import { WordPost } from './entities/WordPost.entity';
 
 @Module({
   imports: [
@@ -32,8 +38,19 @@ import { ScrapsModule } from './modules/scraps/scraps.module';
     QuestionsModule,
     AnswersModule,
     ScrapsModule,
+    TypeOrmModule.forFeature([RightWord, WrongWord, WordPost]),
   ],
   controllers: [AppController],
-  providers: [AppService],
+  providers: [
+    AppService,
+    RightWordRepository,
+    WrongWordRepository,
+    PostsRepsitory,
+  ],
 })
-export class AppModule {}
+export class AppModule {
+  constructor(private appService: AppService) {}
+  async onModuleInit() {
+    //await this.appService.insertWordsData();
+  }
+}
