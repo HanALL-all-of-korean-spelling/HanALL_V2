@@ -78,7 +78,7 @@ export class PostsController {
   @Post('/init-data')
   @ApiOperation({ summary: '초기 맞춤법 정보 삽입' })
   @ApiResponse({ status: 201, type: Boolean })
-  // @UseGuards(AdminGuard)
+  @UseGuards(AdminGuard)
   async createInitPost() {
     return await this.postsService.insertWordsData();
   }
