@@ -21,32 +21,34 @@ services:
     ports:
       - "3000:80"
 
-  # server:
-  #   build:
-  #     dockerfile: Dockerfile.dev
-  #     context: ./server
-  #   container_name: server
-  #   volumes:
-  #     - /app/static
-  #     - /app/node_modules
-  #     - ./server:/app
-  #   environment:
-  #     - NODE_ENV=development
-  #     - ES_HOST=elasticsearch
-
-  nest-server:
+  server:
     build:
-      dockerfile: Dockerfile
-      context: ./nest-server
-    container_name: nest-server
+      dockerfile: Dockerfile.dev
+      context: ./server
+    container_name: server
     volumes:
       - /app/static
       - /app/node_modules
-      - ./nest-server:/app
+      - ./server:/app
     ports:
       - "8080:8080"
     depends_on:
       - mysql
+    env_file: .env
+
+  mysql:
+    image: library/mysql:8.0
+    container_name: mysql
+    restart: always
+    ports:
+      - 3307:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+    volumes:
+      - mysql-data:/var/lib/mysql
+    platform: linux/x86_64
     env_file: .env
 
   # elasticsearch:
@@ -81,21 +83,6 @@ services:
   #   environment:
   #     ELASTICSEARCH_URL: http://elasticsearch:9200/
   #     ELASTICSEARCH_HOSTS: http://elasticsearch:9200/
-
-  mysql:
-    image: library/mysql:8.0
-    container_name: mysql
-    restart: always
-    ports:
-      - 3307:3306
-    environment:
-      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
-      MYSQL_DATABASE: ${MYSQL_DATABASE}
-      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
-    volumes:
-      - mysql-data:/var/lib/mysql
-    platform: linux/x86_64
-    env_file: .env
 
 volumes:
   mysql-data: {}
