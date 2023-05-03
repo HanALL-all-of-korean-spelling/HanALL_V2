@@ -77,6 +77,7 @@ export class PostsController {
 
   @Post('/init-data')
   @ApiOperation({ summary: '초기 맞춤법 정보 삽입' })
+  @ApiSecurity('accesstokenAuth')
   @ApiResponse({ status: 201, type: Boolean })
   @UseGuards(AdminGuard)
   async createInitPost() {
