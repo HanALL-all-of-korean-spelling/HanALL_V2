@@ -15,6 +15,7 @@ import { PostsRepsitory } from './modules/posts/posts.repository';
 import { RightWord } from './entities/RightWord.entity';
 import { WrongWord } from './entities/WrongWord.entity';
 import { WordPost } from './entities/WordPost.entity';
+import { ElasticsearchModule } from '@nestjs/elasticsearch';
 
 @Module({
   imports: [
@@ -32,6 +33,13 @@ import { WordPost } from './entities/WordPost.entity';
       entities: [__dirname + '/**/*.entity.{js,ts}'],
       synchronize: true,
     }),
+    ElasticsearchModule.registerAsync({
+      useFactory: async () => ({
+        node: 'http://elasticsearch:9200',
+        maxRetries: 10,
+        requestTimeout: 60000,
+      }),
+    }),
     AuthModule,
     UsersModule,
     PostsModule,
@@ -44,5 +52,7 @@ import { WordPost } from './entities/WordPost.entity';
 })
 export class AppModule {
   constructor(private appService: AppService) {}
-  async onModuleInit() {}
+  async onModuleInit() {
+    await this.appService.createIndex();
+  }
 }
