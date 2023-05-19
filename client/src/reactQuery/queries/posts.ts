@@ -1,5 +1,5 @@
-import { PostSortEnum, PostTypeEnum } from '@/constants/types/posts';
 import { useQuery } from '@tanstack/react-query';
+import { PostSortEnum, PostTypeEnum } from '@/constants/types/posts';
 import { api } from '../apiClient';
 import { KEYS } from '../queryKeys';
 
