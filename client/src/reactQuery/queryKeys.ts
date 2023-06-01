@@ -10,4 +10,6 @@ export const KEYS = {
   POST_DETAIL: 'postDetail',
   // questions
   QUESTIONS: 'questions',
+  // answers
+  ANSWERS: 'answers',
 };
