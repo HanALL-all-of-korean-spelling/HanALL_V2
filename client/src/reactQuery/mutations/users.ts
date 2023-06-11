@@ -1,6 +1,6 @@
 import { useCallback } from 'react';
 import { useMutation } from '@tanstack/react-query';
-import { JoinInputs } from '@/constants/types';
+import { JoinInputs } from '@/constants/types/users';
 import { api } from '../apiClient';
 
 export const useJoin = () => {

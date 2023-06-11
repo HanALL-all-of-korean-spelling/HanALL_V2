@@ -1,6 +1,6 @@
 import { useCallback } from 'react';
 import { useMutation } from '@tanstack/react-query';
-import { LoginInputs } from '@/constants/types';
+import { LoginInputs } from '@/constants/types/auth';
 import { api } from '../apiClient';
 
 export const useLogin = () => {
