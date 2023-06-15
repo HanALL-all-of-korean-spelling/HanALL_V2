@@ -12,4 +12,7 @@ export const KEYS = {
   QUESTIONS: 'questions',
   // answers
   ANSWERS: 'answers',
+  // scraps
+  SCRAPS: 'scraps',
+  SCRAPS_TEST: 'test',
 };
