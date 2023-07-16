@@ -46,6 +46,14 @@ export class PostsRepsitory {
     return query.getMany();
   }
 
+  async findAll(): Promise<WordPost[]> {
+    return await this.postsRepository
+      .createQueryBuilder('post')
+      .innerJoinAndSelect('post.rightWord', 'rw')
+      .innerJoinAndSelect('rw.wrongWord', 'ww')
+      .getMany();
+  }
+
   async findOneById(id: number): Promise<WordPost> {
     let post: any = await this.postsRepository.findOne({
       where: {
