@@ -10,7 +10,10 @@ import { WrongWordRepository } from './modules/words/repositories/wrongWord.repo
 
 @Injectable()
 export class AppService {
-  constructor(private esService: ElasticsearchService) {}
+  constructor(
+    private esService: ElasticsearchService,
+    private postsRepository: PostsRepsitory,
+  ) {}
   async createIndex() {
     const index = 'word_post';
     const checkIndex: boolean = await this.esService.indices.exists({
@@ -26,13 +29,14 @@ export class AppService {
                 nori: {
                   type: 'custom',
                   tokenizer: 'nori_mixed',
+                  filter: ['lowercase', 'stop'],
                 },
               },
               tokenizer: {
                 nori_mixed: {
                   type: 'nori_tokenizer',
                   decompound_mode: 'mixed',
-                  user_dictionary_rules: ['왠', '웬'],
+                  discard_punctuation: true,
                 },
               },
             },
@@ -47,9 +51,20 @@ export class AppService {
                 type: 'text',
                 analyzer: 'nori',
               },
-              title: { type: 'text' },
+              title: {
+                type: 'text',
+                analyzer: 'nori',
+                search_analyzer: 'standard',
+              },
               description: {
                 type: 'text',
+                analyzer: 'nori',
+                search_analyzer: 'standard',
+              },
+              heplful_info: {
+                type: 'text',
+                analyzer: 'nori',
+                search_analyzer: 'standard',
               },
             },
           },
@@ -61,5 +76,26 @@ export class AppService {
     } else {
       console.log(`${index} index is already exist`);
     }
+  }
+
+  async insertData() {
+    const index = 'word_post';
+    const checkIndex: boolean = await this.esService.indices.exists({
+      index,
+    });
+    if (!checkIndex) return;
+    const postData = await this.postsRepository.findAll();
+    for (const post of postData) {
+      await this.esService.index({
+        index: index,
+        document: {
+          title: post.title,
+          description: post.description,
+          right_words: post.rightWord.name,
+          wrong_words: post.rightWord.wrongWord.name,
+        },
+      });
+    }
+    console.log(`Inserted ${index} data`);
   }
 }

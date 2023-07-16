@@ -5,8 +5,11 @@ import {
   CreateDateColumn,
   UpdateDateColumn,
   DeleteDateColumn,
+  OneToMany,
+  JoinColumn,
 } from 'typeorm';
 import { WordType } from './enums/wordType.enum';
+import { WrongWord } from './WrongWord.entity';
 
 @Entity('rightWord', { schema: 'hanall_project' })
 export class RightWord {
@@ -27,4 +30,7 @@ export class RightWord {
 
   @DeleteDateColumn({ name: 'deleteTime', type: 'timestamp', nullable: true })
   deleteTime: Date | null;
+
+  @OneToMany(() => WrongWord, (wrongWord) => wrongWord.rightWord)
+  wrongWord: WrongWord;
 }

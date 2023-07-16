@@ -54,5 +54,6 @@ export class AppModule {
   constructor(private appService: AppService) {}
   async onModuleInit() {
     await this.appService.createIndex();
+    //await this.appService.insertData();
   }
 }
