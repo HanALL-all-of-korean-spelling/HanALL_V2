@@ -8,6 +8,7 @@ import { User } from 'src/entities/User.entity';
 import { QuestionsRepository } from '../questions/questions.repository';
 import { AnswersRepository } from './answers.repository';
 import { CreateAnswerDto, UpdateAnswerDto } from './dto/answers.req.dto';
+import { AnswerResDto, QuestionIdResDto } from './dto/answers.res.dto';
 
 @Injectable()
 export class AnswersService {
@@ -16,7 +17,9 @@ export class AnswersService {
     private questionsRepository: QuestionsRepository,
   ) {}
 
-  async createAnswer(createAnswerDto: CreateAnswerDto) {
+  async createAnswer(
+    createAnswerDto: CreateAnswerDto,
+  ): Promise<QuestionIdResDto> {
     const { questionId, content } = createAnswerDto;
     const question = await this.questionsRepository.findOneById(questionId);
     if (!question) {
@@ -32,10 +35,10 @@ export class AnswersService {
     if (!answer) {
       throw new InternalServerErrorException('답변 작성에 실패했습니다.');
     }
-    return true;
+    return { questionId: questionId };
   }
 
-  async getAnswer(id: number) {
+  async getAnswer(id: number): Promise<AnswerResDto> {
     const answer = await this.answersRepository.findOneById(id);
     if (!answer) {
       throw new NotFoundException('해당 답변을 찾을 수 없습니다.');
@@ -43,7 +46,10 @@ export class AnswersService {
     return answer;
   }
 
-  async modifyAnswer(id: number, updateAnswerDto: UpdateAnswerDto) {
+  async modifyAnswer(
+    id: number,
+    updateAnswerDto: UpdateAnswerDto,
+  ): Promise<QuestionIdResDto> {
     const { content } = updateAnswerDto;
     const answer = await this.answersRepository.findOneById(id);
     if (!answer) {
@@ -53,10 +59,10 @@ export class AnswersService {
     if (!updateAnswer) {
       throw new InternalServerErrorException('답변 수정에 실패했습니다.');
     }
-    return true;
+    return { questionId: answer.question.id };
   }
 
-  async deleteAnswer(id: number) {
+  async deleteAnswer(id: number): Promise<QuestionIdResDto> {
     const answer = await this.answersRepository.findOneById(id);
     if (!answer) {
       throw new NotFoundException('해당 답변을 찾을 수 없습니다.');
@@ -65,6 +71,6 @@ export class AnswersService {
     if (!deleteAnswer) {
       throw new InternalServerErrorException('답변 삭제에 실패했습니다.');
     }
-    return true;
+    return { questionId: answer.question.id };
   }
 }
