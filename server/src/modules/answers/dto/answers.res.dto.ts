@@ -1,5 +1,4 @@
 import { ApiProperty } from '@nestjs/swagger';
-import { IsEmail, IsNotEmpty, IsString } from 'class-validator';
 
 export class AnswerResDto {
   @ApiProperty()
@@ -16,4 +15,9 @@ export class AnswerResDto {
 
   @ApiProperty()
   deleteTime: Date;
+}
+
+export class QuestionIdResDto {
+  @ApiProperty()
+  questionId: number;
 }

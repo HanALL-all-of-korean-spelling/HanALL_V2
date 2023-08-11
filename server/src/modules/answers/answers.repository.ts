@@ -16,6 +16,7 @@ export class AnswersRepository {
   async findOneById(id: number): Promise<Answer> {
     return await this.answersRepository.findOne({
       where: { id: id },
+      relations: { question: true },
     });
   }
 
