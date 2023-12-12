@@ -6,7 +6,7 @@ export default function App({ Component, pageProps }: AppProps) {
   const queryClient = new QueryClient({
     defaultOptions: {
       queries: {
-        onError: (error) => console.log((error as any).message),
+        onError: (error) => console.log((error as Error).message),
       },
     },
   });
