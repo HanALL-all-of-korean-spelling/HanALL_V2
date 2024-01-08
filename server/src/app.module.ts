@@ -16,6 +16,7 @@ import { RightWord } from './entities/RightWord.entity';
 import { WrongWord } from './entities/WrongWord.entity';
 import { WordPost } from './entities/WordPost.entity';
 import { ElasticsearchModule } from '@nestjs/elasticsearch';
+import { TypesenseService } from './typesense/typesenes.service';
 
 @Module({
   imports: [
@@ -48,12 +49,18 @@ import { ElasticsearchModule } from '@nestjs/elasticsearch';
     ScrapsModule,
   ],
   controllers: [AppController],
-  providers: [AppService],
+  providers: [AppService, TypesenseService],
 })
 export class AppModule {
-  constructor(private appService: AppService) {}
+  constructor(
+    private appService: AppService,
+    private typesenseService: TypesenseService,
+  ) {}
   async onModuleInit() {
     //await this.appService.createIndex();
     //await this.appService.insertData();
+    //await this.typesenseService.createWordsSchema();
+    //await this.typesenseService.insertWordsData();
+    await this.typesenseService.searchWords();
   }
 }
