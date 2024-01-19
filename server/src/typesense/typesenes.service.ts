@@ -4,43 +4,47 @@ import { wordsData } from 'words-data';
 
 @Injectable()
 export class TypesenseService {
-  private client: any;
-
+  private client;
   constructor() {
     this.client = new Typesense.Client({
       nodes: [
         {
-          host: 'localhost',
+          host: '127.0.0.1',
           port: 8108,
           protocol: 'http',
         },
       ],
       apiKey: process.env.TYPESENSE_API_KEY,
+      connectionTimeoutSeconds: 2,
     });
+  }
+
+  async getConnection() {
+    console.log(await this.client);
   }
 
   async createWordsSchema() {
     try {
       const isExist = await this.client.collections('words').retrieve();
       if (isExist) {
+        console.log('isExist', isExist);
         this.client.collections('words').delete();
       }
     } catch {
       const wordSchema = {
         name: 'words',
+        num_documents: 0,
         fields: [
+          { name: 'id', type: 'int32' },
+          { name: 'title', type: 'string' },
           { name: 'right_words', type: 'string' },
           { name: 'wrong_words', type: 'string[]', facet: true },
-          { name: 'title', type: 'string' },
           { name: 'description', type: 'string' },
           { name: 'helpful_info', type: 'string' },
           { name: 'type', type: 'string' },
-          { name: 'hits', type: 'int32' },
-          { name: 'scraps', type: 'int32' },
-          { name: 'created_at', type: 'string' },
-          { name: 'ratings_count', type: 'int32' },
+          { name: 'rank', type: 'int32' },
         ],
-        default_sorting_field: 'ratings_count',
+        default_sorting_field: 'rank',
       };
 
       await this.client
@@ -50,38 +54,9 @@ export class TypesenseService {
           console.log(data);
         });
     }
-
-    // const wordSchema = {
-    //   name: 'words',
-    //   fields: [
-    //     { name: 'right_words', type: 'string' },
-    //     { name: 'wrong_words', type: 'string[]', facet: true },
-    //     { name: 'title', type: 'string' },
-    //     { name: 'description', type: 'string' },
-    //     { name: 'helpful_info', type: 'string' },
-    //     { name: 'type', type: 'string' },
-    //     { name: 'hits', type: 'int32' },
-    //     { name: 'scraps', type: 'int32' },
-    //     { name: 'created_at', type: 'string' },
-    //     { name: 'ratings_count', type: 'int32' },
-    //   ],
-    //   default_sorting_field: 'ratings_count',
-    // };
-
-    // await this.client
-    //   .collections()
-    //   .create(wordSchema)
-    //   .then((data) => {
-    //     console.log(data);
-    //   });
   }
 
   async insertWordsData() {
-    // const insertData = await this.client
-    //   .collections('words')
-    //   .documents()
-    //   .import(wordsData, { action: 'create' });
-    // console.log(insertData);
     for (const data of wordsData) {
       data.ratings_count = 0;
       await this.client.collections('words').documents().create(data);
