@@ -15,7 +15,6 @@ import { PostsRepsitory } from './modules/posts/posts.repository';
 import { RightWord } from './entities/RightWord.entity';
 import { WrongWord } from './entities/WrongWord.entity';
 import { WordPost } from './entities/WordPost.entity';
-import { ElasticsearchModule } from '@nestjs/elasticsearch';
 import { TypesenseService } from './typesense/typesenes.service';
 
 @Module({
@@ -27,19 +26,12 @@ import { TypesenseService } from './typesense/typesenes.service';
     TypeOrmModule.forRoot({
       type: 'mysql',
       host: process.env.MYSQL_HOST,
-      port: 3307,
+      port: Number(process.env.MYSQL_PORT),
       username: process.env.MYSQL_USER,
       password: process.env.MYSQL_PASSWORD,
       database: process.env.MYSQL_DATABASE,
       entities: [__dirname + '/**/*.entity.{js,ts}'],
       synchronize: true,
-    }),
-    ElasticsearchModule.registerAsync({
-      useFactory: async () => ({
-        node: 'http://elasticsearch:9200',
-        maxRetries: 10,
-        requestTimeout: 60000,
-      }),
     }),
     AuthModule,
     UsersModule,
@@ -57,10 +49,8 @@ export class AppModule {
     private typesenseService: TypesenseService,
   ) {}
   async onModuleInit() {
-    //await this.appService.createIndex();
-    //await this.appService.insertData();
     //await this.typesenseService.createWordsSchema();
     //await this.typesenseService.insertWordsData();
-    await this.typesenseService.searchWords();
+    //await this.typesenseService.searchWords();
   }
 }
