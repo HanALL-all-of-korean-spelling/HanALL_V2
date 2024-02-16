@@ -90,10 +90,10 @@ export class TypesenseService {
   }
 
   async searchWords() {
-    const word = '왠 웬';
+    const word = '않되';
     let searchParameters = {
       q: word,
-      query_by: 'title',
+      query_by: ['title', 'helpful_info'],
       sort_by: 'ratings_count:desc',
     };
 
@@ -103,6 +103,9 @@ export class TypesenseService {
       .search(searchParameters)
       .then(async (searchResults) => {
         console.log(searchResults.hits);
+        // searchResults.hits.forEach((o) => {
+        //   console.log(o);
+        // });
       });
   }
 }

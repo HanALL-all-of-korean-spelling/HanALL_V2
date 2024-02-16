@@ -6,6 +6,7 @@ import {
 import { SortType } from 'src/entities/enums/sortType.enum';
 import { WordType } from 'src/entities/enums/wordType.enum';
 import { WordPost } from 'src/entities/WordPost.entity';
+import Typesense from 'typesense';
 import { wordsData } from 'words-data';
 import { RightWordRepository } from '../words/repositories/rightWord.repository';
 import { WrongWordRepository } from '../words/repositories/wrongWord.repository';
@@ -16,11 +17,23 @@ import { PostsRepsitory } from './posts.repository';
 
 @Injectable()
 export class PostsService {
+  private client: any;
   constructor(
     private postRepository: PostsRepsitory,
     private rightWordRepository: RightWordRepository,
     private wrongWordRepository: WrongWordRepository,
-  ) {}
+  ) {
+    this.client = new Typesense.Client({
+      nodes: [
+        {
+          host: 'localhost',
+          port: 8108,
+          protocol: 'http',
+        },
+      ],
+      apiKey: process.env.TYPESENSE_API_KEY,
+    });
+  }
 
   async createPost(createPostReqDto: CreatePostReqDto) {
     const { title, description, helpfulInfo, rightWord, type, wrongWords } =
@@ -59,6 +72,29 @@ export class PostsService {
     page: number,
   ): Promise<GetPostListResDto[]> {
     return await this.postRepository.findMany(type, sort, page);
+  }
+
+  async searchPost(text: string) {
+    let searchParameters = {
+      q: text,
+      query_by: ['title', 'helpful_info'],
+      sort_by: 'ratings_count:desc',
+    };
+
+    let result = [];
+
+    await this.client
+      .collections('words')
+      .documents()
+      .search(searchParameters)
+      .then(async (searchResults) => {
+        result = searchResults.hits;
+        console.log(searchResults.hits);
+        // searchResults.hits.forEach((o) => {
+        //   console.log(o);
+        // });
+      });
+    return result;
   }
 
   async getPost(postId: number): Promise<WordPost> {
