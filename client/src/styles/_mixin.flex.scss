@@ -1,0 +1,28 @@
+@mixin flex-variant(
+  $direction: false,
+  $align: false,
+  $justify: false,
+  $wrap: false
+) {
+  display: flex;
+
+  @if $direction {
+    flex-direction: $direction;
+  }
+
+  @if $align {
+    align-items: $align;
+  }
+
+  @if $justify {
+    justify-content: $justify;
+  }
+}
+
+@mixin flex-row($align: false, $justify: false) {
+  @include flex-variant($direction: row, $align: $align, $justify: $justify);
+}
+
+@mixin flex-col($align: false, $justify: false) {
+  @include flex-variant($direction: column, $align: $align, $justify: $justify);
+}
