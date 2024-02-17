@@ -8,3 +8,13 @@ export const enum PostSortEnum {
   HITS = 'hits',
   SCRAPS = 'scraps',
 }
+
+export interface PostDataType {
+  id?: number;
+  title: string;
+  type?: PostTypeEnum;
+  content?: string;
+  hitCount: number;
+  scrapCount: number;
+  createTime: Date;
+}
