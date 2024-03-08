@@ -1,4 +1,4 @@
-export const wordsData = [
+export const wordsData: any = [
   {
     type: 'spelling',
     title: '베개 vs 배게',

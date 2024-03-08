@@ -34,6 +34,7 @@ services:
       - "8080:8080"
     depends_on:
       - mysql
+      - typesense
     env_file: .env
 
   mysql:
@@ -47,40 +48,20 @@ services:
       MYSQL_DATABASE: ${MYSQL_DATABASE}
       MYSQL_PASSWORD: ${MYSQL_PASSWORD}
     volumes:
-      - mysql-data:/var/lib/mysql
+      - ./mysql-data:/var/lib/mysql
     platform: linux/x86_64
     env_file: .env
 
-  elasticsearch:
-    build:
-      dockerfile: Dockerfile.dev
-      context: ./elasticsearch
-    container_name: elasticsearch
-    environment:
-      - node.name=elasticsearch
-      - cluster.name=es-docker-cluster
-      - cluster.initial_master_nodes=elasticsearch
-      - bootstrap.memory_lock=true
-      - ES_JAVA_OPTS=-Xms750m -Xmx750m
-      - xpack.security.enabled=false
-    ulimits:
-      memlock:
-        soft: -1
-        hard: -1
-    volumes:
-      - data:/usr/share/elasticsearch/data
+  typesense:
+    image: typesense/typesense:0.25.2
+    container_name: typesense
+    restart: on-failure
     ports:
-      - 9200:9200
-
-  # kibana:
-  #   image: docker.elastic.co/kibana/kibana:7.13.0
-  #   container_name: kibana
-  #   ports:
-  #     - 5601:5601
-  #   environment:
-  #     ELASTICSEARCH_URL: http://elasticsearch:9200/
-  #     ELASTICSEARCH_HOSTS: http://elasticsearch:9200/
+      - "8108:8108"
+    volumes:
+      - ./typesense-data:/data
+    command: "--data-dir /data --api-key=${TYPESENSE_API_KEY} --enable-cors"
 
 volumes:
-  mysql-data: {}
+  mysql: {}
   data: {}
