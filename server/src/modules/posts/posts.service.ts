@@ -17,13 +17,13 @@ import { PostsRepsitory } from './posts.repository';
 
 @Injectable()
 export class PostsService {
-  private client: any;
+  private tsClient: any;
   constructor(
     private postRepository: PostsRepsitory,
     private rightWordRepository: RightWordRepository,
     private wrongWordRepository: WrongWordRepository,
   ) {
-    this.client = new Typesense.Client({
+    this.tsClient = new Typesense.Client({
       nodes: [
         {
           host: 'localhost',
@@ -74,25 +74,31 @@ export class PostsService {
     return await this.postRepository.findMany(type, sort, page);
   }
 
-  async searchPost(text: string) {
-    let searchParameters = {
-      q: text,
+  async searchPost(word: string): Promise<GetPostListResDto[]> {
+    const searchParameters = {
+      q: word,
       query_by: ['title', 'helpful_info'],
       sort_by: 'ratings_count:desc',
     };
-
-    let result = [];
-
-    await this.client
+    const result: GetPostListResDto[] = [];
+    await this.tsClient
       .collections('words')
       .documents()
       .search(searchParameters)
       .then(async (searchResults) => {
-        result = searchResults.hits;
-        console.log(searchResults.hits);
-        // searchResults.hits.forEach((o) => {
-        //   console.log(o);
-        // });
+        if (searchResults.hits) {
+          searchResults.hits.forEach((o) => {
+            if (o.document) {
+              result.push({
+                id: o.document.id,
+                title: o.document.title,
+                createTime: o.document.created_at,
+                hitCount: o.document.hits,
+                scrapCount: o.document.scraps,
+              });
+            }
+          });
+        }
       });
     return result;
   }

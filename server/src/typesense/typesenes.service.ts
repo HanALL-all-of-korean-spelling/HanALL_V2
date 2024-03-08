@@ -20,6 +20,7 @@ export class TypesenseService {
   }
 
   async createWordsSchema() {
+    console.log('start');
     try {
       const isExist = await this.client.collections('words').retrieve();
       if (isExist) {
@@ -50,38 +51,9 @@ export class TypesenseService {
           console.log(data);
         });
     }
-
-    // const wordSchema = {
-    //   name: 'words',
-    //   fields: [
-    //     { name: 'right_words', type: 'string' },
-    //     { name: 'wrong_words', type: 'string[]', facet: true },
-    //     { name: 'title', type: 'string' },
-    //     { name: 'description', type: 'string' },
-    //     { name: 'helpful_info', type: 'string' },
-    //     { name: 'type', type: 'string' },
-    //     { name: 'hits', type: 'int32' },
-    //     { name: 'scraps', type: 'int32' },
-    //     { name: 'created_at', type: 'string' },
-    //     { name: 'ratings_count', type: 'int32' },
-    //   ],
-    //   default_sorting_field: 'ratings_count',
-    // };
-
-    // await this.client
-    //   .collections()
-    //   .create(wordSchema)
-    //   .then((data) => {
-    //     console.log(data);
-    //   });
   }
 
   async insertWordsData() {
-    // const insertData = await this.client
-    //   .collections('words')
-    //   .documents()
-    //   .import(wordsData, { action: 'create' });
-    // console.log(insertData);
     for (const data of wordsData) {
       data.ratings_count = 0;
       await this.client.collections('words').documents().create(data);

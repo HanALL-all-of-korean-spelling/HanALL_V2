@@ -61,12 +61,9 @@ export class PostsController {
   @Get('/search')
   @ApiOperation({ summary: '맞춤법 게시글 검색' })
   @ApiResponse({ status: 200, type: [GetPostListResDto] })
-  @ApiResponse({ status: 400, description: '이메일/닉네임 중복' })
-  @ApiResponse({ status: 503, description: '회원가입 실패' })
-  @ApiQuery({ name: 'type', enum: WordType })
-  @ApiQuery({ name: 'sort', enum: SortType })
-  async searchPost(@Query('text') text: string) {
-    const postsData = await this.postsService.searchPost(text);
+  @ApiQuery({ name: 'word' })
+  async searchPost(@Query('word') word: string) {
+    const postsData = await this.postsService.searchPost(word);
     return postsData;
   }
 
