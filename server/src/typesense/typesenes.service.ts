@@ -20,13 +20,15 @@ export class TypesenseService {
   }
 
   async createWordsSchema() {
-    console.log('start');
     try {
       const isExist = await this.client.collections('words').retrieve();
       if (isExist) {
-        this.client.collections('words').delete();
+        console.log('Typesense Create Schema: skip');
+        return;
+        //this.client.collections('words').delete();
       }
     } catch {
+      console.log('Typesense Create Schema: start');
       const wordSchema = {
         name: 'words',
         fields: [
@@ -47,18 +49,20 @@ export class TypesenseService {
       await this.client
         .collections()
         .create(wordSchema)
-        .then((data) => {
-          console.log(data);
+        .then(async () => {
+          console.log('Typesense Create Schema: done');
+          await this.insertWordsData();
         });
     }
   }
 
   async insertWordsData() {
+    console.log('Typesense Data Insert: start');
     for (const data of wordsData) {
       data.ratings_count = 0;
       await this.client.collections('words').documents().create(data);
     }
-    console.log('done');
+    console.log('Typesense Data Insert: done');
   }
 
   async searchWords() {

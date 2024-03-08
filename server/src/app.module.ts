@@ -49,8 +49,6 @@ export class AppModule {
     private typesenseService: TypesenseService,
   ) {}
   async onModuleInit() {
-    // await this.typesenseService.createWordsSchema();
-    //await this.typesenseService.insertWordsData();
-    //await this.typesenseService.searchWords();
+    await this.typesenseService.createWordsSchema();
   }
 }
