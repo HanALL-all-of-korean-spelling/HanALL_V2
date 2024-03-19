@@ -77,7 +77,7 @@ export class PostsService {
   async searchPost(word: string): Promise<GetPostListResDto[]> {
     const searchParameters = {
       q: word,
-      query_by: ['title', 'helpful_info'],
+      query_by: ['title', 'description', 'helpful_info'],
       sort_by: 'ratings_count:desc',
     };
     const result: GetPostListResDto[] = [];
@@ -95,6 +95,7 @@ export class PostsService {
                 createTime: o.document.created_at,
                 hitCount: o.document.hits,
                 scrapCount: o.document.scraps,
+                description: o.document.description,
               });
             }
           });
