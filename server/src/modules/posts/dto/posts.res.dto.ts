@@ -1,32 +1,36 @@
 import { ApiProperty } from '@nestjs/swagger';
 import { Type } from 'class-transformer';
-import { IsArray, IsDate, IsEmail, IsNumber, IsString } from 'class-validator';
 import { WordType } from 'src/entities/enums/wordType.enum';
 
 export class GetPostListResDto {
   @ApiProperty()
-  @IsEmail()
   id: number;
 
   @ApiProperty()
-  @IsEmail()
   title: string;
 
   @ApiProperty()
-  @IsDate()
   createTime: Date;
 
   @ApiProperty()
-  @IsNumber()
   hitCount: number;
 
   @ApiProperty()
-  @IsNumber()
   scrapCount: number;
 
   @ApiProperty()
-  @IsString()
   description: string;
+}
+
+export class CreatePostResDto {
+  @ApiProperty()
+  id: number;
+
+  @ApiProperty()
+  title: string;
+
+  @ApiProperty()
+  createTime: Date;
 }
 
 export class RightWordInPostDto {

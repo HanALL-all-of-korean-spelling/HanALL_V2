@@ -6,10 +6,11 @@ import { WordPost } from 'src/entities/WordPost.entity';
 import { RightWord } from 'src/entities/RightWord.entity';
 import { Repository } from 'typeorm';
 import { RightWordRepository } from '../words/repositories/rightWord.repository';
-import { CreatePostDbDto } from './dto/posts.db.dto';
 import { CreatePostReqDto } from './dto/posts.req.dto';
 import { GetPostListResDto } from './dto/posts.res.dto';
 import { WrongWordRepository } from '../words/repositories/wrongWord.repository';
+import { findManyPostListQueryDto } from './dto/posts.query.dto';
+import { CreatePostRepoDto } from './dto/posts.repo.dto';
 
 @Injectable()
 export class PostsRepsitory {
@@ -24,8 +25,8 @@ export class PostsRepsitory {
     type: WordType,
     sort: SortType,
     page: number,
-  ): Promise<GetPostListResDto[]> {
-    let query = this.postsRepository
+  ): Promise<findManyPostListQueryDto[]> {
+    const query = this.postsRepository
       .createQueryBuilder('post')
       .innerJoin('post.rightWord', 'rw')
       .select([
@@ -99,21 +100,15 @@ export class PostsRepsitory {
     return post;
   }
 
-  async create(createPostDbDto: CreatePostDbDto) {
-    try {
-      const { title, description, helpfulInfo, rightWordId } = createPostDbDto;
-      const rightWord = await this.rightWordRepository.findOneById(rightWordId);
-      const newPost = this.postsRepository.create({
-        title: title,
-        description: description,
-        helpfulInfo: helpfulInfo,
-        rightWord: rightWord,
-      });
-      const newPostId = await this.postsRepository.save(newPost);
-      return newPostId;
-    } catch (err) {
-      console.log('CREATE POST', err);
-      return false;
-    }
+  async create(createPostDbDto: CreatePostRepoDto): Promise<WordPost> {
+    const { title, description, helpfulInfo, rightWordId } = createPostDbDto;
+    const rightWord = await this.rightWordRepository.findOneById(rightWordId);
+    const newPost = this.postsRepository.create({
+      title: title,
+      description: description,
+      helpfulInfo: helpfulInfo,
+      rightWord: rightWord,
+    });
+    return await this.postsRepository.save(newPost);
   }
 }

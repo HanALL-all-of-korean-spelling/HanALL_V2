@@ -17,12 +17,17 @@ import {
   ApiSecurity,
   ApiTags,
 } from '@nestjs/swagger';
+import { ErrorCode } from 'src/entities/enums/errorCode.enum';
 import { SortType } from 'src/entities/enums/sortType.enum';
 import { WordType } from 'src/entities/enums/wordType.enum';
 import { WordPost } from 'src/entities/WordPost.entity';
 import { AdminGuard } from '../auth/guards/admin.guard';
 import { CreatePostReqDto } from './dto/posts.req.dto';
-import { GetPostListResDto, GetPostResDto } from './dto/posts.res.dto';
+import {
+  CreatePostResDto,
+  GetPostListResDto,
+  GetPostResDto,
+} from './dto/posts.res.dto';
 import { PostsService } from './posts.service';
 
 @ApiTags('Post')
@@ -33,20 +38,17 @@ export class PostsController {
   @Post('/')
   @ApiOperation({ summary: '맞춤법 정보 게시글 작성' })
   @ApiSecurity('accesstokenAuth')
-  @ApiResponse({ status: 201, type: Boolean })
-  @ApiResponse({ status: 400, description: '이메일/닉네임 중복' })
-  @ApiResponse({ status: 503, description: '회원가입 실패' })
+  @ApiResponse({ status: 201, type: CreatePostResDto })
+  @ApiResponse({ status: 400, description: ErrorCode.ALREADY_EXIST_POST })
+  @ApiResponse({ status: 503, description: ErrorCode.CREATE_POST_FAIL })
   @UseGuards(AdminGuard)
   async createPost(@Body() createPostReqDto: CreatePostReqDto) {
-    const userData = await this.postsService.createPost(createPostReqDto);
-    return userData;
+    return await this.postsService.createPost(createPostReqDto);
   }
 
   @Get('/')
   @ApiOperation({ summary: '맞춤법 게시글 목록 조회' })
   @ApiResponse({ status: 200, type: [GetPostListResDto] })
-  @ApiResponse({ status: 400, description: '이메일/닉네임 중복' })
-  @ApiResponse({ status: 503, description: '회원가입 실패' })
   @ApiQuery({ name: 'type', enum: WordType })
   @ApiQuery({ name: 'sort', enum: SortType })
   async getPostList(
@@ -54,8 +56,7 @@ export class PostsController {
     @Query('sort', new ParseEnumPipe(SortType)) sort: SortType,
     @Query('page', ParseIntPipe) page: number,
   ) {
-    const postsData = await this.postsService.getPostList(type, sort, page);
-    return postsData;
+    return await this.postsService.getPostList(type, sort, page);
   }
 
   @Get('/search')

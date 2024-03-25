@@ -3,6 +3,8 @@ import {
   Injectable,
   InternalServerErrorException,
 } from '@nestjs/common';
+import { plainToInstance } from 'class-transformer';
+import { ErrorCode } from 'src/entities/enums/errorCode.enum';
 import { SortType } from 'src/entities/enums/sortType.enum';
 import { WordType } from 'src/entities/enums/wordType.enum';
 import { WordPost } from 'src/entities/WordPost.entity';
@@ -10,9 +12,13 @@ import Typesense from 'typesense';
 import { wordsData } from 'words-data';
 import { RightWordRepository } from '../words/repositories/rightWord.repository';
 import { WrongWordRepository } from '../words/repositories/wrongWord.repository';
-import { CreatePostDbDto } from './dto/posts.db.dto';
+import { CreatePostRepoDto } from './dto/posts.repo.dto';
 import { CreatePostReqDto } from './dto/posts.req.dto';
-import { GetPostListResDto, GetPostResDto } from './dto/posts.res.dto';
+import {
+  CreatePostResDto,
+  GetPostListResDto,
+  GetPostResDto,
+} from './dto/posts.res.dto';
 import { PostsRepsitory } from './posts.repository';
 
 @Injectable()
@@ -35,35 +41,46 @@ export class PostsService {
     });
   }
 
-  async createPost(createPostReqDto: CreatePostReqDto) {
+  async createPost(
+    createPostReqDto: CreatePostReqDto,
+  ): Promise<CreatePostResDto | void> {
     const { title, description, helpfulInfo, rightWord, type, wrongWords } =
       createPostReqDto;
+
+    // * 기존에 존재하는 단어인지 확인
     const rigthWordCheck = await this.rightWordRepository.findOneByName(
       rightWord,
     );
     if (rigthWordCheck) {
-      throw new BadRequestException('이미 게시된 내역이 있는 맞춤법입니다.');
+      throw new BadRequestException(ErrorCode.ALREADY_EXIST_POST);
     }
-    const creteRightWord: number = await this.rightWordRepository.create(
+
+    // * rightWord 추가
+    const savedRightWord = await this.rightWordRepository.create(
       rightWord,
       type,
     );
-    if (creteRightWord) {
-      const rightWordId: number = creteRightWord;
+
+    // * worngWord 추가
+    if (savedRightWord && wrongWords && wrongWords.length > 0) {
       for (let i = 0; i < wrongWords.length; i++) {
-        await this.wrongWordRepository.create(wrongWords[i], rightWordId);
-        const createPostDbDto = {
-          title,
-          description,
-          helpfulInfo,
-          rightWordId,
-        };
-        const createdPost = await this.postRepository.create(createPostDbDto);
-        return createdPost;
+        await this.wrongWordRepository.create(wrongWords[i], savedRightWord.id);
       }
-    } else {
-      throw new InternalServerErrorException('게시글 작성에 실패했습니다.');
     }
+
+    // * post 추가
+    const createPostRepoDto: CreatePostRepoDto = {
+      title,
+      description,
+      helpfulInfo,
+      rightWordId: savedRightWord.id,
+    };
+    const savedPost = await this.postRepository.create(createPostRepoDto);
+
+    if (!savedPost) {
+      throw new InternalServerErrorException(ErrorCode.CREATE_POST_FAIL);
+    }
+    return plainToInstance(CreatePostResDto, savedPost);
   }
 
   async getPostList(
@@ -71,7 +88,8 @@ export class PostsService {
     sort: SortType,
     page: number,
   ): Promise<GetPostListResDto[]> {
-    return await this.postRepository.findMany(type, sort, page);
+    const postList = await this.postRepository.findMany(type, sort, page);
+    return plainToInstance(GetPostListResDto, postList);
   }
 
   async searchPost(word: string): Promise<GetPostListResDto[]> {
@@ -132,13 +150,13 @@ export class PostsService {
           wordType,
         );
         for (let wrongWord of word.wrong_words) {
-          await this.wrongWordRepository.create(wrongWord, rightWordId);
+          await this.wrongWordRepository.create(wrongWord, rightWordId.id);
         }
-        const createPostDto: CreatePostDbDto = {
+        const createPostDto: CreatePostRepoDto = {
           title: word.title,
           description: word.description,
           helpfulInfo: word.helpful_info,
-          rightWordId: rightWordId,
+          rightWordId: rightWordId.id,
         };
         await this.postRepository.create(createPostDto);
       } else {

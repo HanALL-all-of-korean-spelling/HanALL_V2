@@ -1,6 +1,6 @@
 import { ApiProperty } from '@nestjs/swagger';
 import { Type } from 'class-transformer';
-import { IsArray, IsEmail, IsString } from 'class-validator';
+import { IsArray, IsEmail, IsEnum, IsString, MinLength } from 'class-validator';
 import { WordType } from 'src/entities/enums/wordType.enum';
 
 export class CreatePostReqDto {
@@ -21,7 +21,7 @@ export class CreatePostReqDto {
   rightWord: string;
 
   @ApiProperty()
-  @IsString()
+  @IsEnum(WordType)
   type: WordType;
 
   @ApiProperty({ type: [String] })

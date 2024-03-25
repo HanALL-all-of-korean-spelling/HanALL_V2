@@ -19,17 +19,11 @@ export class RightWordRepository {
     return this.rightWordRepository.findOneBy({ name });
   }
 
-  async create(name: string, type: WordType): Promise<number> {
-    try {
-      const newWord = this.rightWordRepository.create({
-        name: name,
-        type: type,
-      });
-      const newWordId = await this.rightWordRepository.save(newWord);
-      return newWordId.id;
-    } catch (err) {
-      console.log('CREATE RIGHT WORD', err);
-      return 0;
-    }
+  async create(name: string, type: WordType): Promise<RightWord> {
+    const rightWord = this.rightWordRepository.create({
+      name: name,
+      type: type,
+    });
+    return await this.rightWordRepository.save(rightWord);
   }
 }
