@@ -1,22 +1,22 @@
-import { PostDataType, PostTypeEnum } from '@/constants/types/posts';
+import { PostDataType, PostTypeTextMap } from '@/constants/types/posts';
 import style from './postContainer.module.scss';
 
 export const PostContainer = ({
   id,
   title,
-  type,
+  postType,
   content,
   hitCount,
   scrapCount,
   createTime,
 }: PostDataType) => {
-  const typeText = type === PostTypeEnum.SPACING ? '띄어쓰기' : '철자';
-
   return (
     <div className={style['container']} key={id}>
       <div className={style['title-line']}>
         <div>{title}</div>
-        <div className={style['word-type-wrapper']}>{typeText}</div>
+        <div className={style['word-type-wrapper']}>
+          {PostTypeTextMap[postType]}
+        </div>
       </div>
       <div className={style['content-wrapper']}>{content}내용</div>
       <div className={style['info-line']}>
@@ -27,7 +27,7 @@ export const PostContainer = ({
             <div>{hitCount}</div>
           </div>
           <div className={style['icon-with-text']}>
-            <img src="https://dummyimage.com/18x18.png" alt="hit" />
+            <img src="https://dummyimage.com/18x18.png" alt="scrap" />
             <div>{scrapCount}</div>
           </div>
         </div>
