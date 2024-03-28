@@ -6,6 +6,7 @@ import {
 import { SortType } from 'src/entities/enums/sortType.enum';
 import { WordType } from 'src/entities/enums/wordType.enum';
 import { WordPost } from 'src/entities/WordPost.entity';
+import Typesense from 'typesense';
 import { wordsData } from 'words-data';
 import { RightWordRepository } from '../words/repositories/rightWord.repository';
 import { WrongWordRepository } from '../words/repositories/wrongWord.repository';
@@ -16,11 +17,23 @@ import { PostsRepsitory } from './posts.repository';
 
 @Injectable()
 export class PostsService {
+  private tsClient: any;
   constructor(
     private postRepository: PostsRepsitory,
     private rightWordRepository: RightWordRepository,
     private wrongWordRepository: WrongWordRepository,
-  ) {}
+  ) {
+    this.tsClient = new Typesense.Client({
+      nodes: [
+        {
+          host: 'localhost',
+          port: 8108,
+          protocol: 'http',
+        },
+      ],
+      apiKey: process.env.TYPESENSE_API_KEY,
+    });
+  }
 
   async createPost(createPostReqDto: CreatePostReqDto) {
     const { title, description, helpfulInfo, rightWord, type, wrongWords } =
@@ -59,6 +72,36 @@ export class PostsService {
     page: number,
   ): Promise<GetPostListResDto[]> {
     return await this.postRepository.findMany(type, sort, page);
+  }
+
+  async searchPost(word: string): Promise<GetPostListResDto[]> {
+    const searchParameters = {
+      q: word,
+      query_by: ['title', 'description', 'helpful_info'],
+      sort_by: 'ratings_count:desc',
+    };
+    const result: GetPostListResDto[] = [];
+    await this.tsClient
+      .collections('words')
+      .documents()
+      .search(searchParameters)
+      .then(async (searchResults) => {
+        if (searchResults.hits) {
+          searchResults.hits.forEach((o) => {
+            if (o.document) {
+              result.push({
+                id: o.document.id,
+                title: o.document.title,
+                createTime: o.document.created_at,
+                hitCount: o.document.hits,
+                scrapCount: o.document.scraps,
+                description: o.document.description,
+              });
+            }
+          });
+        }
+      });
+    return result;
   }
 
   async getPost(postId: number): Promise<WordPost> {

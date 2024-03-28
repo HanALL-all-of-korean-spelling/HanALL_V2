@@ -23,6 +23,10 @@ export class GetPostListResDto {
   @ApiProperty()
   @IsNumber()
   scrapCount: number;
+
+  @ApiProperty()
+  @IsString()
+  description: string;
 }
 
 export class RightWordInPostDto {

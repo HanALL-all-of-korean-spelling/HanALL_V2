@@ -58,6 +58,15 @@ export class PostsController {
     return postsData;
   }
 
+  @Get('/search')
+  @ApiOperation({ summary: '맞춤법 게시글 검색' })
+  @ApiResponse({ status: 200, type: [GetPostListResDto] })
+  @ApiQuery({ name: 'word' })
+  async searchPost(@Query('word') word: string) {
+    const postsData = await this.postsService.searchPost(word);
+    return postsData;
+  }
+
   @Get('/today')
   @ApiOperation({ summary: '오늘의 맞춤법 조회' })
   @ApiResponse({ status: 200, type: GetPostResDto })

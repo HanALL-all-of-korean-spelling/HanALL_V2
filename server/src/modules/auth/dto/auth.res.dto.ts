@@ -18,7 +18,7 @@ export class LoginResDto {
   nickname: string;
 
   @ApiProperty()
-  isAdmin: number;
+  isAdmin: boolean;
 
   @ApiProperty()
   userRank: Rank;
