@@ -1,0 +1,22 @@
+@import '@/styles/_mixin.flex.scss';
+
+.flex-line {
+  @include flex-row($justify: space-between, $align: center);
+}
+
+.go-to-button {
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: #e5e5e5 1px solid;
+}
+
+.filter-button-container {
+  display: flex;
+  gap: 8px;
+
+  > div {
+    background-color: #f6f6f6;
+    border-radius: 20px;
+    padding: 6px 12px;
+  }
+}
