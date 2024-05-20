@@ -10,7 +10,7 @@ export class TypesenseService {
     this.client = new Typesense.Client({
       nodes: [
         {
-          host: 'localhost',
+          host: process.env.TYPESENSE_HOST,
           port: 8108,
           protocol: 'http',
         },
