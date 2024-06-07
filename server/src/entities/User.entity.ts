@@ -7,8 +7,21 @@ import {
   DeleteDateColumn,
 } from 'typeorm';
 
+export interface IUser {
+  id: number;
+  email: string;
+  passwd: string;
+  nickname: string;
+  userRank: number;
+  userPoint: number;
+  isAdmin: boolean;
+  createTime: Date | null;
+  updateTime: Date | null;
+  deleteTime: Date | null;
+}
+
 @Entity('user', { schema: 'hanall_project' })
-export class User {
+export class User implements IUser {
   @PrimaryGeneratedColumn({ type: 'int', name: 'id', comment: 'Primary Key' })
   id: number;
 
